@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Herbarium Data Collection and Preperation</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<h1>Herbarium Data Collection and Preperation</h1>
+
+<h2>Key components of this file</h2>
+
+<ul>
+<li><p>In this script I am documenting the acquisition and filteing of
+records for the group of associated species 
+that will be used in the cummulative record analysis</p></li>
+<li><p>Data cleaning for the previously collated historical presence 
+records for <em>Frangula alnus</em>. Record collection is documented in Chapter 3
+of my PhD dissertation.</p></li>
+<li><p>In this script I assigne Long/Lat values to Counties for records
+that were not georeferenced to the highest resolution possible. These records
+are mostly those in the <strong>group of associated species</strong> and <strong>FRAL</strong> records
+collected from Ohio State University Herbarium and University of Minnesota 
+Herbarium. The <strong>FRAL</strong> records that were not georeferenced are records that I 
+was only able to aquire recently.</p></li>
+</ul>
+
+<h2>Define the group of asscocated species</h2>
+
+<p>First I had to define a group of associated species. I did this be
+selecting a number of plants that have similar ecological requirements
+as Glossy buckthorn and/or have been compared to GB in previous analyses</p>
+
+<h3>Associated Species</h3>
+
+<ul>
+<li>Speckled Alder = Alnus rugosa</li>
+<li>Grey Alder = Alnus incana </li>
+<li>Smooth Alder = Alnus serrulata</li>
+<li>Alder (Alderleaf) Buckthorn = Rhamnus alnifolia</li>
+<li>White Ash = Fraxinus americana </li>
+<li>Witch Hazel = Hamamelis virginiana </li>
+<li>Withc Hazel (syn) = Hamamelis macrophylla</li>
+</ul>
+
+<hr/>
+
+<h2>GBIF Records</h2>
+
+<p>First, I&#39;m going to aquire all the records that I can from GBIF. Because
+of the way I am doing this, by collecting data from a specific spatial extent,
+I am only getting recordst that have <strong>Latitude</strong> and <strong>Longitude</strong> values.
+Thus, these records <strong>DO NOT</strong> have to be georeferenced to the county level.
+However, I do have to make sure that they all have county names for a later
+analysis.</p>
+
+<h3>Preliminaries: Load the required packages and set a few parameters</h3>
+
+<p>R code disabled</p>
+
+<pre><code>## Required Packages
+## -----------------
+require(dismo)
+require(maptools)
+gpclibPermit()
+require(rgdal)
+require(ggplot2)
+require(sp)
+require(PBSmapping)
+require(plyr)
+require(maps)
+require(psych)
+require(reshape)
+
+## Define and set working directory
+HERB_PROJECT_DIR &lt;- &#39;/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/&#39;
+setwd( HERB_PROJECT_DIR )
+
+## Spatial extent of the study area
+## --------------------------------
+## These values are based on the extent values used for Chapter 4 - SDM,
+## which I worked extensively on during the Fall of 2012 while taking 
+## the ENM class with Rob Anderson at CUNY. These values essentially define
+## what I refer to as &quot;northeast North America&quot; and are based on the extent
+## of *Frangula alnus*, excluding outliers in Wyoming and Tennessee
+##
+## The extent is saved in &#39;scripts/falnus.extent.RData&#39; and has an object
+## name of &#39;falnus.extent&#39;
+
+## Load falnus.extent
+load(&#39;scripts/falnus.extent.RData&#39;)
+extent.values &lt;- as.matrix(falnus.extent)
+xmin &lt;- extent.values[1,1]
+xmax &lt;- extent.values[1,2]
+ymin &lt;- extent.values[2,1]
+ymax &lt;- extent.values[2,2]
+
+</code></pre>
+
+<h3>Use <code>gbif</code> function to get records</h3>
+
+<p>R code disabled</p>
+
+<pre><code>## I&#39;m also going to get the data in &#39;gbif&#39; for Frangula alnus. Note that
+## I have already done this and included it in the data set just read in,
+## however, that dataset also includes a lot of data **not** in &#39;gbif&#39;, so
+## I think this may be a better data set to compare with.
+
+## Get Frangula alnus records (Glossy Buckthorn)
+Frangula.alnus &lt;- gbif( genus=&quot;Frangula&quot;, species=&quot;alnus*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Frangula.alnus$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Frangula.alnus &lt;- Frangula.alnus[ -(which(Frangula.alnus$collection==&quot;USDA Plants&quot;)), ]
+}
+
+Rhamnus.frangula &lt;- gbif( genus=&quot;Rhamnus&quot;, species=&quot;frangula*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Rhamnus.frangula$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Rhamnus.frangula &lt;- Rhamnus.frangula[ -(which(Rhamnus.frangula$collection==&quot;USDA Plants&quot;)), ]
+}
+
+## Associated plants data
+## ----------------------
+## To account for effects of potential uneven sampling effort
+## of *Frangula alnus* I am collecting presence records for other 
+## plants that grow in similar ecological conditions.
+## 
+## Get Alnus incana records
+Alnus.incana &lt;- gbif( genus=&quot;Alnus&quot;, species=&quot;incana*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Alnus.incana$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Alnus.incana &lt;- Alnus.incana[ -(which(Alnus.incana$collection==&quot;USDA Plants&quot;)), ]
+}
+
+## Get Alnus incana records
+Alnus.rugosa &lt;- gbif( genus=&quot;Alnus&quot;, species=&quot;rugosa*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Alnus.rugosa$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Alnus.rugosa &lt;- Alnus.rugosa[ -(which(Alnus.rugosa$collection==&quot;USDA Plants&quot;)), ]
+}
+
+## Get Alnus serrulata records
+Alnus.serrulata &lt;- gbif( genus=&quot;Alnus&quot;, species=&quot;serrulata*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Alnus.serrulata$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Alnus.serrulata &lt;- Alnus.serrulata[ -(which(Alnus.serrulata$collection==&quot;USDA Plants&quot;)), ]
+}
+
+## Get Rhamnus incana records
+Rhamnus.alnifolia &lt;- gbif( genus=&quot;Rhamnus&quot;, species=&quot;alnifolia*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Rhamnus.alnifolia$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Rhamnus.alnifolia &lt;- Rhamnus.alnifolia[ -(which(Rhamnus.alnifolia$collection==&quot;USDA Plants&quot;)), ]
+}
+
+## Get Hamamelis virginiana records (Witch Hazel)
+Hamamelis.virginiana &lt;- gbif( genus=&quot;Hamamelis&quot;, species=&quot;virginiana*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Hamamelis.virginiana$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Hamamelis.virginiana &lt;- Hamamelis.virginiana[ -(which(Hamamelis.virginiana$collection==&quot;USDA Plants&quot;)), ]
+}
+
+## Get Hamamelis macrophylla records (Witch Hazel - synonym)
+Hamamelis.macrophylla &lt;- gbif( genus=&quot;Hamamelis&quot;, species=&quot;macrophylla*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Hamamelis.macrophylla$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Hamamelis.macrophylla &lt;- Hamamelis.macrophylla[ -(which(Hamamelis.macrophylla$collection==&quot;USDA Plants&quot;)), ]
+}
+
+## Get Fraxinus americana records (White Ash)
+Fraxinus.americana &lt;- gbif( genus=&quot;Fraxinus&quot;, species=&quot;americana*&quot;, ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Fraxinus.americana$collection==&quot;USDA Plants&quot;)) &gt; 0 ) {
+  Fraxinus.americana &lt;- Fraxinus.americana[ -(which(Fraxinus.americana$collection==&quot;USDA Plants&quot;)), ]
+}
+
+## Pulling together all GBIF data together into one data.frame
+GBIF.Data &lt;- rbind( Alnus.incana,
+                    Alnus.rugosa,
+                    Alnus.serrulata,
+                    Fraxinus.americana,
+                    Hamamelis.macrophylla,
+                    Hamamelis.virginiana,
+                    Rhamnus.alnifolia,
+                    ## Also add Frangula data
+                    Rhamnus.frangula,
+                    Frangula.alnus
+)
+
+## Save a backup copy of the GBIF data
+GBIF.Data.bkup &lt;- GBIF.Data
+
+</code></pre>
+
+<p>As of 2013-05-15, there was a record in the GBIF dataset that had a 
+inaccurate date, which has to be removed.</p>
+
+<p>R code disabled</p>
+
+<pre><code>## Have to remove a point in the GBIF data in which the date information
+## is incorrect - year is listed as 2803
+GBIF.remove &lt;- grep(pattern=&quot;*2803*&quot;,x=GBIF.Data$earliestDateCollected)
+GBIF.Data &lt;- GBIF.Data[-GBIF.remove,]
+</code></pre>
+
+<h3>Seperate out date information</h3>
+
+<p>R code disabled</p>
+
+<pre><code>## First remove records without data information
+if ( length(which(is.na(GBIF.Data$earliestDateCollected))) ){
+  GBIF.Data &lt;- GBIF.Data[-(which(is.na(GBIF.Data$earliestDateCollected))), ]
+}
+## Next, get the date information
+GBIF.date &lt;- GBIF.Data$earliestDateCollected
+GBIF.date &lt;- t(sapply(GBIF.date,function(x) {unlist(strsplit(x=x,split=&quot;-&quot;))}))
+GBIF.date &lt;- data.frame( CollectionYear=as.character(GBIF.date[,1]),
+                         CollectionMonth=GBIF.date[,2],
+                         CollectionDay=GBIF.date[,3])
+## I use plyr later, which seems to have a problem working with
+## factor data. Also, I don&#39;t want to treat these values as 
+## factors anyway
+GBIF.date$CollectionYear &lt;- as.character(GBIF.date$CollectionYear)
+GBIF.date$CollectionMonth &lt;- as.character(GBIF.date$CollectionMonth)
+GBIF.date$CollectionDay &lt;- as.character(GBIF.date$CollectionDay)
+GBIF.Data &lt;- data.frame(GBIF.Data,GBIF.date)
+
+## Get the Rhamnus frangula and Frangula alnus records back
+R.frangula &lt;- which(grepl(pattern=&quot;Rhamnus frangula*&quot;,x=GBIF.Data$species))
+F.alnus &lt;- which(grepl(pattern=&quot;Frangula alnus*&quot;,x=GBIF.Data$species))
+GBIF.Data.FRAL &lt;- GBIF.Data[ (c(R.frangula,F.alnus)), ]
+
+## Now remove Fral Data from the GBIF records
+GBIF.Data &lt;- GBIF.Data[ -(c(R.frangula,F.alnus)), ] 
+</code></pre>
+
+<h3>Save these data</h3>
+
+<ul>
+<li>Write the FRAL dataset to disk</li>
+<li>Later in this document, combine these Associated Species with the
+other Associated Species data (from herbarium records) and save as one
+file</li>
+</ul>
+
+<pre><code>write.csv( GBIF.Data.FRAL, file=&#39;data/GBIF.FRAL.csv&#39;,
+            row.names=FALSE)
+
+# Save as a *.shp file as well
+coordinates(GBIF.Data.FRAL) &lt;- c(&#39;lon&#39;,&#39;lat&#39;)
+writeOGR(GBIF.Data.FRAL,dsn=&quot;data_gis/&quot;,layer=&quot;FRAL_GBIF&quot;,&quot;ESRI Shapefile&quot;,overwrite=TRUE)
+</code></pre>
+
+<h3>Plot these data and have a look at what GBIF has given us</h3>
+
+<p>R code disabled</p>
+
+<pre><code>## Get a simple background
+data(wrld_simpl)
+plot(wrld_simpl, xlim=c(xmin,xmax), ylim=c(ymin,ymax), axes=TRUE, col=&quot;light yellow&quot;)
+map(&quot;state&quot;,boundary=FALSE, col=&quot;gray&quot;, add=TRUE)
+## Plot other species
+points(Alnus.incana$lon, Alnus.incana$lat, col=&quot;green&quot;, pch=20, cex=0.75)
+points(Alnus.rugosa$lon, Alnus.rugosa$lat, col=&quot;green&quot;, pch=20, cex=0.75)
+points(Alnus.serrulata$lon, Alnus.serrulata$lat, col=&quot;green&quot;, pch=20, cex=0.75)
+points(Fraxinus.americana$lon, Fraxinus.americana$lat, col=&quot;green&quot;, pch=20, cex=0.75)
+points(Hamamelis.virginiana$lon, Hamamelis.virginiana$lat, col=&quot;green&quot;, pch=20, cex=0.75)
+points(Rhamnus.alnifolia$lon, Rhamnus.alnifolia$lat, col=&quot;green&quot;,pch=20,cex=0.75)
+## Plot Frangula alnus - only those occurences in GBIF (in orange)
+points(Frangula.alnus$lon, Frangula.alnus$lat, col=&quot;orange&quot;, pch=20, cex=0.5)
+points(Rhamnus.frangula$lon,Rhamnus.frangula$lat,col=&quot;orange&quot;,pch=20,cex=0.5)
+legend( -95, 55,
+        c(&#39;FRAL Herb&#39;,&#39;FRAL GBIF&#39;,&#39;Associates GBIF&#39;),
+        pch=c(20,20,20),
+        col=c(&#39;red&#39;,&#39;orange&#39;,&#39;green&#39;)
+)
+</code></pre>
+
+<h3>Get County Names for GBIF Data</h3>
+
+<p>For the US locations (i.e. excluding Canada), I want to get accurate Admin2 (i.e. County)
+level data.</p>
+
+<p>R code disabled</p>
+
+<pre><code>## Seperate US and Canadian GBIF.Data
+GBIF.Data.CA &lt;- subset(GBIF.Data,subset=GBIF.Data$country==&#39;Canada&#39;)
+GBIF.Data.US &lt;- subset(GBIF.Data,subset=GBIF.Data$country==&#39;United States&#39;)
+
+## Read in US county level shp file
+County.shp &lt;- readOGR(dsn=&#39;/Users/mlammens/Dropbox/gis_layers/countyp010.shp&#39;,
+                      layer=&#39;countyp010&#39;)
+## Define a spatialPoints object for GBIF data
+GBIF.US.Pts &lt;- SpatialPoints( cbind(GBIF.Data.US$lon,GBIF.Data.US$lat) )
+## Give this object the same project as counties, not exactly correct, but a close
+## enough approximation for my purposes
+projection(GBIF.US.Pts) &lt;- projection(County.shp)
+## Get county information for each point
+GBIF.US.Counties &lt;- over(x=GBIF.US.Pts,y=County.shp)
+
+## Add the county name information to GBIF.Data.US data.frame
+GBIF.Data.US$Admin2 &lt;- sub(pattern=&#39; County&#39;,replacement=&#39;&#39;,GBIF.US.Counties$COUNTY)
+
+## Do a little cleaning of the GBIF Counties, Check for mismatches,
+## and assume that for cases of mismatches, GBIF is correct
+# Remove the word County
+GBIF.Data.US$adm2 &lt;- sub(pattern=&#39; County&#39;,replacement=&#39;&#39;,GBIF.Data.US$adm2)
+# Remove Co.
+GBIF.Data.US$adm2 &lt;- sub(pattern=&#39; Co.&#39;,replacement=&#39;&#39;,GBIF.Data.US$adm2)
+# Clean trailing space
+GBIF.Data.US$adm2 &lt;- sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,GBIF.Data.US$adm2)
+# Change &#39;Prince Georges&#39; to &#39;Prince George&#39;s&#39;
+GBIF.Data.US$adm2 &lt;- sub(pattern=&quot;Prince Georges&quot;,replacement=&quot;Prince George&#39;s&quot;,GBIF.Data.US$adm2)
+
+length(which(GBIF.Data.US$adm2!=GBIF.Data.US$Admin2)) # A total of 38 - not bad
+  # and having a look at these, many of them are quirks with spelling or symbols
+  # which leads to a little more cleaning, and gets it down to 33
+GBIF.Data.US$adm2 &lt;- sub(pattern=&#39;La Porte&#39;,replacement=&#39;LaPorte&#39;,GBIF.Data.US$adm2)
+GBIF.Data.US$adm2 &lt;- sub(pattern=&#39;District ofumbia&#39;,replacement=&#39;District of Columbia&#39;,GBIF.Data.US$adm2)
+GBIF.Data.US$adm2 &lt;- sub(pattern=&#39; \\(ME\\)&#39;,replacement=&#39;&#39;,GBIF.Data.US$adm2)
+
+# Really what I wanted is to fill in NA values in adm2 from the overlay
+# So first find the records that are NA in adm2 AND NOT NA in Admin2
+adm2.na.to.fill &lt;- setdiff(which(is.na(GBIF.Data.US$adm2)),which(is.na(GBIF.Data.US$Admin2)))
+# And fill in the NAs
+GBIF.Data.US$adm2[adm2.na.to.fill] &lt;-
+  GBIF.Data.US$Admin2[adm2.na.to.fill]
+
+# Make a clean GBIF data.frame that can be combined easily with 
+# the herbarium data.frames
+GBIF_Clean_US &lt;- data.frame(
+  SpeciesName=GBIF.Data.US$species,
+  HerbariumCode=GBIF.Data.US$institution,
+  Source=&#39;GBIF Search&#39;,
+  Collector=GBIF.Data.US$collector,
+  RecordNumber=GBIF.Data.US$catalogNumber,
+  CollectionDay=as.numeric(GBIF.Data.US$CollectionDay),
+  CollectionMonth=as.numeric(GBIF.Data.US$CollectionMonth),
+  CollectionYear=as.numeric(GBIF.Data.US$CollectionYear),
+  Country=&#39;USA&#39;,
+  Admin1=GBIF.Data.US$adm1,
+  Admin2=GBIF.Data.US$adm2,
+  Admin3=NA,
+  Locality=GBIF.Data.US$locality,
+  Longitude=GBIF.Data.US$lon,
+  Latitude=GBIF.Data.US$lat,
+  CoordUncertainty=GBIF.Data.US$coordUncertaintyM,
+  LocationNotes=NA,
+  EcologyNotes=NA,
+  AnalysisNotes=NA,
+  Remove=NA,
+  CountyLevelOnly=0 )
+# Now Canadian Records
+GBIF_Clean_CA &lt;- data.frame(
+  SpeciesName=GBIF.Data.CA$species,
+  HerbariumCode=paste(GBIF.Data.CA$collection,GBIF.Data.CA$institution),
+  Source=&#39;GBIF Search&#39;,
+  Collector=GBIF.Data.CA$collector,
+  RecordNumber=GBIF.Data.CA$catalogNumber,
+  CollectionDay=as.numeric(GBIF.Data.CA$CollectionDay),
+  CollectionMonth=as.numeric(GBIF.Data.CA$CollectionMonth),
+  CollectionYear=as.numeric(GBIF.Data.CA$CollectionYear),
+  Country=&#39;Canada&#39;,
+  Admin1=GBIF.Data.CA$adm1,
+  Admin2=GBIF.Data.CA$adm2,
+  Admin3=NA,
+  Locality=NA,
+  Longitude=GBIF.Data.CA$lon,
+  Latitude=GBIF.Data.CA$lat,
+  CoordUncertainty=GBIF.Data.CA$coordUncertaintyM,
+  LocationNotes=GBIF.Data.CA$locality,
+  EcologyNotes=NA,
+  AnalysisNotes=NA,
+  Remove=NA,
+  CountyLevelOnly=0 )
+
+## Combine these two datasets
+GBIF_Clean &lt;- rbind(GBIF_Clean_CA,GBIF_Clean_US)
+
+## Clean up a few entries (again)
+# Remove any *leading* white space from Admin1 and Admin2
+GBIF_Clean$Admin1 &lt;- sub(pattern=&#39;^ +&#39;,replacement=&#39;&#39;,GBIF_Clean$Admin1)
+GBIF_Clean$Admin2 &lt;- sub(pattern=&#39;^ +&#39;,replacement=&#39;&#39;,GBIF_Clean$Admin2)
+
+# Remove any *trailing* white space from Admin1 and Admin2
+GBIF_Clean$Admin1 &lt;- sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,GBIF_Clean$Admin1)
+GBIF_Clean$Admin2 &lt;- sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,GBIF_Clean$Admin2)
+
+# Convert the state names to all UPPER CASE to make matching
+# to USPS codes easier
+GBIF_Clean$Admin1 &lt;- toupper(GBIF_Clean$Admin1)
+GBIF_Clean$Admin1 &lt;- sub(pattern=&quot;QUÉBEC&quot;,replacement=&quot;QUEBEC&quot;,GBIF_Clean$Admin1)
+
+# Mark records from iNaturalist as Remove=1
+GBIF_iNat &lt;- grep(pattern=&#39;*iNatural*&#39;,GBIF_Clean$HerbariumCode)
+GBIF_Clean$Remove[GBIF_iNat] &lt;- 1
+
+</code></pre>
+
+<hr/>
+
+<h2>Univeristy of Wisconsin Herbarium (WIS)</h2>
+
+<h3>Steps taken to gather data from Wisconsin State Herbarium</h3>
+
+<p>This requires a script I wrote specifically to scrape data from
+the Wisconsian State Herbarium. In order to use this script I 
+first had to navigate the website
+to get a http address to use in my rcurl call. I did this using
+the standard WisFlora interface and search</p>
+
+<p><strong>NOTE:</strong> I am documenting this as generic code, rather than an R script,
+to prevent it from being executed during knitting.</p>
+
+<pre><code>source(&#39;scripts/wisc_herb_scrape.R&#39;)
+
+Alnus.incana.http &lt;- Alnus.incana &lt;- &quot;http://www.botany.wisc.edu/cgi-bin/searchspecimen.cgi?SpCode=ALNINCsRUG&amp;Genus=Alnus&amp;Family=Betulaceae&amp;Species=incana&amp;Common=mountain%20alder%2C%20speckled%20alder%2C%20swamp%20alder&amp;start=1&amp;per_page=1000&amp;sortop=ACCESSION&quot;
+Alnus.incana.df &lt;- wisc_herb_scrape( Alnus.incana.http, &quot;Alnus incana&quot;)
+
+## Alnus rugosa is treated as a synonym of A.incana in this herbarium
+
+Rhamnus.alnifolia.http &lt;- &quot;http://www.botany.wisc.edu/cgi-bin/searchspecimen.cgi?SpCode=RHAALN&amp;Genus=Rhamnus&amp;Family=Rhamnaceae&amp;Species=alnifolia&amp;Common=alder%20buckthorn%2C%20alder-leaf%20buckthorn&amp;start=1&amp;per_page=1000&amp;sortop=ACCESSION&quot;
+Rhamnus.alnifolia.df &lt;- wisc_herb_scrape( Rhamnus.alnifolia.http, &quot;Rhamnus alnifolia&quot; )
+
+Fraxinus.americana.http &lt;- &quot;http://www.botany.wisc.edu/cgi-bin/searchspecimen.cgi?SpCode=FRAAME&amp;Genus=Fraxinus&amp;Family=Oleaceae&amp;Species=americana&amp;Common=white%20ash&amp;start=1&amp;per_page=1000&amp;sortop=ACCESSION&quot;
+Fraxinus.americana.df &lt;- wisc_herb_scrape( Fraxinus.americana.http, &quot;Fraxinus americana&quot; )
+
+Hamamelis.virginiana.http &lt;- &quot;http://www.botany.wisc.edu/cgi-bin/searchspecimen.cgi?SpCode=HAMVIR&amp;Genus=Hamamelis&amp;Family=Hamamelidaceae&amp;Species=virginiana&amp;Common=American%20witch-hazel&amp;start=1&amp;per_page=1000&amp;sortop=ACCESSION&quot;
+Hamamelis.virginiana.df &lt;- wisc_herb_scrape( Hamamelis.virginiana.http, &quot;Hamamelis virginiana&quot; )
+
+## Combine a full WIS data set
+Wisc.df &lt;- rbind(
+  Alnus.incana.df,
+  Rhamnus.alnifolia.df,
+  Fraxinus.americana.df,
+  Hamamelis.virginiana.df
+)
+
+## Write this data.frame to a csv file
+write.csv(x=Wisc.df, file=&quot;data/wisc_herb_df.csv&quot;,
+          row.names=FALSE)
+
+## IF the above has already been done, just read in the csv file
+Wisc.df &lt;- read.csv(&#39;data/wisc_herb_df.csv&#39;)
+</code></pre>
+
+<p>Below I have included <strong>depreciated</strong> scripting I used to try to get 
+lat/lon coordinates for counties using the <code>geocode</code> function in the
+<code>dismo</code> package. I have since developed another way to do this, but leave
+it here for reference and incase I find it helpful in the future.</p>
+
+<pre><code># ## Automatically Georeference the counties in Wisc.df. This requires 
+# ## a few steps.
+# ## Step 1. Remove references without county (Admin 2) information
+# if ( length(which(Wisc.df$Admin2==&#39;&#39;)) ){
+#   Wisc.df &lt;- Wisc.df[-which(Wisc.df$Admin2==&#39;&#39;),]
+# }
+# if ( length(which(Wisc.df$Admin1==&#39;&#39;)) ){
+#   Wisc.df &lt;- Wisc.df[-which(Wisc.df$Admin1==&#39;&#39;),]
+# }
+# ## Step 2. Make a character vector that consists of the County and State
+# ## seperated by a comma, to be used in `dismo::geocode`
+# CountyState &lt;- paste( as.character(Wisc.df$Admin2),
+#                       as.character(Wisc.df$Admin1),
+#                       sep=&#39;, &#39; )
+# ## Step 4. Only use the unique counties
+# CountyState.unique &lt;- unique( CountyState )
+# ## Step 3. Used `geocode` to get the lat/lon data. Because of data
+# ## use restrictions from Google, have to slow this process down a 
+# ## little
+# CountyLatLon &lt;- c()
+# for( county in CountyState.unique ){
+#   Sys.sleep(0.2)
+#   county.latlon &lt;- geocode( county,oneRecord=TRUE)[3:4]
+#   CountyLatLon &lt;- rbind(CountyLatLon, county.latlon)
+# }
+# ## Combine the longitude and latitude values with the County name
+# CountyState.split &lt;- sapply(CountyState.unique, 
+#                             function(x) {unlist(strsplit( x, split=&#39;,&#39;))} )
+# CountyState.split &lt;- t(CountyState.split)
+# CountyLatLon.df &lt;- data.frame( Admin2=CountyState.split[,1],
+#                                Admin1=CountyState.split[,2],
+#                                Longitude=CountyLatLon$longitude,
+#                                Latitude=CountyLatLon$latitude)
+# write.csv(CountyLatLon.df,file=&#39;data/Wisc_herb_CountyLatLon.csv&#39;,
+#           row.names=FALSE)
+</code></pre>
+
+<hr/>
+
+<h2>University of Minnesota Herbarium (MIN)</h2>
+
+<p>These data are accessible from an online search, but as downloaded in *.csv format
+they are not increadibly useful. In particular, all of the spatial information is
+grouped together in a single cell if you open the *.csv file in Excel.</p>
+
+<p>I employ a sequence of regular expression search and replace operations to 
+make these data more usefull. I carryout the search and replace operations in 
+TextWrangler. Here are the exact steps:</p>
+
+<h3>Step 1. Remove lines that are blank</h3>
+
+<p>Find = ^\r</p>
+
+<p>Replace = [empty]</p>
+
+<h3>Step 2. Merge the ID line with the 1st information line</h3>
+
+<p>Find = (.*[species name].*)\r</p>
+
+<p>Replace = \1&quot;,&ldquo;</p>
+
+<h3>Step 3. Merge this <em>new</em> first line with the start of the locality information</h3>
+
+<p>Find = (.*[species name].*)\r</p>
+
+<p>Replace = \1</p>
+
+<h3>Step 4. Remove lines that only have quotation marks (&rdquo;) on them</h3>
+
+<p>Find = ^&ldquo;\r</p>
+
+<p>Replace = [empty]</p>
+
+<h3>Step 5. Remove Coordinate Lines</h3>
+
+<p>Find = ^\d+.\d+&rdquo;*\r</p>
+
+<p>Replace = [empty]</p>
+
+<h3>Step 6. Merge the Species line with the next line, usually the locality information</h3>
+
+<p>Find = (.*[species name].*)\r</p>
+
+<p>Replace = \1&quot;,</p>
+
+<h3>Step 7. Fix lines that have a &ldquo;&rdquo;, occurence</h3>
+
+<p>Find = (.*)&ldquo;&rdquo;,(.*)\r</p>
+
+<p>Replace = \1&quot;\2&quot;,</p>
+
+<h3>Step 8. Convert the dates from [Year]-[MO]-[DA] to [DA],[MO],[Year]</h3>
+
+<p>Find = (.*)(\d\d\d\d)-(\d\d)-(\d\d)(.*)</p>
+
+<p>Replace = \1\4,\3,\2\5</p>
+
+<h3>Final cleaning</h3>
+
+<p>The above search and replace steps get me most of the way to a clean text file
+that I can read using Excel, but the file still requires a little bit of hand pruining, 
+particularly for locations that occur in a park or forest for some reason (named place?).</p>
+
+<h3>Combining with other records</h3>
+
+<p>I combined these data with the dataset constucted for the Wisconsin Flora 
+dataset. To do this, I did simple &ldquo;cut and paste&rdquo; procedures in Excel, cutting
+only the columns I was interested in from the &#39;Cleaned&#39; data to the &#39;Combined&#39; data.
+In retrospect, I could have read the *.csv files into R and combined only the columns
+I wanted, but I did not do that here. In the future, I will try this instead.</p>
+
+<hr/>
+
+<h2>Ohio State Univeristy Herbarium (OS)</h2>
+
+<p>General information for this herbarium can be found 
+<a href="http://herbarium.osu.edu/">here</a>. 
+Currently the OSU Herbarium has two datasets available for online search - 
+the <strong>vascular flora of Ohio</strong> and their type specimens. I&#39;m taking advantage of the former.  </p>
+
+<ol>
+<li>I downloaded the files available after using the OSU search interface, which were all in *.xml format</li>
+<li>The *.xml files were open in Excel and saved as *.xlsx files</li>
+<li>I combined the Rhamnus frangula and Frangula alnus results into the Rhamnus_frangula_OC_RAW.xlsx file</li>
+<li>Deleted several columns from combined datasets here, but kept the records needed to match previously collected datasets and compiled datasets</li>
+<li>I removed records without Collection Date information</li>
+<li>I also removed records that had no collector information</li>
+<li>I added the Rhamnus frangula data to the compiled Frangula alnus data set, adding a column indicating whether a record was CountyLevelOnly (0,1)</li>
+<li>I added the rest of the data (i.e. non FRAL) to the data scraped from the Wisconsin herbarium, in a new *.csv named &#39;Associated_Spec_Compiled.csv&#39;</li>
+</ol>
+
+<hr/>
+
+<h2>The Morton Arboretum Herbarium - Illinois (MOR)</h2>
+
+<p>General information about this herbarium can be found 
+<a href="http://www.mortonarb.org/plant-systematics/herbarium.html">here</a>.
+I used the search interface on this website and downloaded CSV files for
+five of the six species names in my &#39;Group of Associated Species&#39;.</p>
+
+<h3>Process these data to add to the Associated_Spec data</h3>
+
+<p>R code disabled</p>
+
+<pre><code># Get a list of the MOR data
+mor.files &lt;- list.files(path=&#39;~/Dropbox/F-Alnus-DB/Herbarium-Project/Collected-Data/&#39;,
+                        pattern=&#39;MOR_RAW&#39;,full.names=TRUE)
+# Read in all of the csv files
+mor.raw &lt;- lapply(mor.files,read.csv)
+
+# Use plyr to merge into one data.frame
+require(plyr)
+mor.all &lt;- ldply(mor.raw, data.frame)
+
+# Clean a few county occurences
+mor.all$hrb_subctry2 &lt;- sub(pattern=&#39;DUPAGE&#39;,replacement=&#39;DuPage&#39;,mor.all$hrb_subctry2)
+mor.all$hrb_subctry2 &lt;- sub(pattern=&#39;KANKAKEE&#39;,replacement=&#39;Kankakee&#39;,mor.all$hrb_subctry2)
+
+# Seperate the date information
+mor.coll.date &lt;- t(sapply(
+  strsplit(as.character(mor.all$hrb_coll_date),split=&quot;-&quot;),
+  unlist))
+
+Mor_Clean &lt;- data.frame(
+  SpeciesName=paste(mor.all$genus_name,mor.all$species_name),
+  HerbariumCode=&#39;MOR&#39;,
+  Source=&#39;http://quercus.mortonarb.org/&#39;,
+  Collector=mor.all$hrb_collector_primary,
+  RecordNumber=mor.all$hrb_herb_nbr,
+  CollectionDay=as.numeric(mor.coll.date[,3]),
+  CollectionMonth=as.numeric(mor.coll.date[,2]),
+  CollectionYear=as.numeric(mor.coll.date[,1]),
+  Country=&#39;USA&#39;,
+  Admin1=sub(pattern=&quot;IL&quot;,replacement=&quot;Illinois&quot;,mor.all$hrb_subctry1),
+  Admin2=mor.all$hrb_subctry2,
+  Admin3=NA,
+  Locality=NA,
+  Longitude=NA,
+  Latitude=NA,
+  CoordUncertainty=NA,
+  LocationNotes=mor.all$hrb_site,
+  EcologyNotes=NA,
+  AnalysisNotes=NA,
+  Remove=NA,
+  CountyLevelOnly=1 )
+
+</code></pre>
+
+<hr/>
+
+<h2>Michigan State University Herbarium (MSC)</h2>
+
+<p>General information about this herbarium can be found
+<a href="http://www.herbarium.msu.edu/">here</a>. The search interface for this
+herbarium can be from this main page, or by going directly to the 
+<a href="http://herbarium.lib.msu.edu:8080/VascBasicWebC/">search page</a>. To search
+by genus/species name, I used the 
+<a href="http://herbarium.lib.msu.edu:8080/VascBasicWebC/advanced.jsp">advance search features</a>.</p>
+
+<h3>Process these data to add to the Associated_Spec data</h3>
+
+<p>R code disabled</p>
+
+<pre><code># Get a list of the MSC data
+msc.files &lt;- list.files(path=&#39;~/Dropbox/F-Alnus-DB/Herbarium-Project/Collected-Data/&#39;,
+                        pattern=&#39;MSC_RAW&#39;,full.names=TRUE)
+# Read in all of the csv files
+msc.raw &lt;- lapply(msc.files,read.csv)
+
+# Use plyr to merge into one data.frame
+require(plyr)
+msc.all &lt;- ldply(msc.raw, data.frame)
+
+# Use `lubridate` package to make dates look ok
+msc.dates &lt;- dmy(as.character(msc.all$Date))
+# Remove the &quot; UTC&quot; part
+msc.dates &lt;- sapply(msc.dates,function(x){sub(pattern=&#39; UTC&#39;,replacement=&#39;&#39;,x)})
+# Identify the dates that didn&#39;t convert correctly
+msc.dates.incomplete &lt;- which(is.na(msc.dates))
+# Split the dates, creating a list
+msc.coll.date &lt;- strsplit(as.character(msc.dates),split=&quot;-&quot;)
+# Make the missing dates three NAs
+for( IND in msc.dates.incomplete ){
+  msc.coll.date[[IND]] &lt;- rep(NA,3)
+}
+# Unlist the dates
+msc.coll.date&lt;- t(sapply(msc.coll.date,unlist))  
+# Get just the years for the missing dates
+msc.coll.date[msc.dates.incomplete,1] &lt;- 
+  sub(pattern=&#39;.*/&#39;,replacement=&#39;&#39;,msc.all$Date[msc.dates.incomplete])
+
+MSC_Clean &lt;- data.frame(
+  SpeciesName=paste(msc.all$Genus.Taxon.Name,msc.all$Species.Taxon.Name),
+  HerbariumCode=&#39;MSC&#39;,
+  Source=&#39;http://www.herbarium.msu.edu/&#39;,
+  Collector=msc.all$Last.Name,
+  RecordNumber=msc.all$Bar.Code..,
+  CollectionDay=as.numeric(msc.coll.date[,3]),
+  CollectionMonth=as.numeric(msc.coll.date[,2]),
+  CollectionYear=as.numeric(msc.coll.date[,1]),
+  Country=&#39;USA&#39;,
+  Admin1=msc.all$State,
+  Admin2=sub(pattern=&quot;Saint&quot;,replacement=&quot;St.&quot;,msc.all$County),
+  Admin3=NA,
+  Locality=NA,
+  Longitude=NA,
+  Latitude=NA,
+  CoordUncertainty=NA,
+  LocationNotes=msc.all$Verbatim.Locality,
+  EcologyNotes=msc.all$Verbatim.Habitat,
+  AnalysisNotes=NA,
+  Remove=NA,
+  CountyLevelOnly=1 )
+
+</code></pre>
+
+<hr/>
+
+<h2>Brooklyn Botanical Garden (BKL)</h2>
+
+<p>BBG is similar to Wisconsin that the data are readily avaialbe on the web,
+but there is no clear way to &#39;bulk download&#39; recrod informaiton. So, I used
+the <code>wisc\_herb\_scrape.R</code> script as a template, and wrote a <code>bbg\_herb\_scrape.R</code>
+script. </p>
+
+<p>R code disabled</p>
+
+<pre><code>## Source bbg_herb_scrape.R
+source(&#39;scripts/bbg_herb_scrape.R&#39;)
+
+Rhamnus.alnifolia.http &lt;- &quot;http://www.bbg.org/the-herbarium/ailanthus/search.php?search_num=1&amp;family=&amp;state=&amp;locality=&amp;county=&amp;collector=&amp;from_date_year=&amp;scientific_name=rhamnus+alnifolia&amp;sort=unsorted&amp;records=25&amp;submit=Search&quot;
+R.alnifolia.bbg &lt;- bbg_herb_scrape(http.link=Rhamnus.alnifolia.http,species.name=&quot;Rhamnus alnifolia&quot;)
+
+Fraxinus.americana.http &lt;- &quot;http://www.bbg.org/the-herbarium/ailanthus/search.php?search_num=1&amp;family=&amp;state=&amp;locality=&amp;county=&amp;collector=&amp;from_date_year=&amp;scientific_name=fraxinus+americana&amp;sort=unsorted&amp;records=100&amp;submit=Search&quot;
+F.americana.bbg &lt;- bbg_herb_scrape(http.link=Fraxinus.americana.http,species.name=&quot;Fraxinus americana&quot;)
+
+Alnus.incana.http &lt;- &quot;http://www.bbg.org/the-herbarium/ailanthus/search.php?search_num=1&amp;family=&amp;state=&amp;locality=&amp;county=&amp;collector=&amp;from_date_year=&amp;scientific_name=alnus+incana&amp;sort=unsorted&amp;records=100&amp;submit=Search&quot;
+A.incana.bbg &lt;- bbg_herb_scrape(http.link=Alnus.incana.http,species.name=&quot;Alnus incana&quot;)
+
+Alnus.rugosa.http &lt;- &quot;http://www.bbg.org/the-herbarium/ailanthus/search.php?search_num=1&amp;family=&amp;state=&amp;locality=&amp;county=&amp;collector=&amp;from_date_year=&amp;scientific_name=alnus+rugosa&amp;sort=unsorted&amp;records=100&amp;submit=Search&quot;
+A.rugosa.bbg &lt;- bbg_herb_scrape(http.link=Alnus.rugosa.http,species.name=&quot;Alnus rugosa&quot;)
+
+Alnus.serrulata.http &lt;- &quot;http://www.bbg.org/the-herbarium/ailanthus/search.php?search_num=1&amp;family=&amp;state=&amp;locality=&amp;county=&amp;collector=&amp;from_date_year=&amp;scientific_name=alnus+serrulata&amp;sort=unsorted&amp;records=100&amp;submit=Search&quot;
+A.serrulata.bbg &lt;- bbg_herb_scrape(http.link=Alnus.serrulata.http,species.name=&quot;Alnus serrulata&quot;)
+
+Hamamelis.virginiana.http &lt;- &quot;http://www.bbg.org/the-herbarium/ailanthus/search.php?search_num=1&amp;family=&amp;state=&amp;locality=&amp;county=&amp;collector=&amp;from_date_year=&amp;scientific_name=hamamelis+virginiana&amp;sort=unsorted&amp;records=100&amp;submit=Search&quot;
+H.virginiana.bbg &lt;- bbg_herb_scrape(http.link=Hamamelis.virginiana.http,species.name=&quot;Hamamelis virginiana&quot;)
+
+## Hamamelis.macrophylla is a synonymn for H. virginiana in this database
+
+BBG.Herb.df &lt;- rbind(
+  A.incana.bbg,
+  A.rugosa.bbg,
+  A.serrulata.bbg,
+  R.alnifolia.bbg,
+  F.americana.bbg,
+  H.virginiana.bbg )
+
+## Now make a BBG_Clean dataset
+
+BBG_Clean &lt;- data.frame(
+  SpeciesName=BBG.Herb.df$SpeciesName,
+  HerbariumCode=&#39;BKL&#39;,
+  Source=BBG.Herb.df$Source,
+  Collector=BBG.Herb.df$Collector,
+  RecordNumber=BBG.Herb.df$RecordNumber,
+  CollectionDay=NA,
+  CollectionMonth=BBG.Herb.df$CollectionMonth,
+  CollectionYear=BBG.Herb.df$CollectionYear,
+  Country=&#39;USA&#39;,
+  Admin1=BBG.Herb.df$Admin1,
+  Admin2=BBG.Herb.df$Admin2,
+  Admin3=BBG.Herb.df$Admin3,
+  Locality=BBG.Herb.df$Locality,
+  Longitude=NA,
+  Latitude=NA,
+  CoordUncertainty=NA,
+  LocationNotes=NA,
+  EcologyNotes=NA,
+  AnalysisNotes=NA,
+  Remove=NA,
+  CountyLevelOnly=1 )
+
+
+</code></pre>
+
+<hr/>
+
+<h2>Carnegie Museum of Natural History (CM)</h2>
+
+<p>I received information from 1500 herbarium records from Bonnie Isaac, 
+Collection Manager at the Carnegie Museum of Natural History. She has 
+previously sent me similar information for <em>F. alnus</em>. Basic information
+on the collection can be found <a href="http://www.carnegiemnh.org/botany/collection.html">here</a>.</p>
+
+<h3>Lat/Long Coords</h3>
+
+<p>There were quite a large number of records with latitude and longitude coordinates
+in this dataset (approx 313), so am going to use them. I did a small number of
+cleaning steps in the Raw data, which included:</p>
+
+<ul>
+<li>Making a longitude column</li>
+<li>Spliting the Lat/Lon column for the 300+ records that I plan to use</li>
+<li>Replacing all symbols seperating degrees, minutes, and seconds by white space</li>
+<li>Removing N and W letters, as well as, NAD83 letters</li>
+</ul>
+
+<p>R code disabled</p>
+
+<pre><code># Read in CM Associates data
+cm &lt;- read.csv(&#39;~/Dropbox/F-Alnus-DB/Herbarium-Project/Collected-Data/Associates_CM_RAW.csv&#39;)
+
+## Clean Lat/Long Columns
+# First determine which records to use lat/long coords from
+# - these will be the records that have non-zero LONG values
+lat.lon.coords &lt;- which(cm$LONG!=&#39;&#39;)
+lon.dms &lt;- as.character(cm$LONG[lat.lon.coords])
+lat.dms &lt;- as.character(cm$LAT[lat.lon.coords])
+
+# Write a function that converst DMS to DD
+DMS.to.DD &lt;- function( dms ){
+  # Clean leading and trailing white space
+  dms &lt;-  sub(pattern=&#39;^ +&#39;,replacement=&#39;&#39;,dms)
+  dms &lt;-  sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,dms)
+  # Split values
+  dms.split &lt;- strsplit(x=dms,split=&#39; &#39;)
+  # Pad list elements with 0s
+  zero.pad &lt;- function( Vector ){
+    while(length(Vector)&lt;3) {
+      Vector &lt;- c(Vector,&#39;0&#39;)
+      }
+    return(Vector)
+    }
+  dms.split &lt;- lapply(X=dms.split,FUN=zero.pad)
+  dms.mat &lt;- do.call(rbind,dms.split)
+  dms.df &lt;- data.frame( deg=as.numeric(dms.mat[,1]), 
+                        min=as.numeric(dms.mat[,2]),
+                        sec=as.numeric(dms.mat[,3]) )
+  dms.DD &lt;- as.numeric(dms.df$deg) +
+    (as.numeric(dms.df$min)/60) +
+    (as.numeric(dms.df$sec)/60/60)
+  return(dms.DD)
+}
+lat.dd &lt;- DMS.to.DD(lat.dms)
+lon.dd &lt;- -(DMS.to.DD(lon.dms))
+
+# Now add the LAT/LON values to the full LAT/LON vectors
+LONG &lt;- rep(NA,length(cm$LONG))
+LONG[lat.lon.coords] &lt;- lon.dd
+LAT &lt;- rep(NA,length(cm$LAT))
+LAT[lat.lon.coords] &lt;- lat.dd
+# County Level Vector
+CountyLevel &lt;- rep(1,length(cm$LONG))
+CountyLevel[lat.lon.coords] &lt;- 0
+
+# Sort collumns into unform &#39;Clean&#39; format
+CM_Clean &lt;- data.frame(
+  SpeciesName=paste(cm$GENUS,cm$SPECIES),
+  HerbariumCode=&#39;CM&#39;,
+  Source=&#39;CM Collection Manager&#39;,
+  Collector=cm$COLLECTOR.S.,
+  RecordNumber=cm$UNIQUE.,
+  CollectionDay=cm$DAY,
+  # Take advantage of Rs internal month.abb values to assing numbers to months with correct abbs,
+  # NA otherwise
+  CollectionMonth=match(as.character(cm$MONTH),month.abb), 
+  CollectionYear=cm$YEAR,
+  Country=&#39;USA&#39;,
+  Admin1=cm$STATE,
+  Admin2=cm$COUNTY,
+  Admin3=NA,
+  Locality=NA,
+  Longitude=LONG,
+  Latitude=LAT,
+  CoordUncertainty=NA,
+  LocationNotes=cm$LOCALITY,
+  EcologyNotes=cm$HABITAT,
+  AnalysisNotes=NA,
+  Remove=NA,
+  CountyLevelOnly=CountyLevel )
+
+</code></pre>
+
+<hr/>
+
+<h2>Combining and Cleaning the Associated Species dataset</h2>
+
+<p>There are a few random cleaning tasks required, such as removing unnecessary white space,
+checking on spelling and what not.</p>
+
+<p>R code disabled</p>
+
+<pre><code># Read in the *.csv file
+Associated_Spec &lt;- read.csv(&#39;/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/data/Associated_Spec_Compiled_ORIG.csv&#39;)
+# Get the original columns names, since these will change with the georef of counties
+Associated_Spec_colNames &lt;- names(Associated_Spec)
+
+# Combine these data with the MOR data
+Associated_Spec &lt;- rbind(Associated_Spec,Mor_Clean)
+# And the MSC data
+Associated_Spec &lt;- rbind(Associated_Spec,MSC_Clean)
+# And the BBG data
+Associated_Spec &lt;- rbind(Associated_Spec,BBG_Clean)
+# And the CM data
+Associated_Spec &lt;- rbind(Associated_Spec,CM_Clean)
+
+# What&#39;s the total number of records? 
+nrow(Associated_Spec) # At this point = 4481 records
+
+# What&#39;s the distribution among the three herbaria?
+table(Associated_Spec$HerbariumCode)
+
+# What about among species?
+table(Associated_Spec$SpeciesName)
+</code></pre>
+
+<p>There are a fair number of sub-species included here, but overall it seems like
+<em>Alnus incana</em>, Grey alder or Speckled alder, 
+is the most common, which is kind of what I expected.</p>
+
+<p>R code disabled</p>
+
+<pre><code># Remove any *leading* white space from Admin1 and Admin2
+Associated_Spec$Admin1 &lt;- sub(pattern=&#39;^ +&#39;,replacement=&#39;&#39;,Associated_Spec$Admin1)
+Associated_Spec$Admin2 &lt;- sub(pattern=&#39;^ +&#39;,replacement=&#39;&#39;,Associated_Spec$Admin2)
+
+# Remove any *trailing* white space from Admin1 and Admin2
+Associated_Spec$Admin1 &lt;- sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,Associated_Spec$Admin1)
+Associated_Spec$Admin2 &lt;- sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,Associated_Spec$Admin2)
+
+# Convert the state names to all UPPER CASE to make matching
+# to USPS codes easier
+Associated_Spec$Admin1 &lt;- toupper(Associated_Spec$Admin1)
+
+# What does the distribution among states look like?
+table(Associated_Spec$Admin1)
+
+# What about counties?
+table(Associated_Spec$Admin2)
+
+# Make sure all St. Whereever have the period (.) after the St
+Associated_Spec$Admin2 &lt;- sub(pattern=&#39;St &#39;,replacement=&#39;St. &#39;,Associated_Spec$Admin2)
+
+# Read in the State Abbreviations
+State_Abb &lt;- read.csv(&#39;~/Dropbox/gis_layers/Gaz_State_Abbrevations.csv&#39;)
+
+# Add the state abbreviations to the Associated_Spec dataset
+Associated_Spec &lt;- merge(Associated_Spec,State_Abb,by.x=&#39;Admin1&#39;,by.y=&#39;STATE&#39;)
+
+</code></pre>
+
+<hr/>
+
+<h2>Georeferencing of records at the County Level</h2>
+
+<p>I&#39;m going to georeference each of these locations at the county level, using
+data from the US Census Burea. Specifically I am using data from the 
+<strong>US Census Gazetteer</strong>
+aquired from this website: 
+<a href="http://www.census.gov/geo/maps-data/data/gazetteer2010.html">http://www.census.gov/geo/maps-data/data/gazetteer2010.html</a> </p>
+
+<p>I downloaded the &#39;Counties&#39; dataset as a *.txt file. I opened it in Excel and saved
+it as a *.csv file. I also copied the metadata information from this website and saved
+it as a seperate *.txt file. All of the Gazatteer files are currently stored in my 
+&#39;gis_layers&#39; direcotry in my Dropbox.</p>
+
+<p>R code disabled</p>
+
+<pre><code># Read in the counties *.csv file
+Counties &lt;- read.csv(&#39;~/Dropbox/gis_layers/Gaz_counties_national.csv&#39;)
+# Remove the word &#39;County&#39; in the &#39;NAME&#39; column
+Counties$NAME &lt;- sub(pattern=&#39; County&#39;,replacement=&#39;&#39;,Counties$NAME)
+
+# First subset the Associated_Spec that have county AND lat/lon data already
+Associated_Spec_LATLON &lt;- Associated_Spec[which(Associated_Spec$CountyLevelOnly==0),]
+# Then county level only
+Associated_Spec_CNTY &lt;- Associated_Spec[which(Associated_Spec$CountyLevelOnly==1),]
+
+# Merge the county informaiton with the Associated_Spec data.frame. 
+# **NOTE** this will remove any records that do not have county level
+# information.
+Associated_Spec_CNTY &lt;- merge(Associated_Spec_CNTY,Counties,
+                         by.x=c(&#39;USPS_CODE&#39;,&#39;Admin2&#39;),by.y=c(&#39;USPS&#39;,&#39;NAME&#39;))
+# How many records remaining?
+nrow(Associated_Spec_CNTY) # 4121 - only lost 40 records
+
+# Calculate a coordinate uncertainty value for these records
+# Base the uncertainty on the radius of a circle of the area
+# of the count. This is a rough approximation.
+Associated_Spec_CNTY$CoordUncertainty &lt;- sqrt(Associated_Spec_CNTY$ALAND/pi)
+
+# Set the nomral Longitude and Latidue columns as the interpreted lon/lat
+Associated_Spec_CNTY$Longitude &lt;- Associated_Spec_CNTY$INTPTLONG
+Associated_Spec_CNTY$Latitude &lt;- Associated_Spec_CNTY$INTPTLAT
+
+# Get rid of all of the extra columns added to georef counties
+Associated_Spec_CNTY &lt;- Associated_Spec_CNTY[ Associated_Spec_colNames ]
+# Similar for LATLON
+Associated_Spec_LATLON &lt;- Associated_Spec_LATLON[ Associated_Spec_colNames ]
+
+# Merge the CNTY and LATLON data.frames back togther
+Associated_Spec &lt;- rbind( Associated_Spec_LATLON, Associated_Spec_CNTY )
+
+</code></pre>
+
+<hr/>
+
+<h2>Combine Herbarium Associated Species and the GBIF Data</h2>
+
+<p>R code disabled</p>
+
+<pre><code># `rbind` county level georefed data from above with GBIF data
+Associated_Spec &lt;- rbind(Associated_Spec,GBIF_Clean)
+</code></pre>
+
+<h2>Data exclusions</h2>
+
+<p>As I did with the FRAL data, I&#39;m excluding some data points. Here are a few of the 
+general exclusion criteria.</p>
+
+<h3>A specimen is noted as being cultivated, or suspected of being cultivated</h3>
+
+<p>R code disabled</p>
+
+<pre><code>Assoc.Cult &lt;- grep(pattern=&#39;*cultiv*&#39;,Associated_Spec$EcologyNotes)
+Associated_Spec &lt;- Associated_Spec[-Assoc.Cult,]
+Assoc.Cult &lt;- grep(pattern=&#39;*Cultiv*&#39;,Associated_Spec$EcologyNotes)
+Associated_Spec &lt;- Associated_Spec[-Assoc.Cult,]
+Assoc.Cult &lt;- grep(pattern=&#39;*c*C*ultiv*&#39;,Associated_Spec$Locality)
+Associated_Spec &lt;- Associated_Spec[-Assoc.Cult,]
+
+</code></pre>
+
+<ul>
+<li>A specimen is document outside of the area of interest for my study.
+
+<ul>
+<li><strong>Addendum</strong> This is unneseccary,
+because every record is assigned a lat/long (either by County lat/long or georef. 
+lat/long) and then all records whose lat/long value does not fall into one of the 
+30 arc minute grids covering my study region are removed. Thus, the records are
+masked by my study region.</li>
+</ul></li>
+</ul>
+
+<hr/>
+
+<h2>Write new files</h2>
+
+<p>R code disabled</p>
+
+<pre><code># Write this data.set to file
+write.csv(Associated_Spec,
+          file=&#39;/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/data/Associated_Spec_Compiled.csv&#39;,
+          row.names=FALSE)
+
+# Make this data set into a spatialPoints data frame
+coordinates(Associated_Spec) &lt;- c(&#39;Longitude&#39;,&#39;Latitude&#39;)
+# Write this spatial data.frame to a *.shp file
+writeOGR(Associated_Spec,dsn=&quot;data_gis/&quot;,layer=&quot;Associated_Spec&quot;,&quot;ESRI Shapefile&quot;,overwrite=TRUE)
+# Make the data set into a normal data frame again
+Associated_Spec &lt;- as.data.frame(Associated_Spec)
+
+</code></pre>
+
+<hr/>
+
+<h2>FRAL Data Cleaning and Spatial Layer construction</h2>
+
+<p>I have previously manually constructed a dataset of FRAL records, the process
+of which is documented in Chapter 3 of my dissertation. Here I am reading in this layer,
+cleaning the data entries a little, and making a GIS layer for these data.</p>
+
+<p>R code disabled</p>
+
+<pre><code>## Read in the original dataset
+Fral.Herb.Orig &lt;- read.csv(&#39;data/Herb-F-alnus-Compiled_ORIG.csv&#39;)
+
+## Clean up a few entries
+FRAL_Clean &lt;- Fral.Herb.Orig
+
+# Remove any *leading* white space from Admin1 and Admin2
+FRAL_Clean$Country &lt;- sub(pattern=&#39;^ +&#39;,replacement=&#39;&#39;,FRAL_Clean$Country)
+FRAL_Clean$Admin1 &lt;- sub(pattern=&#39;^ +&#39;,replacement=&#39;&#39;,FRAL_Clean$Admin1)
+FRAL_Clean$Admin2 &lt;- sub(pattern=&#39;^ +&#39;,replacement=&#39;&#39;,FRAL_Clean$Admin2)
+
+# Remove any *trailing* white space from Admin1 and Admin2
+FRAL_Clean$Country &lt;- sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,FRAL_Clean$Country)
+FRAL_Clean$Admin1 &lt;- sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,FRAL_Clean$Admin1)
+FRAL_Clean$Admin2 &lt;- sub(pattern=&#39; +$&#39;,replacement=&#39;&#39;,FRAL_Clean$Admin2)
+
+# Convert the state names to all UPPER CASE to make matching
+# to USPS codes easier
+FRAL_Clean$Admin1 &lt;- toupper(FRAL_Clean$Admin1)
+
+# If the county level has a &#39;St &#39; in it, convert to &#39;St. &#39;
+FRAL_Clean$Admin2 &lt;- sub(pattern=&#39;St &#39;,replacement=&#39;St. &#39;,FRAL_Clean$Admin2)
+
+# How many records?
+nrow(FRAL_Clean) # 752
+</code></pre>
+
+<h3>Georeferencing counties</h3>
+
+<p>First let&#39;s georeference the CountyLevelOnly data. Note I&#39;m assuming
+that the section titled <strong>Georeferencing of records at the County Level</strong>
+was previously run in this environment.</p>
+
+<p>R code disabled</p>
+
+<pre><code># Get indexs for county level only
+FRAL.cnt.only &lt;- which(FRAL_Clean$CountyLevelOnly==1)
+# Get the State and County names for the &#39;CountyLevelOnly==1&#39; data
+FRAL.cnt.Names &lt;- FRAL_Clean[FRAL.cnt.only,c(&quot;Admin1&quot;,&quot;Admin2&quot;)]
+# Add a column that indexs the orginal order of these records
+FRAL.cnt.Names$Orig.Order &lt;- seq(from=1,to=nrow(FRAL.cnt.Names))
+
+# First get the State Abbreviations
+FRAL.cnt.Names &lt;- merge( FRAL.cnt.Names, State_Abb,by.x=&#39;Admin1&#39;,by.y=&#39;STATE&#39; )
+# Now merge with the County information
+FRAL.cnt.Names &lt;- merge( FRAL.cnt.Names,Counties,
+                         by.x=c(&#39;USPS_CODE&#39;,&#39;Admin2&#39;),by.y=c(&#39;USPS&#39;,&#39;NAME&#39;))
+
+# Now re-order it back to the original order
+FRAL.cnt.Names &lt;- FRAL.cnt.Names[ order(FRAL.cnt.Names$Orig.Order), ]
+
+# Assigne Long/Lat values in the original data.frame
+FRAL_Clean$Longitude[FRAL.cnt.only] &lt;- FRAL.cnt.Names$INTPTLONG
+FRAL_Clean$Latitude[FRAL.cnt.only] &lt;- FRAL.cnt.Names$INTPTLAT
+# And uncertainty values
+FRAL_Clean$CoordUncertainty[FRAL.cnt.only] &lt;- sqrt(FRAL.cnt.Names$ALAND/pi)
+
+</code></pre>
+
+<p>Some of the records that are in the US are missing Admin2 (County) information.
+The CA records I cannot easily georef to county.</p>
+
+<p>TODO - Do this for Admin1 Level Data too. I had to hand fix several
+records from the Brooklyn Botanical Garden. I manually assigned Admin1 (States)
+to several records.</p>
+
+<p>R code disabled</p>
+
+<pre><code># Get the rows of FRAL_Clean that are missing Admin2 data and in the US
+FRAL.missing.adm2 &lt;- which(FRAL_Clean$Admin2==&#39;&#39; &amp; FRAL_Clean$Country==&#39;United States&#39;)
+
+# Make a spatial points object for this records
+FRAL.missing.adm2.pts &lt;- SpatialPoints( FRAL_Clean[ FRAL.missing.adm2,c(&quot;Longitude&quot;,&quot;Latitude&quot;) ] )
+# Assign county layer projection
+projection(FRAL.missing.adm2.pts) &lt;- projection(County.shp)
+# Get county information
+FRAL.missing.counties &lt;- over(x=FRAL.missing.adm2.pts,y=County.shp)
+# Assing the missing county values
+FRAL_Clean[FRAL.missing.adm2,&quot;Admin2&quot;] &lt;- sub(pattern=&quot; County&quot;,replacement=&quot;&quot;,FRAL.missing.counties$COUNTY)
+# If the county level has a &#39;Saint &#39; in it, convert to &#39;St. &#39;
+FRAL_Clean$Admin2 &lt;- sub(pattern=&#39;Saint &#39;,replacement=&#39;St. &#39;,FRAL_Clean$Admin2)
+</code></pre>
+
+<h3>Save the <code>FRAL_Clean</code> dataset</h3>
+
+<p>R code disabled</p>
+
+<pre><code># Write this data.set to file
+write.csv(FRAL_Clean,
+          file=&#39;/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/data/FRAL_HERB_Compiled.csv&#39;,
+          row.names=FALSE)
+
+# Make this data set into a spatialPoints data frame
+coordinates(FRAL_Clean) &lt;- c(&#39;Longitude&#39;,&#39;Latitude&#39;)
+# Write this spatial data.frame to a *.shp file
+writeOGR(FRAL_Clean,dsn=&quot;data_gis/&quot;,layer=&quot;FRAL_Herb&quot;,&quot;ESRI Shapefile&quot;,overwrite=TRUE)
+# Make the data set into a normal data frame again
+FRAL_Clean &lt;- as.data.frame(FRAL_Clean)
+</code></pre>
+
+</body>
+
+</html>
+

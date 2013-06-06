@@ -1,0 +1,161 @@
+## ******************************************************************** ##
+## herb_main.R
+##
+## Author: Matthew Aiello-Lammens
+## Date Created: 06 APR 2013
+##
+## Purpose: A main repository of R scripts used to carryout data colletion
+## and analysis for Chapter 3 - Retrospective spatial modeling of *Frangula
+## alnus* using herbarium recrods.
+##
+## Much of this work has been carried out piece meal in other scripts 
+## and analyses over the last few years. The preliminary work for this 
+## chapter was presented at ESA in 2012 and NENHC in 2012.
+##
+## ******************************************************************** ##
+## Section 1: Required Packages and Parameter Specifications
+
+## Required Packages
+## -----------------
+require(dismo)
+require(maptools)
+gpclibPermit()
+require(rgdal)
+require(ggplot2)
+
+## Define and set working directory
+herb.project.dir <- '/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/'
+setwd( herb.project.dir )
+
+## Spatial extent of the study area
+## --------------------------------
+## These values are based on the extent values used for Chapter 4 - SDM,
+## which I worked extensively on during the Fall of 2012 while taking 
+## the ENM class with Rob Anderson at CUNY. These values essentially define
+## what I refer to as "northeast North America" and are based on the extent
+## of *Frangula alnus*, excluding outliers in Wyoming and Tennessee
+
+## Long
+# Min = -96.61 -> -97
+# Max = -63.00 -> -62
+## Lat
+# Min = 38.60 -> 38 deg
+# Max = 47.82 -> 48 deg
+xmin <- -97.0
+xmax <- -62.0
+ymin <- 38.0
+ymax <- 48.0
+
+## Create and `extent` object based on these values
+falnus.extent <- extent( xmin, xmax, ymin, ymax )
+
+## ******************************************************************** ##
+## Section 2: Gather Data
+
+## Frangula alnus data
+## -------------------
+## These data have been collected and collated over several years
+## and the most recent database of herbarium records can be found in
+## '/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3/...
+##   data/Herb-F-alnus-Compiled.xlxs(.csv)'
+fral.herb <- read.csv('data/Herb-F-alnus-Compiled.csv')
+
+## I'm also going to get the data in 'gbif' for Frangula alnus. Note that
+## I have already done this and included it in the data set just read in,
+## however, that dataset also includes a lot of data **not** in 'gbif', so
+## I think this may be a better data set to compare with.
+
+## Get Frangula alnus records (White Ash)
+Frangula.alnus <- gbif( genus="Frangula", species="alnus*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Frangula.alnus$collection=="USDA Plants")) > 0 ) {
+  Frangula.alnus <- Frangula.alnus[ -(which(Frangula.alnus$collection=="USDA Plants")), ]
+}
+
+Rhamnus.frangula <- gbif( genus="Rhamnus", species="frangula*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Rhamnus.frangula$collection=="USDA Plants")) > 0 ) {
+  Rhamnus.frangula <- Rhamnus.frangula[ -(which(Rhamnus.frangula$collection=="USDA Plants")), ]
+}
+
+## Associated plants data
+## ----------------------
+## To account for effects of potential uneven sampling effort
+## of *Frangula alnus* I am collecting presence records for other 
+## plants that grow in similar ecological conditions.
+## 
+## List of associated plants:
+## * Speckled Alder = Alnus rugosa
+## * Grey Alder = Alnus incana 
+## * Smooth Alder = Alnus serrulata
+## * Alder (Alderleaf) Buckthorn = Rhamnus alnifolia
+## * White Ash = Fraxinus americana 
+## * Witch Hazel = Hamamelis virginica (syn. macrophylla)
+
+## Get Alnus incana records
+Alnus.incana <- gbif( genus="Alnus", species="incana*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Alnus.incana$collection=="USDA Plants")) > 0 ) {
+  Alnus.incana <- Alnus.incana[ -(which(Alnus.incana$collection=="USDA Plants")), ]
+}
+
+## Get Alnus incana records
+Alnus.rugosa <- gbif( genus="Alnus", species="rugosa*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Alnus.rugosa$collection=="USDA Plants")) > 0 ) {
+  Alnus.rugosa <- Alnus.rugosa[ -(which(Alnus.rugosa$collection=="USDA Plants")), ]
+}
+
+## Get Alnus serrulata records
+Alnus.serrulata <- gbif( genus="Alnus", species="serrulata*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Alnus.serrulata$collection=="USDA Plants")) > 0 ) {
+  Alnus.serrulata <- Alnus.serrulata[ -(which(Alnus.serrulata$collection=="USDA Plants")), ]
+}
+
+## Get Rhamnus incana records
+Rhamnus.alnifolia <- gbif( genus="Rhamnus", species="alnifolia*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Rhamnus.alnifolia$collection=="USDA Plants")) > 0 ) {
+  Rhamnus.alnifolia <- Rhamnus.alnifolia[ -(which(Rhamnus.alnifolia$collection=="USDA Plants")), ]
+}
+
+## Get Hamamelis virginiana records (Witch Hazel)
+Hamamelis.virginiana <- gbif( genus="Hamamelis", species="virginiana*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Hamamelis.virginiana$collection=="USDA Plants")) > 0 ) {
+  Hamamelis.virginiana <- Hamamelis.virginiana[ -(which(Hamamelis.virginiana$collection=="USDA Plants")), ]
+}
+
+## Get Hamamelis macrophylla records (Witch Hazel - synonym)
+Hamamelis.macrophylla <- gbif( genus="Hamamelis", species="macrophylla*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Hamamelis.macrophylla$collection=="USDA Plants")) > 0 ) {
+  Hamamelis.macrophylla <- Hamamelis.macrophylla[ -(which(Hamamelis.macrophylla$collection=="USDA Plants")), ]
+}
+
+## Get Fraxinus americana records (White Ash)
+Fraxinus.americana <- gbif( genus="Fraxinus", species="americana*", ext=falnus.extent )
+## Remove any records associated with the USDA Plants data
+if ( length(which(Fraxinus.americana$collection=="USDA Plants")) > 0 ) {
+  Fraxinus.americana <- Fraxinus.americana[ -(which(Fraxinus.americana$collection=="USDA Plants")), ]
+}
+
+## Lets have a look at some of these data on a map
+## Get a simple background
+data(wrld_simpl)
+plot(wrld_simpl, xlim=c(xmin,xmax), ylim=c(ymin,ymax), axes=TRUE, col="light yellow")
+## Plot Frangula alnus
+## First the complete FRAL data set I've compiled
+points(fral.herb$Longitude,fral.herb$Latitude, col="red", pch=20, cex=0.75)
+## And second only those occurences in GBIF (in dark red)
+points(Frangula.alnus$lon, Frangula.alnus$lat, col="darkred", pch=20, cex=0.75)
+points(Rhamnus.frangula$lon,Rhamnus.frangula$lat,col="darkred",pch=20,cex=0.75)
+## Plot other species
+points(Alnus.incana$lon, Alnus.incana$lat, col="green", pch=20, cex=0.75)
+points(Alnus.rugosa$lon, Alnus.rugosa$lat, col="darkgreen", pch=20, cex=0.75)
+points(Alnus.serrulata$lon, Alnus.serrulata$lat, col="green4", pch=20, cex=0.75)
+points(Fraxinus.americana$lon, Fraxinus.americana$lat, col="grey", pch=20, cex=0.75)
+points(Hamamelis.virginiana$lon, Hamamelis.virginiana$lat, col="blue", pch=20, cex=0.75)
+points(Rhamnus.alnifolia$lon, Rhamnus.alnifolia$lat, col="orange",pch=20,cex=0.75)
+

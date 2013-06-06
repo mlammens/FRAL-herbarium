@@ -1,0 +1,661 @@
+SpeciesName,HerbariumCode,Source,Collector,RecordNumber,CollectionDay,CollectionMonth,CollectionYear,Country,Admin1,Admin2,Admin3,Locality,Longitude,Latitude,CoordUncertainty,LocationNotes,EcologyNotes
+Frangula alnus,A,IPANE,Alfred Rehder,,14,8,1920,United States,New Hampshire,Carroll,Jackson,Thorn Mountain,-71.1552,44.1339,,north slope of Mt. Thorn,naturalized; many individuals
+Frangula alnus,A,IPANE,H. C. Ridlon,,3,8,1937,United States,Vermont,Bennington,Bennington,,-73.2133,42.8861,,,Naturalized
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",40507,1,7,1995,United States,Connecticut,Fairfield,Ridgefield,"Silver Spring Rd, E side swamp, S area",-73.5,41.25,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",301929,1,6,2005,United States,Connecticut,Fairfield,Shelton,Indian Well State Park,-73.1166666667,41.3333333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Van Sickle, W. M.",176896,,7,1893,United States,New Jersey,Hudson,North Bergen,New Durham,-74.0333333333,40.7833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Van Sickle, W. M.",176898,,5,1894,United States,New Jersey,Hudson,North Bergen,New Durham,-74.0333333333,40.7833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Van Sickle, W. M.",176899,,7,1894,United States,New Jersey,Hudson,North Bergen,New Durham,-74.0333333333,40.7833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Van Sickle, W. M.",176895,,5,1894,United States,New Jersey,Hudson,Secaucus,Secaucus,-74.05,40.7833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Dautun, H.",176897,,5,1899,United States,New Jersey,Hudson,North Bergen,New Durham,-74.0333333333,40.7833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",42635,1,10,1996,United States,New Jersey,Mercer,Hamilton,Basin Rd @ Assunpink Creek,-74.7,40.2666666667,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Shull, G. H.",39051,,0,1905,United States,New York,Suffolk,Huntington,Cold Spring Harbor,-73.45,40.8666666667,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",9701,1,10,1994,United States,New York,Nassau,Oyster Bay,"Massapequa Preserve, N section",-73.45,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",9229,1,8,1994,United States,New York,Nassau,Hempstead,"Peninsula Blvd & Southern State Parkway, NW corner",-73.6333333333,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",40061,1,5,1995,United States,New York,Suffolk,Islip,"Sampawams Creek, N of Guggenheim Lake",-73.3,40.7333333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Bennett, M. G.",380781,1,9,2008,United States,New York,Nassau,Oyster Bay,"Massapequa Preserve, N section",-73.45,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Bisky, J. A.",39049,,0,1885,United States,, , , ,-73.8166666667,40.75,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Eccles, R. G.",39050,,0,1885,United States,, , ,Canarsie,-73.9,40.6333333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Bisky, J. A.",39048,,0,1886,United States,, , , ,-73.8,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Koziol, F.",39046,,0,1977,United States,, , , ,-73.7333333333,40.7666666667,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Delendick, T. J.",176900,1,10,1991,United States,, , ,Coney Island,-73.9833333333,40.5666666667,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Clemants, Steven E.",9429,1,5,1994,United States,, , ,"Lenape Park, S of highway 22, west of Kenilworth",-74.3166666667,40.6666666667,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Clemants, Steven E.",50469,1,5,1995,United States,, , ,Ellis Island,-74.0333333333,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",42403,1,7,1996,United States,, , ,"Brooklyn Navy Yard, central section",-73.9666666667,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Clemants, Steven E.",50505,1,6,1996,United States,, , ,Ellis Island,-74.0333333333,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Clemants, Steven E.",55823,1,6,1996,United States,, , ,Ellis Island,-74.0333333333,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Clemants, Steven E.",56985,1,9,1996,United States,, , ,Ellis Island,-74.0333333333,40.6833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",177353,1,5,1999,United States,, , , ,-73.0666666667,40.8333333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",177531,1,7,1999,United States,, , , ,-73.5833333333,40.7166666667,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",177883,1,9,1999,United States,, , , ,-74.0666666667,40.75,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",198846,1,7,2000,United States,, , , ,-74.2,41.4,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",237157,1,6,2001,United States,, , , ,-74.25,40.85,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glenn, Steven D.",244975,1,7,2002,United States,, , , ,-73.0833333333,40.8,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Goldman, Douglas",113962,1,8,2002,United States,, , , ,-76.5333333333,43.3666666667,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Glaeser, C. W.",283507,1,5,2003,United States,, , , ,-73.8333333333,40.7,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Moore, Gerry",349267,1,7,2006,United States,, , , ,-74.9,39.7833333333,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Moore, Gerry",365207,1,9,2007,United States,, , , ,-73.8166666667,40.6166666667,,,
+Frangula alnus,BKL,http://www.bbg.org/the-herbarium/ailanthus/search.php 'Scientific name contains'=frangula ,"Moore, Gerry",365229,1,9,2007,United States,, , , ,-73.8166666667,40.6166666667,,,
+Rhamnus frangula,CHIC,vPlants,J. F. Steffen,751,31,5,1988,United States,Illinois,Cook,Glencoe,Turnbull Woods,-87.778965,42.149902,1000,"CBG, Turnbull Woods, mid section, west of road.",
+Rhamnus frangula,CHIC,vPlants,"T. M. Antonio, J. Epting, S. Masi",8418,18,6,1996,United States,Illinois,Cook,Markham,Paintbrush Prairie,-87.706394,41.609317,1000,"Paintbrush Prairie, Markham. Millard Ave. off Frontage Rd. of Interstate 294. Collected east of main path near large pond",
+Rhamnus frangula,CHIC,vPlants,"T. M. Antonio, J. Epting, S. Masi",8689,26,8,1996,United States,Illinois,Cook,Palos,Belly Deep Slough,-87.847254,41.710772,1000,"Belly Deep Slough, Palos Forest Preserve, Hickory Hills: Kean Ave., south of 95th St. East edge of slough.",
+Rhamnus frangula,CHRB,From Currator,H. E. Ahles,93448,15,9,1966,United States,Massachusetts,Hampshire,Amherst,,-72.529177,42.389211,1200,"fence-row, weedy, University of Mass. Campus",
+Rhamnus frangula,CHRB,From Currator,B. F. Palser,118604,4,6,1992,United States,Massachusetts,Hampshire,Amherst,,-72.52116,42.427281,2000,"Near entrance from Summer Street, Amherst, Eastman Brook Conservation Area","Shrub, 3.3 m tall"
+Rhamnus frangula,CHRB,From Currator,N. L. Britton,2703,21,6,1879,United States,New Jersey,Hudson,New Durham,,-74.0333,40.78472,3036,,
+Rhamnus frangula,CHRB,From Currator,Ben Blackburn,89751,12,11,1947,United States,New Jersey,Middlesex,New Brunswick,,-74.422887,40.473852,1000,"Rutgers University Shrub Garden, New Brunswick",
+Rhamnus frangula,CHRB,From Currator,C. J. Heuser,89274,30,5,1948,United States,New Jersey,Hudson,Secaucus,,-74.056522,40.789561,3941,"Old cedar bog, Secaucus, NJ, common",
+Rhamnus frangula,CHRB,From Currator,Karl Anderson,115844,15,6,1989,United States,New Jersey,Hudson,Jersey City,,-74.05387,40.6986,1000,"In thicket near Environmental Center, Liberty State Park",
+Rhamnus frangula,CHRB,From Currator,S.N. Handel,116877,6,11,1990,United States,New Jersey,Hudson,,,-74.119781,40.751009,2000,"Growing at edge of old landfill at south side of Exit 15W, NJ Turnpike","Tree, 4 m tall, with a few black and a few red (unripened) 2-3 seeded drupe-like fruits"
+Rhamnus frangula,CHRB,From Currator,Kerry Barringer,139123,19,8,2003,United States,New Jersey,Morris,Chatham,,-74.398,40.724,10000,"Power line right-of-way SW of Southern Blvd, SE of Jay Rd., roadside thickets under power lines","tree to 12 ft tall, fruits green turning red then black; From Brooklyn Botanic Garden"
+Rhamnus frangula,CHRB,From Currator,J. Monachino,17126,24,8,1936,United States,New York,Queens,,,-73.809063,40.71998,2000,"Peat bog near Parsons Blvd and Union Turnpike, Queens, Long Island, N.Y.",
+Rhamnus frangula,CHRB,From Currator,Jas. L. Edwards,41088,29,7,1945,United States,,,,,-74.030642,40.839444,2000,Thicket on island near Hackensack R. East of Moonachie,
+Frangula alnus,CONN,http://bgbaseserver.eeb.uconn.edu/databasesimple.html search=frangula,"Pollard, Charles L.",,,5,1894,United States,New Jersey,Hudson County,North Bergen,,-74.0333333333,40.7847222222,20000,,flowering
+Frangula alnus,CONN,http://bgbaseserver.eeb.uconn.edu/databasesimple.html search=frangula,,,9,7,1894,United States,New Jersey,Middlesex,New Durham,,-74.4061111111,40.5436111111,20000,,
+Frangula alnus,CONN,http://bgbaseserver.eeb.uconn.edu/databasesimple.html search=frangula,,,20,6,1894,United States,New Jersey,Middlesex,New Durham,,-74.4061111111,40.5436111111,20000,,
+Frangula alnus,CONN,http://bgbaseserver.eeb.uconn.edu/databasesimple.html search=frangula,"Blaine, F. F.",,18,6,1923,United States,New Jersey,Hudson County,Secaucus,,-74.0647222222,40.7811111111,20000,,
+Frangula alnus,CONN,http://bgbaseserver.eeb.uconn.edu/databasesimple.html search=frangula,"Barringer, Kerry",,15,6,2004,United States,New Jersey,Hudson County,Secaucus,,-74.0869444444,40.76,5000,Laurel Hill County Park at the end of the county rd. near the park entrance,"fruiting; flowering; Tree to 15ft tall, flowers green, fruits turning red"
+Frangula alnus,CONN,http://bgbaseserver.eeb.uconn.edu/databasesimple.html search=frangula,"Mehrhoff, Leslie J.",,26,7,2002,Canada,Prince Edward Island,,New London,,-63.5166666667,46.4666666667,5000,near new london bay,fruiting; flowering; Dense low roadside thicket. Immature fruits green - turning red; shrub ca. 2m tall
+Frangula alnus,CONN,IPANE,Edwin Hubert Eames,,28,6,1928,United States,Connecticut,Fairfield,Redding,,-73.3933,41.3044,,,
+Frangula alnus,CONN,IPANE,Edwin Hubert Eames,,18,9,1940,United States,Connecticut,Fairfield,Fairfield,Southport,-73.2839,41.1364,,,
+Frangula alnus,CONN,IPANE,Edwin Hubert Eames,,1,10,1947,United States,Connecticut,Fairfield,Fairfield,,-73.2724,41.1757,,,
+Frangula alnus,CONN,IPANE,Gordon C. Tucker,,25,6,1975,United States,Connecticut,New London,Stonington,Barn Island Hunting Area,-71.8667,41.3419,,,
+Frangula alnus,CONN,IPANE,Ronald A. Pfeffer,,9,10,1975,United States,Connecticut,Hartford,Farmington,,-72.7939,41.7114,,Batterson City Park,
+Frangula alnus,CONN,IPANE,S. J. Barlow,,9,10,1975,United States,Connecticut,Hartford,Farmington,,-72.7939,41.7114,,Batterson City Park,
+Frangula alnus,CONN,IPANE,Diane Carter,,13,9,1979,United States,Connecticut,Tolland,Mansfield,Storrs,-72.254,41.8118,,Hillel house,
+Frangula alnus,CONN,IPANE,Kerry Barringer,,1,6,1979,United States,Connecticut,Tolland,Mansfield,Storrs,-72.2543,41.8121,,behind synagogue,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,30,6,1989,United States,Connecticut,Hartford,Manchester,,-72.5247,41.7753,,,
+Frangula alnus,CONN,IPANE,Juliana Barrett,,28,8,1989,United States,Connecticut,Fairfield,Norwalk,,-73.4228,41.1293,,Pitney Bowes property,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,10,6,1989,United States,Connecticut,Fairfield,Redding,Huckleberry Swamp,-73.4371,41.3068,,Audubon Preserve,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,10,7,1989,United States,Connecticut,Fairfield,Ridgefield,Great Swamp,-73.4853,41.2897,,,Shrub- 2.5 m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,20,8,1989,United States,Connecticut,Fairfield,Stamford,,-73.5487,41.136,,Stamford Connecticut Stamford Connecticut USA,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,30,6,1990,United States,Connecticut,Litchfield,Norfolk,,-73.2222,41.9692,,Great Mountain Forest,
+Frangula alnus,CONN,IPANE,Nina B. Lichtenstein,,30,6,1990,United States,Connecticut,Fairfield,Norwalk,,-73.4202,41.0939,,Property of Edward Child,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,1,6,1991,United States,Connecticut,Tolland,Mansfield,Storrs,-72.2498,41.8104,,Uconn,
+Frangula alnus,CONN,IPANE,Nancy Murray,,23,9,1992,United States,Connecticut,Litchfield,Sharon,,-73.4491,41.8605,,,
+Frangula alnus,CONN,IPANE,Steve Glenn,,11,7,1995,United States,Connecticut,Fairfield,Ridgefield,,-73.5008,41.252,,"Silver Spring Road, E side swamp, S area",8' shrub; 710' elevation
+Frangula alnus,CONN,IPANE,Steve Glenn,,8,6,1995,United States,Connecticut,Fairfield,Stratford,Lordship,-73.1125,41.1539,,along Wood End Rd,6' shrub; 10' elevation
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,2,6,1998,United States,Connecticut,Windham,Pomfret,,-71.9221,41.849,,Route 101 west of Quinnebaug River bridge,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,17,6,1998,United States,Connecticut,Windham,Chaplin,,-72.1245,41.7988,,Natchaug State Forest behind Chapllin town garage,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,7,5,1998,United States,Connecticut,Tolland,Mansfield,Storrs,-72.2498,41.8104,,UCONN campus,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,17,10,1999,United States,Connecticut,Tolland,Mansfield,,-72.3114,41.8111,,Spring Manor Farm,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,12,6,1999,United States,Connecticut,Hartford,Hartford,Keney Park,-72.6661,41.8022,,,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,23,6,1999,United States,Connecticut,New Haven,New Haven,,-72.9089,41.3276,,Mill River,
+Frangula alnus,CONN,IPANE,Erin R. Andrus,,30,6,1999,United States,Connecticut,Fairfield,Norwalk,Chimon Island,-73.3922,41.0658,,,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,3,6,2000,United States,Connecticut,New Haven,Meriden,Hubbard Park,-72.8285,41.5532,,k east of band shell,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,16,5,2001,United States,Connecticut,New London,Stonington,Mystic,-71.9669,41.3542,,,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,13,6,2001,United States,Connecticut,Litchfield,Sharon,,-73.4053,41.822,,southwest corner of Route 4 and Northrup Road,robust shrub
+Frangula alnus,CONN,IPANE,Christopher T. Martine,,12,5,2002,United States,Connecticut,Hartford,Manchester,,-72.5039,41.7953,,"Salters Pond, north shore",
+Frangula alnus,CONN,IPANE,Christopher T. Martine,,6,7,2002,United States,Connecticut,Hartford,Manchester,,-72.5247,41.7753,,75 Lorraine Drive.,"With Rachel F. Martine; Partly shaded mulched area beneath mature oak and hemlock; with seedlings of Celastrus orbiculatus, Rubus Phoenicolasius, and Ulmus rubra."
+Frangula alnus,CONN,IPANE,Christopher T. Martine,,11,7,2003,United States,Connecticut,Hartford,Manchester,,-72.566,41.779,,"Laurel Marsh Hiking Trail, edge of woods at parking area","With Isabel Martine; Abundant and invasive throughout understory of moist woods; immature fruits- greenish yellow, blushing red; flowers- white"
+Frangula alnus,CONN,IPANE,Christopher T. Martine,,22,5,2003,United States,Connecticut,Hartford,Manchester,,-72.5247,41.7753,,Hills behind Big Y market at jct. Tolland Turnpike and Parker Street,"Associated taxa: Euonymus alatus, Rhamnus cathartica, Euonymus europaeus, Prunus virginiana"
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,5,11,2005,United States,Connecticut,Tolland,Mansfield,Storrs,-72.2563,41.8187,,University of Connecticut campus near north entrance off Route 195,Campus ornamental planting; atypically dense fastigiate shrub ca. 4 m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,18,10,2001,United States,Maine,Cumberland,Cumberland,,-70.206,43.7651,,North side of southbound I-95 0.2 mile west of Tuttle Road overpass south of railroad tracks,Shrub ca. 2.5 m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,18,10,2001,United States,Maine,York,Kittery,,-70.7178,43.1291,,Northbound Maine Turnpike at Visitor Center,Shrub ca. 2 m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,31,7,2002,United States,Maine,Cumberland,Freeport,,-70.1626,43.8308,,north of Route 1 and west of Old Country Road,Abundant
+Frangula alnus,CONN,IPANE,J. Franklin Collins,,1,6,1921,United States,Massachusetts,Suffolk,Boston,Jamaica Plain (subdivision),-71.1232,42.2996,,Arnold Arboretum,
+Frangula alnus,CONN,IPANE,J. Franklin Collins,,2,6,1921,United States,Massachusetts,Suffolk,Boston,Jamaica Plain (subdivision),-71.1235,42.2971,,Woods near Arnold Arboretum,
+Frangula alnus,CONN,IPANE,Clarence H. Knowlton,,27,7,1943,United States,Massachusetts,Plymouth,Hingham,,-70.8863,42.2201,,,two bushes only
+Frangula alnus,CONN,IPANE,George Safford Torrey,,28,5,1959,United States,Massachusetts,Middlesex,Concord,,-71.3586,42.4404,,Between Sudbury Rd. and Railroad tracks.,
+Frangula alnus,CONN,IPANE,Henry K. Svenson,,17,10,1967,United States,Massachusetts,Barnstable,Sandwich,East Sandwich,-70.4388,41.7346,,along r.r.,Tree about 15 ft. high; in fruit
+Frangula alnus,CONN,IPANE,Harry E. Ahles,,22,7,1978,United States,Massachusetts,Hampshire,Hadley,,-72.5507,42.3577,,North Maple Street near Rt. 9,
+Frangula alnus,CONN,IPANE,Harry E. Ahles,,22,6,1978,United States,Massachusetts,Hampshire,Hadley,,-72.5534,42.3565,,Route 9,
+Frangula alnus,CONN,IPANE,Norton H. Nickerson,,17,6,1980,United States,Massachusetts,Essex,Lynnfield,South Lynnfield,-71.0019,42.5167,,,"Shrub to 2 m., common"
+Frangula alnus,CONN,IPANE,W. Harrington,,17,6,1980,United States,Massachusetts,Essex,Lynnfield,South Lynnfield,-71.0019,42.5167,,,
+Frangula alnus,CONN,IPANE,Harry E. Ahles,,1,6,1980,United States,Massachusetts,Hampshire,Amherst,,-72.5071,42.3645,,,
+Frangula alnus,CONN,IPANE,Harry E. Ahles,,1,7,1980,United States,Massachusetts,Hampshire,Amherst,,-72.5071,42.3645,,,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,27,7,1998,United States,Massachusetts,Middlesex,Chelmsford,,-71.3861,42.5868,,I-495 northbound 2 miles east of exit for Route 4,"immature fruits - green, turning red to black; plants - 2.5 m tall"
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,27,7,1998,United States,Massachusetts,Middlesex,Chelmsford,,-71.3861,42.5868,,I-495 Northbound 2 mi. east of exit for route 4,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,29,6,1999,United States,Massachusetts,Essex,Topsfield,,-70.9363,42.6366,,Ipswich River Wildlife Sanctuary; near Ipswich River,"immature fruits -green, turning red; shrub 2.5 m tall"
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,2,6,1999,United States,Massachusetts,Hampshire,South Hadley,,-72.5803,42.2556,,,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,2,6,1999,United States,Massachusetts,Hampshire,South Hadley,,-72.6111,42.2295,,River Road,in flood plain forest of old Connecticut River oxbow; petals - white; shrub - 1.75 m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,28,6,2000,United States,Massachusetts,Essex,Rowley,,-70.7969,42.7402,,"Parker River National Wildlife Refuge, Hellcat swamp Trail near main road","immature fruits - green, turning red; individuals 2.5 m tall"
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,28,6,2000,United States,Massachusetts,Essex,Rowley,Parker River National Wildlife Refuge,-70.7969,42.7403,,Hellcat swamp trail near Rd.,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,9,6,2000,United States,Massachusetts,Middlesex,Concord,,-71.3026,42.4731,,west of industrial park near Hanscom Field,petals - white; shrub - 2 m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,9,6,2000,United States,Massachusetts,Middlesex,Concord,,-71.3026,42.4731,,Hanscom Field Industrial Park,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,26,7,2001,United States,Massachusetts,Norfolk,Quincy,,-71.0315,42.2293,,"west side of Willard Street near Pine Hill Cemetery, near parking area",Fruits on this plant were super abundant
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,3,10,2001,United States,Massachusetts,Norfolk,Milton,,-71.1022,42.2298,,West side of Hemenway Pond east of Route 138,Shrub ca. 3 m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,18,10,2001,United States,Massachusetts,Middlesex,Westford,,-71.4216,42.5661,,South of Route 110 behind strip mall,Shrub ca. 2 m tall; numerous individuals
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,26,9,2001,United States,Massachusetts,Middlesex,Groton,Paper Mill Village,-71.5871,42.6283,,Boat launch (on Nashua River) in J. Harry Rich State Forest,Fruit- dark purple; shrub ca. 2 m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,23,5,2002,United States,Massachusetts,Middlesex,Lincoln,Minute Man National Historical Park,-71.2796,42.4492,,Battle Road trail between Visitor Center and Hannscom Drive,With J. Mehrhoff; petals- white; shrub ca. 2.5m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,9,9,2003,United States,Massachusetts,Essex,Hamilton,,-70.8525,42.6222,,"Hamilton Cemetery, north of Central Avenue, near Manassah Cutler's gravesite",Berries- dark purple; shrub ca. 2.5 m tall; scattered individuals
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,29,8,2003,United States,Massachusetts,Hampshire,Ware,,-72.2127,42.2852,,Route 32 south of Upper Church Street,Fruits turning from red to dark purple; large shrub ca. 2.5 m tall; single individual
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,7,7,2006,United States,Massachusetts,Hampshire,Hadley,,-72.5502,42.3603,,east side of Maple Street north of junction with Route 9,A few individuals
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,29,6,1999,United States,New Hampshire,Rockingham,Salem,,-71.2204,42.7548,,I-93 northbound by welcome center,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,17,7,2000,United States,New Hampshire,Rockingham,Seabrook,,-70.8373,42.8698,,Route 286 near entrance to water treatment plant,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,27,11,2001,United States,New Hampshire,Rockingham,Rye,,-70.7265,43.0485,,"Pioneer Road west of Odiorne Point, south of boat launch area",Leaves turning yellow.
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,17,10,2002,United States,New Hampshire,Hillsborough,Nashua,,-71.4919,42.768,,"East of Route 3 and south of Rt. 130, west side of Visitor Center parking lot",Shrub ca. 2.5m tall
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,11,6,2003,United States,New Hampshire,Cheshire,Westmoreland,,-72.4446,43.0182,,River Road South just south of Walpole town line,"With David Boufford, Lihong Duan, Michiko Okada, and Akiko Shimizu;  scattered individuals; petals- creamy white; small tree ca. 3 m tall"
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,11,6,2003,United States,New Hampshire,Cheshire,Walpole,,-72.439,43.1278,,Connecticut River flood plain south of power plant near boat launch,"With David Boufford, Frankie Brackley, Lihong Duan, Michiko Okada, and Akiko Shimizu; scattered individuals; petals- white; shrub ca. 2 m tall"
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,10,6,1989,United States,Rhode Island,Washington,South Kingstown,Great Swamp,-71.5839,41.4575,,,
+Frangula alnus,CONN,IPANE,Martha A. Porter,,28,6,1990,United States,Vermont,Bennington,Manchester,,-73.072,43.1616,,,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,18,6,1998,United States,Vermont,Windham,Putney,,-72.4694,43.0069,,north side of connecting road going form I-91 at exit 4 to route 5,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,18,7,2001,United States,Vermont,Windham,Westminster,,-72.4702,43.054,,west side of Route I-91 southbound at mile post 26,Abundant
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,30,9,2002,United States,Vermont,Windsor,Norwich,,-72.3104,43.7015,,I-91 southbound just south of exit 13 on-ramp.,berries - dark purple; shrub - 3 m tall.
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,12,5,2005,United States,Vermont,Windham,Rockingham,,-72.4458,43.1817,,disturbed floodplain north of Herrick Cove near Connecticut River,"Elevation ca. 75 m.; Rich, alluvial soils near parking lot; small saplings; scattered individuals"
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,14,6,2006,United States,Vermont,Windham,Brattleboro,,-72.5515,42.8301,,Route 142 south of junction with Vernon Drive.  Near Connecticut River,
+Frangula alnus,CONN,IPANE,Leslie John Mehrhoff,,14,6,2006,United States,Vermont,Windham,Brattleboro,,-72.5663,42.6192,,"Fort Dummer State Park, recreation field at southern end of South Camping Area",with IPANE volunteers
+Frangula alnus,GH,IPANE,Edwin Hubert Eames,,27,7,1928,United States,Connecticut,Fairfield,Redding,,-73.3933,41.3044,,,"with W. J. Starr; with Spiraea tomentosa, Vaccinium sp. &c; several shrubs"
+Frangula alnus,GH,IPANE,Steven R. Hill,,29,5,1981,United States,Connecticut,Hartford,Wethersfield,,-72.6983,41.6794,,"area cleared for extension of Old Reservoir Rd., W side of Old Reservoir",flowers cream-green; occasional shrub 7 ft tall
+Frangula alnus,GH,IPANE,William Brewster,,14,7,1918,United States,Massachusetts,Middlesex,Concord,,-71.3648,42.4612,,Farm of Wm. Brewster,3 miles from other Concord locality for this plant.  2 trees in wild thicket.
+Frangula alnus,GH,IPANE,Clarence W. Kinney,,2,6,1935,United States,Massachusetts,Worcester,Worcester,Tatnuck (subdivision),-71.85,42.2833,,,spontaneous
+Frangula alnus,GH,IPANE,Clarence W. Kinney,,2,6,1936,United States,Massachusetts,Worcester,Worcester,Tatnuck (subdivision),-71.85,42.2833,,abandoned farm,abandoned farm
+Rhamnus frangula,HAM,"http://www.cbif.gc.ca/portal/digir-searcht.php?p_classid=6&p_lang=en 'Plants, all available' Taxonomic name=Rhamnus frangula",T.W. Smith,201860,27,5,1998,Canada,Ontario,Hamilton,,Rock chapel,-79.936283,43.293135,1000,Lip of falls,
+Rhamnus frangula,HAM,"http://www.cbif.gc.ca/portal/digir-searcht.php?p_classid=6&p_lang=en 'Plants, all available' Taxonomic name=Rhamnus frangula",A.Tamsalu,202799,26,7,1955,Canada,Ontario,Hamilton,,Flood plains under Ulmus,-79.8675,43.2565,10000,"Unable to id location, used Hamilton",
+Rhamnus frangula,HAM,"http://www.cbif.gc.ca/portal/digir-searcht.php?p_classid=6&p_lang=en 'Plants, all available' Taxonomic name=Rhamnus frangula",A.Tamsalu,202800,26,7,1955,Canada,Ontario,Hamilton,,Flood plains under Ulmus,-79.8675,43.2565,10000,"Unable to id location, used Hamilton",
+Rhamnus frangula,HAM,"http://www.cbif.gc.ca/portal/digir-searcht.php?p_classid=6&p_lang=en 'Plants, all available' Taxonomic name=Rhamnus frangula",A.Tamsalu,202801,7,8,1954,Canada,Ontario,Hamilton,Hamilton,,-79.95292,43.250845,5000,"w, swamp at McMaster",
+Rhamnus frangula,HAM,"http://www.cbif.gc.ca/portal/digir-searcht.php?p_classid=6&p_lang=en 'Plants, all available' Taxonomic name=Rhamnus frangula",A.Tamsalu,202802,1,7,1954,Canada,Ontario,Hamilton,Hamilton,,-79.95292,43.250845,5000,"w, swamp at McMaster",
+Rhamnus frangula,HAM,"http://www.cbif.gc.ca/portal/digir-searcht.php?p_classid=6&p_lang=en 'Plants, all available' Taxonomic name=Rhamnus frangula",A.Tamsalu,202803,6,6,1954,Canada,Ontario,Hamilton,Hamilton,,-79.95292,43.250845,5000,"w, swamp at McMaster",
+Rhamnus frangula,HAM,"http://www.cbif.gc.ca/portal/digir-searcht.php?p_classid=6&p_lang=en 'Plants, all available' Taxonomic name=Rhamnus frangula",Mr. McNair,208023,22,9,1941,Canada,Ontario,Wellington,,Guelph Rd,-80.354212,43.678497,10000,,
+Rhamnus frangula,MAD,http://botany.wisc.edu/herbarium/ 'see methods',"Webb, Stella",00001417MAD,5,8,1964,United States,Wisconsin,Jackson,Black River Falls,,-88.17,43.32,10000,Black River Falls [Jackson Co.],
+Frangula alnus,MASS,IPANE,D. H. Harrington,,28,9,1932,United States,Massachusetts,Franklin,Orange,,-72.2955,42.6112,,,
+Frangula alnus,MASS,IPANE,R. B. Livingston,,8,6,1955,United States,Massachusetts,Hampshire,Amherst,,-72.5071,42.3645,,,Small weed tree
+Frangula alnus,MASS,IPANE,R. B. Livingston,,26,5,1960,United States,Massachusetts,Hampshire,Amherst,,-72.511,42.3837,,old gravel pit east of junction of High and Chestnut Streets.,"Small tree, becoming a bad weed in young hardwood stand"
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,2,6,1972,United States,Massachusetts,Middlesex,Cambridge,,-71.1187,42.3758,,,
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,17,6,1973,United States,Massachusetts,Essex,Newburyport,Plum Island,-70.8066,42.7639,,Parker River National Wildlife Refuge,
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,24,8,1974,United States,Massachusetts,Hampden,Palmer,,-72.3328,42.1586,,along railroad,
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,25,7,1975,United States,Massachusetts,Plymouth,Plymouth,,-70.6685,41.9638,,center of Plymouth at the foot of the stone breakwater,with Bruce A. Sorrie
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,19,8,1976,United States,Massachusetts,Worcester,Worcester City,,-71.8089,42.2696,,,
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,15,10,1977,United States,Massachusetts,Middlesex,Concord,,-71.3648,42.4612,,,
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,31,7,1978,United States,Massachusetts,Hampden,Holyoke,,-72.6151,42.2143,,along Connecticut River and railroad,
+Frangula alnus,MASS,IPANE,G. Snoeyenbos,,1,10,1979,United States,Massachusetts,Hampshire,Amherst,,-72.5098,42.3873,,"yard of Snoeyenbos [sic], Hills Road",volunteer
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,9,8,1980,United States,Massachusetts,Norfolk,Canton,,-71.1294,42.2243,,Fowl Meadow,
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,9,8,1980,United States,Massachusetts,Norfolk,Canton,,-71.1294,42.2242,,Fowl Meadow,var. llatifolia
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,1,7,1980,United States,Massachusetts,Hampshire,Amherst,,-72.5071,42.3645,,,
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,1,7,1980,United States,Massachusetts,Hampshire,Amherst,,-72.5071,42.3645,,,var. latifolia
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,12,6,1980,United States,Massachusetts,Hampshire,Hadley,,-72.5605,42.3523,,at shopping mall off Route 9,var. aspleniifolia Dippel
+Frangula alnus,MASS,IPANE,Harry E. Ahles,,12,6,1980,United States,Massachusetts,Hampshire,Hadley,,-72.5606,42.3522,,near shopping mall off Route 9,
+Frangula alnus,MASS,IPANE,Bruce A. Sorrie,,28,6,1987,United States,Massachusetts,Bristol,Easton,,-71.0946,42.0539,,"Queset Brook, sw of cemetery",A single plant 7 feet tall.  All leaves slender
+Frangula alnus,MASS,IPANE,David M. Hunt,,28,6,1991,United States,Massachusetts,Worcester,Lancaster,,-71.6762,42.502,,powerlines ca. 0.25 mi S of Oak Hill Pond,Longitude:  279700  Latitude:  4709000; Elev. 103 m; assoc. spp.
+Frangula alnus,MASS,IPANE,G. E. Moore,,1,10,1992,United States,Massachusetts,Norfolk,Canton,Ponkapoag Pond,-71.0958,42.1917,,,
+Frangula alnus,MASS,IPANE,Norton H. Nickerson,,21,7,1993,United States,Massachusetts,Plymouth,Abington,,-70.9434,42.1375,,along railroad tracks,"with GEM, TEL, ADC"
+Frangula alnus,MASS,IPANE,Tad M. Zebryk,,20,5,1998,United States,Massachusetts,Hampden,Wilbraham,,-72.4484,42.1212,,"MMWEC Western Corridor, south of All Rd/Springfield St. asjacent to powerline",Elev. 240 ft.; Assoc. spp.; common
+Frangula alnus,MO,http://www.tropicos.org/ 'Quick name search'=frangula,G. Gust & A. Townesmith,,12,8,2005,United States,Wisconsin,Kenosha,,,-88.2188888889,42.5675,,"New Munster Bog Island WI DNR Natural Area TIN-R19E Sections 2, 3 and 10. Shrub-carr bog and northern hardwood",Shrub to 4 m. Leaves glossy on upper surface. Fruit yellow-greenish with red when immature; becoming black when mature. 2 seeds/drupe. Growing in wet edge with Salix spp
+Rhamnus frangula,MO,http://www.tropicos.org/ 'Quick name search'=frangula,Mary Merello & C. Dietrich,,11,5,1994,United States,Missouri,,Saint Louis City,,-90.25,38.6,,,
+Rhamnus frangula,MOR,http://botany.wisc.edu/herbarium/ 'see methods',"Swink, Floyd A.",MOR20188,27,5,1970,United States,Wisconsin,Kenosha,Wilmont,,-87.82,42.58,10000,Wilmont Mt,
+Rhamnus frangula,MOR,http://botany.wisc.edu/herbarium/ 'see methods',"Schulenberg, R.",MOR20186,7,8,1975,United States,Wisconsin,Racine,,,-87.78,42.73,10000,E of Wind Lake,
+Rhamnus frangula,MOR,http://botany.wisc.edu/herbarium/ 'see methods',"Swink, Floyd A.",MOR56073,15,6,1985,United States,Wisconsin,Walworth,Delavan,,-88.6,42.53,10000,"Springs Park, Delavan",
+Rhamnus frangula,MOR,http://botany.wisc.edu/herbarium/ 'see methods',"Swink, Floyd A.",MOR83253,27,6,1989,United States,Wisconsin,Walworth,,,-88.6,42.53,10000,"Springs Park, SW Delavan",
+Rhamnus frangula,MU,From Currator,"DeShurko, J.",,2,7,1978,United States,Illinois,Cook County,,,-87.828941,42.127531,,"Found 10m E of railroad trachs on N side of SR 68 just W of Colonnade Dr in Northbrook, Ill; branch from tree 2.5 m tall; only one of species present; flowers white, clay soil.",
+Rhamnus frangula,MU,From Currator,"Lammers, T.G.",,24,6,1997,United States,Illinois,Cook County,,,-87.867131,41.673919,,"Illinois: Cook County: Palos Twp. Swallow Cliff Woods Forest Preserve, Southwest of the jct of US Hwy 45 and State Hwy 83. Oak forest on uplands.",
+Rhamnus frangula,MU,From Currator,"Ahles, H.E.",,28,6,1973,United States,Massachusetts,Hampshire County,,,-72.523396,42.380252,,"Well-established on woodland border, University of Massachusetts campus, Amherst.",
+Rhamnus frangula,MU,From Currator,"Grover, F.O.",,14,7,1953,United States,Michigan,Sanilac County,,,-82.829223,43.420124,,"In yard north side of Robert McKinzie house Sandusky, Michigan.",
+Rhamnus frangula,MU,From Currator,"Lammers, T.G.",,11,6,1994,United States,Michigan,Delta County,,,-87.085518,45.776484,,"Super 8 Motel, 2415N. Lincoln Rd. Escanaba. Frequent on dry open sand bordering aspen grove behind building. Shrub, 2 m tall.",
+Rhamnus frangula,MU,From Currator,Lonsing,,30,5,1939,United States,Ohio,Montgomery County,,,-84.191072,39.758739,,Dayton UD park,
+Rhamnus frangula,MU,From Currator,"Grover, F.O.",,16,8,1953,United States,Ohio,Lorain County,,,-82.217029,41.294307,,"In center of large circle of trees and shrubs, South by East of Johnson Hous barn. Oberlin, Ohio.",
+Rhamnus frangula,MU,From Currator,"Miller, H.A.",,8,7,1962,United States,Ohio,Butler County,,,-84.728011,39.507847,,"Miami University Campus
+
+Oxford, Ohio",
+Rhamnus frangula,MU,From Currator,Olah,,10,10,1962,United States,Ohio,Bulter County,,,-84.739734,39.510277,,Next to the Dairy queen in the center of oxford.,
+Rhamnus frangula,MU,From Currator,"Jones, G.T.",,13,7,1967,United States,Ohio,Lorain County,,,-82.229106,41.292636,,"a weed shrub in old fallow field 322 west College St., Oberlin.",
+Rhamnus frangula,MU,From Currator,"Jones, G.T.",,31,5,1970,United States,Ohio,Medina County,,,-81.870972,41.13558,,"roadside at edge of woods near Camp Crag, east Hinckley Twp.",
+Rhamnus frangula,MU,From Currator,"Cusick, A.W.",,21,7,1974,United States,Ohio,Cuyahoga County,,,-81.624961,41.520369,,"weedy bank of Cuyahoga River; Old River Rd. at Superior Ave., Cleveland, Cuyahoga County, Ohio.",
+Rhamnus frangula,MU,From Currator,"Werth, C.R.",,22,6,1980,United States,Ohio,Butler County,,,-84.346826,39.42504,,"W side of I-75, rest area.
+
+wet soil along creek, several in fruit, flower white
+
+alien plant apparently naturalized here.",
+Rhamnus frangula,MU,From Currator,"Sauleda, R.P.",,22,8,1981,United States,Ohio,Portage County,,,-81.345814,41.239478,,"Portage County: Along I-80, 3 mi. W of OH 14, ca. 5 mi. W of Streetsboro; ca. 15 mi. SE of Cleveland.",
+Rhamnus frangula,MU,From Currator,"Berlincourt, M.A.",,10,10,1981,United States,Ohio,Geauga County,,,-81.386923,41.435996,,"Edge of woods next to North Deepwood Drive, Chagrin Falls, Geauga County, Ohio.",
+Rhamnus frangula,MU,From Currator,"Werth, C.R.",,17,7,1981,United States,Ohio,Butler County,,,-84.356704,39.526713,,"Butler County, Ohio
+
+Lemon Twp., Sec. N 17 SE
+
+
+
+Miami University Middletown Campus
+
+open soil near stream
+
+possibly spontaneous.",
+Rhamnus frangula,MU,From Currator,"Stewart, D.",,6,7,1985,United States,Ohio,Portage County,,,-81.254609,41.187095,,USA. OHIO. Portage County: Gott Fen State Nature Preserve.,
+Rhamnus frangula,MU,From Currator,"Stewart, D.",,6,9,1985,United States,Ohio,Portage County,,,-81.254609,41.187095,,USA. OHIO. Portage County: Gott Fen State Nature Preserve.,
+Rhamnus frangula,MU,From Currator,"Stewart, D.",,17,5,1986,United States,Ohio,Portage County,,,-81.188884,41.178632,,USA. Ohio. Portage County: Gott Fen State Nature Preserve.,
+Rhamnus frangula,MU,From Currator,"Cusick, A.W.",,22,6,1987,United States,Ohio,Henry County,,,-84.018287,41.370315,,"Scattered; wet field; Maumee State Forest; W., Co. Rt. 2 & 0.25-0.4 mi. N., Co. Rt. U, SE 1/4, Sect. 23, Washington Twp., Henry County, Ohio; Colton Quad.",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,17,10,1988,United States,Ohio,Bulter County,,,-84.756506,39.505421,,"OHIO: Bulter County, Oxford
+
+Thornless, coumnar variety.
+
+Escaping from cultivation (via birds)
+
+in neighborhood around 609 French Dr.",
+Rhamnus frangula,MU,From Currator,"Ray, M.A.",,8,8,1989,United States,Ohio,Summit County,,,-81.439819,41.30922,,"Ohio: Summit County, Twinsburg 1/4 mile west of Chamberlin Road, 3/8 mile north of Highland road. wet old field.",
+Rhamnus frangula,MU,From Currator,"Sulgrove, S.",,19,8,1989,United States,Ohio,Montgomery County,,,-84.229182,39.654364,,"OHIO: Montgomery County, South Dayton Quadrangle; Cox Arboretum, west side SR 741, 1 mile N of Dayton Mall. Dayton-Montgomery County Park District.",
+Rhamnus frangula,MU,From Currator,"Hook, R.",,31,5,1990,United States,Ohio,Franklin County,,,-83.006932,39.957045,,"Franklin County: Columbus. Voucher for Woolpert Consultants Benchmark survey site, job #51-16843-07; site B4.",
+Rhamnus frangula,MU,From Currator,"McCormac, J.S.",,6,9,1990,United States,Ohio,Henry County,,,-83.916624,41.420388,,"Occasional in rich organic soil of moist, open meadow, Much Farm, Maumee State Forest, W side of T2 ca. 1/2 mi. S of Co. Rd. V, Sect. 23, Washington Twp., Henry County, Ohio; Colton Quad.",
+Rhamnus frangula,MU,From Currator,"Sulgrove, S.M.",,12,7,1990,United States,Ohio,Greene County,,,-84.007334,39.61615,,"Travertine Fen. Waynesville Quad. W  edge of Spring Valley, along abandoned railroad track, N of SR 725.",
+Rhamnus frangula,MU,From Currator,"Sulgrove, S.M.",,27,9,1990,United States,Ohio,Greene County,,,-84.012403,39.606608,,"Greene County: Travertine Fen, Spring Valley, east side of bikeway, north of intersection of St. Rt. 725.",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,29,7,1990,United States,Ohio,Miami County,,,-84.025781,39.936022,,"USA. Ohio. Miami County: Bethal Twp. sect. 6. At Silver Lake, west of New Carlisle. Scattered in boggy area at end of lake. Several dozen plants.",
+Rhamnus frangula,MU,From Currator,"Sulgrove, S.M.",,12,7,1990,United States,Ohio,Miami County,,,-84.025823,39.936272,,"Miami County: New Carlisle Quad, Silver Lake. Northwest of New Carlisle, off Silver Lake Road.",
+Rhamnus frangula,MU,From Currator,"McCormac, J.S.",,1,8,1991,United States,Ohio,Logan County,,,-83.840476,40.3877,,"Scattered and uncommon in moist soil of Potentilla fruticosa dominated meadow, McCracken Fen, W side of T32 ca 1/4 mi. W of Jct. with T190, sect. 1, Liberty Twp., Logan County, Ohio.",
+Rhamnus frangula,MU,From Currator,"McCormac, J.S.",,20,5,1993,United States,Ohio,Henry County,,,-83.97057,41.361677,,"Common in moist sedge meadow, Much Farm, W side of T2 1/2 mi. S of Co. Rd. V, sect. 23.
+
+Washington Twp., Henry County, Ohio.",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,11,5,1993,United States,Ohio,Butler County,,,-84.756318,39.50546,,"USA. Ohio: Butler County: Oxford. 609 French Drive. Cultivated. Columnar shrub, 8'; flowers cream.",
+Rhamnus frangula,MU,From Currator,"Cusick, A.W.",,17,7,1995,United States,Ohio,Erie County,,,-82.809003,41.40007,,"Uncommon; thickets about old limestone quarry, S, jct of St Rt 101 & Herr Rd, 1 1/2 mi SW of Castalia, Margaretta Twp, Erie County, Ohio; Castalia Quad.",
+Rhamnus frangula var. asplenifolia,MU,From Currator,"Vincent, M.A.",,12,7,1995,United States,Ohio,Butler County,,,-84.732524,39.50972,,"Ohio: Butler County: Oxford. Miami University campus. Cultivated. In front of Brill Science Library. Shrubs, 8' tall.",
+Rhamnus frangula,MU,From Currator,"Lammers, T.G.",,1,8,1997,United States,Ohio,Cuyahoga County,,,-81.642547,41.280942,,"Ohio: Cuyahoga County: service plaza on eastbound Interstate 80 (Ohio Turnpike), just west of its jct with Interstate 77. Thicket along small stream on west side.",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,29,8,1997,United States,Ohio,Butler County,,,-84.732138,39.508777,,"Miami University campus, Oxford. Bishop Woods, east of Upham Hall. One plant seen. Weedy along central N/S trail through woods.",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,15,7,1999,United States,Ohio,Butler County,,,-84.75631,39.505486,,"609 French Drive, Oxford. Cultivated. Upright shrubs, 8' tall. Voucher for green fruits sent to a violin maker for use in conditioning wood for violins.",
+Rhamnus frangula,MU,From Currator,"Hill, S.R.",,20,7,2000,United States,Ohio,Trumbull County,,,-80.651679,41.099248,,"OHIO: Trumbull County Youngstown, N side of Rt. I-80, Belmont Avenue (OH Rt. 193) exit, along ramp adjoining Tally-ho-tel property. Disturbed wet sandy-gravelly fill soil in drainage, probably with re",
+Rhamnus frangula,MU,From Currator,"Cusick, A.W.",,26,10,2000,United States,Ohio,Muskingum County,,,-82.013869,39.956501,,"Scattered; slopes of disturbed ravine, Mill Run, jct of St Rt 666 & Co Rt 694, Zanesville, Muskingum County, Ohio; Zanesville East Quad.",
+Rhamnus frangula,MU,From Currator,"Craig, C.",,15,9,2001,United States,Ohio,Cuyahoga County,,,-81.724378,41.313519,,"North Royalton, Cuyahoga County, OH. In woods on property south of Woodridge Dr.",
+Rhamnus frangula,MU,From Currator,"Sugawara, Z.T.",,2,10,2004,United States,Ohio,Hamilton County,,,-82.48576,40.393719,,"Mt. Vernon, Hamilton County: Collected Scott Rd. Field - behind original horse pasture",
+Rhamnus frangula,MU,From Currator,"Kennedy, A.H.",,1,10,2005,United States,Ohio,Summit County,,,-81.477881,41.232553,,"Summit County., in powerline right-of-way through wetland about 1 mile east of SR8 on SR 303. Shrub about 2 m tall, black 2 seeded berries.",
+Frangula alnus,MU,From Currator,"Kennedy, A.H.",,10,6,2006,United States,Ohio,Lake County,,,-81.208051,41.770243,,"Lake County, on the corner of Bacon and Lake Roads in marshy area along powerline right-of-way. Two seeded berry; sepals green, white where free; petals white, clawed, cupping anthers; green nectar di",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,28,7,2010,United States,Ohio,Medina County,,,-81.792,41.135009,,"Weeds around abandoned restaurant, along Rt. 18 just off Interstate 71.",
+Rhamnus frangula,MU,From Currator,"Rolland-Germain, F.",,21,5,1946,Canada,Quebec,,,,-73.708774,45.554545,,"Laval Des Rapides, comte de Laval: bois tres humide.",
+Rhamnus frangula,MU,From Currator,"Smith, E.C.",,24,8,1958,Canada,Quebec,,,,-71.850542,45.36704,,"Small Tree to 15', woods near river.
+
+Lennoxville",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,6,8,1997,Canada,Quebec,,,,-74.305755,46.068817,,"At end of Des Skieurs Street, off of Ch. Mont Castor, off of Rt. 117, north of Villiage de Sainte-Agathe du Mont. Boggy shrubby area, with Vaccinium, Salix, etc....  Common along old road. Shrubs to 7",
+Rhamnus frangula,MU,From Currator,"Rill, K.D.",,24,6,1961,United States,Wisconsin,Waupaca County,,,-88.762025,44.620636,,"Clintonville, Wisconsin
+
+On Pigeon Pond
+
+damp shruby place.",
+Rhamnus frangula,MU,From Currator,"Rill, K.D.",,19,9,1969,United States,Wisconsin,Waupaca County,,,-88.762025,44.620636,,"near Clintonville mill pond (Pigeon Lake)
+
+damp swale",
+Rhamnus frangula,MU,From Currator,"Rill, K.D.",,13,7,1974,United States,Wisconsin,Winnebago County,,,-88.70383,44.0631,,shrub edge of RR track - near Vernon Faust property- near Waukaw.,
+Rhamnus frangula,MU,From Currator,"Parfitt, B.D.",,13,7,1976,United States,Wisconsin,Outagamie County,,,-88.637971,44.334796,,"Hortonville at Co. Hw. M and RR 
+
+Disturbed Silt.",
+Rhamnus frangula,MU,From Currator,"Rill, K.D.",,15,7,1978,United States,Wisconsin,Green Lake County,,,-89.122984,43.849151,,"edge of tamarack bog, along road, Co. Hw. CC near Princeton.",
+Rhamnus frangula,MU,From Currator,"Harriman, N.A.",,26,7,1988,United States,Wisconsin,Door County,,,-87.324873,44.887954,,"Spindly little tree in fencerow at Peninsular Agricultural Research Station, on state route 42, four miles N of Sturgeon Bay, section 22 and 27, R27E, T28N.",
+Rhamnus frangula,MU,From Currator,"Harriman, N.A.",,18,9,1993,United States,Wisconsin,Oconto County,,,-88.023618,44.519536,,"All-too-abundant, almost the dominant in understory of wet woods along Bay Shore Drive, which is also county Trunk N, south of Oconto, near Green Bay, T28N, R22E, section 29.",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,1,8,2002,United States,Wisconsin,Brown County,,,-88.053408,44.290548,,"Brown County: Holland Twp. T21N R20E S15 E 1/2
+
+Holland State Wildlife Area, about 10 miles south of DePere. Moist brushy thickets near parking area on Mill Road.",
+Rhamnus frangula,MU,From Currator,"Vincent, M.A.",,8,8,2002,United States,Wisconsin,Rock County,,,-88.981636,42.628325,,Rock County: Rest area along Interstate 39/90 southbound; disturbed woods.,
+Rhamnus frangula,MU,From Currator,"Harriman, N.A.",,19,6,2004,United States,Wisconsin,Outagamie County,,,-88.638006,44.334484,,"Small tree, not abundant, along edge of hiking trail, an old RR grade, between Hortonville and Spring Road, a two - mile stretch, sections 1 and 12, T21N, R15E. This was very near the parking lot at t",
+Frangula alnus,NCBS,IPANE,Elmer Worthly,,18,6,1947,United States,Connecticut,Fairfield,Greenwich,,-73.6142,41.039,,Audubon Nature Center,with L. J. Bradley; in moist soil
+Frangula alnus,NCBS,IPANE,Leonard J. Bradley,,18,6,1947,United States,Connecticut,Fairfield,Greenwich,,-73.6142,41.039,,Audubon Nature Center; along entrance road,
+Frangula alnus,NCBS,IPANE,Gordon C. Tucker,,5,5,1989,United States,Connecticut,New London,Norwich,,-72.088,41.5502,,"west side of Route 395, just south of Route 82; large cemetery",
+Frangula alnus,NEBC,IPANE,Edwin Hubert Eames,,17,9,1940,United States,Connecticut,Fairfield,Fairfield,,-73.2724,41.1757,,,"forming a thicket, in shade"
+Frangula alnus,NEBC,IPANE,Frank Conklin Seymour,,30,7,1964,United States,Connecticut,Tolland,Mansfield,Storrs,-72.25,41.8083,,,One shrub in meadow with Campanula aparanoides and Glyceria canadensis; cultivated on campus 1/2 mile away
+Frangula alnus,NEBC,IPANE,Gordon C. Tucker,,5,5,1989,United States,Connecticut,New London,Norwich,,-72.1108,41.5149,,"large cemetery; west side of Route 395, just south of Route 82",
+Frangula alnus,NEBC,IPANE,Jonathan D. Kusmin,,16,10,1989,United States,Connecticut,Tolland,Mansfield,Storrs,-72.2601,41.8071,,Uconn's X-lot south hillside,"Flw white/green, fr dark maroon [sic]"
+Frangula alnus,NEBC,IPANE,Lawrence O. Safford,,8,8,1968,United States,Maine,Penobscot,Bradley,,-68.6274,44.8647,,Penobscot Experimental Forest; middle of Blackman Stream below dam,"large shrub, 12 ft. high"
+Frangula alnus,NEBC,IPANE,Winfield S. Ripley Jr.,,24,7,1915,United States,Massachusetts,Middlesex,Wakefield,,-71.0622,42.5172,,Lowell St. beside R. R.,
+Frangula alnus,NEBC,IPANE,William Brewster,,27,6,1918,United States,Massachusetts,Middlesex,Concord,,-71.3648,42.4612,,Miss Mary Eaton's Estate,
+Frangula alnus,NEBC,IPANE,Charles Foster Batchelder,,23,7,1918,United States,Massachusetts,Middlesex,Concord,,-71.3648,42.4612,,,
+Frangula alnus,NEBC,IPANE,Charles Schweinfurth,,1,6,1921,United States,Massachusetts,Suffolk,Boston,West Roxbury (subdivision),-71.1244,42.3018,,by Bussey Institute,
+Frangula alnus,NEBC,IPANE,Merritt Lyndon Fernald,,26,9,1928,United States,Massachusetts,Middlesex,Lexington,,-71.2314,42.4456,,,abundant; collected with H. K. Svenson
+Frangula alnus,NEBC,IPANE,Richard J. Eaton,,22,6,1935,United States,Massachusetts,Middlesex,Concord,,-71.3648,42.4612,,,"several bushes; rare; naturalized from Europe; 2nd known station in Concord in 1935, by 1955 widely scattered"
+Frangula alnus,NEBC,IPANE,Richard J. Eaton,,23,6,1936,United States,Massachusetts,Middlesex,Concord,,-71.3485,42.467,,East side of Ripley Hill,
+Frangula alnus,NEBC,IPANE,Clarence W. Kinney,,2,6,1936,United States,Massachusetts,Worcester,Worcester,Tatnuck (subdivision),-71.85,42.2833,,abandoned farm,
+Frangula alnus,NEBC,IPANE,Richard J. Eaton,,20,7,1937,United States,Massachusetts,Middlesex,Concord,,-71.3505,42.4781,,J. Boardman's field - s.w. Punkatasset Hill,numerous plants; N. B. By 1955  widely distributed in Concord and Lincoln
+Frangula alnus,NEBC,IPANE,F. W. Hunnewell,,21,8,1937,United States,Massachusetts,Middlesex,Natick,,-71.3577,42.2867,,Lake Cochituate,
+Frangula alnus,NEBC,IPANE,Arthur Stanley Pease,,22,7,1940,United States,Massachusetts,Middlesex,Bedford,,-71.3108,42.4823,,Davis Road,
+Frangula alnus,NEBC,IPANE,F. W. Hunnewell,,26,5,1942,United States,Massachusetts,Norfolk,Wellesley,,-71.244,42.3208,,by Charles River,
+Frangula alnus,NEBC,IPANE,Clarence H. Knowlton,,27,7,1943,United States,Massachusetts,Plymouth,Hingham,,-70.8863,42.2201,,,2 bushes
+Frangula alnus,NEBC,IPANE,S. N. F. Sanford,,8,6,1944,United States,Massachusetts,Essex,Marblehead,,-70.8361,42.494,,,
+Frangula alnus,NEBC,IPANE,S. N. F. Sanford,,30,5,1944,United States,Massachusetts,Suffolk,Boston,,-71.1057,42.3472,,Park Drive off baseball Fenway,copse
+Frangula alnus,NEBC,IPANE,Arthur Stanley Pease,,2,9,1944,United States,Massachusetts,Middlesex,Billerica,North Billerica,-71.285,42.5833,,,"Roadside copse, far from a house"
+Frangula alnus,NEBC,IPANE,Clarence H. Knowlton,,4,9,1946,United States,Massachusetts,Plymouth,Hanover,,-70.8575,42.1228,,,
+Frangula alnus,NEBC,IPANE,Clarence W. Kinney,,18,10,1950,United States,Massachusetts,Worcester,Worcester,,-71.8659,42.2968,,vicinity of pipe-line forn Holden Reservoir; rear of Mr. Kinney's property,seedling bush to 4 feet tall
+Frangula alnus,NEBC,IPANE,S. N. F. Sanford,,9,7,1954,United States,Massachusetts,Norfolk,Walpole,East Walpole,-71.2111,42.1619,,,
+Frangula alnus,NEBC,IPANE,Richard J. Eaton,,30,9,1955,United States,Massachusetts,Middlesex,Lincoln,,-71.3111,42.4259,,nursery; R. J. E.[aton]'s shrubbery,Nursery - propag. From seedling in my strawberry bed.  Occasional
+Frangula alnus,NEBC,IPANE,Richard J. Eaton,,20,7,1957,United States,Massachusetts,Middlesex,Concord,,-71.3335,42.443,,near Goose Pond,"A small pinch"" from a turf [underlined] of seedlings 3 m in diam.  This species well nigh ubiquitious in Concord."""
+Frangula alnus,NEBC,IPANE,Stuart K. Harris,,7,7,1958,United States,Massachusetts,Essex,North Andover,,-71.1219,42.7221,,Clark Street,
+Frangula alnus,NEBC,IPANE,Roscoe E. Johnson,,6,6,1958,United States,Massachusetts,Worcester,Templeton,,-72.0731,42.5684,,"same locus as 32,367, across the road from the previous collection",Part 1; several equally old bushes in a hedgerow across the road from previous collection.
+Frangula alnus,NEBC,IPANE,Roscoe E. Johnson,,30,8,1958,United States,Massachusetts,Worcester,Templeton,,-72.0731,42.5684,,"same as 32,612",from same bush as Johnson 6 JUN 1958
+Frangula alnus,NEBC,IPANE,Richard J. Eaton,,5,11,1961,United States,Massachusetts,Essex,Ipswich,,-70.7672,42.6849,,between Argilla Rd. and the saltmarshes on the Goodale property,"where abundant and becoming a pest"" fide Dr. R. L. Goodale"""
+Frangula alnus,NEBC,IPANE,Richard J. Eaton,,30,6,1965,United States,Massachusetts,Worcester,Lancaster,,-71.6817,42.479,,near ancient burying ground,with L. E. Richardson
+Frangula alnus,NEBC,IPANE,Henry K. Svenson,,7,10,1967,United States,Massachusetts,Barnstable,Sandwich,East Sandwich,-70.4455,41.739,,along r. r.,tree about 15 ft. high
+Frangula alnus,NEBC,IPANE,Harry E. Ahles,,22,7,1978,United States,Massachusetts,Hampshire,Hadley,,-72.5506,42.3577,,North Maple Street near Rt. 9,
+Frangula alnus,NEBC,IPANE,Harry E. Ahles,,1,7,1980,United States,Massachusetts,Hampshire,Amherst,,-72.5071,42.3645,,,var. latifolia (Kirchn.) Dipp.
+Frangula alnus,NEBC,IPANE,Harry E. Ahles,,12,6,1980,United States,Massachusetts,Hampshire,Hadley,,-72.5606,42.3522,,fence row at shopping mall off Route 9,var. aspleniifolia Dippel
+Frangula alnus,NEBC,IPANE,Thomas J. Rawinski,,4,7,1985,United States,Massachusetts,Norfolk,Needham,,-71.1938,42.2858,,small marsh at Powells Island,With Carex bullata and Chamaedaphne calycullata. Normal plants here as well.  Leaves unusual on entire plant; lateral veins are lacking.  Elev. 90 ft. (27 m.).
+Frangula alnus,NEBC,IPANE,Bruce A. Sorrie,,28,6,1987,United States,Massachusetts,Bristol,Easton,,-71.0946,42.0538,,Queset Brook sw of cemetery,A single plant 7 feet tall at edge of open sedge meadow.  All leave slender.
+Frangula alnus,NEBC,IPANE,Pamela B. Weatherbee,,11,6,1991,United States,Massachusetts,Berkshire,Lenox,,-73.2956,42.3904,,"Pleasant Valley, M[ass.] A[udubon] S[ociety] property",
+Frangula alnus,NEBC,IPANE,R. N. Toppan Mrs.,,1,7,1922,United States,New Hampshire,Cheshire,Dublin,,-72.0699,42.8965,,,away from cultivation
+Frangula alnus,NEBC,IPANE,Albion R. Hodgdon,,12,7,1944,United States,New Hampshire,Strafford,Durham,,-70.9285,43.137,,near Garrison Avenue,tall shrub
+Frangula alnus,NEBC,IPANE,Albion R. Hodgdon,,29,8,1944,United States,New Hampshire,Coos,Northumberland,,-71.5582,44.5636,,near Connecticut River,with H. S. Clapp and A. F. Yeager
+Frangula alnus,NEBC,IPANE,Albion R. Hodgdon,,3,7,1957,United States,New Hampshire,Rockingham,Rye,,-70.7378,43.0086,,,"with alders at edge of Chamaecyparis, Red Maple, Red Spruce Swamp near shore"
+Frangula alnus,NEBC,IPANE,Stuart K. Harris,,26,6,1958,United States,New Hampshire,Rockingham,Salem,Rockingham Park,-71.2272,42.7711,,,with A. R. Hodgdon
+Frangula alnus,NEBC,IPANE,Gerald Ouellette,,28,6,1959,United States,New Hampshire,Cheshire,Jaffrey,,-72.0603,42.8289,,,"with Acer saccharum, Fraxinus americana, Prunus serotina, Ulmus americana, & Viburnum cassinoides"
+Frangula alnus,NEBC,IPANE,Stuart K. Harris,,12,10,1961,United States,New Hampshire,Rockingham,New Castle,,-70.7154,43.063,,,abundant
+Frangula alnus,NEBC,IPANE,Albion R. Hodgdon,,29,7,1962,United States,New Hampshire,Grafton,Lebanon,,-71.8206,43.9491,,Blodgett's brook,with N. Nugent and C. Chapman
+Frangula alnus,NEBC,IPANE,Albion R. Hodgdon,,24,7,1969,United States,New Hampshire,Hillsborough,Manchester,,-71.4558,42.9387,,bordering Merrimack River southe of Manchester,with F. L. Steele
+Frangula alnus,NEBC,IPANE,Albion R. Hodgdon,,9,11,1970,United States,New Hampshire,Strafford,Dover,,-70.9144,43.2077,,along Cocheco River about 1 1/2 miles east of County Farm,"with Alnus rugosa, Cornus amomum et c"
+Frangula alnus,NEBC,IPANE,Harry E. Ahles,,31,7,1980,United States,New Hampshire,Belknap,Tilton,,-71.5474,43.466,,"on US 3 near Noyes Road, 0.7 miles south of Lochmere",
+Frangula alnus,NEBC,IPANE,Harry E. Ahles,,31,7,1980,United States,New Hampshire,Belknap,Tilton,,-71.5478,43.4655,,"on US Route 3, near Noyes Road, 0.7 miles south of south of Lochmere",
+Frangula alnus,NEBC,IPANE,Harry E. Ahles,,16,7,1980,United States,New Hampshire,Sullivan,Newport,,-72.1727,43.3616,,"Route 11, along Sugar River",
+Frangula alnus,NEBC,IPANE,Thomas J. Rawinski,,20,8,1985,United States,New Hampshire,Carroll,Conway,,-71.1585,44.076,,Flood plain of the saco River just south of the Bartlett town line,with Acer saccharinum and Salix lucida; frequent
+Frangula alnus,NEBC,IPANE,David E. Boufford,,19,7,1987,United States,New Hampshire,Cheshire,Fitzwilliam,Brigham Hill,-72.1373,42.7626,,east of village of Fitzwilliam Depot and northeast of Brigham Hill at right angle bend in Collins Pond Road,with E. W. Wood; elevation ca. 330 meters; shrub ca 3 meters tall; fowers green; fruits turning red; leaves slightly glossy above.
+Frangula alnus,NEBC,IPANE,Richard L. Champlin,,21,6,1980,United States,Rhode Island,Newport,Jamestown,,-71.3656,41.4814,,Walcott Avenue,var. angustifolia L.
+Frangula alnus,NEBC,IPANE,Richard L. Champlin,,6,11,1992,United States,Rhode Island,Providence,Burrillville,,-71.7386,41.9671,,Wallum Lake Road,about 10 - 12 ft. tall. No Fruit.
+Frangula alnus,NEBC,IPANE,Richard L. Champlin,,19,6,1993,United States,Rhode Island,Kent,Coventry,Summit,-71.693,41.693,,Rte. 102 & 117,
+Frangula alnus,NEBC,IPANE,Leston A. Wheeler,,11,6,1911,United States,Vermont,Windham,Brattleboro,,-72.566,42.8584,,Retreat Park,
+Frangula alnus,NEBC,IPANE,Arthur Stanley Pease,,21,6,1929,United States,Vermont,Windham,Westminster,,-72.5086,43.0746,,,7' high
+Frangula alnus,NEBC,IPANE,Clarence H. Knowlton,,12,7,1934,United States,Vermont,Chittenden,Burlington,,-73.2262,44.4881,,,
+Frangula alnus,NEBC,IPANE,Robert Downs,,30,7,1979,United States,Vermont,Windsor,Norwich,,-72.2437,43.8333,,west slope of Meetinghouse Hill ca. 2 miles north of Norwich Village off New Boston Road,
+Frangula alnus,NEBC,IPANE,Harry E. Ahles,,8,7,1980,United States,Vermont,Essex,Guildhall,,-71.5662,44.5654,,Vermont Route 102,
+Frangula alnus,NEBC,IPANE,Ray Angelo,,10,9,1988,United States,Vermont,Bennington,Manchester,Equinox Mountain,-73.1165,43.1661,,vicinity of Mt. Equinox,On NEBC Field field trip;  Several shrubs about 1 m high.
+Frangula alnus,NEBC,IPANE,Arthur V. Gilman,,2,7,1997,United States,Vermont,Caledonia,Waterford,,-71.8711,44.3374,,below Moore Reservoir,one small shrub
+Rhamnus frangula L.,NY,http://sciweb.nybg.org/science2/vii2.asp 'Basic search'=frangula,S. Hunkins,645195,19,6,2002,United States,New Hampshire,Carroll Co.,,Jackson. Across the road from the Wentworth Inn,-71.182,44.147,,,
+Rhamnus frangula L.,NY,http://sciweb.nybg.org/science2/vii2.asp 'Basic search'=frangula,W. R. Buck,666422,30,6,2002,United States,New York,Putnam Co.,,"Town of Southeast, Doansburg Preserve, ENE of Mill Farm Lane and WSW of Gage Road, 0.2 mi SE of Doansburg Road",-73.552,41.449,,,Wetland
+Rhamnus frangula L.,NY,http://sciweb.nybg.org/science2/vii2.asp 'Basic search'=frangula,D. E. Atha,1116438,9,7,2009,United States,New York,Putnam Co.,,"ca 7 km W of New York/Connecticut border and ca 10 km N of Putnam/Westchester border, Ice Pond Conservation Area, E of Ice Pond Rd, W of Co. Rd 62 (Farm to Market Rd), N of Rte 312 and S of Rte 164",-73.603,41.456,,,Powerline right-of-way
+Rhamnus frangula L.,NY,http://sciweb.nybg.org/science2/vii2.asp 'Basic search'=frangula,D. E. Atha,1116469,7,8,2009,United States,New York,Putnam Co.,,"ca 7 km W of New York/Connecticut border and ca 10 km N of Putnam/Westchester border, Ice Pond Conservation Area, E of Ice Pond Rd, W of Co. Rd 62 (Farm to Market Rd), N of Rte 312 and S of Rte 164",-73.613,41.458,,,Dwarf red maple swamp
+Rhamnus frangula L.,NY,http://sciweb.nybg.org/science2/vii2.asp 'Basic search'=frangula,D. E. Atha,1088595,24,6,2009,United States,New York,Putnam Co.,,"ca 7 km W of New York/Connecticut border and ca 10 km N of Putnam/Westchester border, Ice Pond Conservation Area, E of Ice Pond Rd, W of Co. Rd 62 (Farm to Market Rd), N of Rte 312 and S of Rte 164",-73.615,41.451,,,Edge of red maple swamp forest
+Rhamnus frangula,paper,Howell and Blackwell 1977,Beardslee and Tyler,,,,1927,United States,Ohio,Lake County,,,-81.3036,41.6933,10000,Georeferenced by MA-L based on County,"Collection year based on Howell et al. 1977, p. 114"
+Rhamnus frangula,paper,Taft and Solecki 1990,Sherff,,,,1912,,Illinois,Cook,,,-87.78,42.13,10000,,
+Rhamnus frangula,paper,Taft and Solecki 1990,,,,,1950,,Illinois,Lake,,,-88.13,42.39,10000,Gavin Bog,
+Rhamnus frangula,QK,http://www.queensu.ca/biology/facilities/herbarium/database.html,"Matthewman, G.S.",67428,23,7,1953,Canada,Ontario,Frontenac,Kingston,Kingston,-76.486281,44.231101,10000,,damp woods
+Rhamnus frangula,QK,http://www.queensu.ca/biology/facilities/herbarium/database.html,Crowder & Snetsinger,126373,6,,1985,Canada,Ontario,Leeds,South Elmsley,E of Poonamakie Lock,-76.054377,44.892489,10000,,rock ridge
+Frangula alnus,RM,http://www.rmh.uwyo.edu/data/search.php genus=frangula species=alnus,R. Dorn,200227,22,7,1985,United States,Wyoming,Crook,,Sand Creek across from Fish Technical Center.,-104.1027,44.4951,1600,Stream bank thicket with Viburnum lentago and R. cathartica,Flowering and Fruiting
+Frangula alnus,RM,http://www.rmh.uwyo.edu/data/search.php genus=frangula species=alnus,Robert D. Dorn,672125,22,7,1985,United States,Wyoming,Crook,,Sand Creek across from Fish Technical Center.,-104.1027,44.4951,1600,Stream bank thicket with Viburnum lentago and R. cathartica,Flowering and Fruiting
+Rhamnus frangula,US,http://collections.mnh.si.edu/search/botany/ key word=frangula,"Barton, B. W.",2345153,20,5,1903,United States,Maryland,Baltimore,,,-76.7228,39.3742,,Pikesville vicinity,
+Rhamnus frangula,US,http://collections.mnh.si.edu/search/botany/ key word=frangula,"Fessenden, G. R.",2235409,2,6,1952,United States,Maryland,Baltimore,,,-76.658924,39.385473,2000,Southeast of Falls road and Old Pimlico road intersection,
+Rhamnus frangula,US,http://collections.mnh.si.edu/search/botany/ key word=frangula,"Baltars, E.",2179224,9,7,1955,United States,Maryland,Baltimore,,,-76.668266,39.411539,2000,"Hillside Road, west of Falls Road",
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',Meeker/Fewless,UWGB9361,4,11,1981,United States,Wisconsin,Brown,Green Bay,,-87.93,44.46,10000,UWGB,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB21207,17,10,1986,United States,Wisconsin,Brown,Green Bay,,-87.93,44.46,10000,UWGB,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB16279,28,8,1986,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB17620,25,10,1987,United States,Wisconsin,Brown,Howard,,-87.93,44.46,10000,,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB17774,29,9,1987,United States,Wisconsin,Brown,Howard,,-87.93,44.46,10000,PETERS MARSH,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',Moore/Fewless,UWGB18041,25,6,1987,United States,Wisconsin,Brown,Suamico,,-87.93,44.46,10000,BARKHAUSEN,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Moore, James",UWGB20664,17,7,1987,United States,Wisconsin,Iron,Gurney,,-90.23,46.29,10000,,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB18358,18,6,1988,United States,Wisconsin,Brown,Green Bay,,-87.93,44.46,10000,,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB18400,23,6,1988,United States,Wisconsin,Brown,Scott,,-87.93,44.46,10000,BLUEBERRY MARSH,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB18422,12,7,1988,United States,Wisconsin,Brown,Green Bay,,-87.93,44.46,10000,ATKINSONS MARSH,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB18497,27,6,1988,United States,Wisconsin,Brown,Allouez,,-87.93,44.46,10000,GREEN ISLE PARK,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB20258,9,8,1989,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB20142,3,9,1989,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,SEA GULL BAR,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB21289,25,7,1990,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,E of Krause Road,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB22030,26,7,1991,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,PESHTIGO HARBOR,
+Rhamnus frangula,UWGB,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",UWGB22185,12,9,1991,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,SEA GULL BAR,
+Rhamnus frangula,UWSP,http://botany.wisc.edu/herbarium/ 'see methods',"Bogdansky, Alvin",UWSP131122,20,7,2000,United States,Wisconsin,Jackson,,,-88.17,43.32,10000,0.25 mile south of 54 along Brockway Rd.,
+Rhamnus frangula,UWSP,http://botany.wisc.edu/herbarium/ 'see methods',"Hiles, Melissa",UWSP137762,10,9,2003,United States,Wisconsin,Marathon,Rib Mountain,,-89.84,44.93,10000,Bluegill Bay County Park.  [S of Wausau; section added by editor] [originally 44.9232N 89.633],
+Rhamnus frangula,UWSP,http://botany.wisc.edu/herbarium/ 'see methods',"Bogdansky, Alvin",UWSP140561,23,8,2005,United States,Wisconsin,Portage,,,-89.46,43.54,10000,"110 St., 0.5mi S of CTH W",
+Rhamnus frangula,UWSP,http://botany.wisc.edu/herbarium/ 'see methods',"Bogdansky, Alvin",UWSP140707,20,6,2005,United States,Wisconsin,Wood,,,-90.33,43.57,10000,On 49th St. South between North Beach Rd. and grove,
+Rhamnus frangula,UWSP,http://botany.wisc.edu/herbarium/ 'see methods',"Garske, Steven C.",UWSP141945,8,6,2006,United States,Wisconsin,Oneida,,,-88.22,44.49,10000,Wetland just W of Bear Rd.  Norhern Highland-American Legion State Forest.,
+Rhamnus frangula,UWSP,http://botany.wisc.edu/herbarium/ 'see methods',"Bogdansky, Alvin",UWSP142721,27,5,2006,United States,Wisconsin,Wood,Wisconsin Rapids,,-90.33,43.57,10000,Edge of parking lot along Bonow Ave. NW edge of Wisconsin Rapids,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Wadmond, S.C.",v0161211WIS,12,6,1927,United States,Wisconsin,Walworth,Bloomfield,,-88.6,42.53,10000,,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fassett, N.C.",v0161205WIS,12,6,1934,United States,Wisconsin,Columbia,Wyocena,,-90.72,44.51,10000,,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Goessl, Chas.",v0161212WIS,20,9,1935,United States,Wisconsin,Milwaukee,Wauwatosa,,-87.91,43.04,10000,Menomonee Valley,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Thomson, J.W., Jr.",v0161236WIS,29,7,1940,United States,Wisconsin,Walworth,Lake Geneva,,-88.6,42.53,10000,2.5mi. NE of Lake Geneva.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Shinners, L.H.",v0161204WIS,2,7,1941,United States,Wisconsin,Calumet,Chilton,,-88.3,43.91,10000,1.5mi. W of Chilton.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cull, Irene",v0161209WIS,14,6,1947,United States,Wisconsin,Waukesha,,,-88.23,43.01,10000,Between Hartland and Pewaukee.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Derr, Kenneth",v0161215WIS,14,9,1949,United States,Wisconsin,Wood,Wisconsin Rapids,,-90.33,43.57,10000,Griffith State Nursery,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Piehl, Martin A.",v0161203WIS,20,6,1955,United States,Wisconsin,Taylor,Medford,,-91.12,44.32,10000,West city limits of Medford.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Peterson, Alvin M.",v0161240WIS,29,5,1958,United States,Wisconsin,Jackson,Black River Falls,,-88.17,43.32,10000,Castle Mound near Black River Falls.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Hartley, Thomas G.",v0161250WIS,24,5,1958,United States,Wisconsin,Jackson,Brockway,,-88.17,43.32,10000,In Castle Mound Roadside Park,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fell, E.W.",v0161242WIS,19,8,1958,United States,Wisconsin,Green,Brodhead,,-89.63,42.63,10000,"Sugar River at CTH F, W of Brodhead.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fell, E.W.",v0161249WIS,24,6,1958,United States,Wisconsin,Green,Brodhead,,-89.63,42.63,10000,"CTH F at Sugar River, W of Brodhead.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Hasselkus, E.R.",v0161235WIS,20,4,1960,United States,Wisconsin,Waukesha,Dousman,,-88.23,43.01,10000,"Hasselkus swamp, S of Dousman.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Woelkerling, Wm.",v0161200WIS,17,10,1961,United States,Wisconsin,Milwaukee,Milwaukee,,-87.91,43.04,10000,Estabrook Park,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Rill, K.D.",v0161218WIS,24,6,1961,United States,Wisconsin,Waupaca,Clintonville,,-89.09,44.36,10000,,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Jacobson, W.",v0161213WIS,19,7,1961,United States,Wisconsin,Marinette,Marinette,,-89.84,44.93,10000,Marinette City,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Aumann, G.",v0161243WIS,29,7,1961,United States,Wisconsin,Columbia,Arlington,,-90.72,44.51,10000,[S of Arlington],
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Goff, Glenn",v0161241WIS,30,9,1962,United States,Wisconsin,Jackson,,,-88.17,43.32,10000,Castle Mound State Park.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"James, M.C.",v0161252WIS,18,5,1962,United States,Wisconsin,Walworth,,,-88.6,42.53,10000,,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Lind, C.T.",v0161201WIS,28,10,1965,United States,Wisconsin,Racine,Burlington,,-87.78,42.73,10000,Shoreline of Rockland Lake [E of Burlington],
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Harriman, Neil A.",v0161216WIS,4,6,1965,United States,Wisconsin,Winnebago,Waukau,,-88.53,44.08,10000,"Above Waukau Creek, just upstream from where it crosses State Route 116.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Harker, Mollie",v0161237WIS,10,10,1965,United States,Wisconsin,Winnebago,Neenah,,-88.53,44.08,10000,Near the shore of Lake Winnebago,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Harriman, Neil A.",v0161246WIS,12,6,1966,United States,Wisconsin,Green Lake,Princeton,,-88.96,43.83,10000,"Tom Chickowski farm, W of Princeton off CTH Y, in Princeton Twp.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Jasperson, Ronald",v0161261WIS,21,9,1968,United States,Wisconsin,Racine,North Cape,,-87.78,42.73,10000,[NW of Noth Cape],
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Musselman, Lytton J.",v0161208WIS,3,6,1968,United States,Wisconsin,Rock,Lima,,-90.24,44.57,10000,Also Section 16,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Musselman, Lytton J.",v0161226WIS,3,6,1968,United States,Wisconsin,Rock,Lima,,-90.24,44.57,10000,Lima Bog. Also Section 16,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Tans, William E.",v0161202WIS,5,8,1969,United States,Wisconsin,Sheboygan,,,-87.71,43.75,10000,Sheboygan Marsh,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Harriman, Neil A.",v0161238WIS,6,6,1969,United States,Wisconsin,Winnebago,Black Wolf,,-88.53,44.08,10000,High Trestle Woods. [300 yds. S of West Ripple Rd. beside the Soo Line RR.],
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Musselman, Lytton J.",v0161225WIS,19,5,1969,United States,Wisconsin,Rock,Lima,,-90.24,44.57,10000,Lima Bog,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Musselman, Lytton J.",v0161259WIS,8,9,1969,United States,Wisconsin,Rock,Lima,,-90.24,44.57,10000,Lima Bog. Also Section 16.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Musselman, Lytton J.",v0161258WIS,19,8,1970,United States,Wisconsin,Rock,Janesville,,-90.24,44.57,10000,Edge of Rock River. Riverside Park. Janseville Twp.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Musselman, Lytton J.",v0161260WIS,19,8,1970,United States,Wisconsin,Rock,Janesville,,-90.24,44.57,10000,Edge of Rock River. Riverside Park. Janseville Twp.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Schilling, Wayne M.",v0161214WIS,16,10,1971,United States,Wisconsin,Marathon,,,-89.84,44.93,10000,,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0161254WIS,22,10,1973,United States,Wisconsin,Walworth,Lake Geneva,,-88.6,42.53,10000,Playboy Club property between town road and Hwy 36. 0.5mi. NE of Lake Geneva.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0161255WIS,22,10,1973,United States,Wisconsin,Walworth,,,-88.6,42.53,10000,,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0161256WIS,22,10,1973,United States,Wisconsin,Walworth,Lake Geneva,,-88.6,42.53,10000,Playboy Club property overlooking White River. 0.5mi. NE of Lake Geneva.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0161257WIS,22,10,1973,United States,Wisconsin,Walworth,Lake Geneva,,-88.6,42.53,10000,Playboy Club property overlooking White River. 0.5mi. NE of Lake Geneva.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Hansen, Bruce",v0161206WIS,18,6,1975,United States,Wisconsin,Dane,Madison,,-89.5,43.25,10000,"Nine Springs Creek, 0.25mi. W of Syene Rd.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Moroder, Christopher",v0161262WIS,11,9,1976,United States,Wisconsin,Sheboygan,Saint Cloud,,-87.71,43.75,10000,"Sheboygan Marsh Area, 2blocks W of Western crossroad of Sheboygan River and Main Drainage Ditch (runs E-W); 2mi. NE of St. Cloud [MN].",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Alverson, William S.",v0161253WIS,26,6,1980,United States,Wisconsin,Walworth,Delevan,,-88.6,42.53,10000,"RR tracks at Springs Park, Delevan.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Alverson, William S.",v0161207WIS,20,7,1980,United States,Wisconsin,Barron,Barron,,-91.85,45.4,10000,"Along Yellow River, within city limits of Barron.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0161248WIS,7,6,1981,United States,Wisconsin,Oconto,Oconto,,-87.86,44.89,10000,RR yard in City of Oconto.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0161263WIS,15,8,1981,United States,Wisconsin,Oconto,,,-87.86,44.89,10000,,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Nee, M.",v0161245WIS,13,6,1981,United States,Wisconsin,Jefferson,Fort Atkinson,,-88.81,43.01,10000,"Rock River Park, W side of Fort Atkinson.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Coenen, Linda",v0161251WIS,23,2,1982,United States,Wisconsin,Dane,Madison,,-89.5,43.25,10000,"UW Arboretum, Gardner Marsh area.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Gage, Linda M.",v0113028WIS,22,7,1982,United States,Wisconsin,Monroe,Camp Mccoy,,-89.64,42.6,10000,"WAC pond; Military Coordinates X,Y: 685100, 4875500",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0161247WIS,27,7,1985,United States,Wisconsin,Kenosha,Kenosha,,-87.82,42.58,10000,"Low flat prairies along Lake Michigan, just N of Illinois State line and E of railroad. [S of Kenosha]",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Iltis, Hugh H.",v0161244WIS,19,8,1985,United States,Wisconsin,Dane,Madison,,-89.5,43.25,10000,UW Arboretum,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Salzman, R.",v0161239WIS,1,9,1987,United States,Wisconsin,Marinette,Marinette,,-89.84,44.93,10000,1mi. W of Marinette (Wright Slough).,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Leitner, Lawrence A.",v0161217WIS,27,7,1988,United States,Wisconsin,Washington,,,-86.93,45.39,10000,Northern Part SNA,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Freckmann, Robert W.",v0178391WIS,9,8,1989,United States,Wisconsin,Jackson,,,-88.17,43.32,10000,Castle Mound Pine Forest State Natural Area in Castle Mound State Roadside Park,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",v0161220WIS,9,8,1989,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,Near Green Bay shore.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",v0161221WIS,3,9,1989,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,Sea Gull Bar,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Thompson, Kathy L.",v0161210WIS,1,7,1990,United States,Wisconsin,Door,Baileys Harbor,,-87.05,45.11,10000,4mi. S of Baileys Harbor. Kangaroo Lake County Park.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Nee, M.",v0177632WIS,10,8,1990,United States,Wisconsin,Jefferson,Fort Atkinson,,-88.81,43.01,10000,Along Bark River. SE side of Fort Atkinson,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fewless, Gary",v0003979WIS,25,7,1990,United States,Wisconsin,Marinette,Peshtigo,,-89.84,44.93,10000,E of Krause Road,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0125709WIS,12,10,1992,United States,Wisconsin,Washington,Slinger,,-86.93,45.39,10000,"Southeast of Aurora Rd. between (E of) Soo Line RR. and (W of) U.S. Hwy. 41, 4 mi. NNW of Slinger, 6 mi. (airline distance) NE of Hartford.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Nee, M.",v0177631WIS,30,8,1993,United States,Wisconsin,Jefferson,Fort Atkinson,,-88.81,43.01,10000,"Floodplain of Bark River, 0.5mi. upstram from confluence with Rock River, 1mi. SE of center of Fort Atkinson",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Iltis, Hugh H.",v0161223WIS,13,10,1993,United States,Wisconsin,Dane,,,-89.5,43.25,10000,"UW Arboretum, Wingra Marsh.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Iltis, Hugh H.",v0161224WIS,13,10,1993,United States,Wisconsin,Dane,,,-89.5,43.25,10000,"UW Arboretum, Wingra Marsh.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fields, Douglas M.",v0113503WIS,25,9,1993,United States,Wisconsin,Taylor,Stetsonville,,-91.12,44.32,10000,0.25 mile S of Stetsonville.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0161198WIS,1,6,1993,United States,Wisconsin,St. Croix,,,-92.39,45.05,10000,"Extreme NW corner of county, also found on Minn. side in Wm. O'Brien State Park.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fields, Douglas M.",v0113472WIS,13,6,1994,United States,Wisconsin,Taylor,Gilman,,-91.12,44.32,10000,Yellow River downstream from the railroad bridge in Gilman.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Fields, Douglas M.",v0113475WIS,30,6,1994,United States,Wisconsin,Taylor,,,-91.12,44.32,10000,Mud Lake,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0161219WIS,15,8,1995,United States,Wisconsin,Ashland,Ashland,,-90.88,46.59,10000,[orig. Bayfield Co.-err],
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Iltis, Hugh H.",v0161222WIS,15,9,1996,United States,Wisconsin,Dane,,,-89.5,43.25,10000,UW Arboretum near Sinyake overlook.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0161233WIS,19,7,1996,United States,Wisconsin,Bayfield,,,-90.82,46.81,10000,At NW of Eagle Lake.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0161234WIS,19,7,1996,United States,Wisconsin,Bayfield,,,-90.82,46.81,10000,At NW of Eagle Lake.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0013388WIS,26,8,1996,United States,Wisconsin,Bayfield,,,-90.82,46.81,10000,south shore of LAKE TWO at headwaters of WHITE RIVER near DELTA,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0089566WIS,14,9,1997,United States,Wisconsin,Dane,Fitchburg,,-89.5,43.25,10000,"South Waubesa Wetlands, SW side of Lake Waubesa between Swan and Murphy Creeks, E of Lalor Rd., 7 mi. SSE of Madison's capitol building, 2.5 mi. E of Fitchburg.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0208060WIS,2,6,1998,United States,Wisconsin,Door,Washington Island,,-87.05,45.11,10000,"Coffee Swamp area, N part of Washington Island. Around central pond.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0208284WIS,17,6,1998,United States,Wisconsin,Door,Plum Island,,-87.05,45.11,10000,Island in Lake Michigan. Lagoon near N tip.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Judziewicz, Emmet J.",v0208195WIS,8,6,1998,United States,Wisconsin,Marinette,Green Island,,-89.84,44.93,10000,80 acre island in Green Bay.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0039760WIS,2,8,1998,United States,Wisconsin,Chippewa,,,-90.72,46.03,10000,"S side of Ice Age Dr., 0.7 mi. E of Co. Hwy. AA, 7 mi. due E of New Auburn, 7.5 mi. due NE of Bloomer.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Garske, Steven C.",v0161137WIS,20,9,2001,United States,Wisconsin,Bayfield,Delta,,-90.82,46.81,10000,"NW shore of Lake Three, at end of fishing path. White River Fisheries Area, WDNR.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Garske, Steven C.",v0161141WIS,25,9,2001,United States,Wisconsin,Bayfield,Iron River,,-90.82,46.81,10000,"Twin Bear Lake Park, next to boat landing.",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Garske, Steven C.",v0161140WIS,24,9,2001,United States,Wisconsin,Bayfield,Iron River,,-90.82,46.81,10000,Woods on both sides of Hart Lake Road.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Garske, Steven C.",v0155036WIS,12,7,2001,United States,Wisconsin,Bayfield,Bayfield,,-90.82,46.81,10000,Just N of Madeline Island lookout platform. Dalrymple Park.,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Laatsch, Janeen R.",v0225478WIS,20,9,2004,United States,Wisconsin,Jefferson,Farmington,,-88.81,43.01,10000,DNR land. 1.25 miles SE of Farmington,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Gust, G.",v0221659WIS,12,8,2005,United States,Wisconsin,Kenosha,New Munster,,-87.82,42.58,10000,New Munster Bog Island WI DNR Natural Area. Also Sec. 3,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Gust, G.",v0257767WIS,12,8,2005,United States,Wisconsin,Kenosha,,,-87.82,42.58,10000,New Munster Bog Island WI DNR Natural Area; also Sec. 10,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Cochrane, Theodore S.",v0254708WIS,27,5,2007,United States,Wisconsin,Columbia,Poynette,,-90.72,44.51,10000,"N edge of Rocky Run Creek State Fishery Area, 1.4 mi. E of US Hwy 51 on Phillips Rd., 0.6 mi. W of Dunning Rd., 4.8 mi. (airline distance) NNE of Poynette",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Sulman, Joshua D.",v0252870WIS,27,7,2007,United States,Wisconsin,Rusk,Ladysmith,,-91.83,44.91,10000,"Gravel drive on S bank of Flambeau River, just S of Hwy 27 bridge",
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Gerber, D. Timothy",v0252806WIS,19,6,2008,United States,Wisconsin,La Crosse,Midway,,-91.24,43.8,10000,W side of Great River State Trail approx. 100 m N of trail jct. with CTH ZN;  Midway,
+Rhamnus frangula,WIS,http://botany.wisc.edu/herbarium/ 'see methods',"Garske, Steven C.",v0255417WIS,1,7,2008,United States,Wisconsin,Douglas,,,-91.86,46.56,10000,Wetland E of Forest Road. (WGS84),
+Frangula alnus,YU,IPANE,George E. Nichols,,2,11,1916,United States,Connecticut,New Haven,New Haven,Beaver Ponds Park,-72.9411,41.3297,,,
+Frangula alnus,YU,IPANE,John R. Reeder,,1,11,1948,United States,Connecticut,New Haven,New Haven,,-72.9241,41.3101,,north of Yale University Observatory along Prospect Street,
+Rhamnus frangula,paper,Catling and Porebski 1994,J. Dearness,,,,1898,Canada,Ontario,,London,,-81.15,43.0333,,,
+Rhamnus frangula,paper,Catling and Porebski 1994,J. Macoun,,,,1899,Canada,Ontario,,Ottawa,,-75.6919,45.4214,,,
+Rhamnus frangula,paper,Catling and Porebski 1994,W. Scott,,,,1906,Canada,Ontario,,Guelph,,-80.2503,43.5485,,,
+Rhamnus frangula L.,F,Field Museum and vPlant,C. W. Duesner,421311,,,1908,United States,Indiana,Lake,Pine,,-86.962409,41.660893,10000,,
+Rhamnus frangula L.,F,Field Museum and vPlant,E. E. Sherff,300299,8,6,1912,United States,Illinois,Cook,,,-87.78106,42.134451,10000,"Skokie Marsh, W. of Glencoe",in thicket
+Rhamnus frangula L.,F,Field Museum and vPlant,J. A. Steyermark,930589,30,6,1938,United States,Illinois,Cook,River Forest,,-87.829135,41.90058,5000,,
+Rhamnus frangula L.,F,Field Museum and vPlant,J. Freymuth,929458,,7,1938,United States,Illinois,Cook,River Forest,,-87.813948,41.897809,10000,,
+Rhamnus frangula L.,F,Field Museum and vPlant,H. C. Benke,1010651,28,6,1939,United States,Illinois,Cook,Des Plaines,,-87.883401,42.033364,10000,,probably planted
+Rhamnus frangula L.,F,Field Museum and vPlant,H. C. Benke,1010661,28,6,1939,United States,Illinois,Cook,Des Plaines,,-87.883401,42.033364,10000,,
+Rhamnus frangula L.,F,Field Museum and vPlant,J. A. Steyermark,1419101,8,9,1945,United States,Illinois,Lake,,,-88.189878,42.357372,10000,NW of Volo,tamarack swamp
+Rhamnus frangula L.,F,Field Museum and vPlant,J. A. Steyermark,1362055,14,10,1947,United States,Illinois,Lake,,,-88.130252,42.204718,10000,"Biltmore Estates subdivision, 5 mi. north of Barrington, at 117 North Hill Road",in woods
+Rhamnus frangula L.,F,Field Museum and vPlant,F. A. Swink,1415220,17,5,1952,United States,Illinois,DuPage,,,-87.96374,41.706652,10000,near Sawmill Creek in Rocky Glen Forest Preserve west of Palisades,
+Rhamnus frangula L.,F,Field Museum and vPlant,F. A. Swink,1561328,3,8,1952,United States,Illinois,Lake,,,-88.139247,42.258912,25000,Roney Farm near Wauconda,in a tamarck bog
+Rhamnus frangula L.,F,Field Museum and vPlant,F. A. Swink,1415221,24,5,1952,United States,Illinois,Kane,,,-88.266501,42.064199,1000,Trout Park north of Elgin,in alkaline springy ground
+Rhamnus frangula L.,F,Field Museum and vPlant,F. A. Swink,1496572,23,5,1953,United States,Illinois,Cook,Morton Grove,,-87.783965,42.046532,5000,near the Chicago River in Linne Woods at Morton Grove,
+Rhamnus frangula L.,F,Field Museum and vPlant,J. W. Thieret,1440747,17,6,1955,United States,Illinois,DuPage,,,-88.075991,41.807921,1000,"near junction of #53 and Warrenville Road, north of Lisle",at roadside
+Rhamnus frangula L.,F,Field Museum and vPlant,N. V. Haynie,1447286,8,7,1956,United States,Illinois,DuPage,Villa Park,,-87.988883,41.889832,5000,at home of Miss Nellie Haynie,
+Rhamnus frangula L.,F,Field Museum and vPlant,S. F. Glassman,2265596,18,7,1957,United States,Illinois,Cook,,,-87.885557,41.688568,1000,,4' tall shrub
+Rhamnus frangula L.,F,Field Museum and vPlant,R. A. Evers,2265616,18,6,1958,United States,Illinois,Lake,,,-88.189878,42.357372,2000,in Volo Bog north of Volo,
+Rhamnus frangula L.,F,Field Museum and vPlant,S. F. Glassman,2265598,23,5,1958,United States,Illinois,Cook,,,-88.073133,42.143754,5000,East of Rt. 12 & Dundee Rd,mixed deciduous woodland. flowers white
+Rhamnus frangula L.,F,Field Museum and vPlant,H. R. Bennett,1530679,4,6,1960,United States,Wisconsin,Walworth,,along Turtle Creek near Delavan,-88.653531,42.635379,5000,,moist soil
+Rhamnus frangula L.,F,Field Museum and vPlant,S. F. Glassman,2265600,28,5,1960,United States,Illinois,Cook,Morton Grove,,-87.775358,42.033227,1000,,cut over woodland
+Rhamnus frangula L.,F,Field Museum and vPlant,S. F. Glassman,2265595,29,7,1967,United States,Illinois,Lake,,,-88.189878,42.357372,2000,"Volo Bog, 1 mi. N. of Volo; tamarack bog",Tamarack Bog
+Rhamnus frangula L.,F,Field Museum and vPlant,E. M. Smith,2265602,3,5,1968,United States,Illinois,DuPage,,,-87.950418,41.839071,10000,"Forest Preserve No. 1, near Oak Brook",
+Rhamnus frangula L.,F,Field Museum and vPlant,S. F. Glassman,2265599,22,7,1972,United States,Wisconsin,Kenosha,,"Kenosha Prairie, 16th Ave. and Lake Michigan",-87.82739,42.550273,5000,,
+Rhamnus frangula L.,F,Field Museum and vPlant,A. O. Crook,1992989,,10,1975,United States,Illinois,Kane,Aurora,,-88.010622,41.807088,10000,"campus of George Williams College, near Downers Grove",shrub-invaded ridge
+Rhamnus frangula L.,F,Field Museum and vPlant,M. Nee et al.,1886911,31,8,1980,United States,Illinois,Lake,,,-88.130252,42.204718,1000,the former Julian A. Steyermark property; 5 miles N of Barrington,on hilly Valparaiso moraine
+Rhamnus frangula L.,F,Field Museum and vPlant,M. Böhlke et al.,2122917,2,7,1993,United States,Illinois,DuPage,Downers Grove,,-88.056536,41.817417,2000,side of 2-track dirt road in thicket,
+Rhamnus frangula L.,F,Field Museum and vPlant,T. G. Lammers,2156160,12,10,1995,United States,Illinois,Will,Wilmington,,-88.199552,41.274401,1000,"parallelling State Hwy 129, 1 mile north of its junction with State Hwy 113","along railroad tracks, in swale in sandy prairie"
+Rhamnus frangula L.,F,Field Museum and vPlant,T. G. Lammers et al.,2177305,24,6,1997,United States,Illinois,Cook,Palos,,-87.864013,41.677104,1500,"Swallow Cliff Woods Forest Preserve, southwest of the jct of US Hsy 45 and State Hwy 83",Oak forest and uplands
+Rhamnus frangula L.,F,Field Museum and vPlant,T. G. Lammers,2205924,9,5,1998,United States,Illinois,Cook,Palos,,-87.864013,41.677104,1500,"Swallow Cliffs Woods Forest Preserve, southwest of the jct. of US Hwy 45 and State Hwy 83, south of toboggan run",in dry-mesic forest on uplands
+Rhamnus frangula,KANU,GBIF Data portal search='Rhamnus frangula',Suneeti Jog,345624,29,5,2000,United States,Ohio,Cuyahoga,,Highland Heights,-81.4729,41.5446,,,
+Rhamnus frangula,KANU,GBIF Data portal search='Rhamnus frangula',Frank J Norman; Brad Guhr,343067,19,6,2003,United States,Illinois,Lake,,"Waukegan, E side",-87.8247,42.375,,,
+Rhamnus frangula,KANU,GBIF Data portal search='Rhamnus frangula',Edward M Smith,331805,5,7,1996,United States,Michigan,Kent,,"Caledonia, ca 3.9 mi NNE",-85.479,42.84,,,
+Frangula alnus P. Mill.,ACAD,GBIF Data portal search='Rhamnus frangula',"Roland, AE",ECS018405,21,6,1940,Canada,Nova Scotia,Colchester,,Truro,-63.27865,45.36468,,,
+Frangula alnus P. Mill.,ACAD,GBIF Data portal search='Rhamnus frangula',"Blaney, CS",ECS018161,16,7,2001,Canada,Nova Scotia,Queens,,Kempt,-65.10472,44.425,,,
+Frangula alnus P. Mill.,ACAD,GBIF Data portal search='Rhamnus frangula',"Blaney, CS; Archibald, DR; Popma, TM",ECS020413,7,9,2003,Canada,Nova Scotia,Pictou,,"East Branch River John, N of bridge at E Branch River John hamlet",-63,45,,,
+Frangula alnus P. Mill.,ACAD,GBIF Data portal search='Rhamnus frangula',"Blaney, CS; Boates, JS",ECS024849,25,8,2004,Canada,Nova Scotia,Shelburne,,Clyde River,-65.48194,43.6275,,,
+Frangula alnus P. Mill.,ACAD,GBIF Data portal search='Rhamnus frangula',"Blaney, CS",ECS025270,25,10,2004,Canada,Prince Edward Island,Queens,,Stanley Bridge,-63.46472,46.46361,,,
+Frangula alnus P. Mill.,ACAD,GBIF Data portal search='Rhamnus frangula',"Newell, RE",ECS024667,10,8,2007,Canada,Nova Scotia,Kings,,Grand Pre,-64.30565,45.10371,,,
+Frangula alnus P. Mill.,ACAD,GBIF Data portal search='Rhamnus frangula',"Blaney, CS; Smith, T.",ECS025024,5,9,2007,Canada,Nova Scotia,Queens,,Ponhook Lake,-64.879654,44.313328,,,
+Frangula alnus P. Mill.,ACAD,GBIF Data portal search='Rhamnus frangula',"Newell, RE",ECS024593,16,8,2008,Canada,Nova Scotia,Halifax,,Dartmouth,-63.57777,44.67198,,,
+Frangula alnus Mill. var. alnus,B,GBIF Data portal search='Rhamnus frangula',H. Zetzsche & G. Dröge,B 10 0355405,6,6,2010,Canada,,,,"Ontario. Ottawa, Cyrville, Ken Steele Park.",-75.91389,45.541943,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Cléonique-Joseph, Fr.",68265,3,9,1937,Canada,Québec,,,"Montréal, Mont Royal, cimetière",-73.6,45.5,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Cléonique-Joseph, Fr.",68266,7,6,1938,Canada,Québec,,,"Mont Royal, Montréal",-73.6,45.5,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Cléonique-Joseph, Fr.",68267,28,8,1941,Canada,Québec,,,"Mont Royal, Montréal",-73.6,45.5,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Pageau, Gérard; Lévesque, Lucien, Fr.; Legendre, Pierre; Desnoyers, R.",110060,11,7,1967,Canada,Québec,,,"Ile aux Vaches, en face de Sainte-Anne-de-Bellevue, sous le pont de la voie ferrée PC",-73.958885,45.40167,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Pageau, Gérard; Lévesque, Lucien, Fr.; Legendre, Pierre; Desnoyers, R.",110061,9,8,1967,Canada,Québec,,,"Ile aux Vaches, en face de Sainte-Anne-de-Bellevue",-73.95917,45.398613,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Pageau, Gérard",110062,17,7,1968,Canada,Québec,,,"Dorion, 600 m au SSW de l'extrémité de la pointe Foster",-74.00861,45.36778,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Pageau, Gérard",110063,30,7,1968,Canada,Québec,,,"Pointe-des-Cascades, déversoir du barrage des Cascades, côté ouest",-73.949165,45.33139,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Pageau, Gérard",110064,6,8,1968,Canada,Québec,,,"Ile Perrot, baie de la Sucrerie (accès par chemin de la cabane à sucre de M. Albert Lalonde",-73.91583,45.390835,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Pageau, Gérard; Lagacé, Michel; Faucher, Denis",110065,14,10,1975,Canada,Québec,,,"Rivière des Prairies, tronçon 14. Ile aux Pins, côté Sud (vers l'Est)",-74,45.383335,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Pageau, Gérard; Lagacé, Michel; Faucher, Denis",110066,16,10,1975,Canada,Québec,,,"Rivière des Prairies, site 9. Petite île allongée juste au nord du ruisseau Brucy.",-73.95,45.4,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Lagacé, Michel; Faucher, Denis",110067,28,10,1975,Canada,Québec,,,"Rivière des Prairies, site 8.",-73.96667,45.4,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette; Houle, Gilles",39161,6,6,1978,Canada,Québec,Lajemmerais,,"Varennes, archipel de Varennes et de Repentigny, île Sainte-Thérèse",-73.46667,45.7,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette",172304,1,9,1995,Canada,Québec,Ville de Gatineau,,Canton de Hull,-75.749,45.433,,,
+Rhamnus fragula,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette",172299,1,9,1995,Canada,Québec,Ville de Gatineau,,Canton de Hull,-75.749,45.432,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette",11583,5,8,1997,Canada,Québec,Ville de Gatineau,,"Marais de Touraine, boulevard de La Vérendrye entre l'Autoroute 50 et le Pont Alonzo Wright, Gatineau",-75.736115,45.493057,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette",11587,5,8,1997,Canada,Québec,Ville de Gatineau,,"Marais de Touraine, boulevard de La Vérendrye entre l'Autoroute 50 et le Pont Alonzo Wright, Gatineau",-75.736115,45.493057,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette",20428,5,8,1998,Canada,Québec,Ville de Sherbrooke,,Prolongement autoroute 410.  Canton d'Ascot.,-71.950554,45.373333,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette",20389,10,8,1999,Canada,Québec,Ville de Gatineau,,Parc de la Gatineau,-75.757774,45.432777,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette",20727,22,8,2000,Canada,Québec,Ville de Gatineau,,"Marais de Touraine, boulevard de La Vérendrye",-75.742775,45.49889,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Villeneuve, Patrick; Chabot, N.",18180,14,9,2002,Canada,Québec,Les Laurentides,,Sainte-Agathe-des-Monts,-74.272224,46.041668,,,
+Rhamnus frangula,MT,GBIF Data portal search='Rhamnus frangula',"Jetté, Anne",24020,17,9,2006,Canada,Québec,,,"Montréal, Lasalle, parc Angrignon.",-73.60833,45.441666,,,
+Frangula alnus,MT,GBIF Data portal search='Rhamnus frangula',"Claude, Ginette",25034,14,8,2008,Canada,Québec,Brome-Missisquoi,,Farham; futur contournement de Farnham,-72.961586,45.298557,,,
+Frangula alnus Mill.,W,GBIF Data portal search='Rhamnus frangula',"Atha,D. 7595",221706,24,6,2009,United States,,,,"United States of America. New York. Putnam Co. ca 7 km W of New York/Connecticut border and ca 10 km N of Putnam/Westchester border, Ice Pond Conservation Area, E of Ice Pond Rd, W of Co. Rd 62 (Farm to Market Rd), N of Rte 312 and S of Rte 164. 41.451479N, 73.615414W (±10m), ca 134m",-73.61528,41.45139,,,
+Frangula alnus Mill.,W,GBIF Data portal search='Rhamnus frangula',"Atha,D. 8430",220855,16,9,2009,United States,,,,"United States of America. Pennsylvania: Tioga Co., Tioga State Forest, ca 2 km W of Arnot, N of Landrus Road. 41.665287N, 77.142159W (±50m), ca 518m elev.",-77.14222,41.66528,,,
+Rhamnus frangula,YU,GBIF Data portal search='Rhamnus frangula',E. H. Eames,YPM CBS 025879,27,7,1928,United States,Connecticut,Fairfield County,,Redding,-73.3914,41.305,,,
+Rhamnus frangula,YU,GBIF Data portal search='Rhamnus frangula',L. J. Bradley,YPM CBS 022703,18,6,1947,United States,Connecticut,Fairfield County,,Greenwich,-73.6387,41.0692,,,
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,James Ng,MSC0147995,7,9,1981,United States,Michigan,Berrien,,"Berrien Co.: Bertrand Twp. S. of Niles, 1.5 km E of US Highway 33",-86.250007,41.766669,10000,,Marsh
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Margaret Kohring,MSC0147997,8,7,1979,United States,Michigan,Berrien,,Berrien Co.: Bertrand Twp. In SE corner of Bakertown and Chamberland Road.,-86.387205,41.813125,1000,,Scattered through the fen
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Margaret Kohring,MSC0147998,25,8,1979,United States,Michigan,Berrien,,Berrien Co.: Bertrand Twp. In SE corner of Bakertown and Chamberland Road.,-86.387205,41.813125,1000,,Fen
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Margaret Kohring,MSC0147999,7,6,1978,United States,Michigan,Berrien,,Berrien Co.: Bertrand Twp. In SE corner of Bakertown and Chamberland Road.,-86.387205,41.813125,1000,,Upland
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,T.H. Marshall,MSC0147989,28,5,1949,United States,Michigan,Monroe,,Monroe Co.: Pointe Mouillee Marsh,-83.20932,42.013554,1000,,On clay island in marsh
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,M. McDonald,MSC0147983,1,6,1950,United States,Michigan,Wayne,,Wayne Co.:Pointe Mouillee State Game Area,-83.20932,42.013554,1000,,Spoil bank of ditch
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,G. Parmelee,MSC0147984,29,5,1949,United States,Michigan,Wayne,,Wayne Co.: Across canal from Pte. Mouille State Game Area headquarters,-83.20932,42.013554,1000,,
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Michael Chamberland,MSC0147991,18,5,1998,United States,Michigan,Jackson,,Jackson Co.: Rogers Reserve. NW corner of property.,-84.423014,42.152814,5000,,
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Michael Chamberland,MSC0147992,18,5,1998,United States,Michigan,Jackson,,Jackson Co.: Rogers Reserve. Central portion of Reserve.,-84.423014,42.152814,5000,,x
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Steven Grund,MSC0147994,28,6,1994,United States,Michigan,Kalamazoo,,Kalamazoo Co.: Ponds approx. 0.1 mi N or I-94 and 0.4 mi E of Augusta-Climax Rd.,-85.333148,42.300431,10000,,"Near edge of bog, full sun, wet muck"
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,E. Voss,MSC0147972,27,5,1976,United States,Michigan,Washtenaw,,"Washtenaw Co.: On S side of Glacier Way, Ann Arbor Twp.",-83.752086,42.33178,10000,used township,Boggy area
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Basil Stergios,MSC0147977,18,6,1969,United States,Michigan,Kalamazoo,,Kalamazoo Co.: Louden Old Field,-85.41305556,42.47,5000,,
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,John Churchill,MSC0147990,5,7,1974,United States,Michigan,Oakland,,"Oakland Co.: Southfield Twp., At Telegraph and Thirteen Mile Road.",-83.285524,42.515574,5000,,Old sandy field
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,John Churchill,MSC0147988,15,5,1954,United States,Michigan,Macomb,,"Macomb Co.: Shelby Twp., Along the Clinton River",-83.059239,42.652529,10000,,Thicket
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Warren Stevens,MSC0147982,19,5,1970,United States,Michigan,Ingham,,"Ingham Co.: Baker Woodlot, Michigan State University Campus.",-84.473184,42.71558,1000,,"Beech-maple forest, SC woods"
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,G. Parmelee,MSC0147981,3,9,1952,United States,Michigan,Ingham,,"Ingham Co.: Meridian Twp., Along W edge of Burcham woods",-84.415096,42.726576,25000,"Could not find burcham woods, used center of town",
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,R. Nelson,MSC0147980,20,6,1968,United States,Michigan,Ingham,,"Ingham Co.: Sanford Natural Area, Michigan State University Campus; In NW section of area",-84.466543,42.727858,1000,,On edge of woodlot
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Jerold Grashoff,MSC0147985,4,6,1968,United States,Michigan,Ingham,,"Ingham Co.: Sanford Natural Area, Michigan State University",-84.466543,42.727858,1000,,
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Loran Anderson,MSC0147987,18,5,1963,United States,Michigan,Ingham,,Ingham Co.: Just E of end of Mt. Vernon Street in East Lansing,-84.455344,42.73943,1000,,In wet aspen-box elder woods
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Eric Bourdo,MSC0147974,12,9,1967,United States,Michigan,Menominee,,"Menominee, Golf Course",-88.741038,45.015212,15000,used county,"Moist woods edge, open disturbed land."
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,E. Voss,MSC0147978,11,8,1974,United States,Michigan,Emmet,,"Emmet Co.: Center Tp., 5.5 mi. W of Pellston.",-84.90431,45.552468,10000,,At edge of swampy mixed woods
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Phoebe Hunter,MSC0147971,3,7,1974,United States,Michigan,Ingham,,"Ingham Co: Lansing Twp.,",-91.819135,45.616394,,I chose to use coords for Bear Lake Sedge Meadow State Natural Area because this fit with brief descriptions of the MS Thesis of this collector,
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Phoebe Hunter,MSC0147973,9,8,1974,United States,Michigan,Ingham,,"Ingham Co.: Bear Lake Bog, Lansing Twp.",-91.819135,45.616394,,,In damp depression
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Phoebe Hunter,MSC0147975,7,6,1974,United States,Michigan,Ingham,,"Ingham Co.: Bear Lake Bog, Lansing Twp.",-91.819135,45.616394,,,Bog
+Rhamnus fragula,MSC,http://www.herbarium.msu.edu/ Search term = frangula,Phoebe Hunter,MSC0147976,25,6,1974,United States,Michigan,Ingham,,"Ingham Co.: Bear Lake Bog, Lansing Twp.",-91.819135,45.616394,,,In wet depression in marginal fosse
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Floyd A. Swink,0028288MOR,28,6,1990,United States,Indiana,Newton,,,-87.452342,41.0327,10000,"Near a ditch along the west side of 200W Road, about 2 miles northeast of Enos. 45? 47'. In open ground near the ditch.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Elizabeth Rossi,0028283MOR,28,6,1990,United States,Indiana,Newton,,,-87.452342,41.0327,10000,"On the west side of 200W Road, about 2 miles NE of Enos. Beside ditch through cultivated fields.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Thomas W. Post,0028278MOR,7,8,1984,United States,Indiana,Jasper,,,-87.247322,41.078626,10000,"In a disturbed savanna on sandy soil, just east of Fair Oaks.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Floyd A. Swink,0028294MOR,7,7,1989,United States,Indiana,Jasper,,,-87.247322,41.078626,10000,"North of 500N Road near the Louisville & Nashville RR, just southeast of Fair Oaks. Along the railroad.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Dick Young,0028281MOR,7,8,1974,United States,Illinois,Grundy,,,-88.26194,41.224651,1000,Braceville - Main St. & G.M. & O. RR - SW corner. Wet soil.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Raymond F. Schulenberg,0028291MOR,20,5,1976,United States,Illinois,Will,,,-88.216038,41.24216,10000,South of Braidwood. In wet depression in sandy soil.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Floyd A. Swink,0028290MOR,1,7,1992,United States,Indiana,Starke,,,-86.605422,41.296426,1000,"In East Crown Hill Cemetery, east of Knox. In partly shaded ground at the cemetery edge.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Floyd A. Swink,0028295MOR,23,6,1989,United States,Indiana,Porter,,,-87.053931,41.457416,5000,"Collected along the Norfolk & Western RR and U.S. 30, in Valparaiso. In woods near Route 30 and the railroad.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Gerould Wilhelm,0028289MOR,18,6,1985,United States,Indiana,St. Joseph,,,-84.931685,41.569316,15000,"Just northwest of Hamilton, south of the Indiana Toll Road, in disturbed ground along Hamilton Trail.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Gerould Wilhelm,0028585MOR,24,5,1989,United States,Indiana,Porter,,,-87.085501,41.645334,1000,South of Dune Acres at Cowles Bog.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Elizabeth Rossi,0028282MOR,7,6,1990,United States,Indiana,LaPorte,,,-86.848211,41.682356,10000,"Location south of Rt. 20, about 3 mi SW of Michigan City. Near high-tension wires. In open area.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Dick Young,0028284MOR,19,5,1974,United States,Illinois,Kendall,,,-88.432873,41.687732,5000,In prairie remnant S of gravel pits N of BN RR.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Floyd A. Swink,0028293MOR,16,6,1989,United States,Indiana,LaPorte,,,-86.583587,41.689709,10000,Near the South Shore RR and 600E Rd. 2 1/2 mi W of the town of Hudson Lake; in partly shaded ground.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Sandy Whisler,0031107MOR,3,8,1992,United States,Indiana,Porter,,,-86.941374,41.701218,10000,"Wet, scrubby woods N of Beverly Dr. and slightly W of Kintzele Ditch; in level, black soil.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Gerould Wilhelm,0028296MOR,25,8,1987,United States,Indiana,LaPorte,,,-86.923049,41.708691,1000,"Northwest of Michigan City in the vicinity of the parking area for Mt. Baldy, just east of the county line, on the grounds of the Indiana Dunes National Lakeshore.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Edward M. Smith,0028270MOR,18,5,1969,United States,Illinois,DuPage,,,-87.975559,41.71997,5000,"Argonne National Lab., in oak woods along Eastwood Cutoff.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Gerould Wilhelm,0028271MOR,24,10,1993,United States,Michigan,Berrien,,,-86.715698,41.787355,1000,"Just northeast of the New Buffalo Weigh Station, off of east-bound I-94, 0.9, about 1 mile northeast of MI 239, about 0.5 mile south of Maudlin Road.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Henry Teuscher,0047793MOR,8,10,1924,United States,Illinois,DuPage,,,-88.070421,41.803886,15000,,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,L. C. Hawkinson,0047791MOR,27,9,1940,United States,Illinois,DuPage,,,-88.070421,41.803886,15000,,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,L. C. Hawkinson,0057170MOR,27,9,1940,United States,Illinois,DuPage,,,-88.070421,41.803886,15000,,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,L. C. Hawkinson,0047794MOR,22,10,1940,United States,Illinois,DuPage,,,-88.070421,41.803886,15000,,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,L. C. Hawkinson,0047795MOR,19,6,1941,United States,Illinois,DuPage,,,-88.070421,41.803886,15000,,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Raymond F. Schulenberg,0028267MOR,15,8,1975,United States,Michigan,Berrien,,,-86.387205,41.813125,1000,"Southwest of Buchanan, on north edge of railroad grade east of McCoy Creek, 300' east of Bakertown Road.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Robert H. Read,0028265MOR,22,6,1970,United States,Illinois,DuPage,,,-88.064531,41.815265,1000,"Growing on an island in Bur Reed Marsh, Morton Arboretum.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,S. Marousek,0028277MOR,19,7,2000,United States,Illinois,DuPage,,,-88.0522,41.8165,,"1 mile N of Lisle off I-88. Parking 8, along Oakwood Loop, east side.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Jason Sturner,0050788MOR,18,5,2007,United States,Illinois,DuPage,,,-88.0537,41.8171,,"The Morton Arboretum, East Side. Along Main Trail Loop 2 near the bridge at Bur Reed Marsh.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Jason Sturner,0051066MOR,20,9,2007,United States,Illinois,DuPage,,,-88.0542,41.819,,"The Morton Arboretum, East Side. Woodland opening.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,George Hickman,0028264MOR,16,7,2000,United States,Michigan,Berrien,,,-86.608894,41.87681,1000,"SE side of C&O RR in balla, 1/4 mile N of Three Oaks Rd., Sawyer.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Nick A. Stoynoff,0028269MOR,10,7,1988,United States,Illinois,DuPage,,,-88.22424,41.891363,1000,Winfield Township; ca. 200 ft. E of power lines crossing prairie path bordering N side of West Chicago Prairie. N side of path. In shrub-carr.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Gerould Wilhelm,0028273MOR,22,5,1979,United States,Illinois,DuPage,,,-88.181044,41.903589,1000,"Just NE of West Chicago, N of the Illinois Prairie Path, in large marsh area S of the Chicago & Great Western RR, ca. 1/4 mi E of the Prince Crossing Road.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Nancy Coons,0028272MOR,31,7,1989,United States,Illinois,DuPage,,,-88.238929,41.936799,,"Roadside along railroad tracks, 0.7 mi N of North Ave. along Powis Rd. West Chicago.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Ursula Rowlatt,0028263MOR,16,7,1978,United States,Illinois,Cook,,,-87.740843,41.975843,1000,La Bagh Woods.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Gerould Wilhelm,0028275MOR,11,7,1978,United States,Illinois,Cook,,,-88.253912,42.013925,1000,"At the southeast edge of Elgin, south of the Bluff City Cemetery.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Erwin F. Evert,0028274MOR,9,5,1982,United States,Illinois,Cook,,,-87.871249,42.052523,1000,"Carle Woods, just N of Rt. 58, Golf Rd., and E of the Des Plaines River.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Floyd A. Swink,0028268MOR,4,7,1946,United States,Illinois,Cook,,,-87.871249,42.052523,10000,At Riverside.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Gerould Wilhelm,0028279MOR,11,7,1978,United States,Illinois,Kane,,,-88.266497,42.064207,1000,At Trout Park in Elgin.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Robbin C. Moran,0028286MOR,23,5,1977,United States,Illinois,Lake,,,-87.837905,42.275636,10000,Ravine bed.,
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Gerould Wilhelm,0028280MOR,26,7,1984,United States,Illinois,McHenry,,,-88.231442,42.314809,1000,"At Moraine Hills State Park, along the Pike Marsh Trail.",
+Rhamnus frangula,MOR,http://quercus.mortonarb.org/,Raymond F. Schulenberg,0028587MOR,7,8,1975,United States,Wisconsin,Racine,,,-88.119659,42.822306,5000,"East of Wind Lake, on east side of County S (East Wind Lake Road, ca. 11761).",
+Rhamnus frangula,CM,From Curator,"Upale, Z.F.",64416,27,9,1940,United States,Pennsylvania,Allegheny,,,-80.067555,40.500902,1000,near Avalon,"field, escape"
+Rhamnus frangula,CM,From Curator,"McClelland, E.H.",123851,23,10,1949,United States,Pennsylvania,Allegheny,,,-79.995846,40.439488,1000,"Pittsburgh, Demmler property",cultivated
+Rhamnus frangula,CM,From Curator,"Terrell, E.E.",365934,19,7,1953,United States,New York,Tompkins,,,-76.509299,42.481068,2000,"between McKinneys and Esty Point, E shore of Cayuga Lake","open bank, among loose shale"
+Rhamnus frangula,CM,From Curator,"Heumann, E.M.",124235,,,1954,United States,,,,,-77.008548,40.214179,1000,Glen Osborn,"cultivated, yard"
+Rhamnus frangula,CM,From Curator,"Bernard, J.P.",334569,8,11,1954,United States,Illinois,,,,-87.980627,42.08836,3000,Arlington Heights,en bordure du verger
+Rhamnus frangula,CM,From Curator,"Ahles, H.E.",132736,12,9,1954,United States,Illinois,Champaign,,,-88.20727,40.110588,3000,Urbana,along railroad
+Rhamnus frangula,CM,From Curator,"Hazlett, D.",123857,24,7,1957,United States,Pennsylvania,Allegheny,,,-80.000108,40.437939,1000,Pittsburgh,"cultivated, hedge row"
+Rhamnus frangula,CM,From Curator,"Reynolds, M.B.",124248,27,8,1958,United States,Pennsylvania,Allegheny,,,-80.071286,40.333166,3000,"Fort Couch School Nature Trail, Upper Saint Clair Township","cultivated, edge of woods"
+Rhamnus frangula,CM,From Curator,"Long, B.",306353,12,10,1958,United States,Pennsylvania,Bucks,,,-74.78794,40.211498,1000,"edge of P Railroad siding, Morrisville",
+Rhamnus frangula,CM,From Curator,"Bennett, H.R.",186113,4,6,1960,United States,Wisconsin,Walworth,,,-88.665416,42.629516,9000,along Turtle Creek near Delavan,moist soil
+Rhamnus frangula,CM,From Curator,"Buker, W.E.",64417,19,5,1961,United States,Pennsylvania,Allegheny,,,-79.968039,40.532508,1000,Glenshaw district,escape under pines
+Rhamnus frangula,CM,From Curator,"Henry, L.K.",123245,3,6,1962,United States,Pennsylvania,Allegheny,,,-79.879773,40.513402,10000,Fox Chapel,cultivated in woods at edge of yard
+Rhamnus frangula,CM,From Curator,"Goff, G.",186114,30,9,1962,United States,Wisconsin,Jackson,,,-90.769974,44.256897,8000,Castle Mound State Park,shady oak understory
+Rhamnus frangula,CM,From Curator,"Weiss, O.",64414,26,9,1965,United States,Pennsylvania,Allegheny,,,-80.184503,40.536457,1000,near Sewickley,escape in fields
+Rhamnus frangula,CM,From Curator,Ralston,64451,20,5,1968,United States,Pennsylvania,Allegheny,,,-79.963961,40.520875,4000,"Shaler Twp., near Shaler Twp. Nature Reserve",
+Rhamnus frangula,CM,From Curator,"Berkheimer, D.",64413,23,7,1968,United States,Pennsylvania,Bedford,,,-78.646713,40.037635,1000,0.75 mi S of Schellsburg,border of dam
+Rhamnus frangula,CM,From Curator,"Buker, W.E.",64422,3,10,1970,United States,Pennsylvania,Allegheny,,,-80.001326,40.594533,2000,North Park,
+Rhamnus frangula,CM,From Curator,"Grisez, T.J.",64412,17,8,1970,United States,Pennsylvania,Warren,,,-79.145322,41.841171,1000,"near mouth of Conewango Creek past end of Oak St, Warren",on fill
+Rhamnus frangula,CM,From Curator,"Kartesz, J.",230115,22,5,1974,United States,Illinois,Will,,,-88.090076,41.505472,40000,"T-3. 2E, 1/2 N Godley [sic]",old stripmined area
+Rhamnus frangula,CM,From Curator,"Sawada, M.",328675,27,5,1975,United States,Massachusetts,Plymouth,,,-70.959193,42.03343,5000,"East Bridgewater, Brockton",
+Rhamnus frangula,CM,From Curator,"Sawada, M.",328676,28,7,1975,United States,New York,Chautauqua,,,-79.465372,42.211471,500,"North Lake Drive, Chautauqua, Buffalo City",
+Rhamnus frangula,CM,From Curator,"Buker, W.E.",21295,5,8,1977,United States,Pennsylvania,Allegheny,,,-80.12984,40.547179,1000,ca 2 mi N of Glenfield,bank alongside road
+Rhamnus frangula,CM,From Curator,"Ahles, H.E.",204698,22,7,1978,United States,Massachusetts,Hampshire,,,-72.550322,42.361076,3000,"Hadley, North Maple Street near Rt. 9",fencerow
+Rhamnus frangula,CM,From Curator,"Wood, E.W.; Boufford, D.E.; Foust, N.",257734,19,7,1979,United States,Pennsylvania,Allegheny,,,-80.1,40.55,1000,"Ohio Twp., 0.16 km E of I-79 on Mt. Nebo Rd, then 1.6 km N on Red Mud Hollow Rd, ENE of Sewickley",woodland margin
+Rhamnus frangula,CM,From Curator,"Boufford, D.E.; Foust, N.",270163,26,6,1979,United States,West Virginia,Brooke,,,-80.608055,40.346927,1000,"3.7 km S of junction of US 22E and WV 2 on WV 2, along Ohio River opposite Steubenville, Ohio",mixed deciduous forest
+Rhamnus frangula,CM,From Curator,"Ahles, H.E.",265861,1,7,1980,United States,Massachusetts,Hampshire,,,-72.516667,42.36663,13000,Amherst,low woods
+Rhamnus frangula,CM,From Curator,"Boufford, D.E.; Koyama, H.; Shimizu, T.",259918,14,6,1980,United States,New Hampshire,Coos,,,-71.511158,44.598676,9000,"Northumberland, Groveton, along railroad bed and Rt 3, just N of Lancaster",
+Rhamnus frangula,CM,From Curator,"Grisez, T.J.",265592,26,5,1980,United States,Pennsylvania,Forest,,,-79.282051,41.439369,1000,"along Coon Creek, 9 mi SW of Marienville, State Game Land 24",open forest
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.; Buker, W.E.",292507,24,6,1982,United States,Pennsylvania,Allegheny,,,-80.0005444444,40.5941833333,5000,North Park: field above Arboretum,
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.",325773,20,5,1986,United States,Pennsylvania,Allegheny,,,-79.9690472222,40.6148638889,1000,1 mi S of Gibsonia,
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.; Macdonald, M.",481195,15,6,1987,United States,Ohio,Ashtabula,,,-80.9257555556,41.8639638889,1000,1.5 mi E of Geneva-on-the-Lake along OH 531,sand beach along Lake Erie
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.; Macdonald, M.",481196,14,6,1987,United States,Ohio,Ashtabula,,,-80.9752888889,41.8518638889,2000,Geneva State Park,
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.; Macdonald, M.",484031,14,6,1987,United States,Ohio,Ashtabula,,,-80.976475,41.851425,2000,Geneva State Park,
+Rhamnus frangula,CM,From Curator,"Zahn, S.",459947,,10,1990,United States,Pennsylvania,Allegheny,,,-80.0770388889,40.532425,300,"Ohio Township, behind school [Avonworth High School]",
+Rhamnus frangula,CM,From Curator,"York, E.A.",524952,,10,1990,United States,Pennsylvania,Allegheny,,,-80.0494972222,40.3553472222,6000,Mount Lebanon,cultivated in yard
+Rhamnus frangula,CM,From Curator,"Stack, L.",494454,10,10,1990,United States,Pennsylvania,Centre,,,-77.2421777778,40.9566361111,35000,"Pine Creek headwaters, The Hook Natural Area",non-glacial bog
+Rhamnus frangula,CM,From Curator,"Nee, M.",364600,10,8,1990,United States,Wisconsin,Jefferson,,,-88.8232027778,42.9217944444,700,"SE side of Fort Atkinson, along Bark River",brushy areas and floodplain forest
+Rhamnus frangula,CM,From Curator,"Smith, L.L.",500058,13,7,1993,United States,Pennsylvania,Allegheny,,,-79.9333333333,40.2666666667,,"Peters Creek Wetland, near junction of old railroad & Waterman Road",wetland
+Rhamnus frangula,CM,From Curator,"Cusick, A.W.",388121,14,6,1993,United States,Pennsylvania,Jefferson,,,-79.0516166667,41.35105,1000,"Clarion River, PA 949, 0.8 mi SE of bridge to Belltown, Heath Township",bank
+Rhamnus frangula,CM,From Curator,"Wagner, J.D.; Grund, S.P.",477933,20,6,1996,United States,Pennsylvania,Erie,,,-80.1916666667,42.0513888889,,"ca 5.2 km ENE of Fairview, N side of Walnut Creek",herbaceous seepages on steep slumps
+Rhamnus frangula,CM,From Curator,"Wagner, J.D.",477984,27,6,1996,United States,Pennsylvania,Erie,,,-80.1813888889,42.0572222222,,"1.6 km S of Asbury, James Preserve of Mercyhurst College",low shrub-graminoid seepage openings on mild slope
+Rhamnus frangula,CM,From Curator,"Grund, S.; Shriver, S.",477470,4,6,1996,United States,Pennsylvania,Mercer,,,-80.35,41.4833333333,,ca 4 km NNE of Osgood,deep Fraxinus nigra-Ulmus americana seepage swamp
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.",481586,16,8,1996,United States,Wisconsin,Waukesha,,,-88.4683333333,42.9241666667,,"5 km N of Eagle, near junction WI 67 & Co. X, Kettle Moraine State Forest",edge & open area around small pond
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.",477240,19,6,1997,United States,Pennsylvania,Allegheny,,,-79.9,40.4166666667,,"Pittsburgh, Nine Mile Run",wooded area
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.; Isaac, B.L.",477269,6,8,1997,United States,Pennsylvania,Allegheny,,,-79.9066666667,40.4241666667,,"Pittsburgh, Nine Mile Run",small wetland in disturbed woods
+Rhamnus frangula,CM,From Curator,"Isaac, B.L.; Isaac, J.A.",481512,31,5,1997,United States,Pennsylvania,Allegheny,,,-80,40.4666666667,,"Pittsburgh, Riverview Park, ca 2 mi ESE of Bellevue",disturbed deciduous woods
+Rhamnus frangula,CM,From Curator,"Isaac, B.L.; Isaac, J.A.",481663,6,9,1997,United States,Pennsylvania,Elk,,,-78.7333333333,41.45,,ca 3.2 mi NNW of Ridgway on PA 948,wet field
+Rhamnus frangula,CM,From Curator,"Buckley, G.P.",477880,30,7,1997,United States,Pennsylvania,Erie,,,-79.9833333333,42.1,,"ca 1.5 mi SSW of Brookside, Wintergreen Gorge",
+Rhamnus frangula,CM,From Curator,"Isaac, B.L.; Isaac, J.A.",482968,11,10,1997,United States,Pennsylvania,Mercer,,,-80.4666666667,41.2666666667,,"Sharpsville, along Shenango River",woods at edge of river
+Rhamnus frangula,CM,From Curator,"Burroughs, M.",487269,10,9,1998,United States,New York,Chautauqua,,,-79.3805555556,42.4461111111,,8 km W of Dunkirk,field
+Rhamnus frangula,CM,From Curator,"Thompson, S.A.; Isaac, B.; Isaac, J.; Utech, F.H.; Grund, S.",484339,16,5,1998,United States,Pennsylvania,Allegheny,,,-79.9,40.4333333333,,"Pittsburgh, Frick Park",mesic slope in secondary forest
+Rhamnus frangula,CM,From Curator,"Leberman, R.",489877,15,7,1998,United States,Pennsylvania,Crawford,,,-80.0893527778,41.599375,5000,"0.5 mi S of Pettis Corners, E end of Tamarack Lake",edge of boggy swamp
+Rhamnus frangula,CM,From Curator,"Grund, S.P.; Wagner, J.",493041,17,6,1999,United States,Pennsylvania,Huntingdon,,,-78,40.55,,"ca 2.5 km ENE of Warrior Ridge (town), ca 6 km N of Huntingdon",shrub swamp with scattered trees
+Rhamnus frangula,CM,From Curator,"Isaac, B.L.; Isaac, J.A.; Chuey, C.F.",501003,3,8,2002,United States,Indiana,LaPorte,,,-86.6172222222,41.6794444444,,ca 1 km N of Rolling Prairie,swampy roadside woods
+Rhamnus frangula,CM,From Curator,"Isaac, B.L.; Isaac, J.A.",499692,17,5,2002,United States,Pennsylvania,Allegheny,,,-79.9,40.4666666667,,"Highland Park, around reservoir",disturbed woods
+Rhamnus frangula,CM,From Curator,"Grund, S.P.; Speedy, M.L.",510300,9,7,2002,United States,Pennsylvania,Allegheny,,,-80.1166666667,40.5333333333,,Ca 2.5 km NNW of Emsworth,Edge of small stream valley in moist soil of power line ROW
+Rhamnus frangula,CM,From Curator,"Isaac, B.L.; Isaac, J.A.; Chuey, C.F.",500678,8,8,2002,United States,Wisconsin,Wood,,,-89.7447222222,44.3463888889,,"ca 5.5 km SE of Wisconsin Rapids, along Bloody Run",dry open sandy area
+Rhamnus frangula,CM,From Curator,"Ernst, S.; Grund, S.; Speedy, L.",504730,13,8,2003,United States,Pennsylvania,Crawford,,,-80.3,41.6166666667,,Conneaut Lake,Aquatic bed
+Rhamnus frangula,CM,From Curator,"Isaac, J.A.",502905,19,6,2003,United States,Pennsylvania,Elk,,,-78.8705555556,41.4230555556,,"Spring Creek Township, 5.5 km SSE of Owls Nest, along Crow Run, Allegheny National Forest",swamp
+Rhamnus frangula,CM,From Curator,"Isaac, J.; Isaac, B.L.; Rogers, S.P.",504047,29,8,2003,United States,Pennsylvania,Elk,,,-78.7636111111,41.3958333333,,"Ridgway Township, 4.1 km SW of Ridgway in Clarion River at mouth of Big Mill Creek",floodplain thicket
+Rhamnus frangula,CM,From Curator,"Isaac, B.L.; Isaac, J.A.",512638,10,7,2005,United States,Pennsylvania,Lawrence,,,-80.5088888889,41.1025,,"ca 0.7 km NW of New Bedford, along Evergreen Rd",Roadside ditch
+Rhamnus frangula,CM,From Curator,"Grund, S.P.; Harrison, W.",516580,14,7,2006,United States,Pennsylvania,Crawford,,,-80.3166666667,41.6333333333,,"West side of Conneaut Lake south of Conneaut Park, Willis Marsh",Alnus swamp
+Rhamnus frangula,CM,From Curator,"Paxton, W.; Poglein. B.; Ryba, R.",522971,14,10,2006,United States,Pennsylvania,Westmoreland,,,-79.6858388889,40.3185833333,1000,"Irwin, N side of Rt. 30 close to turnpike, Teddy's Restaurant",end of parking lot
+Rhamnus frangula,CM,From Curator,"Speedy, L.",515546,28,9,2007,United States,Pennsylvania,Fayette,,,-79.7388405,39.8946874,,"Rotary Park, Uniontown, along Coal Lick Run nr Lebanon Ave",undeveloped & disturbed wooded park area along rec trail
+Rhamnus frangula,CM,From Curator,"Gleason, W.",522175,17,7,2008,United States,Pennsylvania,Butler,,,-80.107697,41.035094,,"Worth Township, Slippery Rock Creek Natural Area (Moraine SP), ~0.38 miles S of Moores Corners",Floodplain forest
+Rhamnus frangula,CM,From Curator,"Gleason, W. ",524879,11,8,2009,United States,Pennsylvania,Cameron,,,-78.3568972222,41.4253638889,,"Shippen Twp, W Branch Hicks Run @ Middle Branch Hicks Run Elk SF/SGL#14 Boundary ~3.5 mi S of Truman",Beaver modified stream floodplain
+Rhamnus frangula,CM,From Curator,"Gleason, W. ",524988,11,8,2009,United States,Pennsylvania,Cameron,,,-78.4141833333,41.4554027778,,"Shippen Township, W Branch Hicks Run, State Game Land #14, ~2.8 mi WSW of Truman, Rathbun Quadrangle","small beaver modified wetland, long breached"
+Rhamnus frangula,CM,From Curator,"Isaac, B.L.; Isaac, J.A.",523857,17,10,2009,United States,Pennsylvania,Lawrence,,,-80.4575,41.0602777778,,"ca 10 km NNE of Bessemer, S of Frizzleburg",

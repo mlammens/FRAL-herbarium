@@ -42,9 +42,9 @@ require(psych)
 require(reshape)
 require(zoo)
 
-## Define and set working directory
-HERB_PROJECT_DIR <- '/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/'
-setwd( HERB_PROJECT_DIR )
+# ## Define and set working directory
+# HERB_PROJECT_DIR <- '/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/'
+# setwd( HERB_PROJECT_DIR )
 
 ## ******************************************************************** ##
 ## Define some user-created functions here
@@ -446,7 +446,7 @@ rec.years.plot <- ggplot(Rec.Cnt.Decade, aes(x=Record.Decade, y=Decade.Cnt, fill
   geom_bar(position="dodge",stat="identity") +
   xlab("Decade") +
   ylab("Record Count") +
-  scale_fill_grey(labels=c('F. alnus','Assoc. Spec.')) 
+  scale_fill_grey(labels=c('Assoc. Spec.','F. alnus')) 
 
 pdf('figures/Record_Counts_by_Decade.pdf')
 print(rec.years.plot)

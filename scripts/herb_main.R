@@ -1170,7 +1170,7 @@ lines(x,predict(assoc.rec.lm2,data.frame(Years=x)),
       lwd=2.5,lty=4)
 lines(x,predict(fral.rec.lm3,data.frame(Years=x)),
       lwd=2.5,lty=4,col='red')
-legend( 1960, 3,
+legend( 1940, 3,
         expression('Assoc. Spec.',italic('F. alnus')),
         pch=c(19,19),
         col=c('black','red')
@@ -1320,6 +1320,61 @@ length(which(Associated.Spec$CollectionYear<min(FRAL.Herb$CollectionYear)))
 length(which(Associated.Spec$CollectionYear<min(FRAL.Herb$CollectionYear))) / nrow(Associated.Spec) * 100
 ## Total number of Associated Records collected before 1900
 length(which(Associated.Spec$CollectionYear<1900))
+
+## ******************************************************************** ##
+## Make multi-panel figures to include in the paper
+## ******************************************************************** ##
+
+
+## Cumulative Number of Records through time 
+## ******************************************************************** ##
+pdf('figures/Cumulative_Records_Figure.pdf')
+par(mfrow=c(2,2),mar=c(4,4,2,1))
+## Log Cumulative Records vs Time
+plot( Records.Cumm.All$Years,
+      log(Records.Cumm.All$CummRec.Assoc),
+      xlab='Year',
+      ylab='Log-Cumulative Records',
+      xlim=c(1836,2012),
+      pch=19)
+points( Records.Cumm.All$Years,
+        log(Records.Cumm.All$CummRec.Fral.Herb),
+        pch=19,col='red')
+abline(fral.rec.lm,col='red',lwd=2.5)
+abline(assoc.rec.lm,lwd=2.5)
+lines(x,predict(assoc.rec.lm2,data.frame(Years=x)),
+      lwd=2.5,lty=4)
+lines(x,predict(fral.rec.lm3,data.frame(Years=x)),
+      lwd=2.5,lty=4,col='red')
+legend( 1930, 2.5,
+        expression('Assoc. Spec.',italic('F. alnus')),
+        pch=c(19,19),
+        col=c('black','red')
+)
+# Growth Rate Difference
+plot(Records.Cumm.All$Years,Records.Cumm.All$Cumm.Rec.R.Diff,
+     #ylim=c(-0.5,0.5),
+     ylim=c(0.8,1.2),
+     xlim=c(1879,2010),
+     xlab="Year",
+     ylab='Diff. Growth Rate of Cumulative Total Records')
+abline(h=1,lwd=2.5,col='red',lty=5)
+#points(1888:2010,Cumm.Rec.R.Diff,
+points(1890:2007,Cumm.Rec.R.Diff,
+       pch=19,col='darkred')
+# Ratio vs time
+plot( Records.Cumm.All$Years[Recs.Match.Temp],
+      #(log(Records.Cumm.All$CummRec.Fral.Herb[Recs.Match.Temp] /
+      #      Records.Cumm.All$CummRec.Assoc[Recs.Match.Temp])),
+      #(log(Records.Cumm.All$CummRec.Fral.Herb[Recs.Match.Temp]) /
+      #       log(Records.Cumm.All$CummRec.Assoc[Recs.Match.Temp])),
+      (Records.Cumm.All$CummRec.Fral.Herb[Recs.Match.Temp] /
+             Records.Cumm.All$CummRec.Assoc[Recs.Match.Temp]),
+      pch=19,
+      xlab='Year',
+      ylab='Ratio of Cumulative Records',
+      xlim=c(1836,2012))
+dev.off()
 
 
 ##### NOTE - GOT THIS FAR IN MY REDEVELOPMENT

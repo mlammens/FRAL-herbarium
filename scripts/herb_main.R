@@ -673,7 +673,7 @@ Assoc.growth.fit <- cube.growth(cubic.mod=assoc.lm3,
 #Cumm.Grid.growth.Diff.fit <- FRAL.growth.fit - Assoc.growth.fit
 Cumm.Grid.growth.Diff.fit <- FRAL.growth.fit / Assoc.growth.fit
 
-## Calculate the 5-year moving average window of R
+## Calculate the 10-year moving average window of R
 # First make a reduced dataset that only has values when both
 # FRAL and Assoc R is not an NA
 Cum.Grid.R <- 
@@ -962,6 +962,46 @@ legend( 1950,20,
 )
 dev.off()
 
+## ******************************************************************** ##
+## Peform regression analyses on county data
+## ******************************************************************** ##
+
+## Linear Regression
+fral.cnt.lm <- lm( sqrt(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$OccCounties) ~
+                     FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years )   
+assoc.cnt.lm <- lm( sqrt(Associated.Spec.Cnty.Overlap_Cumm.Cnty$OccCounties) ~
+                      Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years )
+
+## Polynomial regression
+fral.cnt.lm2 <- lm( sqrt(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$OccCounties) ~
+                      FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years + 
+                      I(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years^2) 
+                    )   
+assoc.cnt.lm2 <- lm( sqrt(Associated.Spec.Cnty.Overlap_Cumm.Cnty$OccCounties) ~
+                       Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years +
+                       I(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years^2)
+                     )
+fral.cnt.lm3 <- lm( sqrt(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$OccCounties) ~
+                      FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years + 
+                      I(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years^2) +
+                      I(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years^3)
+)   
+assoc.cnt.lm3 <- lm( sqrt(Associated.Spec.Cnty.Overlap_Cumm.Cnty$OccCounties) ~
+                       Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years +
+                       I(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years^2) +
+                       I(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years^3)
+)
+
+## Use likelihood ratio test to see which models are best
+anova(fral.cnt.lm,fral.cnt.lm2) # YES
+anova(fral.cnt.lm2,fral.cnt.lm3) # YES
+anova(assoc.cnt.lm,assoc.cnt.lm2) # YES
+anova(assoc.cnt.lm2,assoc.cnt.lm3) # YES
+
+## Print summary of best fit models
+summary(fral.cnt.lm3)
+summary(assoc.cnt.lm3)
+
 ## Plot the square root of the cumulative county results
 ## ******************************************************************** ##
 ## Figure: Sqrt_Cumulative_Counties.pdf
@@ -1022,7 +1062,7 @@ rm(Cumm.Cnty.R,t.plus.1,t.pres)
 Cumm.Cnty.Combined.df$Cumm.Cnty.R.Diff <-
   Cumm.Cnty.Combined.df$Fral.Cumm.Cnty.R / Cumm.Cnty.Combined.df$Assoc.Cumm.Cnty.R
 
-## Calculate the 5-year moving average window of R
+## Calculate the 10-year moving average window of R
 # First make a reduced dataset that only has values when both
 # FRAL and Assoc R is not an NA
 Cum.Cnty.R <- 
@@ -1205,7 +1245,7 @@ Records.Cumm.All$Cumm.Rec.R.Diff <-
 ## Clean up
 rm(t.plus.1,t.pres)
 
-## Calculate the 5-year moving average window of R
+## Calculate the 10-year moving average window of R
 # First make a reduced dataset that only has values when both
 # FRAL and Assoc R is not an NA
 Cumm.Rec.R <- 
@@ -1325,7 +1365,6 @@ length(which(Associated.Spec$CollectionYear<1900))
 ## Make multi-panel figures to include in the paper
 ## ******************************************************************** ##
 
-
 ## Cumulative Number of Records through time 
 ## ******************************************************************** ##
 pdf('figures/Cumulative_Records_Figure.pdf')
@@ -1376,6 +1415,109 @@ plot( Records.Cumm.All$Years[Recs.Match.Temp],
       xlim=c(1836,2012))
 dev.off()
 
+## Cumulative Number of Grid Cells through time 
+## ******************************************************************** ##
+pdf('figures/Cumulative_GridCells_Figure.pdf')
+par(mfrow=c(2,2),mar=c(4,4,2,1))
+## Plot the **sqrt** Cumulative Occupied Grid Cell numbers
+x.fh <- seq(min(FRAL.Herb.Loc.Overlap_Cumm.Grid$Years),
+            max(FRAL.Herb.Loc.Overlap_Cumm.Grid$Years),
+            l=length(FRAL.Herb.Loc.Overlap_Cumm.Grid$Years) )
+x <- seq(min(Associated.Spec.Loc.Overlap_Cumm.Grid$Years),
+         max(Associated.Spec.Loc.Overlap_Cumm.Grid$Years),
+         l=length(Associated.Spec.Loc.Overlap_Cumm.Grid$Years) )
+plot( Associated.Spec.Loc.Overlap_Cumm.Grid$Years,
+      sqrt(Associated.Spec.Loc.Overlap_Cumm.Grid$OccGrid),
+      xlab='Year',
+      ylab='Sqrt-Cumulative Occupied Grid Cells',
+      pch=19,
+      cex=0.5)
+points( FRAL.Herb.Loc.Overlap_Cumm.Grid$Years, 
+        sqrt(FRAL.Herb.Loc.Overlap_Cumm.Grid$OccGrids), 
+        col='red',pch=19,cex=0.5)
+abline(fral.lm.sqrt, col="red", lwd=2.5)
+abline(assoc.lm.sqrt, lwd=2.5)
+lines(x.fh,predict(fral.lm2.sqrt,data.frame(Years=x.fh)),
+      lwd=2,col='red',lty=2)
+# lines(x,predict(assoc.lm2.sqrt,data.frame(Years=x)),
+#       lwd=2.5,lty=2)
+# lines(x.fh,predict(fral.lm3.sqrt,data.frame(Years=x.fh)),
+#       lty=4,lwd=2.5,col='red')
+lines(x,predict(assoc.lm3.sqrt,data.frame(Years=x)),
+      lty=4,lwd=2)
+# legend( 1980, 4.5,
+#         c('Linear','Quadratic','Cubic'),
+#         lwd=c(2.5,2.5,2.5),
+#         lty=c(1,2,4)
+#)
+legend( 1930, 4,
+        expression('Associated Spec',italic('F. alnus')),
+        pch=c(19,19),
+        col=c('black','red')
+)
+## Growth Rate Difference
+plot( FRAL.Herb.Assoc.allYrs.Overlap$Years,
+      FRAL.Herb.Assoc.allYrs.Overlap$Cumm.Grid.R.Diff,
+      #ylim=c(-.5,.5), # This cuts off one extreme point at > 1.5
+      ylim=c(.8,1.2), # This cuts off one extreme point at > 1.5
+      xlab='Year',
+      ylab='Diff. Growth Rate of Cumulative Occ. Grids' )
+abline(h=1,lwd=2.5,col='red',lty=5)
+points(1884:2005,Cum.Grid.R.Diff,
+       pch=19,cex=0.5,col='darkred')
+# legend( 1950, .9,
+#         c('Ratio - Annual R','Ratio - Mov.Win. R Ratio'),
+#         pch=c(1,19),
+#         col=c('black','darkred')
+# )
+## Ratio vs time
+plot( FRAL.Herb.Assoc.allYrs.Overlap$Years,
+      FRAL.Herb.Assoc.allYrs.Overlap$AOO.Ratio,
+      pch=19,
+      xlab='Year',
+      ylab='Ratio of Cumulative Occupied Grid Cells',
+      xlim=c(1869,2012)
+)
+dev.off()
+
+## Cumulative Number of Counties through time 
+## ******************************************************************** ##
+pdf('figures/Cumulative_Counties_Figure.pdf')
+par(mfrow=c(2,2),mar=c(4,4,2,1))
+## Plot the **sqrt** of the cumulative number of counties through time
+plot(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years,
+     sqrt(Associated.Spec.Cnty.Overlap_Cumm.Cnty$OccCounties),
+     xlab="Year",
+     ylab="Sqrt-Cumulative Occupied Counties",
+     pch=19)
+points(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years,
+       sqrt(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$OccCounties),
+       col='red',
+       pch=19)
+legend( 1930,3.2,
+        expression('Assoc. Spec',italic('F. alnus')),
+        pch=c(19,19),
+        col=c('black','red')
+)
+## Plot the ** Difference** in Growth Rate Results
+plot( Cumm.Cnty.Combined.df$Years,
+      Cumm.Cnty.Combined.df$Cumm.Cnty.R.Diff,
+      #ylim=c(-.5,.5), # This cuts off one extreme point at > 1.5
+      ylim=c(0.8,1.2),
+      xlab='Year',
+      ylab='Diff. Growth Rate of Cumulative Occ. Counties' )
+abline(h=1,lwd=2.5,col='red',lty=5)
+points(1884:2000,Cum.Cnty.R.Diff,
+       pch=19,cex=0.5,col='darkred')
+## Plot Ratio Results
+plot( Cumm.Cnty.Combined.df$Years,
+      Cumm.Cnty.Combined.df$AOO.Ratio,
+      pch=19,
+      xlab='Year',
+      ylab='Ratio of Cumulative Occupied Counties',
+      xlim=c(1836,2005)
+)
+dev.off()
 
 ##### NOTE - GOT THIS FAR IN MY REDEVELOPMENT
 

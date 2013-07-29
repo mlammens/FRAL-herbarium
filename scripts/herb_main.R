@@ -1006,6 +1006,15 @@ summary(assoc.cnt.lm3)
 ## ******************************************************************** ##
 ## Figure: Sqrt_Cumulative_Counties.pdf
 ## ***
+
+# Make two data sets of x-coords
+x.cnty.assoc <- seq(min(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years),
+                    max(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years),
+                    l=length(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years) )
+x.cnty.fral <- seq(min(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years),
+                   max(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years),
+                   l=length(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years) )
+
 pdf('figures/Sqrt_Cumulative_Counties.pdf')
 plot(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years,
      sqrt(Associated.Spec.Cnty.Overlap_Cumm.Cnty$OccCounties),
@@ -1016,6 +1025,14 @@ points(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years,
        sqrt(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$OccCounties),
        col='red',
        pch=19)
+lines(x.cnty.assoc,predict(assoc.cnt.lm,data.frame(Years=x.cnty.assoc)),
+      lwd=2.5)
+lines(x.cnty.assoc,predict(assoc.cnt.lm3,data.frame(Years=x.cnty.assoc)),
+      lwd=2.5,lty=2)
+lines(x.cnty.fral,predict(fral.cnt.lm,data.frame(Years=x.cnty.fral)),
+      lwd=2.5,col='red')
+lines(x.cnty.fral,predict(fral.cnt.lm3,data.frame(Years=x.cnty.fral)),
+      lwd=2.5,col='red',lty=2)
 legend( 1950,2.25,
         expression('Associated Spec',italic('F. alnus')),
         pch=c(19,19),
@@ -1370,15 +1387,21 @@ length(which(Associated.Spec$CollectionYear<1900))
 pdf('figures/Cumulative_Records_Figure.pdf')
 par(mfrow=c(2,2),mar=c(4,4,2,1))
 ## Log Cumulative Records vs Time
+x <- seq( min(Records.Cumm.All$Years),
+          max(Records.Cumm.All$Years),
+          l=length(Records.Cumm.All$Years) )
 plot( Records.Cumm.All$Years,
       log(Records.Cumm.All$CummRec.Assoc),
       xlab='Year',
       ylab='Log-Cumulative Records',
       xlim=c(1836,2012),
-      pch=19)
+      pch=19,
+      cex=0.5)
 points( Records.Cumm.All$Years,
         log(Records.Cumm.All$CummRec.Fral.Herb),
-        pch=19,col='red')
+        pch=19,
+        cex=0.5,
+        col='red')
 abline(fral.rec.lm,col='red',lwd=2.5)
 abline(assoc.rec.lm,lwd=2.5)
 lines(x,predict(assoc.rec.lm2,data.frame(Years=x)),
@@ -1400,7 +1423,9 @@ plot(Records.Cumm.All$Years,Records.Cumm.All$Cumm.Rec.R.Diff,
 abline(h=1,lwd=2.5,col='red',lty=5)
 #points(1888:2010,Cumm.Rec.R.Diff,
 points(1890:2007,Cumm.Rec.R.Diff,
-       pch=19,col='darkred')
+       pch=19,
+       col='darkred',
+       cex=0.5)
 # Ratio vs time
 plot( Records.Cumm.All$Years[Recs.Match.Temp],
       #(log(Records.Cumm.All$CummRec.Fral.Herb[Recs.Match.Temp] /
@@ -1410,6 +1435,7 @@ plot( Records.Cumm.All$Years[Recs.Match.Temp],
       (Records.Cumm.All$CummRec.Fral.Herb[Recs.Match.Temp] /
              Records.Cumm.All$CummRec.Assoc[Recs.Match.Temp]),
       pch=19,
+      cex=0.5,
       xlab='Year',
       ylab='Ratio of Cumulative Records',
       xlim=c(1836,2012))
@@ -1450,8 +1476,8 @@ lines(x,predict(assoc.lm3.sqrt,data.frame(Years=x)),
 #         lwd=c(2.5,2.5,2.5),
 #         lty=c(1,2,4)
 #)
-legend( 1930, 4,
-        expression('Associated Spec',italic('F. alnus')),
+legend( 1950, 4.5,
+        expression('Assoc. Spec',italic('F. alnus')),
         pch=c(19,19),
         col=c('black','red')
 )
@@ -1474,6 +1500,7 @@ points(1884:2005,Cum.Grid.R.Diff,
 plot( FRAL.Herb.Assoc.allYrs.Overlap$Years,
       FRAL.Herb.Assoc.allYrs.Overlap$AOO.Ratio,
       pch=19,
+      cex=0.5,
       xlab='Year',
       ylab='Ratio of Cumulative Occupied Grid Cells',
       xlim=c(1869,2012)
@@ -1489,11 +1516,21 @@ plot(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years,
      sqrt(Associated.Spec.Cnty.Overlap_Cumm.Cnty$OccCounties),
      xlab="Year",
      ylab="Sqrt-Cumulative Occupied Counties",
-     pch=19)
+     pch=19,
+     cex=0.5)
 points(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years,
        sqrt(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$OccCounties),
        col='red',
-       pch=19)
+       pch=19,
+       cex=0.5)
+lines(x.cnty.assoc,predict(assoc.cnt.lm,data.frame(Years=x.cnty.assoc)),
+      lwd=2.5)
+lines(x.cnty.assoc,predict(assoc.cnt.lm3,data.frame(Years=x.cnty.assoc)),
+      lwd=2.5,lty=2)
+lines(x.cnty.fral,predict(fral.cnt.lm,data.frame(Years=x.cnty.fral)),
+      lwd=2.5,col='red')
+lines(x.cnty.fral,predict(fral.cnt.lm3,data.frame(Years=x.cnty.fral)),
+      lwd=2.5,col='red',lty=2)
 legend( 1930,3.2,
         expression('Assoc. Spec',italic('F. alnus')),
         pch=c(19,19),
@@ -1513,6 +1550,7 @@ points(1884:2000,Cum.Cnty.R.Diff,
 plot( Cumm.Cnty.Combined.df$Years,
       Cumm.Cnty.Combined.df$AOO.Ratio,
       pch=19,
+      cex=0.5,
       xlab='Year',
       ylab='Ratio of Cumulative Occupied Counties',
       xlim=c(1836,2005)

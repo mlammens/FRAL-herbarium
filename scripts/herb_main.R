@@ -1377,6 +1377,14 @@ length(which(Associated.Spec$CollectionYear<min(FRAL.Herb$CollectionYear)))
 length(which(Associated.Spec$CollectionYear<min(FRAL.Herb$CollectionYear))) / nrow(Associated.Spec) * 100
 ## Total number of Associated Records collected before 1900
 length(which(Associated.Spec$CollectionYear<1900))
+## Total number of Associated Records collected before 1920
+length(which(Associated.Spec$CollectionYear<1920))
+
+## Total number of FRAL Records collected before 1900
+length(which(FRAL.Herb$CollectionYear<1900))
+## Total number of FRAL Records collected before 1920
+length(which(FRAL.Herb$CollectionYear<1920))
+
 
 ## ******************************************************************** ##
 ## Make multi-panel figures to include in the paper

@@ -9,55 +9,8 @@
 ##
 ## ******************************************************************** ##
 
-## Call required pacages
-require(dismo)
-require(raster)
-require(sp)
-require(maptools)
-gpclibPermit()
-require(rgdal)
-require(ggplot2)
-
-## ******************************************************************** ##
-## Define the Extent of the area that I am working with. 
-## This is an extent that will be used in all of my studies, but is 
-## defined here. These values essentially define
-## what I refer to as "northeast North America" and are based on the extent
-## of *Frangula alnus*, excluding outliers in Wyoming and Tennessee
-
-## Long
-## Min = -96.61 -> -97
-## Max = -63.00 -> -62
-
-## Lat
-## Min = 38.60 -> 38 deg
-## Max = 47.82 -> 48 deg
-xmin <- -97.5
-xmax <- -62.5
-ymin <- 38.5
-ymax <- 48.5
-
-## Create and `extent` object based on these values
-falnus.extent <- extent( xmin, xmax, ymin, ymax )
-
-## Save this extent to be used in all studies 
-save( falnus.extent, 
-      file='~/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/scripts/falnus.extent.RData')
-
-## ******************************************************************** ##
-## Define paths to important directories layers are currently stored in
-# From:
-GIS_LOCAL_DIR <- "/Volumes/Garage/gis_layers_local/"
-GIS_DB_DIR <- "~/Dropbox/gis_layers/"
-BIOCLIM_DIR <- "/Volumes/Garage/gis_layers_local/WorldClim_bio/"
-BIOCLIM_DIR_5ARCMIN <- "/Volumes/Garage/gis_layers_local/WorldClim_bio_5arcmin/"
-HYDE_DIR <- "/Volumes/Garage/gis_layers_local/Hyde/"
-# To:
-FRAL_GIS <- "/Volumes/Garage/Projects/F-alnus/FRAL_GIS/"
-FRAL_CROP_LAYERS_30ARCSEC <- "/Volumes/Garage/Projects/F-alnus/FRAL_GIS/Environ_Layers_30arcsec/"
-FRAL_CROP_LAYERS_5ARCMIN <- "/Volumes/Garage/Projects/F-alnus/FRAL_GIS/Environ_Layers_5arcmin/"
-FRAL_HYDE_LAYERS <- "/Volumes/Garage/Projects/F-alnus/FRAL_GIS/HYDE_Layers/"
-
+source('/Users/mlammens/Google Drive/F-alnus/Chapter-4/R/spatial_data_setup.R')
+  
 ## ******************************************************************** ##
 ## Make Bioclim Environmental layers that match the `falnus.extent`
 
@@ -87,11 +40,18 @@ for ( bio in bioclim_5arcmin ){
   bio.new <- gsub(pattern='bil$',replacement='asc',basename(bio))
   crop( bio.rast, falnus.extent, paste(FRAL_CROP_LAYERS_5ARCMIN,bio.new,sep=""),overwrite=TRUE )
 }
-  
-### TO DO - SETUP CLIPPING OF LANDCOVER, NDVI AND CTI INDEX
 
 ## ******************************************************************** ##
 ## Make Hyde Crop layers that match the `falnus.extent`
+
+## Convert HYDE layers from km2 to % pixel of cover
+
+# Read in pixel area grid
+hyde.pixel.area <- raster(paste(GIS_DB_DIR,'mland_cr.asc',sep=''))
+# Crop FRAL extent
+crop( hyde.pixel.area, falnus.extent, paste(FRAL_HYDE_LAYERS,'mland_cr.asc',sep=""), overwrite=TRUE )
+# Read in cropped layer
+#hyde.pixel.area <- raster(paste(FRAL_HYDE_LAYERS,'mland_cr.asc',sep=""))
 
 ## Get a list of all of the crop land Hyde Layers
 hyde.crop.layers <- Sys.glob(file.path(HYDE_DIR,"*","crop*asc"))
@@ -99,7 +59,24 @@ hyde.crop.layers <- Sys.glob(file.path(HYDE_DIR,"*","crop*asc"))
 ## Crop these layers
 for ( crop.layer in hyde.crop.layers ) {
   crop.rast <- raster( crop.layer )
-  crop( crop.rast, falnus.extent, paste(FRAL_HYDE_LAYERS,basename(crop.layer),sep=""), overwrite=TRUE )
+  crop.rast <- crop.rast / hyde.pixel.area
+  crop_layer_new <- paste(FRAL_HYDE_LAYERS,basename(crop.layer),sep="")
+  crop_layer_new <- gsub(pattern='crop',replacement='crop_',crop_layer_new)
+  crop_layer_new <- gsub(pattern='AD',replacement='',crop_layer_new)
+  crop( crop.rast, falnus.extent, crop_layer_new, overwrite=TRUE )
+}
+
+## Get a list of all of the gras land Hyde Layers
+hyde.gras.layers <- Sys.glob(file.path(HYDE_DIR,"*","gras*asc"))
+
+## gras these layers
+for ( gras.layer in hyde.gras.layers ) {
+  gras.rast <- raster( gras.layer )
+  gras.rast <- gras.rast / hyde.pixel.area
+  gras_layer_new <- paste(FRAL_HYDE_LAYERS,basename(gras.layer),sep="")
+  gras_layer_new <- gsub(pattern='gras',replacement='gras_',gras_layer_new)
+  gras_layer_new <- gsub(pattern='AD',replacement='',gras_layer_new)
+  crop( gras.rast, falnus.extent, gras_layer_new, overwrite=TRUE )
 }
 
 ## ******************************************************************** ##
@@ -121,3 +98,40 @@ Lakes <- readOGR(dsn='/Users/mlammens/Dropbox/gis_layers/lakes.shp',
 Lakes.rast <- rasterize(Lakes, fral.generic.rast,field=0,background=1)
 ## This created a layer that has 0 values where the lakes are and 1s everywhere else
 writeRaster(Lakes.rast,filename=paste(FRAL_GIS,'Lakes_Rast.asc',sep=''), overwrite=TRUE )
+
+## ******************************************************************** ##
+## Clip potential vegetation layer
+pot.veg <- raster(paste(GIS_DB_DIR,'potentialvegetation.asc',sep=''))
+crop( pot.veg, falnus.extent, paste(FRAL_GIS,'pot_veg.asc',sep=''), overwrite=TRUE )
+
+## ******************************************************************** ##
+## Read in, re-project, re-size, and crop CIT Index
+
+# First read dem, to get projection
+dem_na <- raster(paste(GIS_LOCAL_DIR,'gt30h1kna/na_dem.bil',sep=''))
+hydro1k_proj <- projection(dem_na)
+
+# Read in cti
+cti_na <- raster(paste(GIS_LOCAL_DIR,'gt30h1kna/na_cti.bil',sep=''))
+projection(cti_na) <- hydro1k_proj
+
+# Re-project raster to match other layers
+cti_na_reproj <- projectRaster(from=cti_na,to=pot.veg,
+                               filename=paste(GIS_LOCAL_DIR,'gt30h1kna/na_cti_wgs84.bil',sep=''))
+cti_na_reproj[cti_na_reproj>5000] <- NA
+
+crop(cti_na_reproj, falnus.extent, paste(FRAL_GIS,'cti_na.asc',sep=''), overwrite=TRUE)
+
+## ******************************************************************** ##
+## Read in, clip, and disaagregate layer to go from 0.5 degrees to 5 minutes
+soil_ph <- raster(paste(GIS_LOCAL_DIR,'Soil/SAGE_soilph/soilph/hdr.adf',sep=""))
+res(soil_ph)
+soil_ph <- disaggregate(soil_ph,fact=6)
+res(soil_ph)
+crop(soil_ph, falnus.extent, paste(FRAL_GIS,'soil_ph.asc',sep=''), overwrite=TRUE)
+
+## ******************************************************************** ##
+## Also read in and crop topsoil layer
+soil_ph_top <- raster(paste(GIS_LOCAL_DIR,'Soil/FAO_soilph/ph_t_ASCII/ph_t',sep=''))
+res(soil_ph_top)
+crop(soil_ph_top, falnus.extent, paste(FRAL_GIS,'soil_ph_top.asc',sep=''), overwrite=TRUE)

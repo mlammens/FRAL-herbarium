@@ -131,7 +131,44 @@ res(soil_ph)
 crop(soil_ph, falnus.extent, paste(FRAL_GIS,'soil_ph.asc',sep=''), overwrite=TRUE)
 
 ## ******************************************************************** ##
-## Also read in and crop topsoil layer
+## Also read in and crop soil pH for topsoil and sub layers
 soil_ph_top <- raster(paste(GIS_LOCAL_DIR,'Soil/FAO_soilph/ph_t_ASCII/ph_t',sep=''))
+soil_ph_sub <- raster(paste(GIS_LOCAL_DIR,'Soil/FAO_soilph/ph_s_ASCII/ph_s',sep=''))
 res(soil_ph_top)
+
+# This layer is ordinal. Here is the inforamtion from the metadata files:
+## -------------------------------------------------------------------- ##
+# Structure of the attributes
+# =======================
+#   
+#   The first digit indicates the dominant class.
+# The second digit indicates the associated class.
+# The same classes are used in the first and second digit, except that a zero
+# as second digit indicates that the class pointed by the first digit occurs in
+# >80% of the pixel.
+# 
+# pH
+# --
+#   The classes are:
+#   1: pH <4.5
+# 2: pH >=4.5-5.5
+# 3: pH >5.5-7.2
+# 4: pH >7.2-8.5
+# 5: pH >8.5
+# 97:Water
+# 99:Glaciers, Rock, Shifting sand, Missing data
+## -------------------------------------------------------------------- ##
+# I'm only interested in using the dominant class.
+rclass_mat <- c(9,18,1,
+                19,28,2,
+                29,38,3,
+                39,48,4,
+                49,58,5,
+                90,99,NA)
+rclass_mat <- matrix( rclass_mat, ncol=3, byrow=TRUE)
+soil_ph_top <- reclassify(soil_ph_top, rclass_mat)
+soil_ph_sub <- reclassify(soil_ph_sub, rclass_mat)
+
 crop(soil_ph_top, falnus.extent, paste(FRAL_GIS,'soil_ph_top.asc',sep=''), overwrite=TRUE)
+crop(soil_ph_sub, falnus.extent, paste(FRAL_GIS,'soil_ph_sub.asc',sep=''), overwrite=TRUE)
+

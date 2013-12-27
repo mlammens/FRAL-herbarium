@@ -1,22 +1,22 @@
-Herbarium Data Collection and Preperation
+Herbarium Data Collection and Preparation
 ========================================================
 
 ## Key components of this file
 
-* In this script I am documenting the acquisition and filteing of
+* In this script I am documenting the acquisition and filtering of
 records for the group of associated species 
-that will be used in the cummulative record analysis
+that will be used in the cumulative record analysis
 
 * Data cleaning for the previously collated historical presence 
 records for *Frangula alnus*. Record collection is documented in Chapter 3
 of my PhD dissertation.
 
-* In this script I assigne Long/Lat values to Counties for records
+* In this script I assign Long/Lat values to Counties for records
 that were not georeferenced to the highest resolution possible. These records
 are mostly those in the **group of associated species** and **FRAL** records
 collected from Ohio State University Herbarium and University of Minnesota 
 Herbarium. The **FRAL** records that were not georeferenced are records that I 
-was only able to aquire recently.
+was only able to acquire recently.
 
 
 ## Define the group of asscocated species
@@ -33,14 +33,14 @@ as Glossy buckthorn and/or have been compared to GB in previous analyses
 * Alder (Alderleaf) Buckthorn = Rhamnus alnifolia
 * White Ash = Fraxinus americana 
 * Witch Hazel = Hamamelis virginiana 
-* Withc Hazel (syn) = Hamamelis macrophylla
+* Witch Hazel (syn) = Hamamelis macrophylla
 
 ***
 ## GBIF Records 
 
-First, I'm going to aquire all the records that I can from GBIF. Because
+First, I'm going to acquire all the records that I can from GBIF. Because
 of the way I am doing this, by collecting data from a specific spatial extent,
-I am only getting recordst that have **Latitude** and **Longitude** values.
+I am only getting records that have **Latitude** and **Longitude** values.
 Thus, these records **DO NOT** have to be georeferenced to the county level.
 However, I do have to make sure that they all have county names for a later
 analysis.
@@ -181,7 +181,7 @@ GBIF.Data.bkup <- GBIF.Data
 
 ```
 
-As of 2013-05-15, there was a record in the GBIF dataset that had a 
+As of 2013-05-15, there was a record in the GBIF data set that had a 
 inaccurate date, which has to be removed.
 
 ```{r}
@@ -223,7 +223,7 @@ GBIF.Data <- GBIF.Data[ -(c(R.frangula,F.alnus)), ]
 
 ### Save these data
 
-* Write the FRAL dataset to disk
+* Write the FRAL data set to disk
 * Later in this document, combine these Associated Species with the
 other Associated Species data (from herbarium records) and save as one
 file
@@ -387,7 +387,7 @@ GBIF_Clean$Remove[GBIF_iNat] <- 1
 ### Steps taken to gather data from Wisconsin State Herbarium
 
 This requires a script I wrote specifically to scrape data from
-the Wisconsian State Herbarium. In order to use this script I 
+the Wisconsin State Herbarium. In order to use this script I 
 first had to navigate the website
 to get a http address to use in my rcurl call. I did this using
 the standard WisFlora interface and search
@@ -474,11 +474,11 @@ it here for reference and incase I find it helpful in the future.
 ## University of Minnesota Herbarium (MIN)
 
 These data are accessible from an online search, but as downloaded in *.csv format
-they are not increadibly useful. In particular, all of the spatial information is
+they are not incredibly useful. In particular, all of the spatial information is
 grouped together in a single cell if you open the *.csv file in Excel.
 
 I employ a sequence of regular expression search and replace operations to 
-make these data more usefull. I carryout the search and replace operations in 
+make these data more useful. I carryout the search and replace operations in 
 TextWrangler. Here are the exact steps:
 
 ### Step 1. Remove lines that are blank 
@@ -532,13 +532,13 @@ Replace = \1\4,\3,\2\5
 ### Final cleaning
 
 The above search and replace steps get me most of the way to a clean text file
-that I can read using Excel, but the file still requires a little bit of hand pruining, 
+that I can read using Excel, but the file still requires a little bit of hand pruning, 
 particularly for locations that occur in a park or forest for some reason (named place?).
 
 ### Combining with other records
 
-I combined these data with the dataset constucted for the Wisconsin Flora 
-dataset. To do this, I did simple "cut and paste" procedures in Excel, cutting
+I combined these data with the data set constructed for the Wisconsin Flora 
+data set. To do this, I did simple "cut and paste" procedures in Excel, cutting
 only the columns I was interested in from the 'Cleaned' data to the 'Combined' data.
 In retrospect, I could have read the *.csv files into R and combined only the columns
 I wanted, but I did not do that here. In the future, I will try this instead.
@@ -548,13 +548,13 @@ I wanted, but I did not do that here. In the future, I will try this instead.
 
 General information for this herbarium can be found 
 [here](http://herbarium.osu.edu/). 
-Currently the OSU Herbarium has two datasets available for online search - 
+Currently the OSU Herbarium has two data sets available for online search - 
 the **vascular flora of Ohio** and their type specimens. I'm taking advantage of the former.  
 
 1. I downloaded the files available after using the OSU search interface, which were all in *.xml format
 2. The *.xml files were open in Excel and saved as *.xlsx files
 3. I combined the Rhamnus frangula and Frangula alnus results into the Rhamnus\_frangula\_OC\_RAW.xlsx file
-4. Deleted several columns from combined datasets here, but kept the records needed to match previously collected datasets and compiled datasets
+4. Deleted several columns from combined data sets here, but kept the records needed to match previously collected data sets and compiled data sets
 5. I removed records without Collection Date information
 6. I also removed records that had no collector information
 7. I added the Rhamnus frangula data to the compiled Frangula alnus data set, adding a column indicating whether a record was CountyLevelOnly (0,1)
@@ -684,8 +684,8 @@ MSC_Clean <- data.frame(
 ***
 ## Brooklyn Botanical Garden (BKL)
 
-BBG is similar to Wisconsin that the data are readily avaialbe on the web,
-but there is no clear way to 'bulk download' recrod informaiton. So, I used
+BBG is similar to Wisconsin that the data are readily available on the web,
+but there is no clear way to 'bulk download' record information. So, I used
 the `wisc\_herb\_scrape.R` script as a template, and wrote a `bbg\_herb\_scrape.R`
 script. 
 
@@ -760,12 +760,12 @@ on the collection can be found [here](http://www.carnegiemnh.org/botany/collecti
 ### Lat/Long Coords
 
 There were quite a large number of records with latitude and longitude coordinates
-in this dataset (approx 313), so am going to use them. I did a small number of
+in this data set (approx 313), so am going to use them. I did a small number of
 cleaning steps in the Raw data, which included:
 
 * Making a longitude column
-* Spliting the Lat/Lon column for the 300+ records that I plan to use
-* Replacing all symbols seperating degrees, minutes, and seconds by white space
+* Splitting the Lat/Lon column for the 300+ records that I plan to use
+* Replacing all symbols separating degrees, minutes, and seconds by white space
 * Removing N and W letters, as well as, NAD83 letters
 
 ```{r}
@@ -918,15 +918,15 @@ Associated_Spec <- merge(Associated_Spec,State_Abb,by.x='Admin1',by.y='STATE')
 ## Georeferencing of records at the County Level
 
 I'm going to georeference each of these locations at the county level, using
-data from the US Census Burea. Specifically I am using data from the 
+data from the US Census Bureau. Specifically I am using data from the 
 **US Census Gazetteer**
-aquired from this website: 
+acquired from this website: 
 [http://www.census.gov/geo/maps-data/data/gazetteer2010.html](http://www.census.gov/geo/maps-data/data/gazetteer2010.html) 
 
-I downloaded the 'Counties' dataset as a *.txt file. I opened it in Excel and saved
+I downloaded the 'Counties' data set as a *.txt file. I opened it in Excel and saved
 it as a *.csv file. I also copied the metadata information from this website and saved
-it as a seperate *.txt file. All of the Gazatteer files are currently stored in my 
-'gis_layers' direcotry in my Dropbox.
+it as a separate *.txt file. All of the Gazetteer files are currently stored in my 
+'gis_layers' directory in my Dropbox.
 
 ```{r}
 # Read in the counties *.csv file
@@ -993,7 +993,7 @@ Associated_Spec <- Associated_Spec[-Assoc.Cult,]
 ```
 
 * A specimen is document outside of the area of interest for my study.
-  * **Addendum** This is unneseccary,
+  * **Addendum** This is unnecessary,
   because every record is assigned a lat/long (either by County lat/long or georef. 
   lat/long) and then all records whose lat/long value does not fall into one of the 
   30 arc minute grids covering my study region are removed. Thus, the records are
@@ -1021,7 +1021,7 @@ Associated_Spec <- as.data.frame(Associated_Spec)
 *** 
 ## FRAL Data Cleaning and Spatial Layer construction
 
-I have previously manually constructed a dataset of FRAL records, the process
+I have previously manually constructed a data set of FRAL records, the process
 of which is documented in Chapter 3 of my dissertation. Here I am reading in this layer,
 cleaning the data entries a little, and making a GIS layer for these data.
 

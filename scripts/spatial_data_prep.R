@@ -9,7 +9,7 @@
 ##
 ## ******************************************************************** ##
 
-source('/Users/mlammens/Google Drive/F-alnus/Chapter-4/R/spatial_data_setup.R')
+source('/Users/mlammens/Dropbox/F-alnus/Chapter-4/R/spatial_data_setup.R')
   
 ## ******************************************************************** ##
 ## Make Bioclim Environmental layers that match the `falnus.extent`
@@ -69,7 +69,7 @@ for ( crop.layer in hyde.crop.layers ) {
 ## Get a list of all of the gras land Hyde Layers
 hyde.gras.layers <- Sys.glob(file.path(HYDE_DIR,"*","gras*asc"))
 
-## gras these layers
+## Crop these layers
 for ( gras.layer in hyde.gras.layers ) {
   gras.rast <- raster( gras.layer )
   gras.rast <- gras.rast / hyde.pixel.area
@@ -77,6 +77,37 @@ for ( gras.layer in hyde.gras.layers ) {
   gras_layer_new <- gsub(pattern='gras',replacement='gras_',gras_layer_new)
   gras_layer_new <- gsub(pattern='AD',replacement='',gras_layer_new)
   crop( gras.rast, falnus.extent, gras_layer_new, overwrite=TRUE )
+}
+
+## Get a list of all of the populaiton density Hyde Layers
+hyde.popd.layers <- Sys.glob(file.path(HYDE_DIR,"*","popd*asc"))
+
+## Crop these layers
+for ( popd.layer in hyde.popd.layers ) {
+  popd.rast <- raster( popd.layer )
+  popd_layer_new <- paste(FRAL_HYDE_LAYERS,basename(popd.layer),sep="")
+  popd_layer_new <- gsub(pattern='AD',replacement='',popd_layer_new)
+  crop( popd.rast, falnus.extent, popd_layer_new, overwrite=TRUE )
+}
+
+## Also create layers that are in the same projection as the final
+## fral patch layers (Lambers equal area and 20 x 20 km)
+
+# Read dem and pot.veg, to get projections used later
+dem_na <- raster(paste(GIS_LOCAL_DIR,'gt30h1kna/na_dem.bil',sep=''))
+pot.veg <- raster(paste(GIS_DB_DIR,'potentialvegetation.asc',sep=''))
+
+# Get the list of hyde.popd.layers that have been cropped
+hyde.popd.layers <- Sys.glob(file.path(FRAL_HYDE_LAYERS,"popd*asc"))
+
+for ( popd.layer in hyde.popd.layers ){
+  popd.rast <- raster( popd.layer )
+  projection(popd.rast) <- projection(pot.veg)
+  # Make a new popd.rast name
+  popd_layer_laea <- sub( pattern='*.asc', replacement='_laea.asc', popd.layer )
+  # Re-project to Lambers Equal Area
+  projectRaster(from=popd.rast,res=c(20000,20000),crs=projection(dem_na),
+                filename=popd_layer_laea,overwrite=TRUE)
 }
 
 ## ******************************************************************** ##

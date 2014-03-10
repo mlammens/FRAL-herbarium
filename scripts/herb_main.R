@@ -1579,7 +1579,7 @@ plot( Cumm.Cnty.Combined.df$Years,
       #ylim=c(-.5,.5), # This cuts off one extreme point at > 1.5
       ylim=c(0.8,1.2),
       xlab='Year',
-      ylab='Diff. Growth Rate of Cumulative Occ. Counties' )
+      ylab='Ratio of growth rate of cumulative occ. counties' )
 abline(h=1,lwd=2.5,col='red',lty=5)
 points(1884:2000,Cum.Cnty.R.Diff,
        pch=19,cex=0.75,col='red')

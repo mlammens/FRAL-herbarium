@@ -515,6 +515,24 @@ legend( 1980, 50,
 )
 #dev.off()
 
+ggplot() +
+#   geom_point( data=NULL, aes( x = Associated.Spec.Loc.Overlap_Cumm.Grid$Years,
+#                               y = Associated.Spec.Loc.Overlap_Cumm.Grid$OccGrids ),
+#               col="black" ) +
+  geom_point( data=NULL, aes( x = FRAL.Herb.Loc.Overlap_Cumm.Grid$Years,
+                              y = FRAL.Herb.Loc.Overlap_Cumm.Grid$OccGrids ),
+              col="red", size=3 ) +
+  xlim( c(1865, 2010 ) ) +
+  ylim( c( 0, 350 ) ) +
+  xlab( "Year" ) +
+  ylab( "Cumulaitve occupied grid cells" ) +
+  theme_bw() +
+  theme( text=element_text( size=18, face="bold" ),
+         axis.title.y=element_text(vjust=0.3) ) # size=20 # use 20 for most figures, 18 for small
+#ggsave( "figures/Pres_Fig_Fral_CumGrid.pdf", width=9.5, height=6, units="in" )
+ggsave( "figures/Pres_Fig_Fral_CumGrid_Small.pdf", width=4.5, height=4.1, units="in" )
+
+
 ## ----------------------------------------------------------- ##
 ## Calculated using **Log** cumulative occupied grid cells
 ## ----------------------------------------------------------- ##
@@ -763,6 +781,108 @@ legend( 1980, 7,
         col=c('black','red')
 )
 #dev.off()
+
+## -------------------------------------------------------------------- ##
+## Make figures for defense talk
+
+ggplot() +
+  geom_point( data=FRAL.Herb.Loc.Overlap_Cumm.Grid, 
+              aes( x = Years, y = sqrt( OccGrids ) ),
+              col="red", size=3 ) +
+#   geom_line( data=NULL, aes( x = 1879:2010, 
+#                              y = fral.lm.sqrt$fitted.values ),
+#              col="red", size=1.5) +
+#   geom_line( data=NULL, aes( x = 1879:2010, 
+#                              y = fral.lm2.sqrt$fitted.values ),
+#              size = 1.5) +
+  xlim( c(1865, 2010 ) ) +
+  ylim( c( 0, 20 ) ) +
+  xlab( "Year" ) +
+  ylab(  "Sqrt( cumulaitve occupied grid cells )" ) +
+  theme_bw() +
+  theme( text=element_text( size=20, face="bold" ),
+         axis.title.y=element_text(vjust=0.3) )
+ggsave( "figures/Pres_Fig_Fral_SqrtCumGrid.pdf", width=9.5, height=6, units="in" )
+#ggsave( "figures/Pres_Fig_Fral_SqrtCumGrid_Small.pdf", width=4.5, height=4, units="in" )
+
+ggplot() +
+  geom_point( data=FRAL.Herb.Loc.Overlap_Cumm.Grid, 
+              aes( x = Years, y = sqrt( OccGrids ) ),
+              col="red", size=3 ) +
+  #   geom_line( data=NULL, aes( x = 1879:2010, 
+  #                              y = fral.lm.sqrt$fitted.values ),
+  #              col="red", size=1.5) +
+  geom_line( data=NULL, aes( x = 1879:2010, 
+                             y = fral.lm2.sqrt$fitted.values ),
+             size = 1.5) +
+  xlim( c(1865, 2010 ) ) +
+  ylim( c( 0, 20 ) ) +
+  xlab( "Year" ) +
+  ylab(  "Sqrt( cumulaitve occupied grid cells )" ) +
+  theme_bw() +
+  theme( text=element_text( size=20, face="bold" ),
+         axis.title.y=element_text(vjust=0.3) )
+ggsave( "figures/Pres_Fig_Fral_SqrtCumGrid_wFit.pdf", width=9.5, height=6, units="in" )
+
+# Fral AND Associated species
+ggplot() +
+  geom_point( data=FRAL.Herb.Loc.Overlap_Cumm.Grid, 
+              aes( x = Years, y = sqrt( OccGrids ) ),
+              col="red", size=3 ) +
+  #   geom_line( data=NULL, aes( x = 1879:2010, 
+  #                              y = fral.lm.sqrt$fitted.values ),
+  #              col="red", size=1.5) +
+  geom_line( data=NULL, aes( x = 1879:2010, 
+                             y = fral.lm2.sqrt$fitted.values ),
+             size = 1.5) +
+  geom_point( data=Associated.Spec.Loc.Overlap_Cumm.Grid, 
+              aes( x = Years, y = sqrt( OccGrids ) ),
+              col="black", size=3 ) +
+  geom_line( data=NULL, aes( x = 1869:2012, 
+                             y = assoc.lm3.sqrt$fitted.values ),
+             size = 1.5) +  
+  xlim( c(1865, 2010 ) ) +
+  ylim( c( 0, 20 ) ) +
+  xlab( "Year" ) +
+  ylab(  "Sqrt( cumulaitve occupied grid cells )" ) +
+  theme_bw() +
+  theme( text=element_text( size=20, face="bold" ),
+         axis.title.y=element_text(vjust=0.3) )
+ggsave( "figures/Pres_Fig_Fral_Assoc_SqrtCumGrid_wFit.pdf", width=9.5, height=6, units="in" )
+
+# Ratio plot
+ggplot() +
+  geom_point( data=FRAL.Herb.Assoc.allYrs.Overlap,
+              aes( x = Years, y = AOO.Ratio ),
+              size = 3 ) +
+  xlim( c(1865, 2010 ) ) +
+  #ylim( c( 0, 20 ) ) +
+  xlab( "Year" ) +
+  ylab( "Ratio of cumulative occurence of\nF. alnus to associated species" ) +
+  theme_bw() +
+  theme( text=element_text( size=20, face="bold" ),
+         axis.title.y=element_text(vjust=0.4) )
+ggsave( "figures/Pres_Fig_Fral_Assoc_Ratio.pdf", width=9.5, height=6, units="in" )
+
+# Growth Rate Ratio plot
+ggplot() +
+  geom_point( data=FRAL.Herb.Assoc.allYrs.Overlap,
+              aes( x = Years, y = Cumm.Grid.R.Diff ),
+              size = 3 ) +
+  geom_point( data=NULL,
+              aes( x = 1884:2005, y = Cum.Grid.R.Diff ),
+              size = 3, col = "red" ) +
+    xlim( c(1865, 2010 ) ) +
+  geom_hline( yintercept=1, size = 1.5 ) +
+  ylim( c( 0.8, 1.2 ) ) +
+  xlab( "Year" ) +
+  ylab( "Ratio of growth rates of\nF. alnus to associated species" ) +
+  theme_bw() +
+  theme( text=element_text( size=20, face="bold" ),
+         axis.title.y=element_text(vjust=0.3) )
+ggsave( "figures/Pres_Fig_Fral_Assoc_GrowthRate.pdf", width=9.5, height=6, units="in" )
+
+
 
 ## Plot Growth Rates based on regression fits
 ## ******************************************************************** ##

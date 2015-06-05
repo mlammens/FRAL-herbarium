@@ -18,7 +18,20 @@
 ##   described in 'scripts/herb_data_prep.Rmd'
 ##
 ## ******************************************************************** ##
-## Development To-do List
+## Development To-do List:
+## 
+## * Scale dependence of lag phase
+## The appraoch I want to take in this updated version of the mansucript
+## (updated from my chapter) is to look at the spread of buckthorn through
+## time using different extents, but the same grain size. 
+## Essentially, what I suspect is that at smaller (i.e., regional) scales,
+## the lag period may differ than when looking at the invasion in its 
+## entirety. 
+## Is this a trivial expectation? I don't actually think so, especially
+## given that my previous reconstruction of the spread indicates that there
+## are large jumps to invading new areas, with relatively little buckthorn
+## around it. So it's almost as if these jumps constitute a new, separate 
+## invasion.
 ##
 ## ******************************************************************** ##
 
@@ -31,7 +44,7 @@
 ## -----------------
 require(dismo)
 require(maptools)
-gpclibPermit()
+#gpclibPermit()
 require(rgdal)
 require(ggplot2)
 require(sp)

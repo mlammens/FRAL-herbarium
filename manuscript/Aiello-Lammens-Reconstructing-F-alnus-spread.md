@@ -280,22 +280,13 @@ Curators or collection managers at three herbaria, Rutgers Chrysler Herbarium, M
 In addition to collecting records from herbarium databases, I collected records accessed searching the Global Biodiversity Information Facility (GBIF), the Canada Biodiversity Information Facility (CBIF), and the Invasive Plant Atlas of New England (IPANE).
 Records collected from all three of these biodiversity databases were carefully examined to exclude records accessed in other searches.
 
-I searched for historical records of *F. alnus* presence reported in
-published journal articles using the ISI Web of Science database. I used
-keyword search terms of “Frangula alnus” and “Rhamnus frangula”. From
-this literature search, I included 5 presence records reported by Howell
-and Blackwell (1977), Taft and Solecki (1990), and Catling and Porebski
-(1994). Howell and Blackwell (1977) investigated the history of the
-spread of *F. alnus* into and throughout Ohio, and reported that the
-first recorded observation was from Lake County, Ohio in 1927 (confirmed
-via search of Ohio State University Herbarium). Taft and Solecki (1990)
-reported that *F. alnus* was first recorded in the state of Illinois in
-1912 (Sherff 1912, as cited by Taft and Solecki 1990) in Cook County
-(confirmed via search of Field Museum Herbarium). Catling and Porebski
-(1994) investigated the spread of *F. alnus* into and throughout
-southern Ontario. I used data reported in this paper to identify time
-and location of the three earliest records of *F. alnus* presence in
-this region.
+I searched for historical records of *F. alnus* presence reported in published journal articles using the ISI Web of Science database.
+I used keyword search terms of “Frangula alnus” and “Rhamnus frangula”.
+From this literature search, I included 5 presence records reported by Howell and Blackwell (1977), Taft and Solecki (1990), and Catling and Porebski (1994).
+Howell and Blackwell (1977) investigated the history of the spread of *F. alnus* into and throughout Ohio, and reported that the first recorded observation was from Lake County, Ohio in 1927 (confirmed via search of Ohio State University Herbarium).
+Taft and Solecki (1990) reported that *F. alnus* was first recorded in the state of Illinois in 1912 (Sherff 1912, as cited by Taft and Solecki 1990) in Cook County (confirmed via search of Field Museum Herbarium).
+Catling and Porebski (1994) investigated the spread of *F. alnus* into and throughout southern Ontario.
+I used data reported in this paper to identify time and location of the three earliest records of *F. alnus* presence in this region.
 
 *Georeferencing of historical presence records*
 

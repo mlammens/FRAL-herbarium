@@ -7,44 +7,21 @@ using herbarium records
 
 **Email of corresponding author:** matt.lammens@gmail.com; 631-327-2371
 
-**To-do:**
-
-\* Slim intro material to that appropriate for Biological Invasions
-
-\* Read through the paper to find the main gist (see below)
-
-\* Update refs – see tag “fral-herbariam” in mendeley
-
-\* Re-examine hypotheses – possibly needs better framing
-
-**What is the main gist of this paper?**
-
-As the paper stands now, I think it’s very much a descriptive analysis
-of the invasion of buckthorn. That’s not bad *per se*, but I don’t think
-it’s terribly interesting.
-
-What I would like to refocus the paper on is how the duration of a lag
-phase differs based on spatial extent of the study region. This will
-require some re-analysis, but I think would be a worthwhile
-contribution.
 
 **\
 **
 
 **Abstract**
 
-Analysis of herbaria records can aid in understanding the processes that govern non-native species invasions, allowing for an examination of patterns of the spread in a novel range.
-I used herbaria records to investigate the rate of spread and pattern of establishment for the invasive shrub *Frangula alnus* (Glossy Buckthorn) in northeastern and middle North America.
-*F. alnus* is a perennial woody species of concern to land managers throughout the invaded range.
-Accession records were collected from online databases of herbaria throughout North America and from direct requests to herbaria curators, resulting in \>700 records of *F.
-alnus* covering a temporal range from ca. 1880-Present and a spatial range broadly covering the entire invaded area in northeast North America.
-I addressed unequal sampling effort by comparing temporal and spatial patterns of *F.
-alnus* accessions to patterns in a group of ecological similar native species.
-Current understanding of the earliest stages of the *F. alnus* invasion is that the plant was likely first introduced in southern Ontario (near London), however my examination finds that initial introductions appear to have been greatly separated geographically, ranging from southern Ontario to coastal New York and New Jersey.
-Such large spatial separations are likely the result of multiple introductions.
-Trends in record collection in time and space show the rate of spread of *F. alnus* was initially slow, then increased rapidly during the early 20^th^ century, and reached a relatively constant rate of spread in the later 20^th^ century.
-Examining the spread of this species at the continental scale, there is little evidence that it experienced an extended lag phase between phases of establishment and rapid spatial spread, in contradiction to previous reports.
-Rather, it appears that *F. alnus* has steadily increased in area of occupancy since ca.
+Herbaria records offer a rich source of information for understanding the patterns and processes of species spread. 
+However, analyses of these data requires careful consideration of the potential effects of unequal sampling effort in space and time.
+I used herbaria records to investigate the rate of spread and pattern of establishment for the invasive shrub *Frangula alnus* in northeastern and middle North America.
+I collected \>700 accession records from herbaria throughout North America for *F.
+alnus* covering a temporal range from ca. 1880-Present and a spatial range covering the entire invaded area in North America.
+I addressed unequal sampling effort by comparing temporal and spatial patterns of *F. alnus* accessions to patterns in a group of ecological similar native species.
+Trends in record collection in time and space show the rate of spread of *F. alnus* was slow and spatially limited during the late 19^th^ century, then increased rapidly during the early 20^th^ century, and reached a relatively constant rate of spread in the later 20^th^ century.
+Examining the spread of this species at the continental scale, there is little evidence that it experienced an extended lag phase between phases of establishment and rapid spatial spread, in contradiction to common trends for non-native plants and to previous reports for this species in particular.
+Rather, it appears that *F. alnus* has steadily increased in area of occupancy from ca.
 1920 to the present.
 
 **\
@@ -52,20 +29,10 @@ Rather, it appears that *F. alnus* has steadily increased in area of occupancy s
 
 **Introduction**
 
-A remaining gap in our understanding of species invasions is a full
-understanding of population dynamics during the transition from
-establishment of self-sustaining populations in a novel region to the
-rapid growth in abundance and expansion of area of occupancy
-characteristic of invasive species. The time from establishment to rapid
-spread is generally noted as being longer than a generation time for
-many invasive species. This period is thought to be one in which
-population growth, both in numbers and area, are relatively small, and
-is commonly referred to as the lag phase (Kowarik 1995, Crooks and Soulé
-1999, Sakai et al. 2001, Crooks 2005, Pyšek and Hulme 2005, Theoharides
-and Dukes 2007). Because the lag phase is most often associated with a
-period early in the invasion process, management actions taken during
-this time have the potential to be most affective at mitigating the
-negative impacts of a species invasion.
+Despite decades of research on invasive species, we still lack a full understanding of population dynamics during the transition from establishment of self-sustaining populations in a novel region to the rapid growth in abundance and expansion of area of occupancy.
+From field observations and patterns in historical data, it is generally thought that the time from establishment to rapid spread is longer than a generation time for many invasive species.
+This period is thought to be one in which population growth, both in numbers and area, is relatively small, and is commonly referred to as the lag phase [@Kowarik1995; @Crooks1999; @Sakai2001; @Crooks2005; @Pysek2005; @Theoharides2007].
+Because the lag phase is associated with a period early in the invasion process, management actions taken during this time have the potential to be most affective at mitigating the negative impacts of a species invasion.
 
 To understand processes governing population dynamics during a lag
 phase, it is first necessary to identify the lag phase. Quantifying the

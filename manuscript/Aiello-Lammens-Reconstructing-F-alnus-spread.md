@@ -30,36 +30,21 @@ Rather, it appears that *F. alnus* has steadily increased in area of occupancy f
 **Introduction**
 
 Despite decades of research on invasive species, we still lack a full understanding of population dynamics during the transition from establishment of self-sustaining populations in a novel region to the rapid growth in abundance and expansion of area of occupancy.
-From field observations and patterns in historical data, it is generally thought that the time from establishment to rapid spread is longer than a generation time for many invasive species.
+From field observations and patterns in historical data, it is generally noted that the time from establishment to rapid spread is longer than a generation time for many invasive species.
 This period is thought to be one in which population growth, both in numbers and area, is relatively small, and is commonly referred to as the lag phase [@Kowarik1995; @Crooks1999; @Sakai2001; @Crooks2005; @Pysek2005; @Theoharides2007].
 Because the lag phase is associated with a period early in the invasion process, management actions taken during this time have the potential to be most affective at mitigating the negative impacts of a species invasion.
 
-To understand processes governing population dynamics during a lag
-phase, it is first necessary to identify the lag phase. Quantifying the
-lag phase for a species has many challenges. Assuming a non-native
-species establishes in an environment suitable for growth and
-reproduction, and ignoring potential positive density dependence effects
-(i.e. Allee effects), population size should initially increase
-exponentially \~\~(Figure 1A)\~\~. Exponential growth is described as
-*N(t) = N(0) R^t^*, where *t =*time-step, *N(t)* = the population size
-at time-step *t*, and *R* is the population growth rate. A visual
-examination of population size through time for an exponentially growing
-population, suggests that there is period of time early in the
-population growth trajectory during which the population size remains
-relatively similar to *N(0)* \~\~(Figure 1A; *R* = 1.2 for the black
-dots)\~\~, and this period is followed by a transition to one in which
-the population size rapidly increases. Crooks and Soulé (1999) describe
-this as “the shallow portion early in the growth curve when the
-population is growing relatively slowly in absolute number” and define
-it as the **inherent lag**. This pattern is common to all exponential
-growth curves, and thus all growing populations should appear to have at
-least an inherent lag phase. However, because a mathematical definition
-of inherent lag is lacking, it is challenging to apply this concept. In
-the case of exponential population growth, a plot of the *log* of
-population size versus time shows a linear relationship (Figure 1B; *R*
-= 1.2 for black dots). The population growth rate is constant through
-time and there is no distinct transition point that can define the shift
-from the inherent lag phase to the population explosion phase.
+To understand processes governing population dynamics during a lag phase, it is first necessary to identify this period.
+Quantifying the lag phase for a species has many challenges.
+Assuming a non-native species establishes in an environment suitable for growth and reproduction, and ignoring potential positive density dependence effects (i.e.
+Allee effects), population size should initially increase exponentially (Figure 1A).
+Exponential growth is described as *N(t) = N(0) R^t^*, where *t =* time-step, *N(t)* = the population size at time-step *t*, and *R* is the population growth rate.
+Looking at a plot of population size through time for an exponentially growing population suggests that early on the population size is relatively similar to *N(0)* (Figure 1A; *R* = 1.2 for the black dots), which is followed by a transition to a period of rapid population increase.
+Crooks and Soulé (1999) describe this as “the shallow portion early in the growth curve when the population is growing relatively slowly in absolute number” and define it as the **inherent lag**.
+This pattern is common to all exponential growth curves, and thus all growing populations should appear to have at least an inherent lag phase.
+However, because a mathematical definition of inherent lag is lacking, it is challenging to apply this concept.
+In the case of exponential population growth, a plot of the *log* of population size versus time shows a linear relationship (Figure 1B; *R* = 1.2 for black dots).
+The population growth rate is constant through time and there is no distinct transition point that can define the shift from the inherent lag phase to the rapid population growth phase.
 
 While an inherent lag cannot be explicitly defined mathematically, it
 serves as a contrast to a population growth curve that shows an

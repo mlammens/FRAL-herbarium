@@ -46,81 +46,35 @@ However, because a mathematical definition of inherent lag is lacking, it is cha
 In the case of exponential population growth, a plot of the *log* of population size versus time shows a linear relationship (Figure 1B; *R* = 1.2 for black dots).
 The population growth rate is constant through time and there is no distinct transition point that can define the shift from the inherent lag phase to the rapid population growth phase.
 
-While an inherent lag cannot be explicitly defined mathematically, it
-serves as a contrast to a population growth curve that shows an
-**extended lag**. An extended lag phase is one in which population
-growth early in the growth curve is less than it is later. The grey dots
-in Figures 1A and B are growth curves for a population whose initial
-growth rate is *R* = 1 and increases to *R =* 1.2 during the first 20
-time steps. As is the case for population growth with constant *R*, the
-growth curve of population size versus time is non-linear (Figure 1A).
-However, in this case the growth curve of the log of population size
-versus time is also non-linear while *R* is increasing. The non-linear
-portion of the curve, where the slope is more shallow and the curve is
-concave up, is considered evidence for an extended lag (Crooks and Soulé
-1999). Patterns of population growth for many invasive species show
-evidence of an extended lag phase. The potential factors causing this
-are not well understood; several ecological and evolutionary processes
-may be involved (Mack et al. 2000, Sakai et al. 2001, Pyšek and Hulme
-2005, Gurevitch et al. 2011). An extended lag may be explained by time
-constraints intrinsic to population growth and establishment, such as
-generation time and time to first reproduction (i.e., the time required
-for a population to achieve a stable age distribution). However, many
-observed extended lag phases are longer than can be explained by these
-processes. In a recent study of weedy species in New Zealand, Aikio et
-al. (2010a) point out that while there are several proposed mechanisms
-that may explain extended lags, relatively little empirical work has
-been done to examine their validity. Among the most well studied
-mechanisms in a theoretical context are the role of evolutionary
-adaptation of the invader during the lag phase, waiting time until a
-disturbance event avails resources to the invader, and the role of
-complex dispersal mechanisms (for a general review see (Crooks 2005).
-Historical biodiversity data from herbaria and museums could be applied
-to address this lack of empirical support and further our understanding
-of the population dynamics of the lag phase. These data can be used to
-re-construct patterns of spatial spread of invasive species, which are
-linked to increases in population size.
+While an inherent lag is not explicitly defined mathematically, it serves as a contrast to the pattern of population growth showing an **extended lag**.
+In this case, the population growth rate changes in time, with a lower rate earlier in time, followed by a higher rate later.
+The grey dots in Figures 1A and B are growth curves for a population whose initial growth rate is *R = 1* and increases to *R = 1.2* during the first 20 time steps.
+As with population growth with constant *R*, the curve of population size versus time is non-linear (Figure 1A).
+However, in this case the curve of the log of population size versus time is also non-linear when *R* is increasing.
+The non-linear portion of the curve, where the slope is shallow and the curve is concave up, is considered evidence for an extended lag [@Crooks1999].
+Patterns of population growth for many invasive species match that expected for an extended lag phase.
+The potential factors causing this are not well understood; several ecological and evolutionary processes may be involved [@Mack2000; @Sakai2001; @Pysek2005; @Gurevitch2011]
+An extended lag may be explained by time constraints intrinsic to population growth and establishment, such as generation time and time to first reproduction (i.e., the time required for a population to achieve a stable age distribution).
+However, many observed extended lag phases are longer than can be explained by these processes.
 
-Retrospective spatial analyses can yield insights into the ecological
-processes involved in the spread of non-native invasive species in novel
-regions. A rich data source for these types of analyses on plant species
-is the specimen holdings of herbaria. Information from herbarium records
-are used in several studies to estimate species rates of spread through
-time and space (e.g., (Delisle et al. 2003, Salo 2005, Miller et al.
-2009, Crawford and Hoagland 2009, Newbold 2010, Aikio et al. 2010a,
-2010b, Lavoie 2012). These data have also been used to investigate
-native species range expansions beyond historical limits due to changing
-ecological conditions (e.g., Feeley et al. 2011; Feeley 2012). Despite
-their utility, analyzing these data presents a number of challenges; and
-determining whether a species had an extended lag phase is not a trivial
-task. One substantial challenge is that herbarium records may have been
-collected with unequal sampling effort in time and/ or space, resulting
-in biases in datasets compiled from these records. For example,
-historically there are documented periods of high and low specimen
-collection for herbaria in general (Prather et al. 2004). There may also
-be herbarium specific trends, such as a peak in collection activity
-following the opening of a herbarium or an emphasis on regional specimen
-collection. Other biases may emerge because of issues of convenience. A
-noted pattern in natural history collections is the large number of
-specimens collected near museums, herbaria, botanical gardens, and
-academic centers, as well as urban areas in general, where there is a
-higher concentration of naturalists (Hijmans et al. 2000, Reddy and
-Dávalos 2003, Kadmon et al. 2004). For plants collection in particular,
-this is sometimes referred to as the “botanist effect”. These potential
-biases make it difficult to determine if observed trends in herbarium
-collections (e.g., increased number of records through time) are
-indicative of changes in the population size or range size of the
-species of interest, or rather, representative of trends in overall
-specimen collection. For example, Catling and Porebski (1994) found that
-observations of the plant *Frangula alnus* were generally concentrated
-around urban areas from the time this species was first observed in
-southern Ontario, late 1800s, up to the 1970s. This pattern may be the
-result of the fact that botanists were located near these areas, and
-thus their collections tended to come from these areas, or it may be
-that *F. alnus* grows well in ecological conditions near urban areas
-(e.g., disturbed environments). It is important to distinguish these
-patterns to use these data for understanding ecological processes of
-species invasions.
+In a recent study of weedy species in New Zealand, Aikio et al. [-@aAikio2010a] point out that while there are several proposed mechanisms that may explain extended lags, relatively little empirical work has been done to examine their validity.
+Among the most well studied mechanisms in a theoretical context are the role of evolutionary adaptation of the invader during the lag phase, waiting time until a disturbance event avails resources to the invader, and the role of complex dispersal mechanisms (for a general review see [@Crooks2005]).
+Historical biodiversity data from herbaria and museums could be applied to address this lack of empirical support and further our understanding of the population dynamics of the lag phase.
+Additionally, retrospective spatial analyses can yield insights into the ecological processes involved in the spread non-native invasive species in novel regions.
+For plant species, the specimen holdings of herbaria offer a rich source of data for these types of analyses.
+Information from herbarium records are used in several studies to estimate species rates of spread through time and space [e.g., @Delisle2003; @Salo2005; @Miller2009; @Crawford2009; @Aikio2010a; @Lavoie2012], as well as to investigate native species range expansions beyond historical limits due to changing ecological conditions [e.g., @Feeley2011; @Feeley2012].
+
+Despite their utility, analyzing these data present a number of challenges; and determining whether a species had an extended lag phase is not a trivial task.
+One substantial challenge is that herbarium records may have been collected with unequal sampling effort in time and/ or space, resulting in biases.
+For example, periods of high and low specimen collection for herbaria in general are well documented [@Prather2004].
+There may also be herbarium specific trends, such as a peak in collection activity following the opening of a herbarium or an emphasis on regional specimen collection.
+Other biases may emerge because of issues of convenience.
+A noted pattern in natural history collections is the large number of specimens collected near museums, herbaria, botanical gardens, and academic centers, as well as urban areas in general, where there is a higher concentration of naturalists [@Hijmans2000; @Reddy2003; @Kadmon2004].
+For plants collection, this is sometimes referred to as the “botanist effect”.
+These potential biases make it difficult to determine if observed trends in herbarium collections (e.g., increased number of records through time) are indicative of changes in the population or range size of the species of interest, or rather, representative of trends in specimen collection.
+For example, Catling and Porebski [-@Catling1994] found that observations of the plant *Frangula alnus* were generally concentrated around urban areas from the time this species was first observed in southern Ontario in the late 1800s up to the 1970s.
+This pattern may be the result of the fact that botanists were located near these areas, and thus their collections tended to come from these areas, or it may be that *F. alnus* grows well in ecological conditions near urban areas (e.g., disturbed environments).
+It is important to distinguish these patterns to use these data for understanding ecological processes of species invasions.
 
 Another challenge in using herbarium records is that the data are
 generally more conducive to studying spatial spread, rather than

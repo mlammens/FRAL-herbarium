@@ -76,84 +76,41 @@ For example, Catling and Porebski [-@Catling1994] found that observations of the
 This pattern may be the result of the fact that botanists were located near these areas, and thus their collections tended to come from these areas, or it may be that *F. alnus* grows well in ecological conditions near urban areas (e.g., disturbed environments).
 It is important to distinguish these patterns to use these data for understanding ecological processes of species invasions.
 
-Another challenge in using herbarium records is that the data are generally more conducive to studying spatial spread, rather than population increase.
-These processes are related, but it should not be assumed that the rate of spatial spread is equivalent to the rate of population growth.
-This is problematic because whereas exponential growth is widely accepted as a null model for local population growth, there are many plausible null models for areal growth (i.e., spatial spread) for range expanding species.
-One commonly used null model is a reaction-diffusion model, which results in a description of spatial growth as a function of the radius of the population.
+Analysis of herbarium records is generally more conducive to studying spatial spread, rather than population increase.
+Though related, rates of spatial spread are not necessarily equivalent to rates of population growth.
+This presents a challenge because whereas exponential growth is widely accepted as a null model for local population growth, there are multiple plausible null models for areal growth (i.e., spatial spread) for range expanding species.
+One commonly used null model is the reaction-diffusion model, which results in a description of spatial growth as a function of the radius of the population.
 The area of occupancy for a species spreading randomly on a landscape from a central point should increase geometrically, with an exponent of 2.
 With this assumption, the square root of the area of occupancy through time for a spreading plant should have a linear relationship with respect to time, analogous to linearity after log transform for exponential growth.
-While other null models have been proposed, the square root transformation has been shown to be applicable to most of these and used to examine historical data on spatial spread (Crooks and Soulé 1999).
+While other null models have been proposed, the square root transformation is appropriate in most cases and used to examine historical data on spatial spread [@Crooks1999].
 
-Given the promise of the utility of natural history collections in
-general (Graham et al. 2004, Anderson 2012), and herbaria in particular
-(Lavoie 2012), it is not surprising that the effects of unequal sampling
-effort have been discussed in recent studies using herbarium records.
-Most methods used to address these effects compare the trends in the
-distribution of records for a species of interest to other species that
-have similar habitat requirements – i.e. associated species (Miller et
-al. 2009). For example, Catling and Porebski (1994) compared the pattern
-of collection records of *F. alnus* to that of *Rhamnus alnifolia* and
-showed that botanists were in fact collecting specimens well outside of
-urban areas during the time frame of the introduction and early spread
-of *F. alnus*. They thus concluded that *F. alnus* was in fact primarily
-located near urban areas during this time. More recent developments in
-analysis methods make it possible to account for potential biases in a
-more robust manner than a simple visual comparison (e.g. (Delisle et al.
-2003, Aikio et al. 2010a). These methods have been used to reconstruct
-patterns of range expansion for both non-native and native plants (e.g.,
-Miller et al. 2009; Larkin 2011). At least one of these methods (i.e.,
-Aikio et al. 2010a) was specifically developed and applied to identify
-the existence, and estimate the duration, of lag phases for invasive
-plants. Adopting and modifying these methods, I address some of the
-unanswered questions regarding the introduction and spread of the
-non-native invasive plant *F. alnus* (Glossy buckthorn)*.*
+Given the promise of the utility of natural history collections in general [@Graham2004; @Anderson2012a], and herbaria in particular [@Lavoie2012], it is not surprising that the effects of unequal sampling effort have been discussed in recent studies using herbarium records.
+Most methods used to address these effects compare the trends in the distribution of records for a species of interest to other species that have similar habitat requirements – i.e. associated species [Miller2009].
+For example, Catling and Porebski [-@Catling1994] compared the pattern of collection records of *F. alnus* to that of *Rhamnus alnifolia* and showed that botanists were collecting specimens well outside of urban areas during the time frame of the introduction and early spread of *F. alnus*.
+They thus concluded that *F. alnus* was in fact primarily located near urban areas during this time.
+More recent developments in analysis methods make it possible to account for potential biases in a more robust manner than a simple visual comparison [e.g. @Delisle2003, @Aikio2010a].
+These methods have been used to reconstruct patterns of range expansion for both non-native and native plants [e.g., @Miller2009; @Larkin2011].
+At least one of these methods [i.e., @Aikio2010a] was specifically developed and applied to identify the existence, and estimate the duration, of lag phases for invasive plants.
+Adopting and modifying these methods, I address some of the unanswered questions regarding the introduction and spread of the non-native invasive plant *F. alnus*. 
 
-*Frangula alnus* is purported to have had an extended lag phase (Catling
-and Porebski 1994, Frappier et al. 2003b, Larkin 2011), and various
-mechanisms have been proposed to explain this observation. Howell and
-Blackwell (1977) suggested that the rapid expansion of *F. alnus* into
-Ohio, following an extended period of presence in the eastern United
-States may be associated with the rapid expansion of the non-native
-European starling. Lending support to this idea, European starlings have
-recently been linked to the spread the non-native invasive plant
-*Celastrus orbiculatus* (Oriental bittersweet) (Merow et al. 2011),
-which is also a woody fruit-bearing plant. However, Catling and Porebski
-(1994) pointed out that the spread of *F. alnus* in southern Ontario
-preceded the presence of European starlings, suggesting other mechanisms
-must be at play. While Howell and Blackwell’s speculation concerns the
-spread of *F. alnus* throughout the state of Ohio (\>110,000 km^2^),
-Frappier and colleagues (2003b) speculate on a mechanism causing an
-observed extended lag phase in the invasion of a 250 m^2^ forest plot,
-suggesting that the lag may be due to “early selection and adaptation”
-to the local ecological conditions. Despite these speculations, it
-remains unclear as to whether *F. alnus* did in fact have an extended
-lag phase.
 
-In this study, I examined the range expansion of *F. alnus* throughout
-its novel range of northeastern North American. I compiled a dataset of
-historical occurrence observations of *F. alnus* consisting primarily of
-herbarium records, but also including observations noted in the
-scientific literature. Using these data I calculated metrics related to
-the rate of spatial expansion of *F. alnus* throughout northeast North
-America employing modified methods of (Delisle et al. 2003 and Aikio et
-al. 2010a) to account for unequal sampling effort of herbarium records.
-I hypothesized that my findings would support previous claims that *F.
-alnus* experienced an extended lag lasting from the time of its
-introduction (ca. 1860) to the early 1970s. The findings and patterns
-established in this chapter provide an important foundation for further
-analyses carried out in *Chapter 4*, in which I use linked population
-and species distribution models to examine the population dynamics of
-the *F. alnus* invasion. Many previous studies have used herbarium
-records to estimate rates of spread and examine spatial patterns of
-spread, but they have largely been limited to a regional focus. In this
-study I investigated the range expansion of *F. alnus* throughout the
-entire novel range. I expanded upon the methods of Delisle et al. (2003)
-to allow for incorporation of data from multiple herbaria, while still
-accounting for unequal effort in sampling. Access to herbaria records
-and other historical biodiversity is increasing as more collections are
-digitized and made available to the public. Having techniques to combine
-information from desperate sources, so as I present here, will help
-scientists use these data to investigate important standing questions.
+*Frangula alnus* is purported to have had an extended lag phase [@Catling1994; @Frappier2003b; @Larkin2011], and various mechanisms have been proposed to explain this observation.
+Howell and Blackwell [-@Howell1977] suggested that the rapid expansion of *F. alnus* into Ohio, following an extended period of presence in the eastern United States, may be associated with the expansion of the non-native European starling.
+Lending support to this idea, European starlings have recently been linked to the spread the non-native invasive plant *Celastrus orbiculatus* (Oriental bittersweet) [@Merow2011a], another woody fruit-bearing plant.
+However, Catling and Porebski (-@Catling1994) pointed out that the spread of *F. alnus* in southern Ontario preceded the presence of European starlings, suggesting other mechanisms must be at play.
+While Howell and Blackwell’s speculation concerns the spread of *F. alnus* throughout the state of Ohio (\>110,000 km^2^), Frappier and colleagues [-@Frappier2003b] speculate on a mechanism causing an observed extended lag phase in the invasion of a 250 m^2^ forest plot, suggesting that the lag may be due to “early selection and adaptation” to the local ecological conditions.
+Despite these speculations, it remains unclear as to whether *F. alnus* did in fact have an extended lag phase.
+
+In this study, I examined the range expansion of *F. alnus* throughout its novel range of northeastern North American.
+I compiled a dataset of historical occurrence observations of *F. alnus* consisting primarily of herbarium records, but also including observations noted in the scientific literature.
+Using these data I calculated metrics related to the rate of spatial expansion of *F. alnus* throughout northeast North America employing modified methods of [@Delisle2003] and [@Aikio2010a] to account for unequal sampling effort of herbarium records.
+I hypothesized that my findings would support previous claims that *F. alnus* experienced an extended lag lasting from the time of its introduction (ca.
+1860) to the early 1970s.
+Many previous studies have used herbarium records to estimate rates of spread and examine spatial patterns of spread, but they have largely been limited to a regional focus.
+In this study I investigated the range expansion of *F. alnus* throughout the entire novel range.
+I expanded upon the methods of [@Delisle2003] to allow for incorporation of data from multiple herbaria, while still accounting for unequal effort in sampling.
+Access to herbaria records and other historical biodiversity is increasing as more collections are digitized and made available to the public.
+Having techniques to combine information from desperate sources, as I present here, will help scientists use these data to investigate important standing questions.
 
 **\
 **

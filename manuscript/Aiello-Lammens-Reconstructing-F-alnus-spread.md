@@ -76,24 +76,13 @@ For example, Catling and Porebski [-@Catling1994] found that observations of the
 This pattern may be the result of the fact that botanists were located near these areas, and thus their collections tended to come from these areas, or it may be that *F. alnus* grows well in ecological conditions near urban areas (e.g., disturbed environments).
 It is important to distinguish these patterns to use these data for understanding ecological processes of species invasions.
 
-Another challenge in using herbarium records is that the data are
-generally more conducive to studying spatial spread, rather than
-population increase. These processes are related, but it should not be
-assumed that the rate of spatial spread is equivalent to the rate of
-population growth. This is problematic because whereas exponential
-growth is widely accepted as a null model for local population growth,
-there are many plausible null models for areal growth (i.e., spatial
-spread) for range expanding species. One commonly used null model is a
-reaction-diffusion model, which results in a description of spatial
-growth as a function of the radius of the population. The area of
-occupancy for a species spreading randomly on a landscape from a central
-point should increase geometrically, with an exponent of 2. With this
-assumption, the square root of the area of occupancy through time for a
-spreading plant should have a linear relationship with respect to time,
-analogous to linearity after log transform for exponential growth. While
-other null models have been proposed, the square root transformation has
-been shown to be applicable to most of these and used to examine
-historical data on spatial spread (Crooks and Soulé 1999).
+Another challenge in using herbarium records is that the data are generally more conducive to studying spatial spread, rather than population increase.
+These processes are related, but it should not be assumed that the rate of spatial spread is equivalent to the rate of population growth.
+This is problematic because whereas exponential growth is widely accepted as a null model for local population growth, there are many plausible null models for areal growth (i.e., spatial spread) for range expanding species.
+One commonly used null model is a reaction-diffusion model, which results in a description of spatial growth as a function of the radius of the population.
+The area of occupancy for a species spreading randomly on a landscape from a central point should increase geometrically, with an exponent of 2.
+With this assumption, the square root of the area of occupancy through time for a spreading plant should have a linear relationship with respect to time, analogous to linearity after log transform for exponential growth.
+While other null models have been proposed, the square root transformation has been shown to be applicable to most of these and used to examine historical data on spatial spread (Crooks and Soulé 1999).
 
 Given the promise of the utility of natural history collections in
 general (Graham et al. 2004, Anderson 2012), and herbaria in particular

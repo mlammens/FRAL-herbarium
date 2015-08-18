@@ -11,7 +11,7 @@ using herbarium records
 **\
 **
 
-**Abstract**
+## Abstract
 
 Herbaria records offer a rich source of information for understanding the patterns and processes of species spread. 
 However, analyses of these data requires careful consideration of the potential effects of unequal sampling effort in space and time.
@@ -27,7 +27,7 @@ Rather, it appears that *F. alnus* has steadily increased in area of occupancy f
 **\
 **
 
-**Introduction**
+## Introduction
 
 Despite decades of research on invasive species, we still lack a full understanding of population dynamics during the transition from establishment of self-sustaining populations in a novel region to the rapid growth in abundance and expansion of area of occupancy.
 From field observations and patterns in historical data, it is generally noted that the time from establishment to rapid spread is longer than a generation time for many invasive species.
@@ -110,62 +110,32 @@ Many previous studies have used herbarium records to estimate rates of spread an
 In this study I investigated the range expansion of *F. alnus* throughout the entire novel range.
 I expanded upon the methods of [@Delisle2003] to allow for incorporation of data from multiple herbaria, while still accounting for unequal effort in sampling.
 Access to herbaria records and other historical biodiversity is increasing as more collections are digitized and made available to the public.
-Having techniques to combine information from desperate sources, as I present here, will help scientists use these data to investigate important standing questions.
+Having techniques to combine information from desperate sources, as I present here, will help maximize the use of historical biodiversity data.
 
 **\
 **
 
-**Methods**
+## Methods
 
-*Collection of presence records*
+*Presence records*
 
-I assembled a dataset of occurrence records for *F. alnus* to investigate its spread throughout northeast North America.
-I collected historical presence records by 1) searching publicly available on-line databases of several herbaria, 2) requesting *F. alnus* record information from curators and collection managers of various herbaria, 3) searching the Global Biodiversity Information Facility (GBIF), and 4) carrying out a literature search for all North American localities, using the keyword search terms “Frangula alnus” or “Rhammus frangula” in ISI Web of Science database.
-I only included presence records with information on the year and location (county level or finer) of observation in my dataset.
-I accessed herbarium records from 30 herbaria via publically available on-line databases (Table 1).
-Many herbaria manage on-line databases that include records from affiliated, but separate, herbaria.
-For example, the Wisconsin State Herbarium is located at the University of Wisconsin at Madison.
-A search of the database for this herbarium yields accession records from this herbarium (WIS), as well as the University of Wisconsin at Stevens Point herbarium (UWSP), the University of Wisconsin at Green Bay herbarium (UWGB), and the Morton Herbarium (MOR).
-Therefore, while 30 herbaria are represented in my dataset, a smaller number of databases were used to acquire these records.
-I contacted curators and collections managers at several herbaria directly to inquire about whether there were records for *F. alnus* in their collections.
-Curators or collection managers at three herbaria, Rutgers Chrysler Herbarium, Miami University of Ohio Herbarium, and Carnegie Mellon Herbarium, provided me with the record information for all *F. alnus* or *R. frangula* in their collections.
-In addition to collecting records from herbarium databases, I collected records accessed searching the Global Biodiversity Information Facility (GBIF), the Canada Biodiversity Information Facility (CBIF), and the Invasive Plant Atlas of New England (IPANE).
-Records collected from all three of these biodiversity databases were carefully examined to exclude records accessed in other searches.
+I collected *F. alnus* presence records by 1) searching publicly available on-line databases of multiple herbaria, 2) requesting record information from curators and collection managers of various herbaria, 3) searching the Global Biodiversity Information Facility (GBIF), Canadian Biodiversity Information Facility (CBIF) and the Invasive Plant Atlas of New England (IPANE), and 4) carrying out a literature search for all North American localities.
+I used the keyword search terms “Frangula alnus” or “Rhammus frangula” in ISI Web of Science database in the literature search.
+Only presence records that included information on the year and location (county level or finer) of observation were included in the final dataset.
+I verified that each record was independent, as some sources included records from multiple institutions (e.g., IPANE). 
+The final dataset included 752 presence records from 32 herbaria and 3 published papers (Table 1).
 
-I searched for historical records of *F. alnus* presence reported in published journal articles using the ISI Web of Science database.
-I used keyword search terms of “Frangula alnus” and “Rhamnus frangula”.
-From this literature search, I included 5 presence records reported by Howell and Blackwell (1977), Taft and Solecki (1990), and Catling and Porebski (1994).
-Howell and Blackwell (1977) investigated the history of the spread of *F. alnus* into and throughout Ohio, and reported that the first recorded observation was from Lake County, Ohio in 1927 (confirmed via search of Ohio State University Herbarium).
-Taft and Solecki (1990) reported that *F. alnus* was first recorded in the state of Illinois in 1912 (Sherff 1912, as cited by Taft and Solecki 1990) in Cook County (confirmed via search of Field Museum Herbarium).
-Catling and Porebski (1994) investigated the spread of *F. alnus* into and throughout southern Ontario.
-I used data reported in this paper to identify time and location of the three earliest records of *F. alnus* presence in this region.
 
-*Georeferencing of historical presence records*
+*Georeferencing of presence records*
 
-Most of the presence records in the compiled dataset did not have
-latitude and longitude values for where the specimen was collected.
-However, many records had descriptive information, which I used to
-assign latitude and longitude values to the collection location. This
-process is commonly called georeferencing. I primarily used the
-GoogleEarth software (Google Inc.) to georeference records (*sensu*
-Garcia-Milagros & Funk 2010), however some cases required additional
-Internet searches on named locations, such as unique building names or
-geographic features. The descriptive location information allowed for
-varying degrees of precision in the final latitude and longitude value
-assigned to a record. At a minimum, all records of specimens collected
-in the United States had enough information to be assigned to the county
-in which the specimen was collected. For records with *only* county
-level information, I assigned the US Census Bureau designated latitude
-and longitude values to the record. For records of specimens collected
-in Canada, I relied on the information included with the specimen to
-assign county equivalent values. To achieve finer spatial resolution,
-some information allowed for assigning values for the township the
-specimen was collected in, whereas others allowed for assigning precise
-locations. I assigned location uncertainty values using guidelines from
-the Biogeomancer Consortium (BioGeomancer Consortium 2006) to all of the
-georeferenced records. I carried out analyses using different subsets of
-the compiled dataset based on the spatial resolution of the presence
-record (described further below).
+For all records that did not include latitude and logitude values, I used the geolocation information included to georeference where the specimen was collected. 
+I primarily used the GoogleEarth software (Google Inc.) to georeference records (*sensu* Garcia-Milagros & Funk 2010), however some cases required additional searches on named locations, such as unique building names or geographic features.
+The descriptive location information allowed for varying degrees of precision in the final latitude and longitude value assigned to a record.
+At a minimum, all records of specimens collected in the United States included enough information to be assigned to the county in which the specimen was collected.
+For records with only county level information, I assigned the US Census Bureau designated latitude and longitude values to the record.
+For records of specimens collected in Canada, I relied on the information included with the specimen to assign county equivalent values.
+For all records, I assigned the most precise location possible with the information available, and assigned location uncertainty values using guidelines from the Biogeomancer Consortium (BioGeomancer Consortium 2006).
+I used different subsets of the compiled dataset based on the spatial resolution of the presence record for subsequent analyses.
 
 *Number of records through time*
 
@@ -952,231 +922,14 @@ observation of *F. alnus* in that county.
 
 ![](media/image7.emf)
 
-**References**
 
-Aikio, S., R. P. Duncan, and P. E. Hulme. 2010a. Lag-phases in alien
-plant invasions: separating the facts from the artefacts. Oikos
-119:370–378.
 
-Aikio, S., R. P. Duncan, and P. E. Hulme. 2010b. Herbarium records
-identify the role of long-distance spread in the spatial distribution of
-alien plants in New Zealand. Journal of Biogeography 37:1740–1751.
+## Notes and extras
 
-Anderson, R. P. 2012. Harnessing the world’s biodiversity data: promise
-and peril in ecological niche modeling of species distributions. Annals
-of the New York Academy of Sciences 1260:66–80.
+Howell and Blackwell (1977) investigated the history of the spread of *F. alnus* into and throughout Ohio, and reported that the first recorded observation was from Lake County, Ohio in 1927 (confirmed via search of Ohio State University Herbarium).
 
-Barney, J. N. 2006. North American history of two invasive plant
-species: phytogeographic distribution, dispersal vectors, and multiple
-introductions. Biological Invasions 8:703–717.
+Taft and Solecki (1990) reported that *F. alnus* was first recorded in the state of Illinois in 1912 (Sherff 1912, as cited by Taft and Solecki 1990) in Cook County (confirmed via search of Field Museum Herbarium).
 
-BioGeomancer Consortium. 2006. Guide to Best Practices for
-Georeferencing. (A. D. Chapman and J. Wieczorek, Eds.). Global
-Biodiversity Information Facility, Copenhagen.
+Catling and Porebski (1994) investigated the spread of *F. alnus* into and throughout southern Ontario.
 
-Boakes, E. H., P. J. K. McGowan, R. A. Fuller, D. Chang-qing, N. E.
-Clark, K. O’Connor, and G. M. Mace. 2010. Distorted views of
-biodiversity: spatial and temporal bias in species occurrence data. PLoS
-Biology 8:e1000385.
-
-Catling, P. M., and Z. S. Porebski. 1994. The history of invasion and
-current status of glossy buckthorn, *Rhamnus frangula*, in southern
-Ontario. Canadian field-naturalist 108:305–310.
-
-Converse, C. K. 1984. Element stewardship abstract for *Rhamnus
-cathartica*, *Rhamnus frangula* (syn. *Frangula alnus*). The Nature
-Conservancy, Arlington, The Nature Conservancy.
-
-Crawford, P. H. C., and B. W. Hoagland. 2009. Can herbarium records be
-used to map alien species invasion and native species expansion over the
-past 100 years? Journal of Biogeography 36:651–661.
-
-Crooks, J. 2005. Lag times and exotic species: the ecology and
-management of biological invasions in slow-motion. Ecoscience
-12:316–329.
-
-Crooks, J. A., and M. E. Soulé. 1999. Lag times in population explosions
-of invasive species: causes and implications. Pages 103–125 *in* O. T.
-Sandlund, P. J. Schei, and A. Viken, editors. Invasive species and
-biodiversity management. Kluwer Academic Dordrecht, The Netherlands.
-
-Cunard, C., and T. D. Lee. 2008. Is patience a virtue? Succession,
-light, and the death of invasive glossy buckthorn (*Frangula alnus*).
-Biological Invasions 11:577–586.
-
-Delisle, F., C. Lavoie, M. Jean, and D. Lachance. 2003. Reconstructing
-the spread of invasive plants: taking into account biases associated
-with herbarium specimens. Journal of Biogeography 30:1033–1042.
-
-Feeley, K. J. 2012. Distributional migrations, expansions, and
-contractions of tropical plant species as revealed in dated herbarium
-records. Global Change Biology 18:1335–1341.
-
-Feeley, K. J., M. R. Silman, M. B. Bush, W. Farfan, K. G. Cabrera, Y.
-Malhi, P. Meir, N. S. Revilla, M. N. R. Quisiyupanqui, and S. Saatchi.
-2011. Upslope migration of Andean trees. Journal of Biogeography
-38:783–791.
-
-Frappier, B., R. T. Eckert, and T. D. Lee. 2003a. Potential impacts of
-the invasive exotic shrub Rhamnus frangula L. (glossy buckthorn) on
-forests of southern New Hampshire. Northeastern Naturalist 10:277–296.
-
-Frappier, B., T. D. Lee, K. F. Olson, and R. T. Eckert. 2003b.
-Small-scale invasion pattern, spread rate, and lag-phase behavior of
-*Rhamnus frangula* L. Forest Ecology and Management 186:1–6.
-
-Garcia-Milagros, E., and V. A. Funk. 2010. Improving the use of
-information from museum specimens: using Google Earth© to georeference
-Guiana Shield specimens in the US National Herbarium. Frontiers of
-Biogeography 2:71–77.
-
-Graham, C. H., S. Ferrier, F. Huettman, C. Moritz, and A. T. Peterson.
-2004. New developments in museum-based informatics and applications in
-biodiversity analysis. Trends in Ecology & Evolution 19:497–503.
-
-Gurevitch, J., G. A. Fox, G. M. Wardle, Inderjit, and D. Taub. 2011.
-Emergent insights from the synthesis of conceptual frameworks for
-biological invasions. Ecology Letters 14:407–418.
-
-Hijmans, R. J. 2012. Introduction to the’raster’package (version
-2.0-08). R.
-
-Hijmans, R. J., K. A. Garrett, Z. Huaman, D. P. Zhang, M. Schreuder, and
-M. Bonierbale. 2000. Assessing the geographic representativeness of
-genebank collections: the case of Bolivian wild potatoes. Conservation
-Biology 14:1755–1765.
-
-Hijmans, R. J., S. J. Phillips, J. R. Leathwick, and J. Elith. 2013.
-dismo: Species distribution modeling. R.
-
-Houlahan, J. E., and С. S. Findlay. 2004. Effect of invasive plant
-species on temperate wetland paint diversity. Conservation Biology
-18:1132–1138.
-
-Howell, J. A., and W. H. J. Blackwell. 1977. The history of *Rhamnus
-frangula* (glossy buckthorn) in the Ohio flora. Castanea 42:111–115.
-
-Jacquart, E. M., and T. M. Knight. 2010. Are there noninvasive cultivars
-of buckthorn. Indiana Nursery and Landscape News 70:16–17.
-
-Kadmon, R., O. Farber, and A. Danin. 2004. Effect of roadside bias on
-the accuracy of predictive maps produced by bioclimatic models.
-Ecological Applications 14:401–413.
-
-Keitt, T. H., R. Bivand, and B. Rowlingson. 2012. rgdal. R.
-
-Kowarik, I. 1995. Time lags in biological invasions with regard to
-success and failure of alien species. *in* P. Pyšek, K. Prach, M.
-Rejmánek, and M. Wade, editors. Plant invasions: General aspects and
-special problems. SPB Adademic Publishing, Amsterdam.
-
-Kurylo, J. S., K. S. Knight, J. R. Stewart, and A. G. Endress. 2007.
-*Rhamnus cathartica*: Native and naturalized distribution and habitat
-preferences. The Journal of the Torrey Botanical Society 134:420–430.
-
-Larkin, D. J. 2011. Lengths and correlates of lag phases in
-upper-Midwest plant invasions. Biological Invasions 14:827–838.
-
-Lavoie, C. 2012. Biological collections in an ever changing world:
-herbaria as tools for biogeographical and environmental studies.
-Perspectives in Plant Ecology, Evolution and Systematics 15:68–76.
-
-Little, E. L., S. Bullaty, and A. Lomeo. 1980. National Audubon Society
-Field Guide to North American Trees: Eastern Region. Alfred A. Knopf.
-
-Mack, R. N., D. Simberloff, W. Mark Lonsdale, H. Evans, M. Clout, and F.
-A. Bazzaz. 2000. Biotic invasions: causes, epidemiology, global
-consequences, and control. Ecological Applications 10:689–710.
-
-Merow, C., N. LaFleur, J. A. Silander Jr, A. M. Wilson, and M. Rubega.
-2011. Developing dynamic mechanistic species distribution models:
-predicting bird-mediated spread of invasive plants across northeastern
-North America. The American Naturalist 178:30–43.
-
-Mihulka, S., and P. Pyšek. 2001. Invasion history of Oenothera congeners
-in Europe: a comparative study of spreading rates in the last 200 years.
-Journal of Biogeography 28:597–609.
-
-Miller, R. J., A. D. Carroll, T. P. Wilson, and J. Shaw. 2009.
-Spatiotemporal analysis of three common wetland invasive plant species
-using herbarium specimens and geographic information systems. Castanea
-74:133–145.
-
-Mosher, E. S., J. A. Silander Jr, and A. M. Latimer. 2009. The role of
-land-use history in major invasions by woody plant species in the
-northeastern North American landscape. Biological Invasions
-11:2317–2328.
-
-Newbold, T. 2010. Applications and limitations of museum data for
-conservation and ecology, with particular attention to species
-distribution models. Progress in Physical Geography 34:3–22.
-
-Possessky, S. L., C. E. Williams, and W. J. Moriarity. 2000. Glossy
-buckthorn, *Rhamnus frangula* L.: A threat to riparian plant communities
-of the northern Allegheny Plateau (USA). Natural Areas Journal
-20:290–292.
-
-Prather, L. A., O. Alvarez-Fuentes, M. H. Hayfield, and C. J. Ferguson.
-2004. The decline of plant collecting in the United States: a threat to
-the infrastructure of biodiversity studies. Systematic Botany 29:15–28.
-
-Pyšek, P., and P. E. Hulme. 2005. Spatio-temporal dynamics of plant
-invasions: linking pattern to process. Ecoscience 12:302–315.
-
-Pyšek, P., and K. Prach. 1993. Plant invasions and the role of riparian
-habitats: a comparison of four species alien to central Europe. Journal
-of Biogeography 20:413–420.
-
-Pyšek, P., and K. Prach. 1995. Invasion dynamics of *Impatiens
-glandulifera* - a century of spreading reconstructed. Biological
-Conservation 74:41–48.
-
-QGIS Development Team. 2012. QGIS Geographic Information System.
-
-R Core Team. 2012. R: A language and environment for statistical
-computing. Vienna, Austria.
-
-Reddy, S., and L. Dávalos. 2003. Geographical sampling bias and its
-implications for conservation priorities in Africa. Journal of
-Biogeography 30:1719–1727.
-
-Sakai, A. K., F. W. Allendorf, J. S. Holt, D. M. Lodge, J. Molofsky, K.
-A. With, S. Baughman, R. J. Cabin, J. E. Cohen, N. C. Ellstrand, D. E.
-McCauley, P. O’Neil, I. M. Parker, J. N. Thompson, and S. G. Weller.
-2001. The population biology of invasive species. Annual Review of
-Ecology and Systematics 32:305–332.
-
-Salo, L. F. 2005. Red brome (*Bromus rubens* subsp. *madritensis*) in
-North America: possible modes for early introductions, subsequent
-spread. Biological Invasions 7:165–180.
-
-Sherff, E. E. 1912. Range extenstions of *Rhamnus frangula* and
-*Sporobolus asperifolius*. Rhodora 14:227–229.
-
-Sibley, D. 2009. The Sibley guide to trees. Alfred A. Knopf, New York.
-
-Sorrie, B. A. 2005. Alien vascular plants in Massachusetts. Rhodora
-107:284–329.
-
-Taft, J. B., and M. K. Solecki. 1990. Vascular flora of the wetland and
-prairie communities of Gavin Bog and Prairie Nature Preserve, Lake
-County, Illinois. Rhodora 92:142–165.
-
-Theoharides, K. A., and J. S. Dukes. 2007. Plant invasion across space
-and time: factors affecting nonindigenous species success during four
-stages of invasion. New Phytologist 176:256–273.
-
-Del Tredici, P. 2010. Wild Urban Plants of the Northeast: A Field Guide.
-Comstock Publishing Associates, Ithica.
-
-United States Pharmacopeial Convention. 1910. The Pharmacopeia of the
-United States of America. Ninth Dece. P. Blakiston’s Son & Company,
-Philadelphia.
-
-Weber, E. 1998. The dynamics of plant invasions: a case study of three
-exotic goldenrod species (*Solidago* L.) in Europe. Journal of
-Biogeography 25:147–154.
-
-Wright, J. P., and J. D. Fridley. 2010. Biogeographic synthesis of
-secondary succession rates in eastern North America. Journal of
-Biogeography 37:1584–1596.
+I used data reported in this paper to identify time and location of the three earliest records of *F. alnus* presence in this region.

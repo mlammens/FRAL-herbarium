@@ -11,7 +11,7 @@ using herbarium records
 **\
 **
 
-## Abstract
+# Abstract
 
 Herbaria records offer a rich source of information for understanding the patterns and processes of species spread. 
 However, analyses of these data requires careful consideration of the potential effects of unequal sampling effort in space and time.
@@ -27,7 +27,7 @@ Rather, it appears that *F. alnus* has steadily increased in area of occupancy f
 **\
 **
 
-## Introduction
+# Introduction
 
 Despite decades of research on invasive species, we still lack a full understanding of population dynamics during the transition from establishment of self-sustaining populations in a novel region to the rapid growth in abundance and expansion of area of occupancy.
 From field observations and patterns in historical data, it is generally noted that the time from establishment to rapid spread is longer than a generation time for many invasive species.
@@ -115,9 +115,9 @@ Having techniques to combine information from desperate sources, as I present he
 **\
 **
 
-## Methods
+# Methods
 
-*Presence records*
+## Presence records
 
 I collected *F. alnus* presence records by 1) searching publicly available on-line databases of multiple herbaria, 2) requesting record information from curators and collection managers of various herbaria, 3) searching the Global Biodiversity Information Facility (GBIF), Canadian Biodiversity Information Facility (CBIF) and the Invasive Plant Atlas of New England (IPANE), and 4) carrying out a literature search for all North American localities.
 I used the keyword search terms “Frangula alnus” or “Rhammus frangula” in ISI Web of Science database in the literature search.
@@ -126,7 +126,7 @@ I verified that each record was independent, as some sources included records fr
 The final dataset included 752 presence records from 32 herbaria and 3 published papers (Table 1).
 
 
-*Georeferencing of presence records*
+## Georeferencing of presence records
 
 For all records that did not include latitude and logitude values, I used the geolocation information included to georeference where the specimen was collected. 
 I primarily used the GoogleEarth software (Google Inc.) to georeference records (*sensu* Garcia-Milagros & Funk 2010), however some cases required additional searches on named locations, such as unique building names or geographic features.
@@ -134,122 +134,67 @@ The descriptive location information allowed for varying degrees of precision in
 At a minimum, all records of specimens collected in the United States included enough information to be assigned to the county in which the specimen was collected.
 For records with only county level information, I assigned the US Census Bureau designated latitude and longitude values to the record.
 For records of specimens collected in Canada, I relied on the information included with the specimen to assign county equivalent values.
-For all records, I assigned the most precise location possible with the information available, and assigned location uncertainty values using guidelines from the Biogeomancer Consortium (BioGeomancer Consortium 2006).
+For all records, I assigned the most precise location possible with the information available, and assigned location uncertainty values using guidelines from the Biogeomancer Consortium [-@BioGeomancerConsortium2006].
 I used different subsets of the compiled dataset based on the spatial resolution of the presence record for subsequent analyses.
 
-*Number of records through time*
+## Number of records through time
 
-Trends in the number of records added to an herbarium through time were
-used to infer rates of spread for non-native invasive species and to
-determine if a species experienced an extended lag phase (*sensu* (Pyšek
-and Prach 1993, Aikio et al. 2010a). I calculated the cumulative number
-of records reported per year in the dataset of compiled historical *F.
-alnus* presences and plotted the log of the cumulative number of records
-through time against years. I fit linear, quadratic, and cubic
-regression lines to these data, and used a likelihood ratio test to
-determine the best-fit model. I calculated an annual rate of growth for
-the cumulative number of presence records by dividing the cumulative
-number of records at year *t +* 1 by the cumulative number of records at
-year *t*. The mean rate of growth was calculated as the geometric mean
-of the annual growth rates. Additionally, I calculated 10-year moving
-window geometric mean growth rates, which minimizes the influence of
-extreme inter-annual fluctuations in growth rates. This yielded more
-consistent rates of growth for the earliest period of the invasion,
-during which time calculations are based on a relatively small number of
-records.
+I examined the log-cumulative number of *F. alnus* presences through time as one way to determine if this species experienced an extended lag phase [*sensu* @Pysek1993; @Aikio2010a].
+I fit linear, quadratic, and cubic regression lines to these data, and used a likelihood ratio test to determine the best-fit model.
+I calculated an annual rate of growth for the cumulative number of presence records by dividing the cumulative number of records at year $t + 1$ by the cumulative number of records at year $t$.
+The mean rate of growth was calculated as the geometric mean of the annual growth rates.
+Additionally, I calculated 10-year moving window geometric mean growth rates, which minimizes the influence of extreme inter-annual fluctuations in growth rates.
+This yielded more consistent rates of growth for the earliest period of the invasion, during which time calculations are based on a relatively small number of records.
 
-*Area of occupancy through time*
+## Area of occupancy through time
 
-I examined the spatial pattern and rate of range expansion of *F. alnus*
-throughout its novel range using the dataset of compiled historical *F.
-alnus* observations described above. To do this I created a map of equal
-sized grid cells for the area of interest (Longitude: -97.0 – -62.0
-degrees; Latitude: 38.0 – 48.0 degrees) using the Quantum GIS software
-(QGIS Development Team 2012). Each grid cell was 5 x 5 arc minutes,
-which is generally reported as 10 x 10 km. Because a unit of longitude
-is smaller at higher latitudes than at lower latitudes, the area of each
-grid cell decreases towards the poles. The area for each grid cell
-ranges from ca. 67 km^2^ to ca. 57 km^2^. Because *F. alnus* occurrences
-were widely distributed throughout the study region, I assumed the
-effects of these differences in grid cell area would be negligible on
-average. I used the R statistical programming environment (R Core Team
-2012) with additionally functions from the “raster”, “rgdal”, and
-“dismo” packages (Hijmans 2012, Keitt et al. 2012, Hijmans et al. 2013)
-respectively) to carryout all other analyses. Each record in the
-compiled dataset was assigned membership to one grid cell based on its
-latitude and longitude value. If a grid cell contained at least one
-occurrence of *F. alnus*, it was considered occupied. I calculated
-multiple occupancy measures, including total area occupied per decade
-and the cumulative area occupied from time of first introduction to the
-present. In calculating the latter measure, I assumed that once a grid
-cell was classified as occupied, it would not later be classified as
-unoccupied. Similar measures have been used in other studies
-investigating the spread of invasive species (e.g., (Pyšek and Prach
-1995, Weber 1998, Delisle et al. 2003). Further, given the difficulty of
-removing *F. alnus* and the lack of reported successful eradications, I
-believe this is a reasonable assumption. I calculated the rate of growth
-for the area of occurrence analogously to how I calculated the rate of
-growth of the number of records (see *Number of records through time*).
-I substituted the cumulative number of records with the cumulative
-number of occupied grid cells and plotted the square root of the
-cumulative number of grid cells versus time (years). Assuming areal
-growth is a random diffusion process, this relationship should be linear
-(\*\*CITATION NEEDED\*\*). A deviation from linearity that is concave up
-indicates a period of time during which spatial spread is slower than
-random diffusion. Likewise, a concave down curve indicates a period of
-during which spatial spread is more rapid than random diffusion.
+I examined the spatial pattern and rate of range expansion of *F. alnus* throughout North America in a multistep process.
 
-*Occupied counties through time*
 
-Many records contained only enough spatial information to georeference
-the collection location to the county in which it occurred. Furthermore,
-georeferencing records to county requires substantially less time and
-effort than higher levels of precision. Thus, analyzing spatial patterns
-of herbarium records at the county level makes the compilation and use
-of large datasets more achievable given limited time and resources,
-while still providing insights into the patterns and processes of
-species invasions (e.g., Barney 2006). Similar to the calculations of
-*Area of occupancy through time*, I calculated the cumulative number of
-counties occupied through time for the compiled dataset. Again, I
-assumed that once *F. alnus* was found in a county, the county was
-henceforth considered occupied. I calculated the growth rate for the
-cumulative number of counties occupied in similar manner to how I
-calculated the rate of growth of the number of records (see *Number of
-records through time*).
+**This section needs to be amended both here and in the code**
+First I created a map of equal sized grid cells for the area of interest (Longitude: -97.0 – -62.0 degrees; Latitude: 38.0 – 48.0 degrees) using the Quantum GIS software [@QGIS_software].
+Each grid cell was 5 x 5 arc minutes, which is generally reported as 10 x 10 km.
+Because a unit of longitude is smaller at higher latitudes than at lower latitudes, the area of each grid cell decreases towards the poles.
+The area for each grid cell ranges from ca. 67 km^2^ to ca. 57 km^2^.
+**End amendment**
 
-*Accounting for unequal sampling effort in time and space*
 
-The potential effects of unequal sampling effort complicate the
-interpretation of observed patterns in historical presence locations.
-One method for addressing these effects is to compare trends in records
-of a species of interest to trends for a species, or group of species,
-whose range and population size should be in equilibrium with their
-environment (e.g., native species) (Delisle et al. 2003). I chose the
-following group of associated native species, each of which has similar
-habitat requirements as *F. alnus*: Speckled Alder (*Alnus incana*),
-Smooth Alder (*Alnus serrulata*), Alderleaf Buckthorn (*Rhamnus
-alnifolia*), Meadow Willow (*Salix peiolarisi*)*,* Witch Hazel
-(*Hamamelis virginica* (syn. *macrophylla*)), and White Ash (*Fraxinus
-Americana*). These species represent woody plants that are likely to be
-observed in ecological conditions where *F. alnus* is observed. As noted
-above, Catling and Porebski (1994) compared the distribution of record
-collections for *R. alnifolia* to that of *F. alnus* as a comparison.
-Similarly, *Salix peiolaris* was used in a paired comparison with *F.
-alnus* in a study on the effects of invasive and native species on
-wetland species diversity (Houlahan and Findlay 2004). The other species
-in this group are found in ecological conditions conducive to the growth
-of *F. alnus* (personal observations; Little et al. 1980; Sibley 2009).
-To construct the associated species dataset, I searched GBIF for all
-records that were located within the area of interest described in *Area
-of occupancy through time*. Additionally, I collected all records for
-these species reported in the following herbaria databases: University
-of Wisconsin, Ohio State University, University of Minnesota, the Morton
-Arboretum Herbarium, Michigan State University, and Brooklyn Botanic
-Gardens. These records were georeferenced to the county level. Grouping
-records for all of these species into one dataset, I calculated the
-metrics for the number of records through time, the area of occupancy
-through time, and the number of counties occupied through time, as
-described above.
+I used the R statistical programming environment [@RCoreTeam2012] with functions from the “raster”, “rgdal”, and “dismo” packages 
+[@Hijmans2011a; @Hijmans2012b; @Keitt2012].
+Each record was assigned membership to a grid cell based on its latitude and longitude value.
+Grid cells were considered occupied if they contained at least one occurrence of *F. alnus*.
+From these data I calculated total area occupied per decade and the cumulative area occupied from time of first introduction to the present.
+For the latter, I assumed that once a grid cell was occupied, it would not later be unoccupied.
+Similar assumptions were used in [@Pysek1995; @Weber1998; @Delisle2003].
+Further, given the difficulty of removing *F. alnus* and the lack of reported successful eradications, I believe this is a reasonable assumption.
+I calculated the rate of growth for the area of occurrence analogously to how I calculated the rate of growth of the number of records (see *Number of records through time*).
+I substituted the cumulative number of records with the cumulative number of occupied grid cells and plotted the square-root of the cumulative number of grid cells versus time (years).
+Assuming areal growth is a random diffusion process, this relationship should be linear [@Crooks1999].
+A deviation from linearity that is concave up indicates a period of time when spatial spread is slower than random diffusion.
+Alternatively, a concave down curve indicates a period when spatial spread is more rapid than random diffusion.
+
+## Occupied counties through time
+
+Many records contained spatial information to identify only the county in which it was collected.
+Additionally, georeferencing records to county requires substantially less time and effort than higher levels of precision.
+Thus, analyzing spatial patterns of herbarium records at the county level makes the compilation and use of large datasets more achievable given limited time and resources, while still providing insights into the patterns and processes of species invasions [e.g., @Barney2006].
+Similar to the calculations of *Area of occupancy through time*, I calculated the cumulative number of counties occupied through time for the compiled dataset.
+Again, I assumed that once *F. alnus* was found in a county, the county was henceforth considered occupied.
+I calculated the growth rate for the cumulative number of counties occupied in similar manner to how I calculated the rate of growth of the number of records (see *Number of records through time*).
+
+## Accounting for unequal sampling effort in time and space
+
+The potential effects of unequal sampling effort complicates the interpretation of patterns of historical presence locations.
+These effects can be addressed by comparing trends for a species of interest to those for another species, or group of species, whose range and population size should be in equilibrium with their environment [e.g., native species, *sensu* @Delisle2003].
+I examined trends in presence records for a group of native species with similar habitat requirements as *F. alnus*: Speckled Alder (*Alnus incana*), Smooth Alder (*Alnus serrulata*), Alderleaf Buckthorn (*Rhamnus alnifolia*), Meadow Willow (*Salix peiolarisi*)*,* Witch Hazel (*Hamamelis virginica* (syn. *macrophylla*)), and White Ash (*Fraxinus Americana*).
+These species are woody plants likely to be observed in places with similar ecological conditions as where *F. alnus* is observed.
+For example, Catling and Porebski [-@Catlin1994] compared the distribution of record collections for *R. alnifolia* and *F. alnus*.
+Similarly, *Salix peiolaris* was used in a paired comparison with *F. alnus* in a study on the effects of invasive and native species on wetland species diversity [@Houlahan2004].
+The other species in this group are found in ecological conditions conducive to the growth of *F. alnus* [personal observations; @Little1980; @Sibley2009].
+To construct the associated species dataset, I searched GBIF for all records that were located within the area of interest described in *Area of occupancy through time*.
+Additionally, I collected all records for these species reported in the University of Wisconsin, Ohio State University, University of Minnesota, the Morton Arboretum, Michigan State University, and Brooklyn Botanic Gardens herbaria.
+These records were georeferenced to the county level.
+Grouping these records, I calculated the number of records through time, the area of occupancy through time, and the number of counties occupied through time, as described above.
 
 I compared the trends for *F. alnus* and the group of associated species
 for both area of occupancy through time and counties occupied through

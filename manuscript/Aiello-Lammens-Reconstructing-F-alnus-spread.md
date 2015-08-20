@@ -196,78 +196,45 @@ Additionally, I collected all records for these species reported in the Universi
 These records were georeferenced to the county level.
 Grouping these records, I calculated the number of records through time, the area of occupancy through time, and the number of counties occupied through time, as described above.
 
-I compared the trends for *F. alnus* and the group of associated species
-for both area of occupancy through time and counties occupied through
-time in a similar manner to Delisle et al. (2003), who used herbarium
-records to investigate the spread of six non-native species in Quebec,
-Canada. They compared trends in area of occupancy through time by
-dividing the cumulative number of occupied 10x10 km grid cells for each
-non-native plant by the cumulative number of cells occupied by a group
-of five native species, yielding a proportion of non-native to native
-occupied cells for each year of their study period. It is important to
-note that a major assumption in the interpretation of this analysis is
-that spatial growth of native plants in the herbaria dataset does not
-represent the spread for these plants *per se*, but rather represents
-the increase in spatial coverage of herbaria records in general (i.e.,
-an increase in the number of locations where samples are collected).
-Thus, if the proportion of occupied cells between non-native and native
-plants is increasing through time, this represents periods during which
-the spatial coverage of records for the non-native plant outpaces the
-background increase in spatial coverage. This can be interpreted as the
-result of the non-native plant rapidly spreading in space.
+I compared patterns of change in area of occupancy and conuties occupied through time for *F. alnus* versus the associated species following a similar approach as Delisle et al. [-@Delisle2003]. 
+I divided the occupied area (number of counties) of *F. alnus* by that for the associated species separately for annual time steps spanning 1879 to 201X, which yielded a proportion of non-native to native occupied area for each year of the study period.
+Assuming the increases in area of occupancy of native plants through time represents an increase in spatial coverage of herbaria records in general, rather then the spread for those plants *per se*, then we can using changes in this proportion as a measure of the rate of spread of *F. alnus*.
+Specifically, if the proportion increases through time, this then represents periods during which the spatial coverage of records for the non-native plant outpaces the background increase in spatial coverage [@Delisle2003], which can be interpreted as the result of rapid spatial spread.
 
-In this study, I was interested in examining spatial spread in a larger
-region than that studied in (Delisle et al. 2003), as well as in using
-records from multiple herbaria across the full naturalized range of *F.
-alnus*. This lead to several presence records for the group of
-associated species being located in areas where *F. alnus* has not been
-observed, most likely due to the larger niche breadth of some of the
-associated species compared to *F. alnus,* (e.g., *Fraxinus americana*
-(White Ash), as determined by examining the Biota of North America
-Program – North American Plant Atlas; Kartesz 2013). Add citation into
-final draft: Kartesz, J.T., The Biota of North America Program (BONAP).
-2013. *North American Plant Atlas.* (http://www.bonap.org/napa.html).
-Chapel Hill, N.C. [maps generated from Kartesz, J.T. 2013. Floristic
-Synthesis of North America, Version 1.0. Biota of North America Program
-(BONAP). (in press)]. Including these records in my analysis had the
-effect of increasing the area of occupancy measures for the group of
-associated species compared to the possible area of occupancy for *F.
-alnus*. Similarly, the historical presence record dataset I manually
-constructed included records of *F. alnus* from institutions from which
-associated species records were not collected (e.g., Miami University
-Herbarium and Rutgers Herbarium). The records acquired from these
-institutions were largely geographically restricted (for example,
-primarily located in the states of Ohio and New Jersey for the
-institutions mentioned), and these locations were not always represented
-well in the larger group of associated species dataset. Therefore,
-including these records has the effect of increasing the area of
-occupancy of *F. alnus* compared to the possible area of occupancy for
-the group of associated species. To account for both of these issues, I
-examined the ratio of cumulative area of occupancy of *F. alnus* to the
-cumulative area of occupancy of the associated group of species,
-limiting the records used to an area of coarse spatial overlap for both
-datasets. I defined the spatial overlap by creating a map of equal sized
-grid cells, again for the area of interest defined above, where each
-grid cell was 30 x 30 arc minutes (i.e., 0.5° or approximately 50 x 50
-km). As described in *Area of occupancy through time*, each record was
-assigned membership to one 30’ grid cell based on its latitude and
-longitude value. I then constructed restricted *F. alnus* and associated
-species occurrence datasets, in which only records that occurred in a
-30’ grid cell occupied by at least one record from *both* datasets
-during the study period. Using these restricted datasets, I calculated
-the ratio of the increase in the cumulative area of occupancy of *F.
-alnus* to the group of associated species. In a separate analysis I
-compared the cumulative number of counties occupied through time, while
-accounting for similar concerns regarding falsely sampling regions in
-space that are unsuitable to *F. alnus*. I only included records from
-counties that were occupied at some time by both *F. alnus* and one of
-the associated plants. In this case, the ratio of the cumulative number
-of counties occupied at the end of the study period had to equal 1.0.
-The growth rates for the cumulative number of grid cells occupied and
-the cumulative number of counties occupied were compared between *F.
-alnus* and the group of associated species. To compare the growth rates
-I divided the annual growth rate of *F. alnus* records by the annual
-growth rate of the entire group of associated species.
+In this study, I was interested in examining a spatial spread across a larger region than this method has been applied to previously [e.g., @Delisle2003].
+A corresponding complication was my dataset consisted of records from multiple herbaria across the naturalized range of *F. alnus*. 
+
+This lead to several presence records for the group of associated species being located in areas where *F. alnus* has not been observed; likely the result of larger niche breadths for some of the associated species (e.g., *Fraxinus americana* (White Ash), as determined by examining the Biota of North America Program – North American Plant Atlas; Kartesz 2013).
+*Add citation into final draft: Kartesz, J.T., The Biota of North America Program (BONAP).
+2013. *North American Plant Atlas.* (http://www.bonap.org/napa.html). Chapel Hill, N.C. [maps generated from Kartesz, J.T. 2013. Floristic Synthesis of North America, Version 1.0. Biota of North America Program (BONAP). (in press)].* 
+Including these records increased the area of occupancy measures for the group of associated species compared to the possible area of occupancy for *F. alnus*.
+Similarly, associated species records were not collected from all of the herbaria from which *F. alnus* records were collected.
+Thus some *F. alnus* occurrence locations were not were not represented well in the group of associated species dataset.
+
+
+
+
+## Continue editing here
+
+Therefore, including these records has the effect of increasing the area of occupancy of *F.
+alnus* compared to the possible area of occupancy for the group of associated species.
+To account for both of these issues, I examined the ratio of cumulative area of occupancy of *F.
+alnus* to the cumulative area of occupancy of the associated group of species, limiting the records used to an area of coarse spatial overlap for both datasets.
+I defined the spatial overlap by creating a map of equal sized grid cells, again for the area of interest defined above, where each grid cell was 30 x 30 arc minutes (i.e., 0.5° or approximately 50 x 50 km).
+As described in *Area of occupancy through time*, each record was assigned membership to one 30’ grid cell based on its latitude and longitude value.
+I then constructed restricted *F.
+alnus* and associated species occurrence datasets, in which only records that occurred in a 30’ grid cell occupied by at least one record from *both* datasets during the study period.
+Using these restricted datasets, I calculated the ratio of the increase in the cumulative area of occupancy of *F.
+alnus* to the group of associated species.
+In a separate analysis I compared the cumulative number of counties occupied through time, while accounting for similar concerns regarding falsely sampling regions in space that are unsuitable to *F.
+alnus*.
+I only included records from counties that were occupied at some time by both *F.
+alnus* and one of the associated plants.
+In this case, the ratio of the cumulative number of counties occupied at the end of the study period had to equal 1.0.
+The growth rates for the cumulative number of grid cells occupied and the cumulative number of counties occupied were compared between *F.
+alnus* and the group of associated species.
+To compare the growth rates I divided the annual growth rate of *F.
+alnus* records by the annual growth rate of the entire group of associated species.
 
 *Comparison of number of records through time*
 

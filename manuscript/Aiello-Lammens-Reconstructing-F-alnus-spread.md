@@ -201,58 +201,37 @@ I divided the occupied area (number of counties) of *F. alnus* by that for the a
 Assuming the increases in area of occupancy of native plants through time represents an increase in spatial coverage of herbaria records in general, rather then the spread for those plants *per se*, then we can using changes in this proportion as a measure of the rate of spread of *F. alnus*.
 Specifically, if the proportion increases through time, this then represents periods during which the spatial coverage of records for the non-native plant outpaces the background increase in spatial coverage [@Delisle2003], which can be interpreted as the result of rapid spatial spread.
 
-In this study, I was interested in examining a spatial spread across a larger region than this method has been applied to previously [e.g., @Delisle2003].
-A corresponding complication was my dataset consisted of records from multiple herbaria across the naturalized range of *F. alnus*. 
-
-This lead to several presence records for the group of associated species being located in areas where *F. alnus* has not been observed; likely the result of larger niche breadths for some of the associated species (e.g., *Fraxinus americana* (White Ash), as determined by examining the Biota of North America Program – North American Plant Atlas; Kartesz 2013).
+In this study, I was interested in examining the spread of *F. alnus* across a larger region than this method has been applied to previously [e.g., @Delisle2003].
+A corresponding complication was my dataset consisted of records from multiple herbaria across the naturalized range. 
+As such, several presence records for the group of associated species being located in areas where *F. alnus* has not been observed; likely the result of larger niche breadths for some of the associated species (e.g., *Fraxinus americana* (White Ash)
 *Add citation into final draft: Kartesz, J.T., The Biota of North America Program (BONAP).
-2013. *North American Plant Atlas.* (http://www.bonap.org/napa.html). Chapel Hill, N.C. [maps generated from Kartesz, J.T. 2013. Floristic Synthesis of North America, Version 1.0. Biota of North America Program (BONAP). (in press)].* 
+2013. *North American Plant Atlas.* (http://www.bonap.org/napa.html). Chapel Hill, N.C. [maps generated from Kartesz, J.T. 2013. Floristic Synthesis of North America, Version 1.0. Biota of North America Program (BONAP). (in press).* 
 Including these records increased the area of occupancy measures for the group of associated species compared to the possible area of occupancy for *F. alnus*.
 Similarly, associated species records were not collected from all of the herbaria from which *F. alnus* records were collected.
 Thus some *F. alnus* occurrence locations were not were not represented well in the group of associated species dataset.
-
-
-
-
-## Continue editing here
-
-Therefore, including these records has the effect of increasing the area of occupancy of *F.
-alnus* compared to the possible area of occupancy for the group of associated species.
-To account for both of these issues, I examined the ratio of cumulative area of occupancy of *F.
-alnus* to the cumulative area of occupancy of the associated group of species, limiting the records used to an area of coarse spatial overlap for both datasets.
+This could falsely increase the area of occupancy of *F. alnus* compared to the possible area of occupancy for the group of associated species.
+To account for both of these issues, I examined the ratio of cumulative area of occupancy of *F. alnus* to the cumulative area of occupancy of the associated group of species, limiting the records used to an area of coarse spatial overlap for both datasets.
 I defined the spatial overlap by creating a map of equal sized grid cells, again for the area of interest defined above, where each grid cell was 30 x 30 arc minutes (i.e., 0.5° or approximately 50 x 50 km).
 As described in *Area of occupancy through time*, each record was assigned membership to one 30’ grid cell based on its latitude and longitude value.
-I then constructed restricted *F.
-alnus* and associated species occurrence datasets, in which only records that occurred in a 30’ grid cell occupied by at least one record from *both* datasets during the study period.
-Using these restricted datasets, I calculated the ratio of the increase in the cumulative area of occupancy of *F.
-alnus* to the group of associated species.
-In a separate analysis I compared the cumulative number of counties occupied through time, while accounting for similar concerns regarding falsely sampling regions in space that are unsuitable to *F.
-alnus*.
-I only included records from counties that were occupied at some time by both *F.
-alnus* and one of the associated plants.
-In this case, the ratio of the cumulative number of counties occupied at the end of the study period had to equal 1.0.
-The growth rates for the cumulative number of grid cells occupied and the cumulative number of counties occupied were compared between *F.
-alnus* and the group of associated species.
-To compare the growth rates I divided the annual growth rate of *F.
-alnus* records by the annual growth rate of the entire group of associated species.
+I then constructed restricted *F. alnus* and associated species occurrence datasets, in which only records that occurred in a 30’ grid cell occupied by at least one record from *both* datasets during the study period.
+Using these restricted datasets, I calculated the ratio of the increase in the cumulative area of occupancy of *F. alnus* to the group of associated species.
+In a separate analysis I compared the cumulative number of counties occupied through time, while accounting for similar concerns regarding falsely sampling regions in space that are unsuitable to *F. alnus*.
+I only included records from counties that were occupied at some time by both *F. alnus* and one of the associated plants.
+In this case, the ratio of the cumulative number of counties occupied at the end of the study period is equal 1.0.
+The growth rates for the cumulative number of grid cells occupied and the cumulative number of counties occupied were compared between *F. alnus* and the group of associated species.
+To compare the growth rates I divided the annual growth rate of *F. alnus* records by the annual growth rate of the entire group of associated species.
 
-*Comparison of number of records through time*
+## Comparison of number of records through time
 
-In addition to comparing trends in the areal increase of *F. alnus* and
-the associated species, I also compared trends in the cumulative number
-of records through time. For each year of the study period, I divided
-the cumulative number of *F. alnus* records by the cumulative number of
-associated species records. This correction method is similar to that
-proposed by (Delisle et al. 2003) and has been used in several studies
-to account for bias due to unequal sampling effort (e.g., Mihulka &
-Pyšek 2001; Aikio et al. 2010a; Larkin 2011). Additionally, to compare
-rates at which *F. alnus* and associated species occurrences were
-collected, I calculated the ratio of growth rates using both the annual
-and 10-year moving window average estimates. A ratio value less than 1.0
-indicated that the rate at which *F. alnus* occurrences were being
-collected was lower than that of the associated species, while a ratio
-value of greater than 1.0 indicated that it was greater that that of the
-associated species.
+**NOTE:** I'm not sure if this section is necessary. Does this analysis provide any information that is not provided by the areal growth analyses? Need to check this and strongly reconsider the inclusion of this section.
+
+In addition to comparing trends in the areal increase of *F. alnus* and the associated species, I also compared trends in the cumulative number of records through time.
+For each year of the study period, I divided the cumulative number of *F. alnus* records by the cumulative number of associated species records.
+This correction method is similar to that proposed by (Delisle et al.
+2003) and has been used in several studies to account for bias due to unequal sampling effort (e.g., Mihulka & Pyšek 2001; Aikio et al.
+2010a; Larkin 2011).
+Additionally, to compare rates at which *F. alnus* and associated species occurrences were collected, I calculated the ratio of growth rates using both the annual and 10-year moving window average estimates.
+A ratio value less than 1.0 indicated that the rate at which *F. alnus* occurrences were being collected was lower than that of the associated species, while a ratio value of greater than 1.0 indicated that it was greater that that of the associated species.
 
 **\
 **

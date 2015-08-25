@@ -40,7 +40,7 @@ Assuming a non-native species establishes in an environment suitable for growth 
 Allee effects), population size should initially increase exponentially (Figure 1A).
 Exponential growth is described as *N(t) = N(0) R^t^*, where *t =* time-step, *N(t)* = the population size at time-step *t*, and *R* is the population growth rate.
 Looking at a plot of population size through time for an exponentially growing population suggests that early on the population size is relatively similar to *N(0)* (Figure 1A; *R* = 1.2 for the black dots), which is followed by a transition to a period of rapid population increase.
-Crooks and Soulé (1999) describe this as “the shallow portion early in the growth curve when the population is growing relatively slowly in absolute number” and define it as the **inherent lag**.
+Crooks and Soulé [@Crooks1999] describe this as “the shallow portion early in the growth curve when the population is growing relatively slowly in absolute number” and define it as the **inherent lag**.
 This pattern is common to all exponential growth curves, and thus all growing populations should appear to have at least an inherent lag phase.
 However, because a mathematical definition of inherent lag is lacking, it is challenging to apply this concept.
 In the case of exponential population growth, a plot of the *log* of population size versus time shows a linear relationship (Figure 1B; *R* = 1.2 for black dots).
@@ -119,7 +119,7 @@ Having techniques to combine information from desperate sources, as I present he
 
 ## Presence records
 
-I collected *F. alnus* presence records by 1) searching publicly available on-line databases of multiple herbaria, 2) requesting record information from curators and collection managers of various herbaria, 3) searching the Global Biodiversity Information Facility (GBIF), Canadian Biodiversity Information Facility (CBIF) and the Invasive Plant Atlas of New England (IPANE), and 4) carrying out a literature search for all North American localities.
+I collected *F. alnus* presence records by 1) searching publicly available on-line databases of multiple herbaria, 2) requesting record information from curators and collection managers of various herbaria, 3) searching the Global Biodiversity Information Facility (GBIF), Canadian Biodiversity Information Facility (CBIF) and the Invasive Plant Atlas of New England (IPANE) databases, and 4) carrying out a literature search for all North American localities.
 I used the keyword search terms “Frangula alnus” or “Rhammus frangula” in ISI Web of Science database in the literature search.
 Only presence records that included information on the year and location (county level or finer) of observation were included in the final dataset.
 I verified that each record was independent, as some sources included records from multiple institutions (e.g., IPANE). 
@@ -193,6 +193,7 @@ Similarly, *Salix peiolaris* was used in a paired comparison with *F. alnus* in 
 The other species in this group are found in ecological conditions conducive to the growth of *F. alnus* [personal observations; @Little1980; @Sibley2009].
 To construct the associated species dataset, I searched GBIF for all records that were located within the area of interest described in *Area of occupancy through time*.
 Additionally, I collected all records for these species reported in the University of Wisconsin, Ohio State University, University of Minnesota, the Morton Arboretum, Michigan State University, and Brooklyn Botanic Gardens herbaria.
+In total, I compiled 5548 associated species records.
 These records were georeferenced to the county level.
 Grouping these records, I calculated the number of records through time, the area of occupancy through time, and the number of counties occupied through time, as described above.
 
@@ -221,151 +222,44 @@ In this case, the ratio of the cumulative number of counties occupied at the end
 The growth rates for the cumulative number of grid cells occupied and the cumulative number of counties occupied were compared between *F. alnus* and the group of associated species.
 To compare the growth rates I divided the annual growth rate of *F. alnus* records by the annual growth rate of the entire group of associated species.
 
-## Comparison of number of records through time
-
-**NOTE:** I'm not sure if this section is necessary. Does this analysis provide any information that is not provided by the areal growth analyses? Need to check this and strongly reconsider the inclusion of this section.
-
-In addition to comparing trends in the areal increase of *F. alnus* and the associated species, I also compared trends in the cumulative number of records through time.
-For each year of the study period, I divided the cumulative number of *F. alnus* records by the cumulative number of associated species records.
-This correction method is similar to that proposed by (Delisle et al.
-2003) and has been used in several studies to account for bias due to unequal sampling effort (e.g., Mihulka & Pyšek 2001; Aikio et al.
-2010a; Larkin 2011).
-Additionally, to compare rates at which *F. alnus* and associated species occurrences were collected, I calculated the ratio of growth rates using both the annual and 10-year moving window average estimates.
-A ratio value less than 1.0 indicated that the rate at which *F. alnus* occurrences were being collected was lower than that of the associated species, while a ratio value of greater than 1.0 indicated that it was greater that that of the associated species.
 
 **\
 **
 
-**Results**
+## Results
 
-I compiled a dataset of 749 occurrence records for *F. alnus* and 5548
-occurrence records for the combined group of associated species.
-*Frangula alnus* specimens have been collected in much of northeast and
-middle North America (Figure 2), and collection locations for the group
-of associated species was largely inclusive of where *F. alnus* was
-collected. The earliest dated occurrence record for *F. alnus* was an
-herbarium specimen collected in 1879 in Hudson County, New Jersey
-(accessed from CHRB). The earliest dated occurrence record for an
-associated species was a herbarium record for *Hamamelis virginiana*
-collected in 1836 in Richland County, Ohio (accessed from CM). Only 36
-associated species records pre-dated the first *F. alnus* record,
-representing less than 1% of the associated records. A total of 14 *F.
-alnus* specimens were deposited in 4 separate herbaria prior to 1900. Of
-these records, 12 were georeferenced to the metropolitan New York City
-area (9 in the state of New Jersey) and the remaining 2 were collected
-in southern Ontario (as reported in Catling & Porebski 1994). Based on
-recorded specimen collection dates, the number of herbarium specimens
-collected for both *F. alnus* and the group of associated species has
-increased through time (Figure 3). For the group of associated species,
-there was a substantial increase in the number of records collected at
-the beginning of the 20^th^ century, followed by another increase after
-1950. There was a steady increase in the number of records collected per
-decade from the time of the first recorded presence of *F. alnus* in the
-United States to the end of the 20^th^ century. For both groups, there
-was a dramatic decline in the number of records at the start of 21^st^
-century, which is a pattern that has been observed elsewhere (Prather et
-al. 2004).
 
-The log cumulative number of records through time indicates that the
-rate at which records were added to herbaria for both *F. alnus* and the
-group of associated species does not fit an exponential growth
-relationship (i.e., a linear relationship) (Figure 4A). The best-fit
-regression models of log cumulative number of records versus time
-(years) were a cubic polynomial regression for *F. alnus* (R^2^ = 0.989,
-df = 124, P \<\< 0.05) and a quadratic polynomial regression for the
-group of associated species (R^2^ =0.979, df = 174, P\<\<0.05
-respectively), both departing from a linear relationship. The cumulative
-number of records for the group of associated species increased steadily
-from the late 1800s to the present. The cumulative number of records for
-*F. alnus* increased rapidly from the late 1800s to approximately 1930.
-Ratios of the annual growth rates and ten year moving average (geometric
-mean) growth rates show that the rate at which *F. alnus* collections
-occurred was generally slower than that of the group of associated
-species prior to approximately 1920, but faster during most of the
-20^th^ century (Figure 4B). The ratio of the cumulative increase in
-records of *F. alnus* to the associated species corroborates this
-pattern, indicating that the increase of *F. alnus* records was greater
-than the associated species from 1920 to the present (Figure 4C).
+*Frangula alnus* specimens have been collected in much of northeast and middle North America (Figure 2), and collection locations for the group of associated species was largely inclusive of where *F. alnus* was collected.
+The earliest dated occurrence record for *F. alnus* was 1879 in Hudson County, New Jersey (accessed from CHRB).
+The earliest dated occurrence record for one of the associated species was 1836 for *H. virginiana* in Richland County, Ohio (accessed from CM).
+Thirty-six associated species records pre-dated the first *F. alnus* record, representing less than 1% of the associated records.
+A total of 14 *F. alnus* specimens were deposited in 4 separate herbaria prior to 1900; 12 were collected in the greater New York City region and 2 were collected in southern Ontario [as reported in @Catling1994].
+The number of herbarium specimens collected for both *F. alnus* and the group of associated species increased through time (Figure 3).
+For the group of associated species, there was a substantial increase at the beginning of the 20^th^ century, followed by another increase after 1950.
+For *F. alnus*, there was a steady increase in the number of records per decade from the time of the first recorded presence to the end of the 20^th^ century.
+Both groups showed a dramatic decline in the number of records at the start of 21^st^ century, which fits general patterns these types of data [@Prather2004].
 
-The cumulative number of occupied 5 arc min grid cells for *F. alnus*
-and the associated species, constrained to overlap within 30 arc min
-grid cells, increased through time for both datasets (Figure 5). A plot
-of the square root of cumulative occupied grid cells versus time
-supports a departure from a simple diffusion model of spatial spread in
-historical presence records (Figure 5A). If a random diffusion process
-governed the spatial spread of herbaria record locations, a linear
-regression would be the best-fit model of the square root of cumulative
-records versus time (Crooks and Soulé 1999). In contrast, based on
-likelihood ratio tests, the best-fit regression models of the square
-root of the cumulative number of grid cells occupied, with year as the
-predictor variable, were a quadratic polynomial regression for *F.
-alnus* (R^2^ = 0.996, df = 129, P \<\< 0.05) and a cubic polynomial
-regression for the group of associated species (R^2^ = 0.990, df = 140,
-P \<\< 0.05), both indicating a departure from linearity. The rate of
-increase in occurrence records was low for both *F. alnus* and the group
-of associated species until 1890, after which the number of occupied
-cells rapidly increases for the group of associated species. In
-contrast, the number of occupied cells continued to increase slowly for
-*F. alnus* until approximately 1920, as is demonstrated by the
-calculated ratio between the two growth rates (Figure 5B). Prior to
-1915, with the exception of the earliest years of the *F. alnus*
-invasion, the rate at which new grid cells were considered occupied by
-*F. alnus* was lower than the corresponding rate for the group of
-associated species. From 1915 to the present, the rate at which grid
-cells are considered occupied by *F. alnus* was consistently higher than
-the corresponding rate of growth for the associated species. The ratio
-of the cumulative number of occupied grid cells of *F. alnus* to the
-associated species shows that after approximately 1910 the rate at which
-*F. alnus* increased in area of occurrence was greater than that of the
-group of associated species (Figure 5C).
 
-Trends in the cumulative number of counties occupied were similar to the
-results of the analysis of the cumulative number of occupied grid cells.
-As noted in *Occupied counties through time*, the compiled records
-dataset for both *F. alnus* and the associated species was subset to
-include records from counties that were occupied by both during the
-study period. The number of counties where herbarium samples were
-collected increased very rapidly during the late 19^th^ to early 20^th^
-century, as indicated by rapid increase in the cumulative occupied
-counties for the associated species. The number of counties where *F.
-alnus* was found increased very slowly during the early part of the
-20^th^ century, but rapidly after 1940 (Figure 6A). Assuming counties
-were selected as locations for herbarium specimen collections at random,
-the relationship between the square root of the cumulative number of
-occupied counties and time (years) should be linear for the associated
-species. However, this is not the relationship for either the associated
-species or *F. alnus* (Figure 6A). Compared to linear and quadratic
-regression models, a cubic polynomial regression model was the best fit
-model for both the associated species (R^2^ = 0.967, df = 166, P \<
-0.001) and *F. alnus* (R^2^ = 0.997, df = 130, P \< 0.001), as
-determined by a likelihood ratio test. The difference in the rate of
-growth of cumulative occupied counties between *F. alnus* and the
-associated species shows a similar pattern to that reported for
-cumulative occupied grid cells (Figure 6B). The rate at which counties
-are considered occupied is slower for *F. alnus* than the associated
-species early in the invasion history (prior to 1900) and faster during
-most of the 20^th^ century (Figure 6B). The ratio of occupied counties
-of *F. alnus* to those occupied by the associated species indicates that
-early in the invasion history, *F. alnus* was less frequently collected
-in newly sampled counties, but that for most of the 20^th^ century the
-number of counties occupied by *F. alnus* has increased more rapidly
-than the number of counties occupied by associated species (Figure 6C).
-*F. alnus* specimens were collected on average 48 years after at least
-one of the associated species had been collected in a county. \~\~While
-the distribution of years between sampling of an associated species and
-*F. alnus* is quite wide (standard deviation = 44; Figure 7), the first
-year an associated species was collected in a county was significantly
-earlier than the first year *F. alnus* was sampled in that county
-(paired t-test, t = -15.57, df = 196, P \<\< 0.05).\~\~
+The cumulative number of occupied 5 arc min grid cells for *F. alnus* and the associated species, constrained to overlap within 30 arc min grid cells, increased through time for both datasets (Figure 5).
+A plot of the square root of cumulative occupied grid cells versus time showed a departure from a simple diffusion model of spatial spread (Figure 5A).
+Based on likelihood ratio tests, the best-fit regression models were a quadratic polynomial regression for *F. alnus* (R^2^ = 0.996, df = 129, P \<\< 0.05) and a cubic polynomial regression for the associated species (R^2^ = 0.990, df = 140, P \<\< 0.05), indicating a departure from linearity for both.
+The rate of increase in occurrence records was low for both *F. alnus* and the associated species until 1890, after which occupancy rapidly increased for the associated species.
+In contrast, occupancy increased slowly for *F. alnus* until approximately 1920, as  demonstrated by the ratio between the two growth rates (Figure 5B).
+Prior to 1915, with the exception of the earliest years of the invasion, the rate at which new grid cells were considered occupied by *F. alnus* was lower than the corresponding rate for the group of associated species.
+From 1915 to the present, this rate was consistently higher for *F. alnus* than the associated species.
+The ratio of the cumulative number of occupied grid cells of *F. alnus* to the associated species shows that after approximately 1910 the rate at which *F. alnus* increased in area of occurrence was greater than that of the group of associated species (Figure 5C).
 
-\*\*\*\* I am not convinced that Fig 7 is important. The only piece of
-useful and relevant information that can be gleaned from it is that for
-most counties, some sampling occurred many years prior to finding
-Buckthorn there. If this stays in the paper at all, it could potentially
-go into a supporting information, but more likely, I can simply state
-the overall result, probably in the discussion.
+Trends in the cumulative number of counties occupied were similar to the results for cumulative number of occupied grid cells.
+In this analysis, I subset the compiled records dataset for both *F. alnus* and the associated species to include records from counties that were occupied by both during the study period.
+The number of counties where herbarium samples were collected increased very rapidly during the late 19^th^ to early 20^th^ century.
+However, the number of counties where *F. alnus* was found increased very slowly during the early part of the 20^th^ century, but rapidly after 1940 (Figure 6A).
+A cubic polynomial regression model was the best fit model for both the associated species (R^2^ = 0.967, df = 166, P \< 0.001) and *F. alnus* (R^2^ = 0.997, df = 130, P \< 0.001), when compared to linear and quadratic models using likelihood ratio tests.
+The difference in the rate of growth of cumulative occupied counties between *F. alnus* and the associated species shows a similar pattern to that reported for cumulative occupied grid cells (Figure 6B).
+The rate at which counties are considered occupied is slower for *F. alnus* than the associated species early in the invasion history (prior to 1900) and faster during most of the 20^th^ century (Figure 6B).
+The ratio of occupied counties of *F. alnus* to those occupied by the associated species indicates that early in the invasion history, *F. alnus* was less frequently collected in newly sampled counties, but that for most of the 20^th^ century the number of counties occupied by *F. alnus* has increased more rapidly than the number of counties occupied by associated species (Figure 6C).
 
-**Discussion**
+
+## Discussion
 
 *Early observations and likely region of first introduction*
 

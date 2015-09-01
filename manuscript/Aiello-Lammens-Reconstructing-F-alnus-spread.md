@@ -226,7 +226,7 @@ To compare the growth rates I divided the annual growth rate of *F. alnus* recor
 **\
 **
 
-## Results
+# Results
 
 
 *Frangula alnus* specimens have been collected in much of northeast and middle North America (Figure 2), and collection locations for the group of associated species was largely inclusive of where *F. alnus* was collected.
@@ -259,105 +259,52 @@ The rate at which counties are considered occupied is slower for *F. alnus* than
 The ratio of occupied counties of *F. alnus* to those occupied by the associated species indicates that early in the invasion history, *F. alnus* was less frequently collected in newly sampled counties, but that for most of the 20^th^ century the number of counties occupied by *F. alnus* has increased more rapidly than the number of counties occupied by associated species (Figure 6C).
 
 
-## Discussion
+# Discussion
 
-*Early observations and likely region of first introduction*
+## Early observations and likely region of first introduction
 
-The question of *how* *F. alnus* was introduced remains unanswered.
-Based on its long history of use as a medicinal plant (United States
-Pharmacopeial Convention 1910) and evidence that it was planted as an
-ornamental shrub (Sherff 1912) Add reference to Sudworth and Fernow:
-(Sudworth, G. B. and B. E. Fernow.  1891.  *Trees of Washington, D.C.*,
-compliments of the Forestry Division. Geo. B. Sudworth, botanist ; B. E.
-Fernow, chief.  Washington, D.C.: Bell Lithographing Co.  [18] pp.; 2
-folding plans; 14 x 22 cm.), it is likely the *F. alnus* was purposely
-planted in many locations in North America. In fact, low fertility
-cultivars of *F. alnus* are still available for purchase (Jacquart and
-Knight 2010). A thorough investigation of seed catalogs and nursery
-records from the late 19^th^ century may shed more light on when and
-where it was planted, but was beyond the scope of this project. As is
-the case with many non-native species, there is little documented
-evidence of the time(s) or place(s) that *F. alnus* was introduced. The
-most frequently referenced time of first introduction is the mid-19^th^
-century (Catling and Porebski 1994, Possessky et al. 2000, Frappier et
-al. 2003a), however at least one source suggests it occurred prior to
-1800 (Converse 1984). This source may mistakenly be referring to the
-closely related *Rhamnus cathartica* (Common Buckthorn; Kurylo et al.
-2007). The location of first introduction has been reported variably as
-“the eastern states” (Howell and Blackwell 1977) and Canada (Frappier et
-al. 2003a). My findings suggest that a potential location of first
-introduction was the metropolitan New York City area and areas of New
-Jersey along New York Harbor. Specimens for 12 of 14 records dating from
-before 1900 were collected in this region. *F. alnus* was present in
-this region for more than a decade before it was first reported in
-southern Ontario, countering the claim that southern Canada was the
-location of first introduction. However, locations in southern Ontario
-account for the remaining 2 of 14 records dating before 1900, indicating
-that introduction into the region was likely early during the spread of
-*F. alnus*. It is interesting to note that the region the first recorded
-observations come from was a large shipping and port area, raising the
-possibility that shipping played a role in an accidental introduction.
-Many non-native plants have been introduced to port areas by the
-unloading of solid ballast, with seeds mixed in with rocks and other
-materials used as ballast (Sorrie 2005, Barney 2006). However, this
-region historical had a high population density, thus there also may
-have been more people who purposely planted *F. alnus*.
+The precise ways in which *F. alnus* was introduced to North America remain unclear.
+Based on its long history of use as a medicinal plant (United States Pharmacopeial Convention 1910) and evidence that it was planted as an ornamental shrub [@Sherff1912; 
+**Add reference to Sudworth and Fernow: (Sudworth, G.B. and B.E. Fernow.  1891.  *Trees of Washington, D.C.*, compliments of the Forestry Division. Geo. B. Sudworth, botanist ; B. E. Fernow, chief.  Washington, D.C.: Bell Lithographing Co.  [18] pp.; 2 folding plans; 14 x 22 cm.)**], it is likely *F. alnus* was intentionally planted in many locations.
+In fact, low fertility cultivars of *F. alnus* are still available for purchase [@Jacquart2010].
+A thorough investigation of seed catalogs and nursery records from the late 19^th^ century may shed more light on when and where it was planted, but was beyond the scope of this project.
+As is the case with many non-native species, there is little documented evidence of the time(s) or place(s) that *F. alnus* was introduced.
+My findings suggest that a potential location of first introduction was the metropolitan New York City area and areas of New Jersey along New York Harbor.
+This corresponds to previous reports of the first introduction being in "the eastern states" [@Howell1977].
+Specimens for 12 of 14 records dating from before 1900 were collected in this region.
+However, locations in southern Ontario account for the remaining 2 of 14 records dating before 1900, indicating that introduction into that region was also early in its spread.
+It is interesting to note that the region the first recorded observations come from was a large shipping and port area, raising the possibility that shipping played a role in an accidental introduction.
+Many non-native plants have been introduced to port areas by the unloading of solid ballast, with seeds mixed in with rocks and other materials used as ballast [@Sorrie2005; @Barney2006).
+However, the historically high population density of this region also increases the chances that individuals may have purposely planted *F. alnus*.
 
-*Accounting for unequal sampling effort in historical biodiversity
-collections *
 
-Using historical biodiversity collections to reconstruct patterns of
-species presence presents many challenges. One of the most common is the
-presence of unequal sampling effort (Reddy and Dávalos 2003, Graham et
-al. 2004, Kadmon et al. 2004, Boakes et al. 2010). For herbaria in
-particular, there are many reasons for unequal sampling effort in
-specimen collection, some of which have been discussed above (i.e. the
-‘botanist effect’). Another potential cause is herbaria specific
-emphasis on regional collections. For example, the Oberlin Herbarium
-collection (housed in the Ohio State Herbarium) includes several
-thousand records primarily collected from within the state of Ohio.
-Thus, confronted with numerous records of *F. alnus* in Ohio in the
-compiled dataset, it is hard to discern if conditions in Ohio are
-favorable for establishment and spread of buckthorn, or if this region
-is simply better sampled than others. There may also be unequal sampling
-effort associated with taxonomic grouping. There are numerous examples
-of collections of orchids, bryophytes, mosses, and ferns, which are all
-groups of particular interest to plant collectors.
+## Accounting for unequal sampling effort in historical biodiversity collections
 
-Calculating the ratio of the cumulative number of records in space and
-time of non-native to native plants offers a way to account for unequal
-sampling effort, making it possible to distinguish periods of relatively
-slow versus rapid spread (Delisle et al. 2003). The primary assumption
-in this correction method is that native species are in equilibrium with
-their environment prior to the collection of any records. That is, these
-plants have spread to all of the ecological conditions within the study
-range where they can survive and reproduce, and have a stable range
-distribution. There are some caveats to this assumption to consider,
-perhaps the most important being that the ecological conditions in
-northeast North America have not been stable over the last 130 years.
-There have been substantial changes in land use, resulting in changes to
-plant communities (Wright and Fridley 2010), as well as affecting plant
-invasion dynamics (Mosher et al. 2009). However, given that the species
-chosen for the group of associated species have similar ecological
-requirements as *F. alnus*, I expect that any such changes would affect
-trends in these species and *F. alnus* equally.
+Using historical biodiversity collections to reconstruct patterns of species presence presents many challenges.
+One of the most common is the presence of unequal sampling effort [@Reddy2003; @Kadmon2004; @Boakes2010].
+For herbaria in particular, there are many reasons for unequal sampling effort in specimen collection, some of which have been discussed above (i.e. the ‘botanist effect’).
+Another potential cause is herbaria specific emphasis on regional collections.
+For example, the Oberlin Herbarium collection (housed in the Ohio State Herbarium) includes several thousand records primarily collected from within the state of Ohio.
+Thus, confronted with numerous records of *F. alnus* in Ohio in the compiled dataset, it is hard to discern if conditions in Ohio are favorable for establishment and spread of buckthorn, or if this region is simply better sampled than others.
+There may also be unequal sampling effort associated with taxonomic grouping.
+There are numerous examples of collections of orchids, bryophytes, mosses, and ferns, which are all groups of particular interest to plant collectors.
+In this case, woody plants are likely to be underrepresented.
 
-Provided the equilibrium assumption is true for the group of associated
-species in this study, then the rate of the cumulative number of
-records, grid cells, or counties occupied is not representative of the
-spread of these plants, but rather of the effort of herbarium specimen
-collectors. As such, if the ratio of cumulative records of *F. alnus* to
-the associated species is increasing in time, this indicates a period
-during which *F. alnus* is increasing more rapidly than background
-sampling, and thus experiencing positive growth rates. If the ratio is
-constant, *F. alnus* may be increasing, however it is not
-distinguishable from sampling effort. If the ratio is decreasing, *F.
-alnus* may still be increasing, but more slowly than the rate of
-sampling effort. Because the *cumulative* number of records was used in
-all three temporal trends calculated in this study, the absolute rate of
-change in samples cannot show a decline. Time periods that have either
-decreasing or stable ratio values, which precede periods of increasing
-ratio values, may be considered lags.
+Calculating the ratio of the cumulative number of records in space and time of non-native to native plants offers a way to account for unequal sampling effort, making it possible to distinguish periods of relatively slow versus rapid spread [@Delisle2003].
+The primary assumption of this correction method is that native species are in equilibrium with their environment prior to the collection of any records.
+That is, these plants inhabit all of the ecological conditions within the study range where they can survive and reproduce, and have a stable range distribution.
+There are some caveats to this assumption, perhaps the most important being that the ecological conditions in northeast North America have not been stable over the last 130 years.
+There have been substantial changes in land use, resulting in changes to plant communities [@Wright2010], as well as affecting plant invasion dynamics [@Mosher2009].
+However, given that here the species I chose for the group of associated species have similar ecological requirements as *F. alnus*, I expect that any such changes would affect trends in these species and *F. alnus* equally.
+
+**THIS SECTION SEEMS REPETATIVE**
+
+Provided the equilibrium assumption is true for the group of associated species in this study, then the rate of the cumulative number grid cells or counties occupied is not representative of the spread of these plants *per se*, but rather of the effort of specimen collectors.
+As such, if the ratio of cumulative records of *F. alnus* to the associated species is increasing in time, this indicates a period during which *F. alnus* is increasing more rapidly than background sampling, and thus experiencing positive growth rates.
+If the ratio is constant, *F. alnus* may be increasing, however it is not distinguishable from sampling effort.
+If the ratio is decreasing, *F. alnus* may still be increasing, but more slowly than the rate of sampling effort.
+Because the *cumulative* number of records was used in all three temporal trends calculated in this study, the absolute rate of change in samples cannot show a decline.
+Time periods that have either decreasing or stable ratio values, which precede periods of increasing ratio values, may be considered lags.
 
 *Cumulative records through time*
 

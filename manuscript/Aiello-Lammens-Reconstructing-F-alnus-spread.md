@@ -1,35 +1,44 @@
 **Author:** Matthew E. Aiello-Lammens
 
-**Title:** Reconstructing the historical spread of *Frangula alnus*
-using herbarium records
+**Title:** Analysis of information from multiple herbarium calls into question existence of lag-phase in spread of *Frangula alnus* in North America
+
+<!---
+Maybe this paper is better described as "taking advantage of data with low spatial resolution to account for sampling effort in studies using herbaria records".
+-->
 
 **Affiliation:**
 
 **Email of corresponding author:** matt.lammens@gmail.com; 631-327-2371
 
+<!---
+Check Notebook entry for 2016-02-01
+-->
 
 **\
 **
 
 # Abstract
 
-Herbaria records offer a rich source of information for understanding the patterns and processes of species spread. 
-However, analyses of these data requires careful consideration of the potential effects of unequal sampling effort in space and time.
-I used herbaria records to investigate the rate of spread and pattern of establishment for the invasive shrub *Frangula alnus* in northeastern and middle North America.
-I collected \>700 accession records from herbaria throughout North America for *F.
-alnus* covering a temporal range from ca. 1880-Present and a spatial range covering the entire invaded area in North America.
-I addressed unequal sampling effort by comparing temporal and spatial patterns of *F. alnus* accessions to patterns in a group of ecological similar native species.
-Trends in record collection in time and space show the rate of spread of *F. alnus* was slow and spatially limited during the late 19^th^ century, then increased rapidly during the early 20^th^ century, and reached a relatively constant rate of spread in the later 20^th^ century.
-Examining the spread of this species at the continental scale, there is little evidence that it experienced an extended lag phase between phases of establishment and rapid spatial spread, in contradiction to common trends for non-native plants and to previous reports for this species in particular.
-Rather, it appears that *F. alnus* has steadily increased in area of occupancy from ca.
-1920 to the present.
+Analysis of herbaria records allows for an examination of patterns of spatial spread of non-native plants in novel ranges, aiding in understanding the processes that govern non-native species invasions. 
+**Additional transitional statement.**
+I used herbaria records to investigate the rate of spread and pattern of establishment for the invasive plant Frangula alnus (Glossy Buckthorn) in northeastern and middle North America.  
+F. alnus is a perennial woody shrub of concern to land managers throughout the invaded range.  
+I collected accession records from online databases and requests to curators of herbaria throughout North America, resulting in >700 records of F. alnus covering a temporal range from ca. 1880 - Present and a spatial range broadly covering the entire invaded area in northeast North America.  
+I addressed unequal sampling effort by comparing temporal and spatial patterns of F. alnus accessions to patterns in a group of ecologically similar native species. 
+I found evidence for the potential of multiple initial introductions into North America, that were greatly separated geographically, ranging from southern Ontario to coastal New York and New Jersey. 
+Trends in record collection in time and space show the rate of spread of F. alnus was initially slow, then increased rapidly during the early 20th century, and reached a relatively constant rate of spread in the later 20th century. 
+Examining the spread of this species at the continental scale, there is little evidence that it experienced an extended lag phase between phases of establishment and rapid spatial spread, in contradiction to previous reports. 
+Rather, it appears that F. alnus has steadily increased in area of occupancy since ca. 1920 to the present. 
 
 **\
 **
 
 # Introduction
 
-Despite decades of research on invasive species, we still lack a full understanding of population dynamics during the transition from establishment of self-sustaining populations in a novel region to the rapid growth in abundance and expansion of area of occupancy.
+The population dynamics of a non-native species that transitions from establishing in a novel region to one that shows rapid growth in abundance and occupied area often go unobserved. 
+We are left to piece together ‘what happened’ by examining emerging patterns taken from snapshots in time. 
+
+~~Despite decades of research on invasive species, we still lack a full understanding of population dynamics during the transition from establishment of self-sustaining populations in a novel region to the rapid growth in abundance and expansion of area of occupancy.~~
 From field observations and patterns in historical data, it is generally noted that the time from establishment to rapid spread is longer than a generation time for many invasive species.
 This period is thought to be one in which population growth, both in numbers and area, is relatively small, and is commonly referred to as the lag phase [@Kowarik1995; @Crooks1999; @Sakai2001; @Crooks2005; @Pysek2005; @Theoharides2007].
 Because the lag phase is associated with a period early in the invasion process, management actions taken during this time have the potential to be most affective at mitigating the negative impacts of a species invasion.
@@ -172,6 +181,7 @@ I substituted the cumulative number of records with the cumulative number of occ
 Assuming areal growth is a random diffusion process, this relationship should be linear [@Crooks1999].
 A deviation from linearity that is concave up indicates a period of time when spatial spread is slower than random diffusion.
 Alternatively, a concave down curve indicates a period when spatial spread is more rapid than random diffusion.
+**These last two statements aren’t necessarily right – concave up should imply slower growth early, followed by acceleration, and vice-versa for concave down.**
 
 ## Occupied counties through time
 
@@ -192,18 +202,27 @@ For example, Catling and Porebski [-@Catlin1994] compared the distribution of re
 Similarly, *Salix peiolaris* was used in a paired comparison with *F. alnus* in a study on the effects of invasive and native species on wetland species diversity [@Houlahan2004].
 The other species in this group are found in ecological conditions conducive to the growth of *F. alnus* [personal observations; @Little1980; @Sibley2009].
 To construct the associated species dataset, I searched GBIF for all records that were located within the area of interest described in *Area of occupancy through time*.
-Additionally, I collected all records for these species reported in the University of Wisconsin, Ohio State University, University of Minnesota, the Morton Arboretum, Michigan State University, and Brooklyn Botanic Gardens herbaria.
+Additionally, I collected all records for these species reported in the University of Wisconsin, Ohio State University, University of Minnesota, Morton Arboretum, Michigan State University, and Brooklyn Botanic Gardens herbaria.
 In total, I compiled 5548 associated species records.
 These records were georeferenced to the county level.
 Grouping these records, I calculated the number of records through time, the area of occupancy through time, and the number of counties occupied through time, as described above.
 
-I compared patterns of change in area of occupancy and conuties occupied through time for *F. alnus* versus the associated species following a similar approach as Delisle et al. [-@Delisle2003]. 
+I compared patterns of change in area of occupancy and counties occupied through time for *F. alnus* versus the associated species following a similar approach as Delisle et al. [-@Delisle2003]. 
 I divided the occupied area (number of counties) of *F. alnus* by that for the associated species separately for annual time steps spanning 1879 to 201X, which yielded a proportion of non-native to native occupied area for each year of the study period.
 Assuming the increases in area of occupancy of native plants through time represents an increase in spatial coverage of herbaria records in general, rather then the spread for those plants *per se*, then we can using changes in this proportion as a measure of the rate of spread of *F. alnus*.
 Specifically, if the proportion increases through time, this then represents periods during which the spatial coverage of records for the non-native plant outpaces the background increase in spatial coverage [@Delisle2003], which can be interpreted as the result of rapid spatial spread.
 
 In this study, I was interested in examining the spread of *F. alnus* across a larger region than this method has been applied to previously [e.g., @Delisle2003].
 A corresponding complication was my dataset consisted of records from multiple herbaria across the naturalized range. 
+<!---
+Delisle also used records from multiple herbaria (5 in Quebec and 2 country wide), so what's different about what I did? Here are a few thoughts:
+* The herbaria used in my study a quite a bit more geographically disperate than those in Delisle.
+* Background are considered only at the county level. 
+* I'm not sure what the patterns would look like if I only used points with lat/lon values. That is, if I don't use the county level approach for the background. This is really the key difference between Delisle and my study.
+-->
+
+### Key addition to previously reported methods
+
 As such, several presence records for the group of associated species being located in areas where *F. alnus* has not been observed; likely the result of larger niche breadths for some of the associated species (e.g., *Fraxinus americana* (White Ash)
 *Add citation into final draft: Kartesz, J.T., The Biota of North America Program (BONAP).
 2013. *North American Plant Atlas.* (http://www.bonap.org/napa.html). Chapel Hill, N.C. [maps generated from Kartesz, J.T. 2013. Floristic Synthesis of North America, Version 1.0. Biota of North America Program (BONAP). (in press).* 

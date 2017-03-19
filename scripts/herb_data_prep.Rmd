@@ -477,7 +477,7 @@ These data are accessible from an online search, but as downloaded in *.csv form
 they are not incredibly useful. In particular, all of the spatial information is
 grouped together in a single cell if you open the *.csv file in Excel.
 
-I employ a sequence of regular expression search and replace operations to 
+I used a sequence of regular expression search and replace operations to 
 make these data more useful. I carryout the search and replace operations in 
 TextWrangler. Here are the exact steps:
 

@@ -386,7 +386,7 @@ data(wrld_simpl)
 ## Make and Save Plot
 #pdf(file='figures/Specimen_Locales.pdf',width=9, height=6, )
 graphics.off()
-pdf(file='figures/Diss_Fig_3_2.pdf',width=9, height=5.5, family="Times" )
+#pdf(file='figures/Diss_Fig_3_2.pdf',width=9, height=5.5, family="Times" )
 par( mar=c( 2, 2, 0, 0) )
 plot(wrld_simpl, xlim=c(xmin,xmax), ylim=c(ymin,ymax), axes=TRUE, col="lightgoldenrodyellow")
 #plot(can1,add=TRUE)
@@ -404,7 +404,7 @@ legend( -71, 41.0,
         col=c('black','grey50') )
 
 plot(falnus.extent,add=TRUE,col='red')
-dev.off()
+#dev.off()
 
 graphics.off()
 ## ******************************************************************** ##
@@ -470,7 +470,7 @@ rec.years.plot <-
   theme_bw() +
   theme( text=element_text( size=12, family="Times") )
 
-ggsave( filename="figures/Diss_Fig_3_3.pdf", width=6.5, height=6.5, units="in" )
+# ggsave( filename="figures/Diss_Fig_3_3.pdf", width=6.5, height=6.5, units="in" )
 
 # pdf('figures/Record_Counts_by_Decade.pdf')
 # print(rec.years.plot)
@@ -543,7 +543,7 @@ ggplot() +
   theme( text=element_text( size=18, face="bold" ),
          axis.title.y=element_text(vjust=0.3) ) # size=20 # use 20 for most figures, 18 for small
 #ggsave( "figures/Pres_Fig_Fral_CumGrid.pdf", width=9.5, height=6, units="in" )
-ggsave( "figures/Pres_Fig_Fral_CumGrid_Small.pdf", width=4.5, height=4.1, units="in" )
+#ggsave( "figures/Pres_Fig_Fral_CumGrid_Small.pdf", width=4.5, height=4.1, units="in" )
 
 
 ## ----------------------------------------------------------- ##
@@ -815,7 +815,7 @@ ggplot() +
   theme_bw() +
   theme( text=element_text( size=20, face="bold" ),
          axis.title.y=element_text(vjust=0.3) )
-ggsave( "figures/Pres_Fig_Fral_SqrtCumGrid.pdf", width=9.5, height=6, units="in" )
+#ggsave( "figures/Pres_Fig_Fral_SqrtCumGrid.pdf", width=9.5, height=6, units="in" )
 #ggsave( "figures/Pres_Fig_Fral_SqrtCumGrid_Small.pdf", width=4.5, height=4, units="in" )
 
 ggplot() +
@@ -835,7 +835,7 @@ ggplot() +
   theme_bw() +
   theme( text=element_text( size=20, face="bold" ),
          axis.title.y=element_text(vjust=0.3) )
-ggsave( "figures/Pres_Fig_Fral_SqrtCumGrid_wFit.pdf", width=9.5, height=6, units="in" )
+#ggsave( "figures/Pres_Fig_Fral_SqrtCumGrid_wFit.pdf", width=9.5, height=6, units="in" )
 
 # Fral AND Associated species
 ggplot() +
@@ -861,7 +861,7 @@ ggplot() +
   theme_bw() +
   theme( text=element_text( size=20, face="bold" ),
          axis.title.y=element_text(vjust=0.3) )
-ggsave( "figures/Pres_Fig_Fral_Assoc_SqrtCumGrid_wFit.pdf", width=9.5, height=6, units="in" )
+#ggsave( "figures/Pres_Fig_Fral_Assoc_SqrtCumGrid_wFit.pdf", width=9.5, height=6, units="in" )
 
 # Ratio plot
 ggplot() +
@@ -875,7 +875,7 @@ ggplot() +
   theme_bw() +
   theme( text=element_text( size=20, face="bold" ),
          axis.title.y=element_text(vjust=0.4) )
-ggsave( "figures/Pres_Fig_Fral_Assoc_Ratio.pdf", width=9.5, height=6, units="in" )
+#ggsave( "figures/Pres_Fig_Fral_Assoc_Ratio.pdf", width=9.5, height=6, units="in" )
 
 # Growth Rate Ratio plot
 ggplot() +
@@ -893,7 +893,7 @@ ggplot() +
   theme_bw() +
   theme( text=element_text( size=20, face="bold" ),
          axis.title.y=element_text(vjust=0.3) )
-ggsave( "figures/Pres_Fig_Fral_Assoc_GrowthRate.pdf", width=9.5, height=6, units="in" )
+#ggsave( "figures/Pres_Fig_Fral_Assoc_GrowthRate.pdf", width=9.5, height=6, units="in" )
 
 
 
@@ -1086,7 +1086,7 @@ ggplot() +
   theme_bw() +
   theme( text=element_text( size=12, family="Times") )
 
-ggsave( filename="figures/Diss_Fig_3_7.pdf", width=6.5, height=6.5, units="in" )
+#ggsave( filename="figures/Diss_Fig_3_7.pdf", width=6.5, height=6.5, units="in" )
 
 
 ## Calculate the cumulative number of **Counties** Occupied
@@ -1547,7 +1547,7 @@ length(which(FRAL.Herb$CollectionYear<1920))
 ## Cumulative Number of Records through time 
 ## ******************************************************************** ##
 #pdf('figures/Cumulative_Records_Figure.pdf')
-pdf( "figures/Diss_Fig_3_4.pdf", width=6.5, height=6.5, family="Times" )
+#pdf( "figures/Diss_Fig_3_4.pdf", width=6.5, height=6.5, family="Times" )
 par( mfrow=c(2,2), mar=c(4,4,0.5,1), ps=12 )
 ## Log Cumulative Records vs Time
 x <- seq( min(Records.Cumm.All$Years),
@@ -1603,12 +1603,12 @@ plot( Records.Cumm.All$Years[Recs.Match.Temp],
       xlab='Year',
       ylab='Ratio of Cumulative Records',
       xlim=c(1836,2012))
-dev.off()
+#dev.off()
 
 ## Cumulative Number of Grid Cells through time 
 ## ******************************************************************** ##
 #pdf('figures/Cumulative_GridCells_Figure.pdf')
-pdf( "figures/Diss_Fig_3_5.pdf", width=6.5, height=6.5, family="Times" )
+#pdf( "figures/Diss_Fig_3_5.pdf", width=6.5, height=6.5, family="Times" )
 par( mfrow=c(2,2), mar=c(4,4,0.5,1), ps=12 )
 ## Plot the **sqrt** Cumulative Occupied Grid Cell numbers
 x.fh <- seq(min(FRAL.Herb.Loc.Overlap_Cumm.Grid$Years),
@@ -1673,12 +1673,12 @@ plot( FRAL.Herb.Assoc.allYrs.Overlap$Years,
       ylab='Ratio of Cumulative Occupied Grid Cells',
       xlim=c(1869,2012)
 )
-dev.off()
+#dev.off()
 
 ## Cumulative Number of Counties through time 
 ## ******************************************************************** ##
 #pdf('figures/Cumulative_Counties_Figure.pdf')
-pdf( "figures/Diss_Fig_3_6.pdf", width=6.5, height=6.5, family="Times" )
+#pdf( "figures/Diss_Fig_3_6.pdf", width=6.5, height=6.5, family="Times" )
 par( mfrow=c(2,2), mar=c(4,4,0.5,1), ps=12 )
 ## Plot the **sqrt** of the cumulative number of counties through time
 plot(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years,
@@ -1725,7 +1725,7 @@ plot( Cumm.Cnty.Combined.df$Years,
       ylab='Ratio of Cumulative Occupied Counties',
       xlim=c(1836,2005)
 )
-dev.off()
+#dev.off()
 
 ##### NOTE - GOT THIS FAR IN MY REDEVELOPMENT
 

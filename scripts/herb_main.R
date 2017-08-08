@@ -311,9 +311,9 @@ Associated.Spec$Admin2 <-
 ##   30ArcMin = 0.5,0.5
 ##   5ArcMin = 0.08333333,0.08333333
 ##
-Grid.30ArcMin <- readOGR(dsn="/Volumes/Garage/gis_layers_local/FRAL_US_Grids/grid_30arcmin.shp",
+Grid.30ArcMin <- readOGR(dsn="/Users/maiellolammens/Dropbox/gis_layers_local/FRAL_US_Grids/grid_30arcmin.shp",
                          layer="grid_30arcmin")
-Grid.5ArcMin <- readOGR(dsn="/Volumes/Garage/gis_layers_local/FRAL_US_Grids/grid_5arcmin.shp",
+Grid.5ArcMin <- readOGR(dsn="/Users/maiellolammens/Dropbox/gis_layers_local/FRAL_US_Grids/grid_5arcmin.shp",
                         layer="grid_5arcmin")
 GridProjection <- proj4string(Grid.5ArcMin)
 ## Set the Grid.Layer - this is so I can set the layer to use here
@@ -407,6 +407,38 @@ plot(falnus.extent,add=TRUE,col='red')
 #dev.off()
 
 graphics.off()
+
+
+## ******************************************************************** ##
+## Make Figure for journal manuscript (b/w only)
+## ******************************************************************** ##
+## Get a simple background
+data(wrld_simpl)
+## Make and Save Plot
+#pdf(file='figures/Specimen_Locales.pdf',width=9, height=6, )
+graphics.off()
+pdf(file='~/Dropbox/Projects/FRAL-herbarium/manuscript/Figure_1.pdf', width=5.5, height=3.5, family="Times" )
+par( mar=c( 2, 2, 0, 0) )
+plot(wrld_simpl, xlim=c(xmin,xmax), ylim=c(ymin,ymax), axes=TRUE)
+#plot(can1,add=TRUE)
+map("state",boundary=FALSE, col="black", add=TRUE)
+## Plot group of associated species
+points(Associated.Spec$Longitude,Associated.Spec$Latitude, col="black",pch=3,cex=0.4)
+## Plot Frangula alnus
+## First the complete FRAL data set I've compiled
+points(FRAL.Herb$Longitude,FRAL.Herb$Latitude, col="black", bg="black", pch=24, cex=0.8) #  
+# ## And second only those occurences in GBIF (in orange)
+# points(FRAL.GBIF$lon,FRAL.GBIF$lat,col="orange",pch=20,cex=0.4)
+legend( -73.5, 38.45,
+        expression(italic('F. alnus'),'Associated Species'), #'FRAL GBIF','Associates GBIF'),
+        pch=c(17,3), #,20),
+        col=c('black','black') )
+
+plot(falnus.extent,add=TRUE,col='black', lty = 5)
+dev.off()
+
+graphics.off()
+
 ## ******************************************************************** ##
 ## Examine records through time BEFORE any spatial filtering
 ## ******************************************************************** ##
@@ -471,6 +503,7 @@ rec.years.plot <-
   theme( text=element_text( size=12, family="Times") )
 
 # ggsave( filename="figures/Diss_Fig_3_3.pdf", width=6.5, height=6.5, units="in" )
+ggsave(plot = rec.years.plot, filename="manuscript/Figure_2.pdf", width=5.5, height=5.5, units="in" )
 
 # pdf('figures/Record_Counts_by_Decade.pdf')
 # print(rec.years.plot)
@@ -1726,6 +1759,204 @@ plot( Cumm.Cnty.Combined.df$Years,
       xlim=c(1836,2005)
 )
 #dev.off()
+
+## ******************************************************************** ##
+## Make multi-panel figures to include in J. Torr. Bot. submission (5.5 in)
+## ******************************************************************** ##
+
+## Cumulative Number of Records through time 
+## ******************************************************************** ##
+pdf( "manuscript/Figure_3.pdf", width=5.5, height=5.5, family="Times" )
+#par( mfrow=c(2,2), mar=c(2,4,2,1), ps=12 )
+m <- rbind(c(5,6),c(1,2),c(1,2),c(1,2),c(1,2),c(3,4),c(3,4),c(3,4),c(3,4))
+layout(m)
+par(mar=c(4,4,1,2))
+## Log Cumulative Records vs Time
+x <- seq( min(Records.Cumm.All$Years),
+          max(Records.Cumm.All$Years),
+          l=length(Records.Cumm.All$Years) )
+plot( Records.Cumm.All$Years,
+      log(Records.Cumm.All$CummRec.Assoc),
+      xlab='',
+      ylab='Log-Cumulative Records',
+      xlim=c(1836,2012),
+      pch=3,
+      cex=.8)
+points( Records.Cumm.All$Years,
+        log(Records.Cumm.All$CummRec.Fral.Herb),
+        pch=17,
+        cex=1,
+        col='black')
+abline(fral.rec.lm,lwd=2.5)
+abline(assoc.rec.lm,lwd=2.5)
+lines(x,predict(assoc.rec.lm2,data.frame(Years=x)),
+      lwd=2.5,lty=4)
+lines(x,predict(fral.rec.lm3,data.frame(Years=x)),
+      lwd=2.5,lty=4)
+legend( 1938, 2.25,
+        expression('Assoc. spp.',italic('F. alnus')),
+        pch=c(3,17),
+        col=c('black','black')
+)
+mtext(expression(bold("A")), adj = 0, line = 1)
+# Growth Rate Difference
+plot(Records.Cumm.All$Years,Records.Cumm.All$Cumm.Rec.R.Diff,
+     pch=3,
+     #ylim=c(-0.5,0.5),
+     ylim=c(0.8,1.2),
+     xlim=c(1879,2010),
+     xlab="",
+     ylab='Cumulative record growth-rate ratio')
+abline(h=1,lwd=2.5,col='black',lty=5)
+#points(1888:2010,Cumm.Rec.R.Diff,
+points(1890:2007,Cumm.Rec.R.Diff,
+       pch=17,
+       col='black',
+       cex=1)
+mtext(expression(bold("B")), adj = 0, line = 1)
+# Ratio vs time
+plot( Records.Cumm.All$Years[Recs.Match.Temp],
+      #(log(Records.Cumm.All$CummRec.Fral.Herb[Recs.Match.Temp] /
+      #      Records.Cumm.All$CummRec.Assoc[Recs.Match.Temp])),
+      #(log(Records.Cumm.All$CummRec.Fral.Herb[Recs.Match.Temp]) /
+      #       log(Records.Cumm.All$CummRec.Assoc[Recs.Match.Temp])),
+      (Records.Cumm.All$CummRec.Fral.Herb[Recs.Match.Temp] /
+         Records.Cumm.All$CummRec.Assoc[Recs.Match.Temp]),
+      pch=19,
+      cex=0.5,
+      xlab='Year',
+      ylab='Ratio of Cumulative Records',
+      xlim=c(1836,2012))
+mtext(expression(bold("C")), adj = 0, line = 1)
+dev.off()
+
+## Cumulative Number of Grid Cells through time 
+## ******************************************************************** ##
+pdf( "~/Dropbox/Projects/FRAL-herbarium/manuscript/Figure_4.pdf", width=5.5, height=5.5, family="Times" )
+#par( mfrow=c(2,2), mar=c(2,4,2,1), ps=12 )
+m <- rbind(c(5,6),c(1,2),c(1,2),c(1,2),c(1,2),c(3,4),c(3,4),c(3,4),c(3,4))
+layout(m)
+par(mar=c(4,4,1,2))
+## Plot the **sqrt** Cumulative Occupied Grid Cell numbers
+x.fh <- seq(min(FRAL.Herb.Loc.Overlap_Cumm.Grid$Years),
+            max(FRAL.Herb.Loc.Overlap_Cumm.Grid$Years),
+            l=length(FRAL.Herb.Loc.Overlap_Cumm.Grid$Years) )
+x <- seq(min(Associated.Spec.Loc.Overlap_Cumm.Grid$Years),
+         max(Associated.Spec.Loc.Overlap_Cumm.Grid$Years),
+         l=length(Associated.Spec.Loc.Overlap_Cumm.Grid$Years) )
+plot( Associated.Spec.Loc.Overlap_Cumm.Grid$Years,
+      sqrt(Associated.Spec.Loc.Overlap_Cumm.Grid$OccGrid),
+      xlab='',
+      ylab='Sqrt-Cumulative Occupied Grid Cells',
+      pch=3,
+      cex=0.8)
+points( FRAL.Herb.Loc.Overlap_Cumm.Grid$Years, 
+        sqrt(FRAL.Herb.Loc.Overlap_Cumm.Grid$OccGrids), 
+        col='black',pch=17,cex=1)
+abline(fral.lm.sqrt, lwd=2.5)
+abline(assoc.lm.sqrt, lwd=2.5)
+lines(x.fh,predict(fral.lm2.sqrt,data.frame(Years=x.fh)),
+      lwd=2.5,lty=4)
+# lines(x,predict(assoc.lm2.sqrt,data.frame(Years=x)),
+#       lwd=2.5,lty=2)
+# lines(x.fh,predict(fral.lm3.sqrt,data.frame(Years=x.fh)),
+#       lty=4,lwd=2.5,col='red')
+lines(x,predict(assoc.lm3.sqrt,data.frame(Years=x)),
+      lty=4,lwd=2.5)
+# legend( 1980, 4.5,
+#         c('Linear','Quadratic','Cubic'),
+#         lwd=c(2.5,2.5,2.5),
+#         lty=c(1,2,4)
+#)
+legend( 1950, 5.5,
+        expression('Assoc. Spec',italic('F. alnus')),
+        pch=c(3,17),
+        col=c('black','black')
+)
+mtext(expression(bold("A")), adj = 0, line = 1)
+## Growth Rate Difference
+plot( FRAL.Herb.Assoc.allYrs.Overlap$Years,
+      FRAL.Herb.Assoc.allYrs.Overlap$Cumm.Grid.R.Diff,
+      pch=3,
+      #ylim=c(-.5,.5), # This cuts off one extreme point at > 1.5
+      ylim=c(.8,1.2), # This cuts off one extreme point at > 1.5
+      xlab='',
+      ylab='Cumulative occ. grid growth-rate ratio' )
+abline(h=1,lwd=2.5,col='black',lty=5)
+points(1884:2005,Cum.Grid.R.Diff,
+       pch=17,
+       cex=1,
+       col='black')
+mtext(expression(bold("B")), adj = 0, line = 1)
+## Ratio vs time
+plot( FRAL.Herb.Assoc.allYrs.Overlap$Years,
+      FRAL.Herb.Assoc.allYrs.Overlap$AOO.Ratio,
+      pch=19,
+      cex=0.5,
+      xlab='Year',
+      ylab='Ratio of Cumulative Occupied Grid Cells',
+      xlim=c(1869,2012)
+)
+mtext(expression(bold("C")), adj = 0, line = 1)
+dev.off()
+
+## Cumulative Number of Counties through time 
+## ******************************************************************** ##
+pdf( "~/Dropbox/Projects/FRAL-herbarium/manuscript/Figure_5.pdf", width=5.5, height=5.5, family="Times" )
+m <- rbind(c(5,6),c(1,2),c(1,2),c(1,2),c(1,2),c(3,4),c(3,4),c(3,4),c(3,4))
+layout(m)
+par(mar=c(4,4,1,2))
+## Plot the **sqrt** of the cumulative number of counties through time
+plot(Associated.Spec.Cnty.Overlap_Cumm.Cnty$Years,
+     sqrt(Associated.Spec.Cnty.Overlap_Cumm.Cnty$OccCounties),
+     xlab="Year",
+     ylab="Sqrt-Cumulative Occupied Counties",
+     pch=3,
+     cex=0.8)
+points(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$Years,
+       sqrt(FRAL.Herb.Cnty.Overlap_Cumm.Cnty$OccCounties),
+       col='black',
+       pch=17,
+       cex=1)
+lines(x.cnty.assoc,predict(assoc.cnt.lm,data.frame(Years=x.cnty.assoc)),
+      lwd=2.5)
+lines(x.cnty.assoc,predict(assoc.cnt.lm3,data.frame(Years=x.cnty.assoc)),
+      lwd=2.5,lty=2)
+lines(x.cnty.fral,predict(fral.cnt.lm,data.frame(Years=x.cnty.fral)),
+      lwd=2.5,lty=4)
+lines(x.cnty.fral,predict(fral.cnt.lm3,data.frame(Years=x.cnty.fral)),
+      lwd=2.5,lty=4)
+legend( 1933,3.7,
+        expression('Assoc. Spec',italic('F. alnus')),
+        pch=c(3,17),
+        col=c('black','black')
+)
+mtext(expression(bold("A")), adj = 0, line = 1)
+## Plot the ** Difference** in Growth Rate Results
+plot( Cumm.Cnty.Combined.df$Years,
+      Cumm.Cnty.Combined.df$Cumm.Cnty.R.Diff,
+      pch=3,
+      #ylim=c(-.5,.5), # This cuts off one extreme point at > 1.5
+      ylim=c(0.8,1.2),
+      xlab='Year',
+      ylab='Cumulative occ. county growth-rate ratio')
+abline(h=1,lwd=2.5,col='black',lty=5)
+points(1884:2000,Cum.Cnty.R.Diff,
+       pch=17,cex=1,col='black')
+mtext(expression(bold("B")), adj = 0, line = 1)
+## Plot Ratio Results
+plot( Cumm.Cnty.Combined.df$Years,
+      Cumm.Cnty.Combined.df$AOO.Ratio,
+      pch=19,
+      cex=0.5,
+      xlab='Year',
+      ylab='Ratio of Cumulative Occupied Counties',
+      xlim=c(1836,2005)
+)
+mtext(expression(bold("C")), adj = 0, line = 1)
+dev.off()
+
+
 
 ##### NOTE - GOT THIS FAR IN MY REDEVELOPMENT
 

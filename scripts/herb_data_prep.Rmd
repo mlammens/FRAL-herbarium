@@ -27,13 +27,13 @@ as Glossy buckthorn and/or have been compared to GB in previous analyses
 
 ### Associated Species
 
-* Speckled Alder = Alnus rugosa
-* Grey Alder = Alnus incana 
-* Smooth Alder = Alnus serrulata
-* Alder (Alderleaf) Buckthorn = Rhamnus alnifolia
-* White Ash = Fraxinus americana 
-* Witch Hazel = Hamamelis virginiana 
-* Witch Hazel (syn) = Hamamelis macrophylla
+* Speckled Alder = Alnus rugosa (ALINR)
+* Grey Alder = Alnus incana (ALIN2) 
+* Smooth Alder = Alnus serrulata (ALSE2)
+* Alder (Alderleaf) Buckthorn = Rhamnus alnifolia (RHAL)
+* White Ash = Fraxinus americana (FRAM2)
+* Witch Hazel = Hamamelis virginiana (HAVI4) 
+* Witch Hazel (syn) = Hamamelis macrophylla (HAVI4)
 
 ***
 ## GBIF Records 
@@ -63,7 +63,8 @@ require(psych)
 require(reshape)
 
 ## Define and set working directory
-HERB_PROJECT_DIR <- '/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/'
+#HERB_PROJECT_DIR <- '/Users/maiellolammens/Dropbox/F-Alnus/Herbarium-Project/Chapter-3-FRAL-Retrospective/'
+HERB_PROJECT_DIR <- '/Users/maiellolammens/Dropbox/Projects/FRAL-herbarium/'
 setwd( HERB_PROJECT_DIR )
 
 ## Spatial extent of the study area
@@ -78,7 +79,7 @@ setwd( HERB_PROJECT_DIR )
 ## name of 'falnus.extent'
 
 ## Load falnus.extent
-load('scripts/falnus.extent.RData')
+load(paste(HERB_PROJECT_DIR,'scripts/falnus.extent.RData', sep = ''))
 extent.values <- as.matrix(falnus.extent)
 xmin <- extent.values[1,1]
 xmax <- extent.values[1,2]

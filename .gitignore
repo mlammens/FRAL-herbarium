@@ -4,9 +4,11 @@
 .svn
 .DS_Store
 */.DS_Store
-
 # Figures directory
 ###################
 figures/
 manuscript/Figure*
-
+manuscript/submit-2/Editors-Comments-2018-03-12.docx
+manuscript/submit-2/Response-to-Editors-Comments.docx
+scripts/*html
+data/CMNH/*

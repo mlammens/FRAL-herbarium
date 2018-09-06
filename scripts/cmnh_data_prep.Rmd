@@ -1,0 +1,39 @@
+---
+title: "CMNH Data Processing"
+output: html_notebook
+---
+
+```{r "setup", include=FALSE}
+require("knitr")
+opts_knit$set(root.dir = "/Users/maiellolammens/Dropbox/Projects/FRAL-herbarium/")
+```
+
+
+
+```{r}
+library(readxl)
+```
+
+
+Read in the data in Excel format
+
+```{r}
+fral <- read_xlsx("data/CMHN/CMNH glossy buckthorn Data Revised.xlsx", sheet = 1)
+alin2 <- read_xlsx("data/CMHN/CMNH Alnus incana Data.xlsx", sheet = 1)
+alse2 <- read_xlsx("data/CMHN/CMNH Alnus serrulata Data.xlsx", sheet = 1)
+rhal <- read_xlsx("data/CMHN/CMNH Rhamnus alnifolia Data.xlsx", sheet = 1)
+fram2 <- read_xlsx("data/CMHN/CMNH Fraxinus americana Data.xlsx", sheet = 1)
+havi4 <- read_xlsx("data/CMHN/CMNH Hamamelis virginiana Data.xlsx", sheet = 1)
+```
+
+How many countiesn and towns are represented?
+
+```{r}
+length(unique(fral$County))
+length(unique(fral$`City/Twp.`))
+```
+
+```{r}
+sort(unique(fral$`City/Twp.`))
+```
+

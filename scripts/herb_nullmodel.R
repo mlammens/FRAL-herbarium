@@ -12,7 +12,7 @@
 library(dplyr)
 
 ## Source the herb_main.R script
-source(herb_main.R)
+source("scripts/herb_main.R")
 
 ## ******************************************************************** ##
 ## Use reduced datasets for FRAL.Herb and Associated.Spec based
@@ -59,9 +59,9 @@ for (iter in 1:num_randoms){
 
   ## Calculate the cumulative number of occupied grid cells through time for the temp dataset
   FRAL.Herb.Loc.Overlap_Cumm.Grid_TEMP <- 
-    make.cummgrids.allYrs( make.cummgrids.dfYrs( filter(LOC.temp, dataset == "FRAL") ))
+    make.cummgrids.allYrs( make.cummgrids.dfYrs( dplyr::filter(LOC.temp, dataset == "FRAL") ))
   Associated.Spec.Loc.Overlap_Cumm.Grid_TEMP <-
-    make.cummgrids.allYrs( make.cummgrids.dfYrs( filter(LOC.temp, dataset == "ASSOC") ))
+    make.cummgrids.allYrs( make.cummgrids.dfYrs( dplyr::filter(LOC.temp, dataset == "ASSOC") ))
 
 
   ## Merge the datasets for Fral and ALL based on overlapping years
@@ -135,12 +135,20 @@ ggplot() +
   theme_bw() + 
   labs(y = "Sqrt-Cumulative Occupied Grid Cells")
 
+## Calculate the mean AOO ratio through time for the Null model
+FRAL.Herb.Assoc.allYrs.Overlap_NULL_Summary <-
+  FRAL.Herb.Assoc.allYrs.Overlap_NULL %>%
+  group_by(Years) %>%
+  dplyr::summarise(AOO.Ratio.Mean = mean(AOO.Ratio))
+
 ## Plot the Ratio through time
 ggplot() +
   geom_line(data=FRAL.Herb.Assoc.allYrs.Overlap_NULL,
              aes(x = Years, y = AOO.Ratio, group = iter), alpha = 0.1) +
+  geom_point(data=FRAL.Herb.Assoc.allYrs.Overlap_NULL_Summary, 
+              aes(x = Years, y = AOO.Ratio.Mean), color = "blue") +
   geom_point(data=FRAL.Herb.Assoc.allYrs.Overlap,
              aes(x = Years, y = AOO.Ratio), color = "red") +
-  ylim( c(0, 2) ) +
+  ylim( c(0, 1.5) ) +
   theme_bw()
 

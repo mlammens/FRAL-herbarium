@@ -845,6 +845,7 @@ Records.Cumm.All$CummRec.Fral.Herb <- NA
 Records.Cumm.All$CummRec.Fral.Herb[match(FRAL.Herb.Cumm.Records.allYrs$Years,Assoc.Cumm.Records.allYrs$Years)] <-
   FRAL.Herb.Cumm.Records.allYrs$CummRecs
 
+
 ## Linear and polynomial regression on Cummulative Number of Records
 fral.rec.lm <- lm( log(Records.Cumm.All$CummRec.Fral.Herb) ~
                      Records.Cumm.All$Years )

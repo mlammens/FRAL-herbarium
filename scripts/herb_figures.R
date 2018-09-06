@@ -115,6 +115,19 @@ Missing.Rec.Decade <- data.frame(Record.Cat=Missing.Rec.Decade$Record.Cat,
                                  Decade.Cnt=Missing.Rec.Decade$Match )
 Rec.Cnt.Decade <- rbind( Rec.Cnt.Decade, Missing.Rec.Decade )
 
+## Calculate the proportion of total records colleted in each year
+## -------------------------------------------------------------------------- ##
+## Calculate the total number of records for Fral and Associated species
+rec_cnt_totals <- 
+  Rec.Cnt.Decade %>%
+  group_by(Record.Cat) %>%
+  dplyr::summarise(total = sum(Decade.Cnt, na.rm = TRUE))
+## Make proportion columns
+Rec.Cnt.Decade$Decade.Prop <-
+  ifelse(Rec.Cnt.Decade$Record.Cat == "Associates", 
+         yes = Rec.Cnt.Decade$Decade.Cnt / as.numeric(rec_cnt_totals[1,2]),
+         no = Rec.Cnt.Decade$Decade.Cnt / as.numeric(rec_cnt_totals[2,2]))
+
 ## Clean up
 rm(Missing.Rec.Decade,Rec.Cnt.Decade.all,dec.all,rec.years.df,
    rec.decade,rec.years,rec.cat)
@@ -139,11 +152,23 @@ rec.years.plot <-
   theme( text=element_text( size=12, family="Times") )
 
 # ggsave( filename="figures/Diss_Fig_3_3.pdf", width=6.5, height=6.5, units="in" )
-ggsave(plot = rec.years.plot, filename="manuscript/Figure_2.pdf", width=5.5, height=5.5, units="in" )
+#ggsave(plot = rec.years.plot, filename="manuscript/Figure_2.pdf", width=5.5, height=5.5, units="in" )
 
 # pdf('figures/Record_Counts_by_Decade.pdf')
 # print(rec.years.plot)
 # dev.off()
+
+rec.years.prop.plot <- 
+  ggplot(Rec.Cnt.Decade, aes(x=Record.Decade, y=Decade.Prop, fill=Record.Cat)) +
+  geom_bar(position="dodge",stat="identity") +
+  xlab("Decade") +
+  ylab("Proportion of total records") +
+  scale_fill_manual( values= c("grey50", "black"),
+                     name="Record Type",
+                     labels=c('Assoc. Spec.','F. alnus') ) +
+  theme_bw() +
+  theme( text=element_text( size=12, family="Times") )
+print(rec.years.prop.plot)
 
 ## ************************************************************************** ##
 ## Plot raw Cumulative Occupied Grid Cell numbers

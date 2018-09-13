@@ -54,6 +54,7 @@ require(maps)
 require(psych)
 require(reshape)
 require(zoo)
+library(dplyr)
 
 # ## Define and set working directory
 # HERB_PROJECT_DIR <- '/Users/mlammens/Dropbox/F-Alnus-DB/Herbarium-Project/Chapter-3-FRAL-Retrospective/'

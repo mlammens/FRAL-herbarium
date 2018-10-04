@@ -1,32 +1,39 @@
 ---
 title: "CMNH Data Processing"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
+
+# Overview
+
+This script cleans the data provided by the Cleaveland Museum of Natural History, herbarium specimens for *F. alnus* and the group of associated species.
 
 ```{r "setup", include=FALSE}
 require("knitr")
 opts_knit$set(root.dir = "/Users/maiellolammens/Dropbox/Projects/FRAL-herbarium/")
 ```
 
-
+# Load necessary packages
 
 ```{r}
 library(readxl)
+library(dplyr)
 ```
 
 
-Read in the data in Excel format
+# Read in the data in Excel format
 
 ```{r}
-fral <- read_xlsx("data/CMHN/CMNH glossy buckthorn Data Revised.xlsx", sheet = 1)
-alin2 <- read_xlsx("data/CMHN/CMNH Alnus incana Data.xlsx", sheet = 1)
-alse2 <- read_xlsx("data/CMHN/CMNH Alnus serrulata Data.xlsx", sheet = 1)
-rhal <- read_xlsx("data/CMHN/CMNH Rhamnus alnifolia Data.xlsx", sheet = 1)
-fram2 <- read_xlsx("data/CMHN/CMNH Fraxinus americana Data.xlsx", sheet = 1)
-havi4 <- read_xlsx("data/CMHN/CMNH Hamamelis virginiana Data.xlsx", sheet = 1)
+fral <- read_xlsx("data/CMNH/CMNH glossy buckthorn Data Revised.xlsx", sheet = 1)
+alin2 <- read_xlsx("data/CMNH/CMNH Alnus incana Data.xlsx", sheet = 1)
+alse2 <- read_xlsx("data/CMNH/CMNH Alnus serrulata Data.xlsx", sheet = 1)
+rhal <- read_xlsx("data/CMNH/CMNH Rhamnus alnifolia Data.xlsx", sheet = 1)
+fram2 <- read_xlsx("data/CMNH/CMNH Fraxinus americana Data.xlsx", sheet = 1)
+havi4 <- read_xlsx("data/CMNH/CMNH Hamamelis virginiana Data.xlsx", sheet = 1)
 ```
 
-How many countiesn and towns are represented?
+How many counties and towns are represented in the FRAL data set?
 
 ```{r}
 length(unique(fral$County))
@@ -35,5 +42,65 @@ length(unique(fral$`City/Twp.`))
 
 ```{r}
 sort(unique(fral$`City/Twp.`))
+```
+
+
+# Combine all of the data sets and format
+
+Combine the data sets with a consistent set of columns.
+
+```{r}
+cmnh_data <- bind_rows(select(fral, Genus, Species, `Herbarium No.`, Day, Month, Year, Collector,
+                              Locality, Area, `City/Twp.`, County, State, Comments, Description),
+                       select(alin2, Genus, Species, `Herbarium No.`, Day, Month, Year, Collector,
+                              Locality, Area, `City/Twp.`, County, State, Comments, Description),
+                       select(alse2, Genus, Species, `Herbarium No.`, Day, Month, Year, Collector,
+                              Locality, Area, `City/Twp.`, County, State, Comments, Description),
+                       select(fram2, Genus, Species, `Herbarium No.`, Day, Month, Year, Collector,
+                              Locality, Area, `City/Twp.`, County, State, Comments, Description),
+                       select(havi4, Genus, Species, `Herbarium No.`, Day, Month, Year, Collector,
+                              Locality, Area, `City/Twp.`, County, State, Comments, Description),
+                       select(rhal, Genus, Species, `Herbarium No.`, Day, Month, Year, Collector,
+                              Locality, Area, `City/Twp.`, County, State, Comments, Description)
+                       )
+```
+
+Convert `Day` and `Year` columns to numeric valeus.
+
+```{r}
+cmnh_data$Day <- as.numeric(cmnh_data$Day)
+cmnh_data$Year <- as.numeric(cmnh_data$Year)
+```
+
+Remove entries with `Year == 0`.
+
+```{r}
+cmnh_data <-
+  cmnh_data %>%
+  filter(Year != 0)
+```
+
+# Add `County` data
+
+I looked up county locations for those that were missing this field using the Township and State information.
+All look-ups were done in Google Maps.
+
+```{r}
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "033498")] <- "Hudson"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "040830")] <- "Grafton"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "063821")] <- "Cobb"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "032557")] <- "Franklin"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "032558")] <- "Grafton"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "041369")] <- "Lee"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "041372")] <- "Grafton"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "041375")] <- "Hampshire"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "062232")] <- "Walton"
+cmnh_data$County[which(cmnh_data$`Herbarium No.` == "062234")] <- "Cook"
+```
+
+Drop "Co." part of any of the county entries.
+
+```{r}
+cmnh_data$County <- sub(pattern = " Co\\.", replacement = "", x = cmnh_data$County)
 ```
 

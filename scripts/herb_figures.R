@@ -47,33 +47,71 @@ graphics.off()
 
 ## ******************************************************************** ##
 ## Make Figure for journal manuscript (b/w only)
+## Updated on 2019-03-27 to use ggplot2 instead
 ## ******************************************************************** ##
-## Get a simple background
-data(wrld_simpl)
-## Make and Save Plot
-#pdf(file='figures/Specimen_Locales.pdf',width=9, height=6, )
-graphics.off()
-pdf(file='~/Dropbox/Projects/FRAL-herbarium/manuscript/Figure_1.pdf', width=5.5, height=3.5, family="Times" )
-par( mar=c( 2, 2, 0, 0) )
-plot(wrld_simpl, xlim=c(xmin,xmax), ylim=c(ymin,ymax), axes=TRUE)
-#plot(can1,add=TRUE)
-map("state",boundary=FALSE, col="black", add=TRUE)
-## Plot group of associated species
-points(Associated.Spec$Longitude,Associated.Spec$Latitude, col="black",pch=3,cex=0.4)
-## Plot Frangula alnus
-## First the complete FRAL data set I've compiled
-points(FRAL.Herb$Longitude,FRAL.Herb$Latitude, col="black", bg="black", pch=24, cex=0.8) #  
-# ## And second only those occurences in GBIF (in orange)
-# points(FRAL.GBIF$lon,FRAL.GBIF$lat,col="orange",pch=20,cex=0.4)
-legend( -73.5, 38.45,
-        expression(italic('F. alnus'),'Associated Species'), #'FRAL GBIF','Associates GBIF'),
-        pch=c(17,3), #,20),
-        col=c('black','black') )
 
-plot(falnus.extent,add=TRUE,col='black', lty = 5)
-dev.off()
+# ## Get a simple background
+# data(wrld_simpl)
+# ## Make and Save Plot
+# #pdf(file='figures/Specimen_Locales.pdf',width=9, height=6, )
+# graphics.off()
+# pdf(file='~/Dropbox/Projects/FRAL-herbarium/manuscript/Figure_1.pdf', width=5.5, height=3.5, family="Times" )
+# par( mar=c( 2, 2, 0, 0) )
+# plot(wrld_simpl, xlim=c(xmin,xmax), ylim=c(ymin,ymax), axes=TRUE)
+# #plot(can1,add=TRUE)
+# map("state",boundary=FALSE, col="black", add=TRUE)
+# ## Plot group of associated species
+# points(Associated.Spec$Longitude,Associated.Spec$Latitude, col="black",pch=3,cex=0.4)
+# ## Plot Frangula alnus
+# ## First the complete FRAL data set I've compiled
+# points(FRAL.Herb$Longitude,FRAL.Herb$Latitude, col="black", bg="black", pch=24, cex=0.8) #  
+# # ## And second only those occurences in GBIF (in orange)
+# # points(FRAL.GBIF$lon,FRAL.GBIF$lat,col="orange",pch=20,cex=0.4)
+# legend( -73.5, 38.45,
+#         expression(italic('F. alnus'),'Associated Species'), #'FRAL GBIF','Associates GBIF'),
+#         pch=c(17,3), #,20),
+#         col=c('black','black') )
+# 
+# plot(falnus.extent,add=TRUE,col='black', lty = 5)
+# dev.off()
+# 
+# graphics.off()
 
-graphics.off()
+library(ggmap)
+library(maps)
+library(mapdata)
+
+temp_data <- select(Associated.Spec, SpeciesName, Longitude, Latitude)
+temp_data$SpeciesName <- "Associated Species"
+temp_fral <- select(FRAL.Herb, SpeciesName, Longitude, Latitude)
+temp_fral$SpeciesName <- "F. alnus"
+temp_data <- rbind(temp_data, temp_fral)
+
+#pdf(file='~/Dropbox/Projects/FRAL-herbarium/manuscript/Figure_1.pdf', width=5.5, height=3.5, family="Times" )
+## Get USA map data
+states <- map_data("state")
+world <- map_data("world")
+ggplot() + 
+  geom_polygon(data = world, aes(x=long, y=lat, group=group), color = "black", fill = "white")+
+  geom_polygon(data = states, aes(x=long, y = lat, group = group), color = "black", fill = "white") + 
+  coord_fixed(1.45, xlim = c(xmin,xmax), ylim = c(ymin,ymax)) + # 1.3,
+  guides(fill = FALSE) +
+  geom_point(data = temp_data, aes(x = Longitude, y = Latitude, shape = SpeciesName),  alpha = 0.3) +
+  scale_shape_manual(values=c(3, 2)) +
+  geom_point(data = FRAL.Herb, aes(x = Longitude, y = Latitude), pch = 2,  alpha = 0.3) +
+  xlab("Longitude") +
+  ylab("Latitude") +
+  theme_bw() +
+  theme(legend.position = c(1,0), legend.justification = c(1,0), 
+        legend.title = element_blank(), 
+        legend.text = element_text(size = 9, family = "Times"),
+        legend.background = element_rect(fill = "transparent"),
+        axis.title = element_text(size = 12, family = "Times"),
+        axis.text = element_text(family = "Times"))
+ggsave(filename='~/Dropbox/Projects/FRAL-herbarium/manuscript/Figure_1_new.pdf', device = "pdf",
+       width=5.5, height=3.5, units = "in")
+#dev.off()
+
 
 ## ******************************************************************** ##
 ## Examine records through time BEFORE any spatial filtering

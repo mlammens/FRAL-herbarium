@@ -19,7 +19,7 @@ I searched for historical records of F. alnus presence reported in published jou
 
 ## Some notes and thoughts about the null model results - this should be added to the manuscript
 
-Examining the patterns in the null model analysis of Cummulative AOO and AOO Ratio Through Time, the existence of a lag phase for FRAL from its introduction untill approximately 1920 seems more apparent. The deline in the AOO ratio from 1880 to ca. 1900 strongly suggests that this period was one of rapid collection of the associated species. Given the commoness of these species, it is likely that this corresponds with a period of rapid collection in herbaria records more broadly. This corresponds with the increase in records collections, and peak recording decades, reported by Prather et al. for a number of the herbaria included in my study.
+Examining the patterns in the null model analysis of Cummulative AOO and AOO Ratio Through Time, the existence of a lag phase for FRAL from its introduction untill approximately 1920 seems more apparent. The decline in the AOO ratio from 1880 to ca. 1900 strongly suggests that this period was one of rapid collection of the associated species. Given the commoness of these species, it is likely that this corresponds with a period of rapid collection in herbaria records more broadly. This corresponds with the increase in records collections, and peak recording decades, reported by Prather et al. for a number of the herbaria included in my study.
 
 
 

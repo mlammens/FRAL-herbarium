@@ -54,8 +54,8 @@ for (iter in 1:num_randoms){
   ## Shuffle the dates for the observations
   LOC.temp$CollectionYear <- sample(LOC.temp$CollectionYear)
   
-  # ## Shuffle the grid cells
-  # LOC.temp$GridID <- sample(LOC.temp$GridID)
+  ## Shuffle the grid cells
+  LOC.temp$GridID <- sample(LOC.temp$GridID)
 
   ## Calculate the cumulative number of occupied grid cells through time for the temp dataset
   FRAL.Herb.Loc.Overlap_Cumm.Grid_TEMP <- 
@@ -126,12 +126,12 @@ ggplot() +
   geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap_NULL, 
             aes(x = Years, y = sqrt(FRAL.OccGrids), group = iter), alpha = 0.1) +
   geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap,
-            aes(x = Years, y = sqrt(FRAL.OccGrids)), color = "red", size = 1) +
+            aes(x = Years, y = sqrt(FRAL.OccGrids)), color = "black", size = 2) +
   geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap_NULL, 
             aes(x = Years, y = sqrt(Assoc.OccGrids), group = iter), 
             color = "grey", alpha = 0.1) +
   geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap,
-            aes(x = Years, y = sqrt(Assoc.OccGrids)), color = "blue", size = 1) +
+            aes(x = Years, y = sqrt(Assoc.OccGrids)), color = "darkgrey", size = 2) +
   theme_bw() + 
   labs(y = "Sqrt-Cumulative Occupied Grid Cells")
 

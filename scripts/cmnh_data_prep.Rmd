@@ -104,3 +104,111 @@ Drop "Co." part of any of the county entries.
 cmnh_data$County <- sub(pattern = " Co\\.", replacement = "", x = cmnh_data$County)
 ```
 
+Remove any records that do not have County noted at this point
+
+```{r}
+cmnh_data <- filter(cmnh_data, !is.na(County))
+```
+
+
+Look at state abreviations for remaining data
+
+```{r}
+table(cmnh_data$State)
+```
+
+Fix the "Oh" values
+
+```{r}
+cmnh_data$State[which(cmnh_data$State == "Oh")] <- "OH"
+```
+
+
+
+# Georeferencing of records at the County Level
+
+I'm going to georeference each of these locations at the county level, using
+data from the US Census Bureau. Specifically I am using data from the 
+**US Census Gazetteer**
+acquired from this website: 
+[http://www.census.gov/geo/maps-data/data/gazetteer2010.html](http://www.census.gov/geo/maps-data/data/gazetteer2010.html) 
+
+I downloaded the 'Counties' data set as a *.txt file. I opened it in Excel and saved
+it as a *.csv file. I also copied the metadata information from this website and saved
+it as a separate *.txt file. All of the Gazetteer files are currently stored in my 
+'gis_layers' directory in my Google Drive.
+
+```{r}
+# Read in the counties *.csv file
+Counties <- read.csv('~/Google Drive//gis_layers/Gaz_counties_national.csv')
+# Remove the word 'County' in the 'NAME' column
+Counties$NAME <- sub(pattern=' County',replacement='',Counties$NAME)
+
+
+cmnh_data <- merge(cmnh_data,Counties,
+                   by.x=c('State','County'),by.y=c('USPS','NAME'))
+# How many records remaining?
+nrow(cmnh_data) # 433 - only lost 5 records, likely Canadian records
+
+# Calculate a coordinate uncertainty value for these records
+# Base the uncertainty on the radius of a circle of the area
+# of the count. This is a rough approximation.
+cmnh_data$CoordUncertainty <- sqrt(cmnh_data$ALAND/pi)
+
+
+```
+
+
+# Put CMNH data into the same formate as the other data sets
+
+```{r}
+## Make a clean SpeciesName column
+cmnh_data$SpeciesName <- paste(cmnh_data$Genus, sub(pattern = "[[:blank:]].*", replacement = "", cmnh_data$Species))
+
+## Add an herbarium code column
+cmnh_data$HerbariumCode <- "CLM"
+
+## Add a source column
+cmnh_data$Source <- "From Curator"
+
+## Convert from month chr to num
+cmnh_data$Month <- match(cmnh_data$Month, month.name)
+
+## Make a country column
+cmnh_data$Country <- "United States"
+
+## Make a Analysis notes column
+cmnh_data$AnalysisNotes <- ""
+
+## Make a Remove column
+cmnh_data$Remove <- 0
+
+## Make a County only column
+cmnh_data$CountyLevelOnly <- 1
+
+cmnh_data_final <- cmnh_data %>%
+  select(SpeciesName = SpeciesName, 
+         HerbariumCode = HerbariumCode,
+         Source = Source,
+         Collector = Collector,
+         RecordNumber = `Herbarium No.`,
+         CollectionDay = Day,
+         CollectionMonth = Month,
+         CollectionYear = Year,
+         Country = Country,
+         Admin1 = State,
+         Admin2 = County,
+         Admin3 = `City/Twp.`,
+         Locality = Locality, 
+         Longitude = INTPTLONG,
+         Latitude = INTPTLAT,
+         CoordUncertainty = CoordUncertainty, 
+         LocationNotes = Description,
+         EcologyNotes = Comments,
+         AnalysisNotes = AnalysisNotes, 
+         Remove = Remove,
+         CountyLevelOnly = CountyLevelOnly)
+
+write.csv(cmnh_data_final, "data/CMNH_Data_Cleaned.csv", row.names = FALSE)
+```
+

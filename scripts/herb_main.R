@@ -307,6 +307,17 @@ Associated.Spec$Admin2 <-
 Associated.Spec$Admin2 <-
   sub(pattern="Saint ",replacement="St. ",Associated.Spec$Admin2)
 
+## -------------------------------------------------------------------------- ##
+## Add the CMNH data set, acquired post thesis
+## -------------------------------------------------------------------------- ##
+cmnh_data <- read.csv("data/CMNH_Data_Cleaned.csv", as.is = TRUE)
+
+FRAL.Herb <- rbind(FRAL.Herb, 
+                   filter(cmnh_data, SpeciesName == "Rhamnus frangula"))
+
+Associated.Spec <- rbind(Associated.Spec,
+                         filter(cmnh_data, SpeciesName != "Rhamnus frangula"))
+
 ## ******************************************************************** ##
 ## Assign Grid cell IDs to records:
 ## For each data set, overlay grid shape files and get point 
@@ -425,7 +436,7 @@ Associated.Spec.Loc.Overlap_Cumm.Grid <-
 
 # ## ----------------------------------------------------------- ##
 # ## Calculate regressions using **Log** cumulative occupied grid cells
-# ## 2018-04-17: Commented out, because this analysis is supported by 
+# ## 2018-04-17: Commented out, because this analysis is not best supported by 
 # ## expansion theory. 
 # ## ----------------------------------------------------------- ##
 # ## Linear regression on Cummulativie Occupied Grid Cell numbers
@@ -644,11 +655,11 @@ FRAL.Herb.Assoc.Spec.Cnty.Overlap <-
 
 ## Preliminary results notes
 # Unique Counties for Associated Species
-length(unique(Associated.Spec.Cnty$Admin2)) # 470
+length(unique(Associated.Spec.Cnty$Admin2)) # 462
 # Unique Counties for FRAL 
-length(unique(FRAL.Herb.Cnty$Admin2)) # 195
+length(unique(FRAL.Herb.Cnty$Admin2)) # 196
 # Length of overlapping counties
-length(intersect(FRAL.Herb.Cnty$Admin2,Associated.Spec.Cnty$Admin2)) # 175
+length(intersect(FRAL.Herb.Cnty$Admin2,Associated.Spec.Cnty$Admin2)) # 176
 ## Looking at these numbers, it's clear that I have a much greater
 ## representation of the associated species (spatially) than FRAL.
 ## I'm also happy to see that I only lose 31 counties by restricting
@@ -881,55 +892,4 @@ summary(fral.rec.lm3)
 summary(assoc.rec.lm2)
 
 
-
-##### NOTE - GOT THIS FAR IN MY REDEVELOPMENT
-
-# ## Plot the number of grid cells occupied (AOO) for a given decade, **NOT CUMMULATIVE**.
-# ## This is based on a suggestion by Resit.
-# Fral.Herb.data$Decade <- round.up(Fral.Herb.data$CollectionYear)
-# FRAL.Herb.AOO.ByDecade <- ddply(.data=Fral.Herb.data,
-#                                 .variable=c("Decade"),
-#                                 AOO.by.Decade=length(unique(GridID)),
-#                                 summarize)
-# ## Plot the AOO for a given decad, **NOT CUMMULATIVE**.
-# ## This is based on a suggestion by Resit.
-# GBIF.Data$Decade <- round.up(as.numeric(GBIF.Data$CollectionYear))
-# GBIF.Data.AOO.ByDecade <- ddply(.data=GBIF.Data,
-#                                 .variable=c("Decade"),
-#                                 AOO.by.Decade=length(unique(GridID)),
-#                                 summarize)
-# ## Plot the AOO for a given decad, **NOT CUMMULATIVE**.
-# ## This is based on a suggestion by Resit.
-# GBIF.Data.FRAL$Decade <- round.up(as.numeric(GBIF.Data.FRAL$CollectionYear))
-# GBIF.FRAL.AOO.ByDecade <- ddply(.data=GBIF.Data.FRAL,
-#                                 .variable=c("Decade"),
-#                                 AOO.by.Decade=length(unique(GridID)),
-#                                 summarize)
-# 
-# 
-# ## ******************************************************************** ##
-# ## Plots based on **Non-Cumulative AOO**
-# 
-# ## Merge FRAL.Herb.AOO.ByDecade with GBIF.Data.AOO.ByDecade
-# ## --this merge results in columns with names AOO.by.Decade.x and
-# ## --AOO.by.Decade.y
-# FRAL.Herb.AOO.ByDecade <- merge(FRAL.Herb.AOO.ByDecade,GBIF.Data.AOO.ByDecade,by="Decade")
-# ## Calcualte the ratio of occupied grids in decades
-# FRAL.Herb.AOO.ByDecade$Ratio <- 
-#   FRAL.Herb.AOO.ByDecade$AOO.by.Decade.x / FRAL.Herb.AOO.ByDecade$AOO.by.Decade.y
-# ## And calcualte the total number of records reportd for a given decade
-# FRAL.Herb.AOO.ByDecade$TotalGrids <-
-#   FRAL.Herb.AOO.ByDecade$AOO.by.Decade.x + FRAL.Herb.AOO.ByDecade$AOO.by.Decade.y
-# 
-# ## ******************************************************************** ##
-# ## FIGURE XX - Herb_Fral_to_GBIF_All_ratio_NONCUMMULATIVE.pdf
-# pdf(file='figures/Herb_Fral_to_GBIF_All_ratio_NONCUMMULATIVE.pdf',width=10)
-# fral.gbif.ratio.noncumm <- ggplot( FRAL.Herb.AOO.ByDecade, aes(x=(Decade*10), y=Ratio, size=TotalGrids) ) +
-#   geom_point() +
-#   xlab("Decade") +
-#   ylab("Ratio of AOO of FRAL to ALL") +
-#   labs(size="Occ. Grid Count")
-# print(fral.gbif.ratio.noncumm)
-# dev.off()
-# ## ******************************************************************** ##
 

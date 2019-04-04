@@ -208,7 +208,7 @@ rec.years.prop.plot <-
   theme( text=element_text( size=12, family="Times") )
 print(rec.years.prop.plot)
 
-#ggsave(plot = rec.years.prop.plot, filename="manuscript/Figure_2_New.pdf", width=5.5, height=5.5, units="in" )
+ggsave(plot = rec.years.prop.plot, filename="manuscript/Figure_2_New.pdf", width=5.5, height=5.5, units="in" )
 
 ## ************************************************************************** ##
 ## Plot raw Cumulative Occupied Grid Cell numbers

@@ -122,18 +122,24 @@ for (iter in 1:num_randoms){
 }
 
 ## Plot the cummulative grid cells through time
-ggplot() +
+nullmod_cum_AOO <-
+  ggplot() +
+  geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap_NULL, 
+            aes(x = Years, y = sqrt(Assoc.OccGrids), group = iter), 
+            color = "grey50", alpha = 0.1) +
   geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap_NULL, 
             aes(x = Years, y = sqrt(FRAL.OccGrids), group = iter), alpha = 0.1) +
   geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap,
-            aes(x = Years, y = sqrt(FRAL.OccGrids)), color = "black", size = 2) +
-  geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap_NULL, 
-            aes(x = Years, y = sqrt(Assoc.OccGrids), group = iter), 
-            color = "grey", alpha = 0.1) +
+            aes(x = Years, y = sqrt(Assoc.OccGrids)), 
+            color = "grey50", size = 1, linetype = "dashed") +
   geom_line(data = FRAL.Herb.Assoc.allYrs.Overlap,
-            aes(x = Years, y = sqrt(Assoc.OccGrids)), color = "darkgrey", size = 2) +
+            aes(x = Years, y = sqrt(FRAL.OccGrids)), 
+            color = "black", size = 1, linetype = "dashed") +
   theme_bw() + 
-  labs(y = "Sqrt-Cumulative Occupied Grid Cells")
+  theme( text=element_text( size=11, family="Times") ) +
+  labs(y = "Sqrt-Cumulative Occupied Grid Cells", 
+       x = "Year")
+print(nullmod_cum_AOO)
 
 ## Calculate the mean AOO ratio through time for the Null model
 FRAL.Herb.Assoc.allYrs.Overlap_NULL_Summary <-
@@ -142,13 +148,25 @@ FRAL.Herb.Assoc.allYrs.Overlap_NULL_Summary <-
   dplyr::summarise(AOO.Ratio.Mean = mean(AOO.Ratio))
 
 ## Plot the Ratio through time
-ggplot() +
+nullmod_ratio_AOO <-
+  ggplot() +
   geom_line(data=FRAL.Herb.Assoc.allYrs.Overlap_NULL,
-             aes(x = Years, y = AOO.Ratio, group = iter), alpha = 0.1) +
+            aes(x = Years, y = AOO.Ratio, group = iter), 
+            alpha = 0.1, color = "grey50") +
   geom_point(data=FRAL.Herb.Assoc.allYrs.Overlap_NULL_Summary, 
-              aes(x = Years, y = AOO.Ratio.Mean), color = "blue") +
+             aes(x = Years, y = AOO.Ratio.Mean), 
+             color = "black", shape = 1) +
   geom_point(data=FRAL.Herb.Assoc.allYrs.Overlap,
-             aes(x = Years, y = AOO.Ratio), color = "red") +
+             aes(x = Years, y = AOO.Ratio), color = "black") +
   ylim( c(0, 1.5) ) +
-  theme_bw()
+  theme_bw() +
+  theme( text=element_text( size=11, family="Times") ) +
+  labs(y = "Ratio of Cumulative Occupied Grid Cells",
+       x = "Year")
+print(nullmod_ratio_AOO)
 
+library(cowplot)
+plot_grid(nullmod_cum_AOO, nullmod_ratio_AOO, 
+          labels = c("A", "B"), label_fontfamily = "Times")
+ggsave(filename='~/Dropbox/Projects/FRAL-herbarium/manuscript/Figure_6.pdf', device = "pdf",
+       width=5.5, height=3.5, units = "in")

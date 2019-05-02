@@ -145,7 +145,9 @@ print(nullmod_cum_AOO)
 FRAL.Herb.Assoc.allYrs.Overlap_NULL_Summary <-
   FRAL.Herb.Assoc.allYrs.Overlap_NULL %>%
   group_by(Years) %>%
-  dplyr::summarise(AOO.Ratio.Mean = mean(AOO.Ratio))
+  dplyr::summarise(AOO.Ratio.Mean = mean(AOO.Ratio),
+                   FRAL.OccGrids.Mean = mean(FRAL.OccGrids),
+                   Assoc.OccGrids.Mean = mean(Assoc.OccGrids))
 
 ## Plot the Ratio through time
 nullmod_ratio_AOO <-
